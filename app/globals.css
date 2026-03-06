@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-heading: "Avenir Next Condensed", "DIN Alternate", "Segoe UI", sans-serif;
+  --font-body: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 18% 15%, rgba(82, 240, 196, 0.11), transparent 28%),
+    radial-gradient(circle at 78% 4%, rgba(123, 175, 245, 0.16), transparent 30%),
+    linear-gradient(170deg, #050d18 0%, #071423 44%, #081726 100%);
+  color: #f0f4f8;
+}
+
+body {
+  background-size: auto, auto, cover;
+  background-attachment: fixed;
+}
+
+.surface-grid {
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to right, rgba(126, 151, 178, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(126, 151, 178, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px, 28px 28px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
