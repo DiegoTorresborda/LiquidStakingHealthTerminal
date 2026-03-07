@@ -4,6 +4,7 @@ import { networks, type Network } from "@data/networks";
 
 import type { DetailModule, NetworkDetailData } from "@/features/network-detail/types";
 import { resolveLpAttractivenessFromScore, scoreNetworkWithMockModel } from "@/features/scoring";
+import { formatUsdCompactStable } from "@/lib/number-format";
 
 export function getAllNetworkIds(): string[] {
   return networks.map((network) => network.networkId);
@@ -253,10 +254,5 @@ function buildModuleRisk(moduleName: DetailModule["name"], network: Network): st
 }
 
 function formatUsdCompact(value: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    notation: "compact",
-    maximumFractionDigits: 1
-  }).format(value);
+  return formatUsdCompactStable(value);
 }

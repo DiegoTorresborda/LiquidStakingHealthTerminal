@@ -1,5 +1,4 @@
 import coingeckoBasics from "./coingecko-basics.json";
-import overviewOverrides from "./overview-overrides.json";
 
 export type NetworkCategory =
   | "High-performance EVM L1"
@@ -364,41 +363,20 @@ type CoingeckoBasicsSnapshot = {
   networks: Record<string, CoingeckoNetworkBasics>;
 };
 
-const coingeckoNetworkIds = new Set(["xdc", "monad", "sei", "shardeum", "sui"]);
+const coingeckoNetworkIds = new Set([
+  "xdc",
+  "monad",
+  "sei",
+  "shardeum",
+  "sui",
+  "aptos",
+  "berachain",
+  "core",
+  "mantra",
+  "sonic"
+]);
 
-type OverviewOverrideRecord = {
-  marketCapUsd: number | null;
-  fdvUsd: number | null;
-  circulatingSupply: number | null;
-  circulatingSupplyPct: number | null;
-  stakingRatioPct: number | null;
-  stakingApyPct: number | null;
-  stakerAddresses: number | null;
-  validatorCount: number | null;
-  stakedValueUsd: number | null;
-  lstProtocols: number | null;
-  largestLst: string | null;
-  lstTvlUsd: number | null;
-  lstPenetrationPct: number | null;
-  defiTvlUsd: number | null;
-  tvlToMcapPct: number | null;
-  stablecoinLiquidityUsd: number | null;
-  lendingPresence: boolean | null;
-  lstCollateralEnabled: boolean | null;
-};
-
-type OverviewOverridesSnapshot = {
-  source: string;
-  generatedAt: string;
-  networks: Record<string, OverviewOverrideRecord>;
-};
-
-const networksWithCoingecko = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
-
-export const networks: Network[] = applyOverviewOverrides(
-  networksWithCoingecko,
-  overviewOverrides as OverviewOverridesSnapshot
-);
+export const networks: Network[] = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
 
 function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnapshot): Network[] {
   if (!snapshot || snapshot.source !== "coingecko") {
@@ -422,42 +400,6 @@ function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnap
       fdvUsd: basics.fdvUsd ?? network.fdvUsd,
       circulatingSupply: basics.circulatingSupply ?? network.circulatingSupply,
       circulatingSupplyPct: basics.circulatingSupplyPct ?? network.circulatingSupplyPct
-    };
-  });
-}
-
-function applyOverviewOverrides(networks: Network[], snapshot: OverviewOverridesSnapshot): Network[] {
-  if (!snapshot || snapshot.source !== "overview-merge") {
-    return networks;
-  }
-
-  return networks.map((network) => {
-    const override = snapshot.networks[network.networkId];
-
-    if (!override) {
-      return network;
-    }
-
-    return {
-      ...network,
-      marketCapUsd: override.marketCapUsd ?? network.marketCapUsd,
-      fdvUsd: override.fdvUsd ?? network.fdvUsd,
-      circulatingSupply: override.circulatingSupply ?? network.circulatingSupply,
-      circulatingSupplyPct: override.circulatingSupplyPct ?? network.circulatingSupplyPct,
-      stakingRatioPct: override.stakingRatioPct ?? network.stakingRatioPct,
-      stakingApyPct: override.stakingApyPct ?? network.stakingApyPct,
-      stakerAddresses: override.stakerAddresses ?? network.stakerAddresses,
-      validatorCount: override.validatorCount ?? network.validatorCount,
-      stakedValueUsd: override.stakedValueUsd ?? network.stakedValueUsd,
-      lstProtocols: override.lstProtocols ?? network.lstProtocols,
-      largestLst: override.largestLst ?? network.largestLst,
-      lstTvlUsd: override.lstTvlUsd ?? network.lstTvlUsd,
-      lstPenetrationPct: override.lstPenetrationPct ?? network.lstPenetrationPct,
-      defiTvlUsd: override.defiTvlUsd ?? network.defiTvlUsd,
-      tvlToMcapPct: override.tvlToMcapPct ?? network.tvlToMcapPct,
-      stablecoinLiquidityUsd: override.stablecoinLiquidityUsd ?? network.stablecoinLiquidityUsd,
-      lendingPresence: override.lendingPresence ?? network.lendingPresence,
-      lstCollateralEnabled: override.lstCollateralEnabled ?? network.lstCollateralEnabled
     };
   });
 }
