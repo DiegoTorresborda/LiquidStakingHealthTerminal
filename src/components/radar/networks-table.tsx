@@ -181,6 +181,10 @@ export function NetworksTable({
                             <DetailItem label="Main Bottleneck" value={network.mainBottleneck} />
                             <DetailItem label="Main Opportunity" value={network.mainOpportunity} />
                             <DetailItem label="Status Tag" value={network.status} />
+                            <DetailItem label="Data Quality" value={network.quality ?? "Unknown"} />
+                            <DetailItem label="Confidence" value={network.confidence ?? "Unknown"} />
+                            <DetailItem label="As Of" value={network.asOf ?? "Unknown"} />
+                            <DetailItem label="Source Refs" value={network.sourceRefs?.join(", ") || "Unknown"} />
                           </div>
                         </div>
                       </td>

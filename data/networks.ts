@@ -32,6 +32,8 @@ export type Network = {
   fdvUsd: number;
   circulatingSupply: number;
   circulatingSupplyPct: number;
+  priceUsd?: number | null;
+  volume24hUsd?: number | null;
   stakingRatioPct: number;
   stakingApyPct: number;
   stakedValueUsd: number;
@@ -50,6 +52,10 @@ export type Network = {
   opportunityScore: number;
   mainBottleneck: string;
   mainOpportunity: string;
+  asOf?: string;
+  sourceRefs?: string[];
+  quality?: "observed" | "inferred" | "simulated";
+  confidence?: "high" | "medium" | "low";
   status: NetworkStatus;
 };
 
