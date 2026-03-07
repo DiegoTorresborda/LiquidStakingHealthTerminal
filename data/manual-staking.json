@@ -1,0 +1,11 @@
+{
+  "source": "manual-fallback",
+  "asOf": "2026-03-07T00:00:00.000Z",
+  "networks": {
+    "monad": { "validatorCount": 132, "stakingRatioPct": 48, "stakingApyPct": 8.1 },
+    "sei": { "validatorCount": 85, "stakingRatioPct": 52, "stakingApyPct": 7.4 },
+    "sui": { "validatorCount": 107, "stakingRatioPct": 62, "stakingApyPct": 5.9 },
+    "shardeum": { "validatorCount": 78, "stakingRatioPct": 41, "stakingApyPct": 9.8 },
+    "xdc": { "validatorCount": 108, "stakingRatioPct": 38, "stakingApyPct": 6.8 }
+  }
+}

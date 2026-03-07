@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "data:sync:coingecko": "node scripts/sync-coingecko-basics.mjs",
+    "data:build:overview": "node scripts/build-overview-overrides.mjs",
+    "data:build:dataset": "node scripts/build-overview-dataset.ts"
   },
   "dependencies": {
     "next": "14.2.18",

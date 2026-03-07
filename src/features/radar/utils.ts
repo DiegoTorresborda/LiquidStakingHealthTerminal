@@ -183,6 +183,8 @@ export function resolveStatusClass(status: NetworkStatus): string {
   }
 }
 
-export function booleanLabel(value: boolean): string {
-  return value ? "Yes" : "No";
+export function booleanLabel(value: boolean | null | undefined): string {
+  if (value === true) return "Yes";
+  if (value === false) return "No";
+  return "Unknown";
 }
