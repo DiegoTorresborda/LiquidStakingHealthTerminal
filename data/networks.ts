@@ -1,4 +1,5 @@
 import coingeckoBasics from "./coingecko-basics.json";
+import defillamaBasics from "./defillama-basics.json";
 
 export type NetworkCategory =
   | "High-performance EVM L1"
@@ -369,6 +370,21 @@ type CoingeckoBasicsSnapshot = {
   networks: Record<string, CoingeckoNetworkBasics>;
 };
 
+type DefillamaNetworkBasics = {
+  status: "ok" | "partial" | "missing_chain" | "missing_market_data";
+  chainName: string;
+  defiTvlUsd: number | null;
+  stablecoinLiquidityUsd: number | null;
+  lstTvlUsd: number | null;
+  sourceRefs: string[];
+};
+
+type DefillamaBasicsSnapshot = {
+  source: string;
+  generatedAt: string;
+  networks: Record<string, DefillamaNetworkBasics>;
+};
+
 const coingeckoNetworkIds = new Set([
   "xdc",
   "monad",
@@ -382,30 +398,106 @@ const coingeckoNetworkIds = new Set([
   "sonic"
 ]);
 
-export const networks: Network[] = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
+const defillamaNetworkIds = new Set([
+  "xdc",
+  "monad",
+  "sei",
+  "shardeum",
+  "sui",
+  "aptos",
+  "berachain",
+  "core",
+  "mantra",
+  "sonic"
+]);
 
-function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnapshot): Network[] {
-  if (!snapshot || snapshot.source !== "coingecko") {
-    return networks;
-  }
+export const networks: Network[] = applyExternalBasics(
+  baseNetworks,
+  coingeckoBasics as CoingeckoBasicsSnapshot,
+  defillamaBasics as DefillamaBasicsSnapshot
+);
 
+function applyExternalBasics(
+  networks: Network[],
+  coingeckoSnapshot: CoingeckoBasicsSnapshot,
+  defillamaSnapshot: DefillamaBasicsSnapshot
+): Network[] {
   return networks.map((network) => {
-    if (!coingeckoNetworkIds.has(network.networkId)) {
-      return network;
+    let merged: Network = { ...network };
+    const sourceRefs: string[] = [];
+    let observedCount = 0;
+
+    if (coingeckoSnapshot?.source === "coingecko" && coingeckoNetworkIds.has(network.networkId)) {
+      const basics = coingeckoSnapshot.networks[network.networkId];
+      if (basics && basics.status !== "missing_coin_id" && basics.status !== "missing_market_data") {
+        merged = {
+          ...merged,
+          marketCapUsd: basics.marketCapUsd ?? merged.marketCapUsd,
+          fdvUsd: basics.fdvUsd ?? merged.fdvUsd,
+          circulatingSupply: basics.circulatingSupply ?? merged.circulatingSupply,
+          circulatingSupplyPct: basics.circulatingSupplyPct ?? merged.circulatingSupplyPct
+        };
+
+        if (basics.marketCapUsd !== null) observedCount += 1;
+        if (basics.fdvUsd !== null) observedCount += 1;
+        if (basics.circulatingSupply !== null) observedCount += 1;
+        if (basics.circulatingSupplyPct !== null) observedCount += 1;
+
+        sourceRefs.push(`coingecko:coins/markets:${basics.coinId ?? network.networkId}`);
+      }
     }
 
-    const basics = snapshot.networks[network.networkId];
+    if (defillamaSnapshot?.source === "defillama" && defillamaNetworkIds.has(network.networkId)) {
+      const basics = defillamaSnapshot.networks[network.networkId];
+      if (basics && basics.status !== "missing_chain" && basics.status !== "missing_market_data") {
+        merged = {
+          ...merged,
+          defiTvlUsd: basics.defiTvlUsd ?? merged.defiTvlUsd,
+          stablecoinLiquidityUsd: basics.stablecoinLiquidityUsd ?? merged.stablecoinLiquidityUsd,
+          lstTvlUsd: basics.lstTvlUsd ?? merged.lstTvlUsd
+        };
 
-    if (!basics || basics.status === "missing_coin_id" || basics.status === "missing_market_data") {
-      return network;
+        if (basics.defiTvlUsd !== null) observedCount += 1;
+        if (basics.stablecoinLiquidityUsd !== null) observedCount += 1;
+        if (basics.lstTvlUsd !== null) observedCount += 1;
+
+        sourceRefs.push(...basics.sourceRefs);
+      }
     }
+
+    merged = applyDerivedMetrics(merged);
+
+    const asOf = resolveAsOf(coingeckoSnapshot?.generatedAt, defillamaSnapshot?.generatedAt);
+    const uniqueSourceRefs = [...new Set(sourceRefs)];
+
+    const quality: Network["quality"] = observedCount >= 5 ? "observed" : observedCount >= 3 ? "inferred" : "simulated";
+    const confidence: Network["confidence"] = observedCount >= 5 ? "high" : observedCount >= 3 ? "medium" : "low";
 
     return {
-      ...network,
-      marketCapUsd: basics.marketCapUsd ?? network.marketCapUsd,
-      fdvUsd: basics.fdvUsd ?? network.fdvUsd,
-      circulatingSupply: basics.circulatingSupply ?? network.circulatingSupply,
-      circulatingSupplyPct: basics.circulatingSupplyPct ?? network.circulatingSupplyPct
+      ...merged,
+      asOf,
+      sourceRefs: uniqueSourceRefs.length > 0 ? uniqueSourceRefs : undefined,
+      quality,
+      confidence
     };
   });
+}
+
+function applyDerivedMetrics(network: Network): Network {
+  const stakedValueUsd = (network.marketCapUsd * network.stakingRatioPct) / 100;
+  const tvlToMcapPct = network.marketCapUsd > 0 ? (network.defiTvlUsd / network.marketCapUsd) * 100 : network.tvlToMcapPct;
+  const lstPenetrationPct =
+    stakedValueUsd > 0 ? (network.lstTvlUsd / stakedValueUsd) * 100 : network.lstPenetrationPct;
+
+  return {
+    ...network,
+    stakedValueUsd: Number(stakedValueUsd.toFixed(0)),
+    tvlToMcapPct: Number(tvlToMcapPct.toFixed(1)),
+    lstPenetrationPct: Number(lstPenetrationPct.toFixed(1))
+  };
+}
+
+function resolveAsOf(...timestamps: Array<string | undefined>): string | undefined {
+  const valid = timestamps.filter((timestamp): timestamp is string => Boolean(timestamp)).sort();
+  return valid.length > 0 ? valid[valid.length - 1] : undefined;
 }
