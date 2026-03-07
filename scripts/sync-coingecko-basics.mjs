@@ -37,6 +37,36 @@ const TARGET_NETWORKS = [
     preferredCoinId: "sui",
     symbol: "sui",
     nameIncludes: ["sui"]
+  },
+  {
+    networkId: "aptos",
+    preferredCoinId: "aptos",
+    symbol: "apt",
+    nameIncludes: ["aptos"]
+  },
+  {
+    networkId: "berachain",
+    preferredCoinId: "berachain-bera",
+    symbol: "bera",
+    nameIncludes: ["berachain"]
+  },
+  {
+    networkId: "core",
+    preferredCoinId: "coredaoorg",
+    symbol: "core",
+    nameIncludes: ["core dao", "coredao", "core"]
+  },
+  {
+    networkId: "mantra",
+    preferredCoinId: "mantra-dao",
+    symbol: "om",
+    nameIncludes: ["mantra"]
+  },
+  {
+    networkId: "sonic",
+    preferredCoinId: "sonic-3",
+    symbol: "s",
+    nameIncludes: ["sonic"]
   }
 ];
 

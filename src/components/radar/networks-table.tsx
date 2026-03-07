@@ -182,14 +182,9 @@ export function NetworksTable({
                             <DetailItem label="Main Opportunity" value={network.mainOpportunity} />
                             <DetailItem label="Status Tag" value={network.status} />
                             <DetailItem label="Data Quality" value={network.quality ?? "Unknown"} />
-                            <DetailItem label="Data Coverage" value={network.dataCoveragePct !== undefined ? `${network.dataCoveragePct.toFixed(1)}%` : "Unknown"} />
                             <DetailItem label="Confidence" value={network.confidence ?? "Unknown"} />
                             <DetailItem label="As Of" value={network.asOf ?? "Unknown"} />
                             <DetailItem label="Source Refs" value={network.sourceRefs?.join(", ") || "Unknown"} />
-                            <DetailItem
-                              label="Inferred Score Components"
-                              value={network.inferredScoreComponents?.join(", ") || "Unknown"}
-                            />
                           </div>
                         </div>
                       </td>
