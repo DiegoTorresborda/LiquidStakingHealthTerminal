@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { networks as networkDataset } from "@data/networks";
+import { networks as networkUniverse } from "@data/networks";
 
 import { KpiSummaryBar } from "@/components/radar/kpi-summary-bar";
 import { NetworksTable } from "@/components/radar/networks-table";
@@ -17,6 +17,7 @@ import {
   sortNetworks,
   toggleSortDirection
 } from "@/features/radar/utils";
+import { scoreNetworkWithMockModel } from "@/features/scoring";
 
 export function LstOpportunityRadar() {
   const router = useRouter();
@@ -24,11 +25,25 @@ export function LstOpportunityRadar() {
   const [sort, setSort] = useState<SortState>(DEFAULT_SORT);
   const [expandedNetwork, setExpandedNetwork] = useState<string | null>(null);
 
-  const statusOptions = useMemo(() => getStatusOptions(networkDataset), []);
+  const networkDataset = useMemo(() => {
+    return networkUniverse.map((network) => {
+      const scoring = scoreNetworkWithMockModel(network);
+
+      return {
+        ...network,
+        globalLstHealthScore: scoring.globalScore.finalScore,
+        healthScoreRaw: scoring.globalScore.rawScore,
+        healthScorePenaltyPoints: scoring.globalScore.penaltyPoints,
+        healthScoreCapped: scoring.globalScore.cappedScore
+      };
+    });
+  }, []);
+
+  const statusOptions = useMemo(() => getStatusOptions(networkDataset), [networkDataset]);
 
   const filteredNetworks = useMemo(() => {
     return filterNetworks(networkDataset, filters);
-  }, [filters]);
+  }, [filters, networkDataset]);
 
   const visibleNetworks = useMemo(() => {
     return sortNetworks(filteredNetworks, sort);

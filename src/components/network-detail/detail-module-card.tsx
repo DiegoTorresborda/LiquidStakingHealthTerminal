@@ -1,11 +1,13 @@
 import type { DetailModule } from "@/features/network-detail/types";
+import type { ScoreBreakdown } from "@/features/scoring/types";
 import { moduleScoreClass } from "@/features/network-detail/utils";
 
 type DetailModuleCardProps = {
   module: DetailModule;
+  scoreBreakdown?: ScoreBreakdown;
 };
 
-export function DetailModuleCard({ module }: DetailModuleCardProps) {
+export function DetailModuleCard({ module, scoreBreakdown }: DetailModuleCardProps) {
   return (
     <article className="flex h-full flex-col gap-4 rounded-2xl border border-ink-300/20 bg-slateglass-600/60 p-5 shadow-card">
       <div className="flex items-start justify-between gap-4">
@@ -17,6 +19,15 @@ export function DetailModuleCard({ module }: DetailModuleCardProps) {
           {module.score}
         </span>
       </div>
+
+      {scoreBreakdown ? (
+        <div className="rounded-xl border border-ink-300/20 bg-ink-900/25 p-3 text-xs text-ink-200">
+          <p className="uppercase tracking-[0.14em] text-ink-300">Scoring</p>
+          <p className="mt-1">
+            Raw {scoreBreakdown.rawScore} · Penalties -{scoreBreakdown.penaltyPoints} · Capped {scoreBreakdown.cappedScore}
+          </p>
+        </div>
+      ) : null}
 
       <div className="grid gap-2 rounded-xl border border-ink-300/20 bg-ink-900/30 p-3">
         {module.keyMetrics.slice(0, 4).map((metric) => (

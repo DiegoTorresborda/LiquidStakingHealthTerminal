@@ -4,6 +4,7 @@ import { DetailModulesGrid } from "@/components/network-detail/detail-modules-gr
 import { MiniVisualsPanel } from "@/components/network-detail/mini-visuals-panel";
 import { NetworkDetailHeader } from "@/components/network-detail/network-detail-header";
 import { RedFlagsPanel } from "@/components/network-detail/red-flags-panel";
+import { ScoringModelPanel } from "@/components/network-detail/scoring-model-panel";
 import { StressSnapshotPanel } from "@/components/network-detail/stress-snapshot-panel";
 import { TopOpportunitiesPanel } from "@/components/network-detail/top-opportunities-panel";
 
@@ -16,7 +17,9 @@ export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
     <main className="mx-auto flex w-full max-w-[1480px] flex-col gap-6 px-4 py-6 md:px-8 md:py-8">
       <NetworkDetailHeader summary={detail.summary} />
 
-      <DetailModulesGrid modules={detail.modules} />
+      {detail.scoring ? <ScoringModelPanel scoring={detail.scoring} /> : null}
+
+      <DetailModulesGrid modules={detail.modules} scoring={detail.scoring} />
 
       <section className="grid gap-4 xl:grid-cols-3">
         <div className="xl:col-span-2">

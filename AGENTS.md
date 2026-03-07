@@ -157,3 +157,13 @@ When building features:
 - then define UI
 
 Avoid isolated widgets with no role in the decision flow.
+
+## Scoring document priority
+
+For conceptual module definitions, read:
+- /docs/scoring-framework.md
+
+For the actual v1 Health Score implementation, use:
+- /docs/scoring-engine-spec.md
+
+If these conflict, /docs/scoring-engine-spec.md is the source of truth for scoring formulas, weights, penalties, caps, and implementation logic.

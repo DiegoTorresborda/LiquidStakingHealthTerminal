@@ -1,4 +1,5 @@
 import type { ModuleName } from "@/config/scoring";
+import type { LstHealthScoringResult } from "@/features/scoring/types";
 
 export type LpAttractivenessLabel = "Strong" | "Medium" | "Cautious" | "Opportunistic";
 
@@ -77,4 +78,5 @@ export type NetworkDetailData = {
   redFlags: DetailRedFlag[];
   stressSnapshot: StressSnapshot;
   miniVisuals?: DetailMiniVisuals;
+  scoring?: LstHealthScoringResult;
 };

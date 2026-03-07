@@ -1,6 +1,10 @@
 import type { Network, NetworkStatus } from "@data/networks";
 
-export type RadarNetwork = Network;
+export type RadarNetwork = Network & {
+  healthScoreRaw: number;
+  healthScorePenaltyPoints: number;
+  healthScoreCapped: number;
+};
 
 export type BinaryFilter = "all" | "yes" | "no";
 

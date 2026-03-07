@@ -24,6 +24,16 @@ Scoring logic should remain configurable.
 
 ---
 
+## Implementation note
+
+This document defines the conceptual framework of the dashboard and the analytical meaning of each module.
+
+The official v1 implementation logic for Health Score is defined in:
+- /docs/scoring-engine-spec.md
+
+If there is any conflict between this framework and the scoring engine spec, the scoring engine spec takes precedence.
+
+
 ## 1. Liquidity & Exit
 
 ### Why it matters

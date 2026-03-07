@@ -3,6 +3,7 @@ import { explicitNetworkDetails } from "@data/network-details";
 import { networks, type Network } from "@data/networks";
 
 import type { DetailModule, NetworkDetailData } from "@/features/network-detail/types";
+import { resolveLpAttractivenessFromScore, scoreNetworkWithMockModel } from "@/features/scoring";
 
 export function getAllNetworkIds(): string[] {
   return networks.map((network) => network.networkId);
@@ -19,11 +20,16 @@ export function getNetworkDetailById(networkId: string): NetworkDetailData | und
     return undefined;
   }
 
-  return explicitNetworkDetails[networkId] ?? buildFallbackDetail(network);
+  const baseDetail = explicitNetworkDetails[networkId] ?? buildFallbackDetail(network);
+  return applyScoring(baseDetail, network);
+}
+
+export function getScoredGlobalHealth(network: Network): number {
+  return scoreNetworkWithMockModel(network).globalScore.finalScore;
 }
 
 function buildFallbackDetail(network: Network): NetworkDetailData {
-  const lpAttractiveness = resolveLpAttractiveness(network.globalLstHealthScore);
+  const lpAttractiveness = resolveLpAttractivenessFromScore(network.globalLstHealthScore);
 
   const modules = MODULE_ORDER.map((moduleName, index) => {
     const score = clamp(Math.round(network.globalLstHealthScore + FALLBACK_MODULE_OFFSETS[index]), 35, 92);
@@ -131,17 +137,35 @@ function buildFallbackDetail(network: Network): NetworkDetailData {
   };
 }
 
+function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetailData {
+  const scoring = scoreNetworkWithMockModel(network);
+
+  const modules = detail.modules.map((module) => {
+    const computedScore = scoring.moduleScores[module.name];
+    return {
+      ...module,
+      score: computedScore.finalScore
+    };
+  });
+
+  const globalHealth = scoring.globalScore.finalScore;
+
+  return {
+    ...detail,
+    summary: {
+      ...detail.summary,
+      globalLstHealthScore: globalHealth,
+      lpAttractiveness: resolveLpAttractivenessFromScore(globalHealth)
+    },
+    modules,
+    scoring
+  };
+}
+
 const FALLBACK_MODULE_OFFSETS = [-4, 2, -5, 3, 1, -1, -2];
 
 function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
-}
-
-function resolveLpAttractiveness(score: number) {
-  if (score >= 75) return "Strong" as const;
-  if (score >= 62) return "Medium" as const;
-  if (score >= 52) return "Cautious" as const;
-  return "Opportunistic" as const;
 }
 
 function resolveContagion(score: number) {

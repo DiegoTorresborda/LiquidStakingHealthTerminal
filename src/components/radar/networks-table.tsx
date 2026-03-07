@@ -172,6 +172,12 @@ export function NetworksTable({
                             <DetailItem label="Stablecoin Liquidity" value={formatUsdFull(network.stablecoinLiquidityUsd)} />
                             <DetailItem label="Lending Presence" value={booleanLabel(network.lendingPresence)} />
                             <DetailItem label="LST as Collateral" value={booleanLabel(network.lstCollateralEnabled)} />
+                            <DetailItem label="Health Score (Raw)" value={`${network.healthScoreRaw}`} />
+                            <DetailItem
+                              label="Health Penalties"
+                              value={network.healthScorePenaltyPoints > 0 ? `-${network.healthScorePenaltyPoints}` : "0"}
+                            />
+                            <DetailItem label="Health Score (Capped)" value={`${network.healthScoreCapped}`} />
                             <DetailItem label="Main Bottleneck" value={network.mainBottleneck} />
                             <DetailItem label="Main Opportunity" value={network.mainOpportunity} />
                             <DetailItem label="Status Tag" value={network.status} />
