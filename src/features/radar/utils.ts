@@ -44,6 +44,8 @@ export function computeKpis(networks: RadarNetwork[]): RadarKpis {
   const avgStakingRatio = count === 0 ? 0 : networks.reduce((sum, network) => sum + network.stakingRatioPct, 0) / count;
   const avgLstPenetration =
     count === 0 ? 0 : networks.reduce((sum, network) => sum + network.lstPenetrationPct, 0) / count;
+  const avgDataCoverage =
+    count === 0 ? 0 : networks.reduce((sum, network) => sum + (network.dataCoveragePct ?? 0), 0) / count;
 
   return {
     trackedNetworks: count,
@@ -51,7 +53,8 @@ export function computeKpis(networks: RadarNetwork[]): RadarKpis {
     totalStakedValueUsd: totalStakedValue,
     avgStakingRatioPct: avgStakingRatio,
     avgLstPenetrationPct: avgLstPenetration,
-    totalDefiTvlUsd: totalDefiTvl
+    totalDefiTvlUsd: totalDefiTvl,
+    avgDataCoveragePct: avgDataCoverage
   };
 }
 
@@ -183,6 +186,8 @@ export function resolveStatusClass(status: NetworkStatus): string {
   }
 }
 
-export function booleanLabel(value: boolean): string {
-  return value ? "Yes" : "No";
+export function booleanLabel(value: boolean | null | undefined): string {
+  if (value === true) return "Yes";
+  if (value === false) return "No";
+  return "Unknown";
 }

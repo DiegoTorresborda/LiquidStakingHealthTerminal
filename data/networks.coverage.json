@@ -1,0 +1,224 @@
+{
+  "generatedAt": "2026-03-07T15:56:19.531Z",
+  "networkCount": 5,
+  "auditedFields": [
+    "marketCapUsd",
+    "circulatingSupply",
+    "priceUsd",
+    "volume24hUsd",
+    "defiTvlUsd",
+    "stablecoinLiquidityUsd",
+    "validatorCount",
+    "stakingRatioPct",
+    "stakingApyPct",
+    "lstTvlUsd",
+    "tvlToMarketCap",
+    "lstPenetrationPct"
+  ],
+  "perNetwork": [
+    {
+      "networkId": "monad",
+      "coveragePct": 58.3,
+      "confidence": "medium",
+      "quality": "inferred",
+      "observedCount": 0,
+      "inferredCount": 7,
+      "missingCount": 5,
+      "observedFields": [],
+      "fallbackFields": [
+        "defiTvlUsd",
+        "stablecoinLiquidityUsd",
+        "validatorCount",
+        "stakingRatioPct",
+        "stakingApyPct",
+        "lstTvlUsd",
+        "lstPenetrationPct"
+      ],
+      "missingFields": [
+        "marketCapUsd",
+        "circulatingSupply",
+        "priceUsd",
+        "volume24hUsd",
+        "tvlToMarketCap"
+      ]
+    },
+    {
+      "networkId": "sei",
+      "coveragePct": 58.3,
+      "confidence": "medium",
+      "quality": "inferred",
+      "observedCount": 0,
+      "inferredCount": 7,
+      "missingCount": 5,
+      "observedFields": [],
+      "fallbackFields": [
+        "defiTvlUsd",
+        "stablecoinLiquidityUsd",
+        "validatorCount",
+        "stakingRatioPct",
+        "stakingApyPct",
+        "lstTvlUsd",
+        "lstPenetrationPct"
+      ],
+      "missingFields": [
+        "marketCapUsd",
+        "circulatingSupply",
+        "priceUsd",
+        "volume24hUsd",
+        "tvlToMarketCap"
+      ]
+    },
+    {
+      "networkId": "sui",
+      "coveragePct": 58.3,
+      "confidence": "medium",
+      "quality": "inferred",
+      "observedCount": 0,
+      "inferredCount": 7,
+      "missingCount": 5,
+      "observedFields": [],
+      "fallbackFields": [
+        "defiTvlUsd",
+        "stablecoinLiquidityUsd",
+        "validatorCount",
+        "stakingRatioPct",
+        "stakingApyPct",
+        "lstTvlUsd",
+        "lstPenetrationPct"
+      ],
+      "missingFields": [
+        "marketCapUsd",
+        "circulatingSupply",
+        "priceUsd",
+        "volume24hUsd",
+        "tvlToMarketCap"
+      ]
+    },
+    {
+      "networkId": "shardeum",
+      "coveragePct": 58.3,
+      "confidence": "medium",
+      "quality": "inferred",
+      "observedCount": 0,
+      "inferredCount": 7,
+      "missingCount": 5,
+      "observedFields": [],
+      "fallbackFields": [
+        "defiTvlUsd",
+        "stablecoinLiquidityUsd",
+        "validatorCount",
+        "stakingRatioPct",
+        "stakingApyPct",
+        "lstTvlUsd",
+        "lstPenetrationPct"
+      ],
+      "missingFields": [
+        "marketCapUsd",
+        "circulatingSupply",
+        "priceUsd",
+        "volume24hUsd",
+        "tvlToMarketCap"
+      ]
+    },
+    {
+      "networkId": "xdc",
+      "coveragePct": 58.3,
+      "confidence": "medium",
+      "quality": "inferred",
+      "observedCount": 0,
+      "inferredCount": 7,
+      "missingCount": 5,
+      "observedFields": [],
+      "fallbackFields": [
+        "defiTvlUsd",
+        "stablecoinLiquidityUsd",
+        "validatorCount",
+        "stakingRatioPct",
+        "stakingApyPct",
+        "lstTvlUsd",
+        "lstPenetrationPct"
+      ],
+      "missingFields": [
+        "marketCapUsd",
+        "circulatingSupply",
+        "priceUsd",
+        "volume24hUsd",
+        "tvlToMarketCap"
+      ]
+    }
+  ],
+  "perField": {
+    "marketCapUsd": {
+      "observed": 0,
+      "inferred": 0,
+      "simulated": 0,
+      "missing": 5
+    },
+    "circulatingSupply": {
+      "observed": 0,
+      "inferred": 0,
+      "simulated": 0,
+      "missing": 5
+    },
+    "priceUsd": {
+      "observed": 0,
+      "inferred": 0,
+      "simulated": 0,
+      "missing": 5
+    },
+    "volume24hUsd": {
+      "observed": 0,
+      "inferred": 0,
+      "simulated": 0,
+      "missing": 5
+    },
+    "defiTvlUsd": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "stablecoinLiquidityUsd": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "validatorCount": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "stakingRatioPct": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "stakingApyPct": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "lstTvlUsd": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    },
+    "tvlToMarketCap": {
+      "observed": 0,
+      "inferred": 0,
+      "simulated": 0,
+      "missing": 5
+    },
+    "lstPenetrationPct": {
+      "observed": 0,
+      "inferred": 5,
+      "simulated": 0,
+      "missing": 0
+    }
+  }
+}
