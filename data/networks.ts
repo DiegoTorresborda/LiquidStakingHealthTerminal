@@ -363,7 +363,18 @@ type CoingeckoBasicsSnapshot = {
   networks: Record<string, CoingeckoNetworkBasics>;
 };
 
-const coingeckoNetworkIds = new Set(["xdc", "monad", "sei", "shardeum", "sui"]);
+const coingeckoNetworkIds = new Set([
+  "xdc",
+  "monad",
+  "sei",
+  "shardeum",
+  "sui",
+  "aptos",
+  "berachain",
+  "core",
+  "mantra",
+  "sonic"
+]);
 
 export const networks: Network[] = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
 

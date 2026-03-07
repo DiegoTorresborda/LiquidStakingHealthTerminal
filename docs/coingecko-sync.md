@@ -9,6 +9,11 @@ Targets:
 - Sei (`sei`)
 - Shardeum (`shardeum`)
 - Sui (`sui`)
+- Aptos (`aptos`)
+- Berachain (`berachain`)
+- Core (`core`)
+- Mantra (`mantra`)
+- Sonic (`sonic`)
 
 Updated fields (when available):
 - `marketCapUsd`
@@ -37,10 +42,10 @@ If CoinGecko does not return a value, the existing base value in `data/networks.
 If you want to inspect CoinGecko's market payload directly (without running the script), use:
 
 ```bash
-curl -s "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=xdce-crowd-sale,sei-network,sui,monad,shardeum&sparkline=false"
+curl -s "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=xdce-crowd-sale,monad,sei-network,shardeum-2,sui,aptos,berachain-bera,coredaoorg,mantra-dao,sonic-3&sparkline=false"
 ```
 
-This includes all current project targets (XDC, Sei, Sui, Monad, Shardeum) in one request.
+This includes all current project targets in one request.
 
 ## Connectivity / API key notes
 
