@@ -15,36 +15,14 @@
     "lstTvlUsd": 380000000,
     "tvlToMarketCap": null,
     "lstPenetrationPct": 0.623,
-    "globalLstHealthScore": 55,
+    "globalLstHealthScore": 71,
     "opportunityScore": 86,
-    "asOf": "2026-03-07T15:56:18.692Z",
+    "asOf": "2026-03-07T15:19:14.811Z",
     "sourceRefs": [
-      "manual-fallback:manual-staking.json",
-      "fallback:coingecko-basics.json",
-      "fallback:dashboard-domain-overrides.json"
+      "manual-fallback:manual-staking.json"
     ],
     "quality": "inferred",
-    "confidence": "medium",
-    "dataCoveragePct": 58.3,
-    "fieldQuality": {
-      "marketCapUsd": "missing",
-      "circulatingSupply": "missing",
-      "priceUsd": "missing",
-      "volume24hUsd": "missing",
-      "defiTvlUsd": "inferred",
-      "stablecoinLiquidityUsd": "inferred",
-      "validatorCount": "inferred",
-      "stakingRatioPct": "inferred",
-      "stakingApyPct": "inferred",
-      "lstTvlUsd": "inferred",
-      "tvlToMarketCap": "missing",
-      "lstPenetrationPct": "inferred"
-    },
-    "inferredScoreComponents": [
-      "Peg Stability",
-      "Security & Governance",
-      "Stress Resilience"
-    ]
+    "confidence": "medium"
   },
   {
     "networkId": "sei",
@@ -62,36 +40,14 @@
     "lstTvlUsd": 210000000,
     "tvlToMarketCap": null,
     "lstPenetrationPct": 0.4667,
-    "globalLstHealthScore": 45,
+    "globalLstHealthScore": 66,
     "opportunityScore": 82,
-    "asOf": "2026-03-07T15:56:18.692Z",
+    "asOf": "2026-03-07T15:19:14.811Z",
     "sourceRefs": [
-      "manual-fallback:manual-staking.json",
-      "fallback:coingecko-basics.json",
-      "fallback:dashboard-domain-overrides.json"
+      "manual-fallback:manual-staking.json"
     ],
     "quality": "inferred",
-    "confidence": "medium",
-    "dataCoveragePct": 58.3,
-    "fieldQuality": {
-      "marketCapUsd": "missing",
-      "circulatingSupply": "missing",
-      "priceUsd": "missing",
-      "volume24hUsd": "missing",
-      "defiTvlUsd": "inferred",
-      "stablecoinLiquidityUsd": "inferred",
-      "validatorCount": "inferred",
-      "stakingRatioPct": "inferred",
-      "stakingApyPct": "inferred",
-      "lstTvlUsd": "inferred",
-      "tvlToMarketCap": "missing",
-      "lstPenetrationPct": "inferred"
-    },
-    "inferredScoreComponents": [
-      "Peg Stability",
-      "Security & Governance",
-      "Stress Resilience"
-    ]
+    "confidence": "medium"
   },
   {
     "networkId": "sui",
@@ -109,36 +65,14 @@
     "lstTvlUsd": 950000000,
     "tvlToMarketCap": null,
     "lstPenetrationPct": 0.9694,
-    "globalLstHealthScore": 62,
+    "globalLstHealthScore": 74,
     "opportunityScore": 68,
-    "asOf": "2026-03-07T15:56:18.692Z",
+    "asOf": "2026-03-07T15:19:14.811Z",
     "sourceRefs": [
-      "manual-fallback:manual-staking.json",
-      "fallback:coingecko-basics.json",
-      "fallback:dashboard-domain-overrides.json"
+      "manual-fallback:manual-staking.json"
     ],
     "quality": "inferred",
-    "confidence": "medium",
-    "dataCoveragePct": 58.3,
-    "fieldQuality": {
-      "marketCapUsd": "missing",
-      "circulatingSupply": "missing",
-      "priceUsd": "missing",
-      "volume24hUsd": "missing",
-      "defiTvlUsd": "inferred",
-      "stablecoinLiquidityUsd": "inferred",
-      "validatorCount": "inferred",
-      "stakingRatioPct": "inferred",
-      "stakingApyPct": "inferred",
-      "lstTvlUsd": "inferred",
-      "tvlToMarketCap": "missing",
-      "lstPenetrationPct": "inferred"
-    },
-    "inferredScoreComponents": [
-      "Peg Stability",
-      "Security & Governance",
-      "Stress Resilience"
-    ]
+    "confidence": "medium"
   },
   {
     "networkId": "shardeum",
@@ -156,36 +90,14 @@
     "lstTvlUsd": 31000000,
     "tvlToMarketCap": null,
     "lstPenetrationPct": 0.4133,
-    "globalLstHealthScore": 35,
+    "globalLstHealthScore": 54,
     "opportunityScore": 92,
-    "asOf": "2026-03-07T15:56:18.692Z",
+    "asOf": "2026-03-07T15:19:14.811Z",
     "sourceRefs": [
-      "manual-fallback:manual-staking.json",
-      "fallback:coingecko-basics.json",
-      "fallback:dashboard-domain-overrides.json"
+      "manual-fallback:manual-staking.json"
     ],
     "quality": "inferred",
-    "confidence": "medium",
-    "dataCoveragePct": 58.3,
-    "fieldQuality": {
-      "marketCapUsd": "missing",
-      "circulatingSupply": "missing",
-      "priceUsd": "missing",
-      "volume24hUsd": "missing",
-      "defiTvlUsd": "inferred",
-      "stablecoinLiquidityUsd": "inferred",
-      "validatorCount": "inferred",
-      "stakingRatioPct": "inferred",
-      "stakingApyPct": "inferred",
-      "lstTvlUsd": "inferred",
-      "tvlToMarketCap": "missing",
-      "lstPenetrationPct": "inferred"
-    },
-    "inferredScoreComponents": [
-      "Peg Stability",
-      "Security & Governance",
-      "Stress Resilience"
-    ]
+    "confidence": "medium"
   },
   {
     "networkId": "xdc",
@@ -203,35 +115,13 @@
     "lstTvlUsd": 72000000,
     "tvlToMarketCap": null,
     "lstPenetrationPct": 0.6,
-    "globalLstHealthScore": 38,
+    "globalLstHealthScore": 58,
     "opportunityScore": 87,
-    "asOf": "2026-03-07T15:56:18.692Z",
+    "asOf": "2026-03-07T15:19:14.811Z",
     "sourceRefs": [
-      "manual-fallback:manual-staking.json",
-      "fallback:coingecko-basics.json",
-      "fallback:dashboard-domain-overrides.json"
+      "manual-fallback:manual-staking.json"
     ],
     "quality": "inferred",
-    "confidence": "medium",
-    "dataCoveragePct": 58.3,
-    "fieldQuality": {
-      "marketCapUsd": "missing",
-      "circulatingSupply": "missing",
-      "priceUsd": "missing",
-      "volume24hUsd": "missing",
-      "defiTvlUsd": "inferred",
-      "stablecoinLiquidityUsd": "inferred",
-      "validatorCount": "inferred",
-      "stakingRatioPct": "inferred",
-      "stakingApyPct": "inferred",
-      "lstTvlUsd": "inferred",
-      "tvlToMarketCap": "missing",
-      "lstPenetrationPct": "inferred"
-    },
-    "inferredScoreComponents": [
-      "Peg Stability",
-      "Security & Governance",
-      "Stress Resilience"
-    ]
+    "confidence": "medium"
   }
 ]

@@ -2,9 +2,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 
-import type { RadarOverviewRecord } from "../src/data/radar-overview-schema.ts";
-
-type FieldDataClass = "observed" | "inferred" | "simulated" | "missing";
+import type { FieldDataClass, RadarOverviewRecord } from "../src/data/radar-overview-schema.ts";
 
 type FieldSummary = Record<string, Record<FieldDataClass, number>>;
 

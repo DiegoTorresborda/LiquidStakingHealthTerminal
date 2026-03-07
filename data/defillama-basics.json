@@ -1,0 +1,126 @@
+{
+  "source": "defillama",
+  "generatedAt": "2026-03-07T15:35:32.442Z",
+  "networks": {
+    "monad": {
+      "status": "ok",
+      "chainName": "Monad",
+      "defiTvlUsd": 484459410.2264387,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 11337147.572781164,
+      "sourceRefs": [
+        "defillama:chains:Monad",
+        "defillama:protocols:category=liquid staking:chain=Monad",
+        "defillama:stablecoins:Monad"
+      ]
+    },
+    "sei": {
+      "status": "ok",
+      "chainName": "Sei",
+      "defiTvlUsd": 62236473.15221357,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 6451631.045966814,
+      "sourceRefs": [
+        "defillama:chains:Sei",
+        "defillama:protocols:category=liquid staking:chain=Sei",
+        "defillama:stablecoins:Sei"
+      ]
+    },
+    "sui": {
+      "status": "ok",
+      "chainName": "Sui",
+      "defiTvlUsd": 878145525.2818415,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 121374485.50014706,
+      "sourceRefs": [
+        "defillama:chains:Sui",
+        "defillama:protocols:category=liquid staking:chain=Sui",
+        "defillama:stablecoins:Sui"
+      ]
+    },
+    "aptos": {
+      "status": "ok",
+      "chainName": "Aptos",
+      "defiTvlUsd": 391011896.0671505,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 44852665.71915338,
+      "sourceRefs": [
+        "defillama:chains:Aptos",
+        "defillama:protocols:category=liquid staking:chain=Aptos",
+        "defillama:stablecoins:Aptos"
+      ]
+    },
+    "berachain": {
+      "status": "ok",
+      "chainName": "Berachain",
+      "defiTvlUsd": 357097238.5421707,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 107911206.21224914,
+      "sourceRefs": [
+        "defillama:chains:Berachain",
+        "defillama:protocols:category=liquid staking:chain=Berachain",
+        "defillama:stablecoins:Berachain"
+      ]
+    },
+    "core": {
+      "status": "ok",
+      "chainName": "CORE",
+      "defiTvlUsd": 29647167.70263146,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 1245884.016208385,
+      "sourceRefs": [
+        "defillama:chains:CORE",
+        "defillama:protocols:category=liquid staking:chain=CORE",
+        "defillama:stablecoins:CORE"
+      ]
+    },
+    "mantra": {
+      "status": "ok",
+      "chainName": "Mantra",
+      "defiTvlUsd": 816418.0487037897,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 5.018070348682618,
+      "sourceRefs": [
+        "defillama:chains:Mantra",
+        "defillama:protocols:category=liquid staking:chain=Mantra",
+        "defillama:stablecoins:Mantra"
+      ]
+    },
+    "sonic": {
+      "status": "ok",
+      "chainName": "Sonic",
+      "defiTvlUsd": 54672371.89940287,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 1513208.5975968023,
+      "sourceRefs": [
+        "defillama:chains:Sonic",
+        "defillama:protocols:category=liquid staking:chain=Sonic",
+        "defillama:stablecoins:Sonic"
+      ]
+    },
+    "xdc": {
+      "status": "ok",
+      "chainName": "XDC",
+      "defiTvlUsd": 11119489.450477717,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": 6191709.216426685,
+      "sourceRefs": [
+        "defillama:chains:XDC",
+        "defillama:protocols:category=liquid staking:chain=XDC",
+        "defillama:stablecoins:XDC"
+      ]
+    },
+    "shardeum": {
+      "status": "missing_chain",
+      "chainName": "Shardeum",
+      "defiTvlUsd": null,
+      "stablecoinLiquidityUsd": null,
+      "lstTvlUsd": null,
+      "sourceRefs": [
+        "defillama:chains:Shardeum",
+        "defillama:protocols:category=liquid staking:chain=Shardeum",
+        "defillama:stablecoins:Shardeum"
+      ]
+    }
+  }
+}

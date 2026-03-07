@@ -1,5 +1,3 @@
-export type FieldDataClass = "observed" | "inferred" | "simulated" | "missing";
-
 export type RadarOverviewRecord = {
   networkId: string;
   network: string;
@@ -22,7 +20,4 @@ export type RadarOverviewRecord = {
   sourceRefs: string[];
   quality: "observed" | "inferred" | "simulated";
   confidence: "high" | "medium" | "low";
-  dataCoveragePct: number;
-  fieldQuality: Record<string, FieldDataClass>;
-  inferredScoreComponents: string[];
 };

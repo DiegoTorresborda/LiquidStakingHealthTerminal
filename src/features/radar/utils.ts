@@ -1,4 +1,5 @@
 import type { NetworkStatus } from "@data/networks";
+import { formatUsdCompactStable } from "@/lib/number-format";
 
 import {
   RadarFilters,
@@ -10,12 +11,7 @@ import {
 } from "@/features/radar/types";
 
 export function formatUsdCompact(value: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 1,
-    notation: "compact"
-  }).format(value);
+  return formatUsdCompactStable(value);
 }
 
 export function formatUsdFull(value: number): string {
