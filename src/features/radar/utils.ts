@@ -40,6 +40,8 @@ export function computeKpis(networks: RadarNetwork[]): RadarKpis {
   const avgStakingRatio = count === 0 ? 0 : networks.reduce((sum, network) => sum + network.stakingRatioPct, 0) / count;
   const avgLstPenetration =
     count === 0 ? 0 : networks.reduce((sum, network) => sum + network.lstPenetrationPct, 0) / count;
+  const avgDataCoverage =
+    count === 0 ? 0 : networks.reduce((sum, network) => sum + (network.dataCoveragePct ?? 0), 0) / count;
 
   return {
     trackedNetworks: count,
@@ -47,7 +49,8 @@ export function computeKpis(networks: RadarNetwork[]): RadarKpis {
     totalStakedValueUsd: totalStakedValue,
     avgStakingRatioPct: avgStakingRatio,
     avgLstPenetrationPct: avgLstPenetration,
-    totalDefiTvlUsd: totalDefiTvl
+    totalDefiTvlUsd: totalDefiTvl,
+    avgDataCoveragePct: avgDataCoverage
   };
 }
 
