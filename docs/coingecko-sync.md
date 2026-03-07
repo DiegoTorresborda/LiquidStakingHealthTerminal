@@ -28,7 +28,7 @@ The command writes snapshot output to:
 
 - `data/coingecko-basics.json`
 
-At runtime, `data/networks.ts` applies CoinGecko overrides only for the five target networks, and only for records with `status: "ok"`.
+At runtime, `data/networks.ts` applies CoinGecko overrides only for the five target networks when a snapshot record is usable (`status: "ok"` or `status: "partial"`).
 
 If CoinGecko does not return a value, the existing base value in `data/networks.ts` is preserved.
 
@@ -41,3 +41,12 @@ curl -s "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=xdce
 ```
 
 This includes all current project targets (XDC, Sei, Sui, Monad, Shardeum) in one request.
+
+## Connectivity / API key notes
+
+If your environment blocks direct access to `api.coingecko.com`, run from your local machine.
+
+You can also configure:
+
+- `COINGECKO_BASE_URL` (custom API base)
+- `COINGECKO_API_KEY` (sent as `x-cg-demo-api-key`)

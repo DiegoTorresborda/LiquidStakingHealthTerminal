@@ -3,8 +3,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const OUTPUT_PATH = new URL("../data/coingecko-basics.json", import.meta.url);
-const COINGECKO_COINS_LIST_URL = "https://api.coingecko.com/api/v3/coins/list?include_platform=false";
-const COINGECKO_MARKETS_URL = "https://api.coingecko.com/api/v3/coins/markets";
+const COINGECKO_BASE_URL = process.env.COINGECKO_BASE_URL ?? "https://api.coingecko.com/api/v3";
+const COINGECKO_COINS_LIST_URL = `${COINGECKO_BASE_URL}/coins/list?include_platform=false`;
+const COINGECKO_MARKETS_URL = `${COINGECKO_BASE_URL}/coins/markets`;
 
 const TARGET_NETWORKS = [
   {
@@ -40,9 +41,11 @@ const TARGET_NETWORKS = [
 ];
 
 async function fetchJson(url) {
+  const apiKey = process.env.COINGECKO_API_KEY;
   const response = await fetch(url, {
     headers: {
-      accept: "application/json"
+      accept: "application/json",
+      ...(apiKey ? { "x-cg-demo-api-key": apiKey } : {})
     }
   });
 
@@ -52,6 +55,18 @@ async function fetchJson(url) {
   }
 
   return response.json();
+}
+
+function resolveStatus(record) {
+  if (record.marketCapUsd !== null && record.fdvUsd !== null && record.circulatingSupply !== null) {
+    return "ok";
+  }
+
+  if (record.marketCapUsd !== null || record.fdvUsd !== null || record.circulatingSupply !== null) {
+    return "partial";
+  }
+
+  return "missing_market_data";
 }
 
 function buildCoinIndexes(coinsList) {
@@ -172,14 +187,18 @@ async function main() {
       continue;
     }
 
-    snapshot.networks[item.networkId] = {
-      status: "ok",
+    const record = {
       coinId: item.coinId,
       symbol: String(market.symbol || item.symbol).toUpperCase(),
       marketCapUsd: toNumberOrNull(market.market_cap),
       fdvUsd: toNumberOrNull(market.fully_diluted_valuation),
       circulatingSupply: toNumberOrNull(market.circulating_supply),
       circulatingSupplyPct: computeCirculatingSupplyPct(market)
+    };
+
+    snapshot.networks[item.networkId] = {
+      status: resolveStatus(record),
+      ...record
     };
   }
 
@@ -205,5 +224,8 @@ async function main() {
 
 main().catch((error) => {
   console.error("[sync-coingecko-basics] Failed:", error);
+  console.error(
+    "[sync-coingecko-basics] Tip: if your environment blocks api.coingecko.com, run locally or set COINGECKO_BASE_URL/COINGECKO_API_KEY."
+  );
   process.exitCode = 1;
 });

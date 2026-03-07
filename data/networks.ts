@@ -347,7 +347,7 @@ const baseNetworks: Network[] = [
 ];
 
 type CoingeckoNetworkBasics = {
-  status: "ok" | "missing_coin_id" | "missing_market_data";
+  status: "ok" | "partial" | "missing_coin_id" | "missing_market_data";
   coinId: string | null;
   symbol: string;
   marketCapUsd: number | null;
@@ -379,7 +379,7 @@ function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnap
 
     const basics = snapshot.networks[network.networkId];
 
-    if (!basics || basics.status !== "ok") {
+    if (!basics || basics.status === "missing_coin_id" || basics.status === "missing_market_data") {
       return network;
     }
 
