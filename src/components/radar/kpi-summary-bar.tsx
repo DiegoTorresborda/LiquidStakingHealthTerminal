@@ -33,6 +33,11 @@ export function KpiSummaryBar({ kpis }: KpiSummaryBarProps) {
       accent: "border-[#7baff5]/35 bg-[#7baff5]/12 text-[#a9ceff]"
     },
     {
+      label: "Avg Data Coverage",
+      value: formatPercent(kpis.avgDataCoveragePct),
+      accent: "border-[#7baff5]/35 bg-[#7baff5]/12 text-[#a9ceff]"
+    },
+    {
       label: "Total DeFi TVL",
       value: formatUsdCompact(kpis.totalDefiTvlUsd),
       accent: "border-ink-300/30 bg-ink-900/25 text-ink-50"
@@ -41,7 +46,7 @@ export function KpiSummaryBar({ kpis }: KpiSummaryBarProps) {
 
   return (
     <section>
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-6">
+      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-7">
         {cards.map((card) => (
           <article key={card.label} className="rounded-xl border border-ink-300/20 bg-slateglass-600/60 p-4 shadow-card">
             <p className="text-xs uppercase tracking-[0.16em] text-ink-300">{card.label}</p>

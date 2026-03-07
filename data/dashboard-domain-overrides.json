@@ -1,0 +1,71 @@
+{
+  "source": "manual-domain-overrides",
+  "generatedAt": "2026-03-07T00:00:00.000Z",
+  "networks": {
+    "monad": {
+      "stakingRatioPct": 48,
+      "stakingApyPct": 8.1,
+      "stakerAddresses": 142000,
+      "validatorCount": 132,
+      "lstProtocols": 2,
+      "largestLst": "stMON",
+      "lstTvlUsd": 380000000,
+      "defiTvlUsd": 610000000,
+      "stablecoinLiquidityUsd": 210000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": true
+    },
+    "sei": {
+      "stakingRatioPct": 52,
+      "stakingApyPct": 7.4,
+      "stakerAddresses": 185000,
+      "validatorCount": 85,
+      "lstProtocols": 2,
+      "largestLst": "stSEI",
+      "lstTvlUsd": 210000000,
+      "defiTvlUsd": 450000000,
+      "stablecoinLiquidityUsd": 140000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": false
+    },
+    "sui": {
+      "stakingRatioPct": 62,
+      "stakingApyPct": 5.9,
+      "stakerAddresses": 210000,
+      "validatorCount": 107,
+      "lstProtocols": 3,
+      "largestLst": "stSUI",
+      "lstTvlUsd": 950000000,
+      "defiTvlUsd": 980000000,
+      "stablecoinLiquidityUsd": 420000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": true
+    },
+    "xdc": {
+      "stakingRatioPct": 38,
+      "stakingApyPct": 6.8,
+      "stakerAddresses": 61000,
+      "validatorCount": 108,
+      "lstProtocols": 1,
+      "largestLst": "stXDC",
+      "lstTvlUsd": 72000000,
+      "defiTvlUsd": 120000000,
+      "stablecoinLiquidityUsd": 46000000,
+      "lendingPresence": false,
+      "lstCollateralEnabled": false
+    },
+    "shardeum": {
+      "stakingRatioPct": 41,
+      "stakingApyPct": 9.8,
+      "stakerAddresses": 42000,
+      "validatorCount": 78,
+      "lstProtocols": 1,
+      "largestLst": "stSHM",
+      "lstTvlUsd": 31000000,
+      "defiTvlUsd": 75000000,
+      "stablecoinLiquidityUsd": 21000000,
+      "lendingPresence": false,
+      "lstCollateralEnabled": false
+    }
+  }
+}

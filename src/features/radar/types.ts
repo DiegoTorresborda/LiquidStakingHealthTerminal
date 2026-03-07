@@ -42,6 +42,7 @@ export type RadarKpis = {
   avgStakingRatioPct: number;
   avgLstPenetrationPct: number;
   totalDefiTvlUsd: number;
+  avgDataCoveragePct: number;
 };
 
 export const DEFAULT_SORT: SortState = {
