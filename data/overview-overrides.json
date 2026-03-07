@@ -1,0 +1,130 @@
+{
+  "source": "overview-merge",
+  "generatedAt": "2026-03-07T14:49:47.090Z",
+  "inputs": {
+    "coingeckoGeneratedAt": "1970-01-01T00:00:00.000Z",
+    "domainGeneratedAt": "2026-03-07T00:00:00.000Z"
+  },
+  "networks": {
+    "xdc": {
+      "sourceStatus": {
+        "coingecko": "missing_market_data",
+        "domain": "ok"
+      },
+      "marketCapUsd": null,
+      "fdvUsd": null,
+      "circulatingSupply": null,
+      "circulatingSupplyPct": null,
+      "stakingRatioPct": 38,
+      "stakingApyPct": 6.8,
+      "stakerAddresses": 61000,
+      "validatorCount": 108,
+      "stakedValueUsd": null,
+      "lstProtocols": 1,
+      "largestLst": "stXDC",
+      "lstTvlUsd": 72000000,
+      "lstPenetrationPct": null,
+      "defiTvlUsd": 120000000,
+      "tvlToMcapPct": null,
+      "stablecoinLiquidityUsd": 46000000,
+      "lendingPresence": false,
+      "lstCollateralEnabled": false
+    },
+    "monad": {
+      "sourceStatus": {
+        "coingecko": "missing_market_data",
+        "domain": "ok"
+      },
+      "marketCapUsd": null,
+      "fdvUsd": null,
+      "circulatingSupply": null,
+      "circulatingSupplyPct": null,
+      "stakingRatioPct": 48,
+      "stakingApyPct": 8.1,
+      "stakerAddresses": 142000,
+      "validatorCount": 132,
+      "stakedValueUsd": null,
+      "lstProtocols": 2,
+      "largestLst": "stMON",
+      "lstTvlUsd": 380000000,
+      "lstPenetrationPct": null,
+      "defiTvlUsd": 610000000,
+      "tvlToMcapPct": null,
+      "stablecoinLiquidityUsd": 210000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": true
+    },
+    "sei": {
+      "sourceStatus": {
+        "coingecko": "missing_market_data",
+        "domain": "ok"
+      },
+      "marketCapUsd": null,
+      "fdvUsd": null,
+      "circulatingSupply": null,
+      "circulatingSupplyPct": null,
+      "stakingRatioPct": 52,
+      "stakingApyPct": 7.4,
+      "stakerAddresses": 185000,
+      "validatorCount": 85,
+      "stakedValueUsd": null,
+      "lstProtocols": 2,
+      "largestLst": "stSEI",
+      "lstTvlUsd": 210000000,
+      "lstPenetrationPct": null,
+      "defiTvlUsd": 450000000,
+      "tvlToMcapPct": null,
+      "stablecoinLiquidityUsd": 140000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": false
+    },
+    "shardeum": {
+      "sourceStatus": {
+        "coingecko": "missing_market_data",
+        "domain": "ok"
+      },
+      "marketCapUsd": null,
+      "fdvUsd": null,
+      "circulatingSupply": null,
+      "circulatingSupplyPct": null,
+      "stakingRatioPct": 41,
+      "stakingApyPct": 9.8,
+      "stakerAddresses": 42000,
+      "validatorCount": 78,
+      "stakedValueUsd": null,
+      "lstProtocols": 1,
+      "largestLst": "stSHM",
+      "lstTvlUsd": 31000000,
+      "lstPenetrationPct": null,
+      "defiTvlUsd": 75000000,
+      "tvlToMcapPct": null,
+      "stablecoinLiquidityUsd": 21000000,
+      "lendingPresence": false,
+      "lstCollateralEnabled": false
+    },
+    "sui": {
+      "sourceStatus": {
+        "coingecko": "missing_market_data",
+        "domain": "ok"
+      },
+      "marketCapUsd": null,
+      "fdvUsd": null,
+      "circulatingSupply": null,
+      "circulatingSupplyPct": null,
+      "stakingRatioPct": 62,
+      "stakingApyPct": 5.9,
+      "stakerAddresses": 210000,
+      "validatorCount": 107,
+      "stakedValueUsd": null,
+      "lstProtocols": 3,
+      "largestLst": "stSUI",
+      "lstTvlUsd": 950000000,
+      "lstPenetrationPct": null,
+      "defiTvlUsd": 980000000,
+      "tvlToMcapPct": null,
+      "stablecoinLiquidityUsd": 420000000,
+      "lendingPresence": true,
+      "lstCollateralEnabled": true
+    }
+  }
+}
