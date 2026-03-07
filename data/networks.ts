@@ -1,3 +1,5 @@
+import coingeckoBasics from "./coingecko-basics.json";
+
 export type NetworkCategory =
   | "High-performance EVM L1"
   | "High-throughput trading L1"
@@ -51,7 +53,7 @@ export type Network = {
   status: NetworkStatus;
 };
 
-export const networks: Network[] = [
+const baseNetworks: Network[] = [
   {
     networkId: "monad",
     network: "Monad",
@@ -343,3 +345,50 @@ export const networks: Network[] = [
     status: "Emerging"
   }
 ];
+
+type CoingeckoNetworkBasics = {
+  status: "ok" | "missing_coin_id" | "missing_market_data";
+  coinId: string | null;
+  symbol: string;
+  marketCapUsd: number | null;
+  fdvUsd: number | null;
+  circulatingSupply: number | null;
+  circulatingSupplyPct: number | null;
+};
+
+type CoingeckoBasicsSnapshot = {
+  source: string;
+  generatedAt: string;
+  vsCurrency: string;
+  networks: Record<string, CoingeckoNetworkBasics>;
+};
+
+const coingeckoNetworkIds = new Set(["xdc", "monad", "sei", "shardeum", "sui"]);
+
+export const networks: Network[] = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
+
+function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnapshot): Network[] {
+  if (!snapshot || snapshot.source !== "coingecko") {
+    return networks;
+  }
+
+  return networks.map((network) => {
+    if (!coingeckoNetworkIds.has(network.networkId)) {
+      return network;
+    }
+
+    const basics = snapshot.networks[network.networkId];
+
+    if (!basics || basics.status !== "ok") {
+      return network;
+    }
+
+    return {
+      ...network,
+      marketCapUsd: basics.marketCapUsd ?? network.marketCapUsd,
+      fdvUsd: basics.fdvUsd ?? network.fdvUsd,
+      circulatingSupply: basics.circulatingSupply ?? network.circulatingSupply,
+      circulatingSupplyPct: basics.circulatingSupplyPct ?? network.circulatingSupplyPct
+    };
+  });
+}
