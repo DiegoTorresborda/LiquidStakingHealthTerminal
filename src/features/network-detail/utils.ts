@@ -4,14 +4,10 @@ import type {
   DetailRedFlag,
   LpAttractivenessLabel
 } from "@/features/network-detail/types";
+import { formatUsdCompactStable } from "@/lib/number-format";
 
 export function formatUsdCompact(value: number): string {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 1,
-    notation: "compact"
-  }).format(value);
+  return formatUsdCompactStable(value);
 }
 
 export function formatUsd(value: number): string {

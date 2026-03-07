@@ -1,52 +1,97 @@
 {
   "source": "coingecko",
-  "generatedAt": "1970-01-01T00:00:00.000Z",
+  "generatedAt": "2026-03-07T14:16:42.319Z",
   "vsCurrency": "usd",
   "networks": {
     "xdc": {
-      "status": "missing_market_data",
+      "status": "ok",
       "coinId": "xdce-crowd-sale",
       "symbol": "XDC",
-      "marketCapUsd": null,
-      "fdvUsd": null,
-      "circulatingSupply": null,
-      "circulatingSupplyPct": null
+      "marketCapUsd": 658968381,
+      "fdvUsd": 1257871101,
+      "circulatingSupply": 19936228172.82,
+      "circulatingSupplyPct": 52.39
     },
     "monad": {
-      "status": "missing_market_data",
+      "status": "ok",
       "coinId": "monad",
       "symbol": "MON",
-      "marketCapUsd": null,
-      "fdvUsd": null,
-      "circulatingSupply": null,
-      "circulatingSupplyPct": null
+      "marketCapUsd": 240723750,
+      "fdvUsd": 2222629580,
+      "circulatingSupply": 10830583396,
+      "circulatingSupplyPct": 10.83
     },
     "sei": {
-      "status": "missing_market_data",
+      "status": "ok",
       "coinId": "sei-network",
       "symbol": "SEI",
-      "marketCapUsd": null,
-      "fdvUsd": null,
-      "circulatingSupply": null,
-      "circulatingSupplyPct": null
+      "marketCapUsd": 441525201,
+      "fdvUsd": 655730497,
+      "circulatingSupply": 6733333333,
+      "circulatingSupplyPct": 67.33
     },
     "shardeum": {
-      "status": "missing_market_data",
-      "coinId": "shardeum",
+      "status": "ok",
+      "coinId": "shardeum-2",
       "symbol": "SHM",
-      "marketCapUsd": null,
-      "fdvUsd": null,
-      "circulatingSupply": null,
-      "circulatingSupplyPct": null
+      "marketCapUsd": 844052,
+      "fdvUsd": 5243550,
+      "circulatingSupply": 9673430908,
+      "circulatingSupplyPct": 16.1
     },
     "sui": {
-      "status": "missing_market_data",
+      "status": "ok",
       "coinId": "sui",
       "symbol": "SUI",
-      "marketCapUsd": null,
-      "fdvUsd": null,
-      "circulatingSupply": null,
-      "circulatingSupplyPct": null
+      "marketCapUsd": 3501427884,
+      "fdvUsd": 8978055465,
+      "circulatingSupply": 3899984688.415443,
+      "circulatingSupplyPct": 39
+    },
+    "aptos": {
+      "status": "ok",
+      "coinId": "aptos",
+      "symbol": "APT",
+      "marketCapUsd": 736872540,
+      "fdvUsd": 1130881963,
+      "circulatingSupply": 781007635.3399565,
+      "circulatingSupplyPct": 65.16
+    },
+    "berachain": {
+      "status": "ok",
+      "coinId": "berachain-bera",
+      "symbol": "BERA",
+      "marketCapUsd": 124831305,
+      "fdvUsd": 291601522,
+      "circulatingSupply": 228662269.453529,
+      "circulatingSupplyPct": 42.81
+    },
+    "core": {
+      "status": "ok",
+      "coinId": "coredaoorg",
+      "symbol": "CORE",
+      "marketCapUsd": 86243966,
+      "fdvUsd": 168566838,
+      "circulatingSupply": 1074424427.334762,
+      "circulatingSupplyPct": 51.16
+    },
+    "mantra": {
+      "status": "ok",
+      "coinId": "mantra-dao",
+      "symbol": "OM",
+      "marketCapUsd": 164106319,
+      "fdvUsd": 242868856,
+      "circulatingSupply": 4770424199.972451,
+      "circulatingSupplyPct": 67.57
+    },
+    "sonic": {
+      "status": "ok",
+      "coinId": "sonic-3",
+      "symbol": "S",
+      "marketCapUsd": 148190901,
+      "fdvUsd": 152134611,
+      "circulatingSupply": 3784775845,
+      "circulatingSupplyPct": 97.41
     }
   }
 }

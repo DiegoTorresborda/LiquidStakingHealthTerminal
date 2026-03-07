@@ -1,6 +1,4 @@
 import coingeckoBasics from "./coingecko-basics.json";
-import overviewOverrides from "./overview-overrides.json";
-import generatedOverview from "./networks.generated.json";
 
 export type NetworkCategory =
   | "High-performance EVM L1"
@@ -371,43 +369,20 @@ type CoingeckoBasicsSnapshot = {
   networks: Record<string, CoingeckoNetworkBasics>;
 };
 
-const coingeckoNetworkIds = new Set(["xdc", "monad", "sei", "shardeum", "sui"]);
+const coingeckoNetworkIds = new Set([
+  "xdc",
+  "monad",
+  "sei",
+  "shardeum",
+  "sui",
+  "aptos",
+  "berachain",
+  "core",
+  "mantra",
+  "sonic"
+]);
 
-type OverviewOverrideRecord = {
-  marketCapUsd: number | null;
-  fdvUsd: number | null;
-  circulatingSupply: number | null;
-  circulatingSupplyPct: number | null;
-  stakingRatioPct: number | null;
-  stakingApyPct: number | null;
-  stakerAddresses: number | null;
-  validatorCount: number | null;
-  stakedValueUsd: number | null;
-  lstProtocols: number | null;
-  largestLst: string | null;
-  lstTvlUsd: number | null;
-  lstPenetrationPct: number | null;
-  defiTvlUsd: number | null;
-  tvlToMcapPct: number | null;
-  stablecoinLiquidityUsd: number | null;
-  lendingPresence: boolean | null;
-  lstCollateralEnabled: boolean | null;
-};
-
-type OverviewOverridesSnapshot = {
-  source: string;
-  generatedAt: string;
-  networks: Record<string, OverviewOverrideRecord>;
-};
-
-const networksWithCoingecko = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
-
-const networksWithOverviewOverrides: Network[] = applyOverviewOverrides(
-  networksWithCoingecko,
-  overviewOverrides as OverviewOverridesSnapshot
-);
-
-export const networks: Network[] = applyGeneratedOverview(networksWithOverviewOverrides, generatedOverview as RadarOverviewRecord[]);
+export const networks: Network[] = applyCoingeckoBasics(baseNetworks, coingeckoBasics as CoingeckoBasicsSnapshot);
 
 function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnapshot): Network[] {
   if (!snapshot || snapshot.source !== "coingecko") {
@@ -431,100 +406,6 @@ function applyCoingeckoBasics(networks: Network[], snapshot: CoingeckoBasicsSnap
       fdvUsd: basics.fdvUsd ?? network.fdvUsd,
       circulatingSupply: basics.circulatingSupply ?? network.circulatingSupply,
       circulatingSupplyPct: basics.circulatingSupplyPct ?? network.circulatingSupplyPct
-    };
-  });
-}
-
-function applyOverviewOverrides(networks: Network[], snapshot: OverviewOverridesSnapshot): Network[] {
-  if (!snapshot || snapshot.source !== "overview-merge") {
-    return networks;
-  }
-
-  return networks.map((network) => {
-    const override = snapshot.networks[network.networkId];
-
-    if (!override) {
-      return network;
-    }
-
-    return {
-      ...network,
-      marketCapUsd: override.marketCapUsd ?? network.marketCapUsd,
-      fdvUsd: override.fdvUsd ?? network.fdvUsd,
-      circulatingSupply: override.circulatingSupply ?? network.circulatingSupply,
-      circulatingSupplyPct: override.circulatingSupplyPct ?? network.circulatingSupplyPct,
-      stakingRatioPct: override.stakingRatioPct ?? network.stakingRatioPct,
-      stakingApyPct: override.stakingApyPct ?? network.stakingApyPct,
-      stakerAddresses: override.stakerAddresses ?? network.stakerAddresses,
-      validatorCount: override.validatorCount ?? network.validatorCount,
-      stakedValueUsd: override.stakedValueUsd ?? network.stakedValueUsd,
-      lstProtocols: override.lstProtocols ?? network.lstProtocols,
-      largestLst: override.largestLst ?? network.largestLst,
-      lstTvlUsd: override.lstTvlUsd ?? network.lstTvlUsd,
-      lstPenetrationPct: override.lstPenetrationPct ?? network.lstPenetrationPct,
-      defiTvlUsd: override.defiTvlUsd ?? network.defiTvlUsd,
-      tvlToMcapPct: override.tvlToMcapPct ?? network.tvlToMcapPct,
-      stablecoinLiquidityUsd: override.stablecoinLiquidityUsd ?? network.stablecoinLiquidityUsd,
-      lendingPresence: override.lendingPresence ?? network.lendingPresence,
-      lstCollateralEnabled: override.lstCollateralEnabled ?? network.lstCollateralEnabled
-    };
-  });
-}
-
-
-type RadarOverviewRecord = {
-  networkId: string;
-  marketCapUsd: number | null;
-  circulatingSupply: number | null;
-  priceUsd: number | null;
-  volume24hUsd: number | null;
-  defiTvlUsd: number | null;
-  stablecoinLiquidityUsd: number | null;
-  validatorCount: number | null;
-  stakingRatioPct: number | null;
-  stakingApyPct: number | null;
-  lstTvlUsd: number | null;
-  tvlToMarketCap: number | null;
-  lstPenetrationPct: number | null;
-  globalLstHealthScore: number;
-  opportunityScore: number;
-  asOf: string;
-  sourceRefs: string[];
-  quality: "observed" | "inferred" | "simulated";
-  confidence: "high" | "medium" | "low";
-};
-
-function applyGeneratedOverview(networks: Network[], records: RadarOverviewRecord[]): Network[] {
-  const byId = new Map(records.map((record) => [record.networkId, record]));
-
-  return networks.map((network) => {
-    const record = byId.get(network.networkId);
-
-    if (!record) {
-      return network;
-    }
-
-    return {
-      ...network,
-      marketCapUsd: record.marketCapUsd ?? network.marketCapUsd,
-      circulatingSupply: record.circulatingSupply ?? network.circulatingSupply,
-      priceUsd: record.priceUsd,
-      volume24hUsd: record.volume24hUsd,
-      defiTvlUsd: record.defiTvlUsd ?? network.defiTvlUsd,
-      stablecoinLiquidityUsd: record.stablecoinLiquidityUsd ?? network.stablecoinLiquidityUsd,
-      validatorCount: record.validatorCount ?? network.validatorCount,
-      stakingRatioPct: record.stakingRatioPct ?? network.stakingRatioPct,
-      stakingApyPct: record.stakingApyPct ?? network.stakingApyPct,
-      lstTvlUsd: record.lstTvlUsd ?? network.lstTvlUsd,
-      tvlToMcapPct: record.tvlToMarketCap !== null ? Number((record.tvlToMarketCap * 100).toFixed(2)) : network.tvlToMcapPct,
-      lstPenetrationPct:
-        record.lstPenetrationPct !== null ? Number((record.lstPenetrationPct * 100).toFixed(2)) : network.lstPenetrationPct,
-      globalLstHealthScore: record.globalLstHealthScore ?? network.globalLstHealthScore,
-      opportunityScore: record.opportunityScore ?? network.opportunityScore,
-      asOf: record.asOf,
-      sourceRefs: record.sourceRefs,
-      quality: record.quality,
-      confidence: record.confidence
     };
   });
 }
