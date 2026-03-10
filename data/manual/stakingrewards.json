@@ -1,0 +1,80 @@
+{
+  "sui": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.97,
+    "rewardRatePct": 1.73,
+    "stakingRatioPct": 74.89,
+    "stakingMarketCapUsd": 7270000000,
+    "stakedTokens": 7490000000,
+    "inflationRatePct": 3.33,
+    "validators": 128,
+    "verifiedProviders": 23,
+    "benchmarkCommissionPct": 6.51
+  },
+  "sei": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.06,
+    "rewardRatePct": 7.14,
+    "stakingRatioPct": 37.68,
+    "stakingMarketCapUsd": 243830000,
+    "stakedTokens": 3770000000,
+    "inflationRatePct": 3.99,
+    "validators": 40,
+    "verifiedProviders": 12,
+    "benchmarkCommissionPct": 5
+  },
+  "mantra": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.02,
+    "rewardRatePct": 18.58,
+    "stakingRatioPct": 27.88,
+    "stakingMarketCapUsd": 36080000,
+    "stakedTokens": 1970000000,
+    "inflationRatePct": 12.74,
+    "validators": 38,
+    "verifiedProviders": 4,
+    "benchmarkCommissionPct": 4.26
+  },
+  "xdc": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.03,
+    "rewardRatePct": 10,
+    "stakingRatioPct": 12.84,
+    "stakingMarketCapUsd": 82430000,
+    "stakedTokens": 2560000000,
+    "inflationRatePct": 1.28,
+    "validators": 108,
+    "verifiedProviders": 0,
+    "benchmarkCommissionPct": 0
+  },
+  "aptos": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.98,
+    "rewardRatePct": 7,
+    "stakingRatioPct": 98.16,
+    "stakingMarketCapUsd": 815170000,
+    "stakedTokens": 832850000,
+    "inflationRatePct": 7.46,
+    "validators": 119,
+    "verifiedProviders": 11,
+    "benchmarkCommissionPct": 8.75
+  },
+  "monad": {
+    "source": "stakingrewards",
+    "timestamp": "2026-03-10",
+    "price": 0.02,
+    "rewardRatePct": 16.01,
+    "stakingRatioPct": 12.36,
+    "stakingMarketCapUsd": 268560000,
+    "stakedTokens": 12360000000,
+    "inflationRatePct": 1.98,
+    "validators": 169,
+    "verifiedProviders": 34,
+    "benchmarkCommissionPct": 15.73
+  }
+}

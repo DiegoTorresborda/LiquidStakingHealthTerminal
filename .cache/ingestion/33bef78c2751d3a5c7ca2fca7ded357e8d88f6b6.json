@@ -1,0 +1,2337 @@
+{
+  "cachedAt": 1773156675739,
+  "data": [
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0x659bd0bc4167ba25c62e05656f78043e7ed4a9da",
+      "pairAddress": "0x659bD0BC4167BA25c62E05656F78043E7eD4a9da",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02197",
+      "priceUsd": "0.02197",
+      "txns": {
+        "m5": {
+          "buys": 6,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 147,
+          "sells": 47
+        },
+        "h6": {
+          "buys": 301,
+          "sells": 269
+        },
+        "h24": {
+          "buys": 995,
+          "sells": 850
+        }
+      },
+      "volume": {
+        "h24": 978448.96,
+        "h6": 328781.79,
+        "h1": 124878.53,
+        "m5": 1519.54
+      },
+      "priceChange": {
+        "m5": 0.05,
+        "h1": 1.85,
+        "h6": 0.38,
+        "h24": 3.12
+      },
+      "liquidity": {
+        "usd": 1426932.13,
+        "base": 32105216,
+        "quote": 721454
+      },
+      "fdv": 9003406,
+      "marketCap": 9003406,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/monad/0x63e48b725540a3db24acf6682a29f877808c53f2",
+      "pairAddress": "0x63e48B725540A3Db24ACF6682a29f877808C53F2",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02202",
+      "priceUsd": "0.02202",
+      "txns": {
+        "m5": {
+          "buys": 18,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 424,
+          "sells": 360
+        },
+        "h6": {
+          "buys": 1513,
+          "sells": 1324
+        },
+        "h24": {
+          "buys": 4846,
+          "sells": 4424
+        }
+      },
+      "volume": {
+        "h24": 2110163.94,
+        "h6": 702130.84,
+        "h1": 205951.34,
+        "m5": 4448.76
+      },
+      "priceChange": {
+        "m5": 0.27,
+        "h1": 1.87,
+        "h6": 0.74,
+        "h24": 3.45
+      },
+      "liquidity": {
+        "usd": 584679.3,
+        "base": 11686618,
+        "quote": 327234
+      },
+      "fdv": 9029263,
+      "marketCap": 9029263,
+      "pairCreatedAt": 1763952926000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "traderjoe",
+      "url": "https://dexscreener.com/monad/0x5afd3ec861f6104af26e8755abcc1f876de77620",
+      "pairAddress": "0x5AFD3EC861f6104af26e8755aBcc1f876de77620",
+      "labels": [
+        "v2.2"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02202",
+      "priceUsd": "0.02202",
+      "txns": {
+        "m5": {
+          "buys": 11,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 247,
+          "sells": 165
+        },
+        "h6": {
+          "buys": 845,
+          "sells": 777
+        },
+        "h24": {
+          "buys": 2874,
+          "sells": 2701
+        }
+      },
+      "volume": {
+        "h24": 950885.51,
+        "h6": 211798.7,
+        "h1": 45079.17,
+        "m5": 1148.95
+      },
+      "priceChange": {
+        "m5": 0.25,
+        "h1": 1.87,
+        "h6": 0.8,
+        "h24": 3.41
+      },
+      "liquidity": {
+        "usd": 98124.14,
+        "base": 1761195,
+        "quote": 59335
+      },
+      "fdv": 9019545,
+      "marketCap": 9019545,
+      "pairCreatedAt": 1768410146000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/monad/0xb9897986847472cd08b9a0e7bcd31ea4f1322361",
+      "pairAddress": "0xB9897986847472Cd08B9A0E7BCd31EA4F1322361",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02199",
+      "priceUsd": "0.02199",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 26,
+          "sells": 10
+        },
+        "h24": {
+          "buys": 71,
+          "sells": 20
+        }
+      },
+      "volume": {
+        "h24": 1077.34,
+        "h6": 427.61,
+        "h1": 297.56,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.58,
+        "h6": 1.19,
+        "h24": 3.67
+      },
+      "liquidity": {
+        "usd": 74768.99,
+        "base": 1776852,
+        "quote": 35686
+      },
+      "fdv": 9015519,
+      "marketCap": 9015519,
+      "pairCreatedAt": 1763990384000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "traderjoe",
+      "url": "https://dexscreener.com/monad/0x5e60bc3f7a7303bc4dfe4dc2220bdc90bc04fe22",
+      "pairAddress": "0x5E60BC3F7a7303BC4dfE4dc2220bdC90bc04fE22",
+      "labels": [
+        "v2.2"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02201",
+      "priceUsd": "0.02201",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 92,
+          "sells": 55
+        },
+        "h6": {
+          "buys": 256,
+          "sells": 245
+        },
+        "h24": {
+          "buys": 845,
+          "sells": 784
+        }
+      },
+      "volume": {
+        "h24": 5449.45,
+        "h6": 1678.1,
+        "h1": 555.37,
+        "m5": 7.18
+      },
+      "priceChange": {
+        "m5": 0.1,
+        "h1": 1.82,
+        "h6": 0.8,
+        "h24": 3.35
+      },
+      "liquidity": {
+        "usd": 57114.27,
+        "base": 2313209,
+        "quote": 6200.5011
+      },
+      "fdv": 9013774,
+      "marketCap": 9013774,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0x16d564690d32802a0562b4a8a2378350525b365f",
+      "pairAddress": "0x16D564690D32802A0562B4A8A2378350525b365F",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+        "name": "USDT0",
+        "symbol": "USDT0"
+      },
+      "priceNative": "0.02196",
+      "priceUsd": "0.02196",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 65,
+          "sells": 22
+        },
+        "h6": {
+          "buys": 106,
+          "sells": 110
+        },
+        "h24": {
+          "buys": 370,
+          "sells": 307
+        }
+      },
+      "volume": {
+        "h24": 35804.77,
+        "h6": 13330.41,
+        "h1": 5223.47,
+        "m5": 127.32
+      },
+      "priceChange": {
+        "m5": 0.1,
+        "h1": 1.83,
+        "h6": 0.34,
+        "h24": 3.09
+      },
+      "liquidity": {
+        "usd": 23186.28,
+        "base": 340530,
+        "quote": 15705
+      },
+      "fdv": 9000870,
+      "marketCap": 9000870,
+      "pairCreatedAt": 1764015079000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/monad/0x85717a98d195c9306bbf7c9523ba71f044fea0f7",
+      "pairAddress": "0x85717A98d195c9306BBf7c9523Ba71F044Fea0f7",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02196",
+      "priceUsd": "0.02196",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 8
+        },
+        "h6": {
+          "buys": 44,
+          "sells": 37
+        },
+        "h24": {
+          "buys": 161,
+          "sells": 108
+        }
+      },
+      "volume": {
+        "h24": 963.69,
+        "h6": 341.37,
+        "h1": 134.19,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.78,
+        "h6": 0.24,
+        "h24": 3.2
+      },
+      "liquidity": {
+        "usd": 28801.65,
+        "base": 646061,
+        "quote": 14611
+      },
+      "fdv": 9002611,
+      "marketCap": 9002611,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "monday-trade",
+      "url": "https://dexscreener.com/monad/0x8f889ba499c0a176fb8f233d9d35b1c132eb868c",
+      "pairAddress": "0x8f889BA499C0A176Fb8F233D9D35b1c132eB868C",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02199",
+      "priceUsd": "0.02199",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 45,
+          "sells": 26
+        },
+        "h6": {
+          "buys": 158,
+          "sells": 102
+        },
+        "h24": {
+          "buys": 547,
+          "sells": 246
+        }
+      },
+      "volume": {
+        "h24": 2392,
+        "h6": 1180.08,
+        "h1": 308.3,
+        "m5": 3.07
+      },
+      "priceChange": {
+        "m5": 0.15,
+        "h1": 1.82,
+        "h6": 0.58,
+        "h24": 3.55
+      },
+      "liquidity": {
+        "usd": 12498.46,
+        "base": 553918,
+        "quote": 315.749
+      },
+      "fdv": 9011506,
+      "marketCap": 9011506,
+      "pairCreatedAt": 1763740968000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "atlantis-dex",
+      "url": "https://dexscreener.com/monad/0x4538053fc57d72eb70c6f822a3275531760bc7fd",
+      "pairAddress": "0x4538053Fc57d72eb70c6f822A3275531760BC7FD",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02202",
+      "priceUsd": "0.02202",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 44,
+          "sells": 23
+        },
+        "h6": {
+          "buys": 171,
+          "sells": 172
+        },
+        "h24": {
+          "buys": 650,
+          "sells": 611
+        }
+      },
+      "volume": {
+        "h24": 12748.92,
+        "h6": 3042.39,
+        "h1": 586.06,
+        "m5": 18.2
+      },
+      "priceChange": {
+        "m5": 0.17,
+        "h1": 1.92,
+        "h6": 0.79,
+        "h24": 3.53
+      },
+      "liquidity": {
+        "usd": 8810.56,
+        "base": 242906,
+        "quote": 3460.7465
+      },
+      "fdv": 9023993,
+      "marketCap": 9023993,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pangolin",
+      "url": "https://dexscreener.com/monad/0x8cf74ae93a724fba1143a1f6f0c6f1d05899cf4d",
+      "pairAddress": "0x8CF74aE93A724Fba1143A1F6F0C6f1D05899Cf4d",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02201",
+      "priceUsd": "0.02201",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 74,
+          "sells": 84
+        },
+        "h6": {
+          "buys": 278,
+          "sells": 326
+        },
+        "h24": {
+          "buys": 914,
+          "sells": 1055
+        }
+      },
+      "volume": {
+        "h24": 8372.48,
+        "h6": 2687.61,
+        "h1": 660.17,
+        "m5": 15
+      },
+      "priceChange": {
+        "m5": 0.13,
+        "h1": 1.8,
+        "h6": 0.71,
+        "h24": 3.45
+      },
+      "liquidity": {
+        "usd": 7005.13,
+        "base": 153442,
+        "quote": 3627.1176
+      },
+      "fdv": 9020169,
+      "marketCap": 9020169,
+      "pairCreatedAt": 1764027912000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "nad-fun",
+      "url": "https://dexscreener.com/monad/0x878750488f613e043d016f99913e639e58bc1e52",
+      "pairAddress": "0x878750488F613e043D016F99913e639E58BC1e52",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02196",
+      "priceUsd": "0.02196",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 37,
+          "sells": 11
+        },
+        "h6": {
+          "buys": 70,
+          "sells": 68
+        },
+        "h24": {
+          "buys": 256,
+          "sells": 219
+        }
+      },
+      "volume": {
+        "h24": 10523.2,
+        "h6": 3215.56,
+        "h1": 1233.39,
+        "m5": 12.19
+      },
+      "priceChange": {
+        "m5": 0.04,
+        "h1": 1.75,
+        "h6": 0.34,
+        "h24": 3.1
+      },
+      "liquidity": {
+        "usd": 12458.12,
+        "base": 271909,
+        "quote": 6486.3583
+      },
+      "fdv": 8998636,
+      "marketCap": 8998636,
+      "pairCreatedAt": 1763927101000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0xc33e9e441e6f4e74cdb34f878be51189c9cb00d8",
+      "pairAddress": "0xC33e9E441e6f4E74CdB34f878bE51189C9CB00D8",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02198",
+      "priceUsd": "0.02198",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 22,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 24,
+          "sells": 12
+        },
+        "h24": {
+          "buys": 71,
+          "sells": 31
+        }
+      },
+      "volume": {
+        "h24": 954.51,
+        "h6": 294.41,
+        "h1": 207.94,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.53,
+        "h6": 1.16,
+        "h24": 3.69
+      },
+      "liquidity": {
+        "usd": 14048.51,
+        "base": 387352,
+        "quote": 5532.8019
+      },
+      "fdv": 9007699,
+      "marketCap": 9007699,
+      "pairCreatedAt": 1763403895000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "monday-trade",
+      "url": "https://dexscreener.com/monad/0x0a439a3a809dcfa8565625839f74368b0e7d0e3c",
+      "pairAddress": "0x0A439A3a809Dcfa8565625839f74368b0e7D0e3c",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02194",
+      "priceUsd": "0.02194",
+      "txns": {
+        "m5": {
+          "buys": 3,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 27,
+          "sells": 5
+        },
+        "h6": {
+          "buys": 39,
+          "sells": 21
+        },
+        "h24": {
+          "buys": 171,
+          "sells": 72
+        }
+      },
+      "volume": {
+        "h24": 996.28,
+        "h6": 158.17,
+        "h1": 68.45,
+        "m5": 3.74
+      },
+      "priceChange": {
+        "m5": 0.2,
+        "h1": 1.79,
+        "h6": 0.36,
+        "h24": 3.02
+      },
+      "liquidity": {
+        "usd": 2762.96,
+        "base": 65057,
+        "quote": 1335.1634
+      },
+      "fdv": 8992332,
+      "marketCap": 8992332,
+      "pairCreatedAt": 1764054738000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "0xAfE4d3eB898591ACe6285176b26f0F5BEb894447",
+      "url": "https://dexscreener.com/monad/0x8e0344626815aaf9df2c39605a4cbf55c0d91bed",
+      "pairAddress": "0x8e0344626815aAf9DF2c39605A4CBf55c0D91bED",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02196",
+      "priceUsd": "0.02196",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 29,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 79,
+          "sells": 12
+        },
+        "h24": {
+          "buys": 236,
+          "sells": 36
+        }
+      },
+      "volume": {
+        "h24": 72.79,
+        "h6": 24.75,
+        "h1": 9.81,
+        "m5": 0.03
+      },
+      "priceChange": {
+        "m5": 0.01,
+        "h1": 1.79,
+        "h6": 0.56,
+        "h24": 2.84
+      },
+      "liquidity": {
+        "usd": 1104.55,
+        "base": 25141,
+        "quote": 552.2795
+      },
+      "fdv": 9000376,
+      "marketCap": 9000376,
+      "pairCreatedAt": 1763940544000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "traderjoe",
+      "url": "https://dexscreener.com/monad/0xf4443d36ecb9f3ef06eae9b26706aaf591ade5ce",
+      "pairAddress": "0xF4443D36ECB9F3Ef06EAE9B26706AaF591ade5cE",
+      "labels": [
+        "v2.2"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02188",
+      "priceUsd": "0.02188",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 4,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 5,
+          "sells": 6
+        },
+        "h24": {
+          "buys": 19,
+          "sells": 11
+        }
+      },
+      "volume": {
+        "h24": 305.73,
+        "h6": 117.72,
+        "h1": 45.87,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1,
+        "h24": 3.03
+      },
+      "liquidity": {
+        "usd": 1894.57,
+        "base": 40552,
+        "quote": 1007.08719
+      },
+      "fdv": 8962391,
+      "marketCap": 8962391,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pinot",
+      "url": "https://dexscreener.com/monad/0x998b563b214f158fce042ca82a8d441343f507d6",
+      "pairAddress": "0x998B563B214f158FcE042Ca82a8D441343F507d6",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02194",
+      "priceUsd": "0.02194",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 6,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 6,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 16,
+          "sells": 1
+        }
+      },
+      "volume": {
+        "h24": 19.42,
+        "h6": 7.61,
+        "h1": 6.18,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.33,
+        "h6": 1.02,
+        "h24": 3.38
+      },
+      "liquidity": {
+        "usd": 1148.97,
+        "base": 37690,
+        "quote": 321.7016
+      },
+      "fdv": 8993252,
+      "marketCap": 8993252,
+      "pairCreatedAt": 1763908527000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0x5bc39a29ea5d8315263ec8939d6ad393debc34e9",
+      "pairAddress": "0x5Bc39A29EA5d8315263EC8939d6AD393dEbC34E9",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02194",
+      "priceUsd": "0.02194",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 7,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 12,
+          "sells": 31
+        },
+        "h24": {
+          "buys": 50,
+          "sells": 74
+        }
+      },
+      "volume": {
+        "h24": 35.32,
+        "h6": 10.13,
+        "h1": 4.6,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.67,
+        "h6": 0.14,
+        "h24": 3.46
+      },
+      "liquidity": {
+        "usd": 127.96,
+        "base": 5201.05157,
+        "quote": 13.8097
+      },
+      "fdv": 8992818,
+      "marketCap": 8992818,
+      "pairCreatedAt": 1763994539000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0x3fe12728ea1b89e4bac6e59a9130b61a27d032f8",
+      "pairAddress": "0x3fE12728ea1B89E4Bac6e59A9130b61A27D032F8",
+      "labels": [
+        "v2"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02196",
+      "priceUsd": "0.02196",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 4,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 10,
+          "sells": 10
+        },
+        "h24": {
+          "buys": 36,
+          "sells": 21
+        }
+      },
+      "volume": {
+        "h24": 16.54,
+        "h6": 6.66,
+        "h1": 1.7,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.39,
+        "h6": 0.67,
+        "h24": 3.43
+      },
+      "liquidity": {
+        "usd": 296.46,
+        "base": 6749.1411,
+        "quote": 148.2318
+      },
+      "fdv": 8998954,
+      "marketCap": 8998954,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "octoswap",
+      "url": "https://dexscreener.com/monad/0xd5a8564f1e4e450706c742c954a1cbdaee602d62",
+      "pairAddress": "0xD5A8564F1E4e450706C742c954a1cBDaEE602D62",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02195",
+      "priceUsd": "0.02195",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 17,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 28,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 70,
+          "sells": 29
+        }
+      },
+      "volume": {
+        "h24": 27.7,
+        "h6": 8.03,
+        "h1": 3.27,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.53,
+        "h6": 0.5,
+        "h24": 3.42
+      },
+      "liquidity": {
+        "usd": 512.25,
+        "base": 11663,
+        "quote": 256.1268
+      },
+      "fdv": 8997629,
+      "marketCap": 8997629,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pinot",
+      "url": "https://dexscreener.com/monad/0xf8a78d884b9dff75c0a963aea2b04d7742abbf05",
+      "pairAddress": "0xf8A78D884B9dfF75C0A963aEA2B04D7742aBbF05",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02187",
+      "priceUsd": "0.02187",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 3
+        },
+        "h6": {
+          "buys": 10,
+          "sells": 10
+        },
+        "h24": {
+          "buys": 41,
+          "sells": 27
+        }
+      },
+      "volume": {
+        "h24": 19.78,
+        "h6": 6.32,
+        "h1": 2.63,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.52,
+        "h6": -0.08,
+        "h24": 3.22
+      },
+      "liquidity": {
+        "usd": 238.25,
+        "base": 5424.07672,
+        "quote": 119.5988
+      },
+      "fdv": 8963056,
+      "marketCap": 8963056,
+      "pairCreatedAt": 1764002281000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "0x2A6CE23C5017aF1b07B9c4E4014442aDE18Bd404",
+      "url": "https://dexscreener.com/monad/0x425cbbde8d66283ddc875bf7f7051aa86c60c36f",
+      "pairAddress": "0x425CbbdE8d66283ddc875bf7F7051AA86c60c36F",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02194",
+      "priceUsd": "0.02194",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 6,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 35,
+          "sells": 10
+        },
+        "h24": {
+          "buys": 103,
+          "sells": 25
+        }
+      },
+      "volume": {
+        "h24": 112.66,
+        "h6": 42.37,
+        "h1": 16.04,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.38,
+        "h6": 0.43,
+        "h24": 3.3
+      },
+      "liquidity": {
+        "usd": 246.36,
+        "base": 1312.03614,
+        "quote": 217.5784
+      },
+      "fdv": 8989556,
+      "marketCap": 8989556,
+      "pairCreatedAt": 1770805219000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "octoswap",
+      "url": "https://dexscreener.com/monad/0x3e4139e96e60596ab904d3abf39c23ad3cda34f6",
+      "pairAddress": "0x3e4139E96e60596Ab904D3ABF39C23AD3cDa34f6",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+        "name": "USDT0",
+        "symbol": "USDT0"
+      },
+      "priceNative": "0.02191",
+      "priceUsd": "0.02191",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 9,
+          "sells": 6
+        },
+        "h24": {
+          "buys": 29,
+          "sells": 20
+        }
+      },
+      "volume": {
+        "h24": 22.96,
+        "h6": 7.3,
+        "h1": 2.92,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.3,
+        "h6": 0.44,
+        "h24": 3.38
+      },
+      "liquidity": {
+        "usd": 458.22,
+        "base": 10453,
+        "quote": 229.1137
+      },
+      "fdv": 8980577,
+      "marketCap": 8980577,
+      "pairCreatedAt": 1763996836000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "traderjoe",
+      "url": "https://dexscreener.com/monad/0x5b84a296db69bdf2a12e3d701fd53ec50b7f2ffa",
+      "pairAddress": "0x5B84A296dB69bdf2a12e3D701Fd53EC50b7f2fFA",
+      "labels": [
+        "v1"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02192",
+      "priceUsd": "0.02192",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 3,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 4,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 21,
+          "sells": 15
+        }
+      },
+      "volume": {
+        "h24": 5.54,
+        "h6": 1.49,
+        "h1": 0.85,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.21,
+        "h6": 0.54,
+        "h24": 3.08
+      },
+      "liquidity": {
+        "usd": 135.04,
+        "base": 3079.1464,
+        "quote": 67.5223
+      },
+      "fdv": 8984960,
+      "marketCap": 8984960,
+      "pairCreatedAt": 1763814066000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "noxa",
+      "url": "https://dexscreener.com/monad/0x29e3652cd6b55bd108102f766b4a26cef556dbb8",
+      "pairAddress": "0x29E3652cd6B55Bd108102f766b4A26CEF556dbb8",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02200",
+      "priceUsd": "0.02200",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 5,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 22,
+          "sells": 3
+        }
+      },
+      "volume": {
+        "h24": 7.51,
+        "h6": 2.62,
+        "h1": 2.05,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.45,
+        "h6": 1.04,
+        "h24": 3.17
+      },
+      "liquidity": {
+        "usd": 884.34,
+        "base": 26402,
+        "quote": 303.4072
+      },
+      "fdv": 9015307,
+      "marketCap": 9015307,
+      "pairCreatedAt": 1763915129000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "dyorswap",
+      "url": "https://dexscreener.com/monad/0xbe8345287c5ba716941f50a80020911ac2e07c68",
+      "pairAddress": "0xBE8345287c5bA716941f50A80020911AC2e07c68",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02207",
+      "priceUsd": "0.02207",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 4,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 14,
+          "sells": 11
+        }
+      },
+      "volume": {
+        "h24": 2.77,
+        "h6": 0.9,
+        "h1": 0.39,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 2.05,
+        "h6": 1.31,
+        "h24": 4.28
+      },
+      "liquidity": {
+        "usd": 77.64,
+        "base": 1758.6488,
+        "quote": 38.8212
+      },
+      "fdv": 9044606,
+      "marketCap": 9044606,
+      "pairCreatedAt": 1763897571000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/monad/0x9665897a0b66cb9dabeb248c279fd0967c018608",
+      "pairAddress": "0x9665897a0b66Cb9daBEb248C279fd0967C018608",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+        "name": "USDT0",
+        "symbol": "USDT0"
+      },
+      "priceNative": "0.02198",
+      "priceUsd": "0.02198",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 3,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 3,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 12,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 7.73,
+        "h6": 2.56,
+        "h1": 2.56,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.59,
+        "h6": 1.59,
+        "h24": 3.48
+      },
+      "liquidity": {
+        "usd": 405.62,
+        "base": 10871,
+        "quote": 166.5885
+      },
+      "fdv": 9009109,
+      "marketCap": 9009109,
+      "pairCreatedAt": 1763994817000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "pangolin",
+      "url": "https://dexscreener.com/monad/0xcf7b63bcf2faa8e63037e14375f7d507f38a867c",
+      "pairAddress": "0xcf7b63bcf2FaA8E63037E14375f7D507F38a867c",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0xe7cd86e13AC4309349F30B3435a9d337750fC82D",
+        "name": "USDT0",
+        "symbol": "USDT0"
+      },
+      "priceNative": "0.02184",
+      "priceUsd": "0.02184",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 3,
+          "sells": 4
+        },
+        "h24": {
+          "buys": 9,
+          "sells": 7
+        }
+      },
+      "volume": {
+        "h24": 3.97,
+        "h6": 1.84,
+        "h1": 0.77,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.35,
+        "h6": -0.35,
+        "h24": 1.86
+      },
+      "liquidity": {
+        "usd": 98.87,
+        "base": 2422.9582,
+        "quote": 45.9494
+      },
+      "fdv": 8950260,
+      "marketCap": 8950260,
+      "pairCreatedAt": 1764108817000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "octoswap",
+      "url": "https://dexscreener.com/monad/0x16c4d8635ed2b09026eed60d293ed6b3f7f12909",
+      "pairAddress": "0x16c4D8635Ed2B09026eED60d293eD6b3F7f12909",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02194",
+      "priceUsd": "0.02194",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 3
+        },
+        "h24": {
+          "buys": 8,
+          "sells": 6
+        }
+      },
+      "volume": {
+        "h24": 1.92,
+        "h6": 0.62,
+        "h1": 0.25,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.23,
+        "h6": 0.58,
+        "h24": 3.16
+      },
+      "liquidity": {
+        "usd": 11.92,
+        "base": 414.5693,
+        "quote": 2.8251
+      },
+      "fdv": 8992702,
+      "marketCap": 8992702,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "octoswap",
+      "url": "https://dexscreener.com/monad/0x3ca97af5c2420573b40e38393802d3299e9a9bf6",
+      "pairAddress": "0x3Ca97Af5C2420573B40e38393802D3299e9A9Bf6",
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02171",
+      "priceUsd": "0.02171",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 4,
+          "sells": 6
+        }
+      },
+      "volume": {
+        "h24": 0.29,
+        "h6": 0.08,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.25,
+        "h24": 1.75
+      },
+      "liquidity": {
+        "usd": 84.4,
+        "base": 2467.9001,
+        "quote": 30.8173
+      },
+      "fdv": 8897465,
+      "marketCap": 8897465,
+      "pairCreatedAt": 1763990840000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "monad",
+      "dexId": "noxa",
+      "url": "https://dexscreener.com/monad/0xf95185ee345d154f81df358c14ef51de8bb556ec",
+      "pairAddress": "0xf95185Ee345D154F81DF358C14eF51de8bB556ec",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x3bd359C1119dA7Da1D913D1C4D2B7c461115433A",
+        "name": "Monad",
+        "symbol": "MON"
+      },
+      "quoteToken": {
+        "address": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.02192",
+      "priceUsd": "0.02192",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 7
+        }
+      },
+      "volume": {
+        "h24": 2.66,
+        "h6": 1.05,
+        "h1": 0.28,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.62,
+        "h6": 0.51,
+        "h24": 3.44
+      },
+      "liquidity": {
+        "usd": 96.43,
+        "base": 2783.02272,
+        "quote": 35.4157
+      },
+      "fdv": 8984270,
+      "marketCap": 8984270,
+      "pairCreatedAt": 1764000433000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/dbdf1b40bce8361da6215642ec5d4ad7aba0c748daa09eee62e3d6446008d469?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/646addbbcbaae92763d0320e7b7194d70302e5622f08de88f1c6643b34fe347d?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/monad/0x3bd359c1119da7da1d913d1c4d2b7c461115433a?timestamp=1773156600000",
+        "websites": [
+          {
+            "url": "https://www.monad.xyz/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/monad",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/monad",
+            "type": "discord"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,5 +1,63 @@
+export type FieldDataClass = "observed" | "derived" | "inferred" | "simulated" | "missing";
+
+export type RadarOverviewField =
+  | "marketCapUsd"
+  | "circulatingSupply"
+  | "priceUsd"
+  | "volume24hUsd"
+  | "defiTvlUsd"
+  | "stablecoinLiquidityUsd"
+  | "validatorCount"
+  | "stakingRatioPct"
+  | "stakingApyPct"
+  | "rewardRatePct"
+  | "stakingMarketCapUsd"
+  | "stakedTokens"
+  | "inflationRatePct"
+  | "verifiedProviders"
+  | "benchmarkCommissionPct"
+  | "lstTvlUsd"
+  | "tvlToMarketCap"
+  | "lstPenetrationPct"
+  | "baseTokenDexLiquidityUsd"
+  | "baseTokenDexVolume24hUsd"
+  | "baseTokenPairCount"
+  | "baseTokenLargestPoolLiquidityUsd"
+  | "baseTokenPoolConcentration"
+  | "stableExitRouteExists"
+  | "stableExitLiquidityUsd"
+  | "stableExitPairAddress"
+  | "stableExitQuoteToken"
+  | "stableExitDexId"
+  | "lstDexLiquidityUsd"
+  | "lstDexVolume24hUsd"
+  | "lstPairCount"
+  | "lstLargestPoolLiquidityUsd"
+  | "lstPoolConcentration"
+  | "lstHasBasePair"
+  | "lstHasStablePair"
+  | "baseTokenVolumeLiquidityRatio"
+  | "lstVolumeLiquidityRatio"
+  | "lstTotalSupply"
+  | "lstHolderCount"
+  | "lstTop10HolderShare"
+  | "lstTransferCount24h"
+  | "lstTransferVolume24h"
+  | "contractAbiAvailable"
+  | "contractVerified"
+  | "protocolMintCount24h"
+  | "protocolRedeemCount24h"
+  | "protocolMintVolume24h"
+  | "protocolRedeemVolume24h"
+  | "protocolTreasuryNativeBalance"
+  | "safeGasPrice"
+  | "proposeGasPrice"
+  | "fastGasPrice"
+  | "suggestedBaseFee";
+
 export type RadarOverviewRecord = {
   networkId: string;
+  chain: string;
   network: string;
   token: string;
   marketCapUsd: number | null;
@@ -11,13 +69,72 @@ export type RadarOverviewRecord = {
   validatorCount: number | null;
   stakingRatioPct: number | null;
   stakingApyPct: number | null;
+  rewardRatePct: number | null;
+  stakingMarketCapUsd: number | null;
+  stakedTokens: number | null;
+  inflationRatePct: number | null;
+  verifiedProviders: number | null;
+  benchmarkCommissionPct: number | null;
+  staking: {
+    rewardRatePct: number | null;
+    stakingRatioPct: number | null;
+    stakingMarketCapUsd: number | null;
+    stakedTokens: number | null;
+    inflationRatePct: number | null;
+    validators: number | null;
+    verifiedProviders: number | null;
+    benchmarkCommissionPct: number | null;
+  };
+  stakingMeta: {
+    source: string | null;
+    asOf: string | null;
+    quality: "observed-manual" | null;
+    confidence: "high" | null;
+  };
   lstTvlUsd: number | null;
   tvlToMarketCap: number | null;
   lstPenetrationPct: number | null;
+  baseTokenDexLiquidityUsd: number | null;
+  baseTokenDexVolume24hUsd: number | null;
+  baseTokenPairCount: number | null;
+  baseTokenLargestPoolLiquidityUsd: number | null;
+  baseTokenPoolConcentration: number | null;
+  stableExitRouteExists: boolean | null;
+  stableExitLiquidityUsd: number | null;
+  stableExitPairAddress: string | null;
+  stableExitQuoteToken: string | null;
+  stableExitDexId: string | null;
+  lstDexLiquidityUsd: number | null;
+  lstDexVolume24hUsd: number | null;
+  lstPairCount: number | null;
+  lstLargestPoolLiquidityUsd: number | null;
+  lstPoolConcentration: number | null;
+  lstHasBasePair: boolean | null;
+  lstHasStablePair: boolean | null;
+  baseTokenVolumeLiquidityRatio: number | null;
+  lstVolumeLiquidityRatio: number | null;
+  lstTotalSupply: number | null;
+  lstHolderCount: number | null;
+  lstTop10HolderShare: number | null;
+  lstTransferCount24h: number | null;
+  lstTransferVolume24h: number | null;
+  contractAbiAvailable: boolean | null;
+  contractVerified: boolean | null;
+  protocolMintCount24h: number | null;
+  protocolRedeemCount24h: number | null;
+  protocolMintVolume24h: number | null;
+  protocolRedeemVolume24h: number | null;
+  protocolTreasuryNativeBalance: number | null;
+  safeGasPrice: number | null;
+  proposeGasPrice: number | null;
+  fastGasPrice: number | null;
+  suggestedBaseFee: number | null;
   globalLstHealthScore: number;
   opportunityScore: number;
   asOf: string;
   sourceRefs: string[];
   quality: "observed" | "inferred" | "simulated";
   confidence: "high" | "medium" | "low";
+  dataCoveragePct: number;
+  fieldQuality: Record<string, FieldDataClass>;
 };

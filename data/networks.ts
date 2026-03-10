@@ -1,5 +1,4 @@
-import coingeckoBasics from "./coingecko-basics.json";
-import defillamaBasics from "./defillama-basics.json";
+import networksGenerated from "./networks.generated.json";
 
 export type NetworkCategory =
   | "High-performance EVM L1"
@@ -57,6 +56,7 @@ export type Network = {
   sourceRefs?: string[];
   quality?: "observed" | "inferred" | "simulated";
   confidence?: "high" | "medium" | "low";
+  dataCoveragePct?: number;
   status: NetworkStatus;
 };
 
@@ -353,133 +353,75 @@ const baseNetworks: Network[] = [
   }
 ];
 
-type CoingeckoNetworkBasics = {
-  status: "ok" | "partial" | "missing_coin_id" | "missing_market_data";
-  coinId: string | null;
-  symbol: string;
-  marketCapUsd: number | null;
-  fdvUsd: number | null;
-  circulatingSupply: number | null;
-  circulatingSupplyPct: number | null;
+type GeneratedOverviewRecord = {
+  networkId: string;
+  marketCapUsd?: number | null;
+  circulatingSupply?: number | null;
+  priceUsd?: number | null;
+  volume24hUsd?: number | null;
+  defiTvlUsd?: number | null;
+  stablecoinLiquidityUsd?: number | null;
+  validatorCount?: number | null;
+  stakingRatioPct?: number | null;
+  stakingApyPct?: number | null;
+  lstTvlUsd?: number | null;
+  globalLstHealthScore?: number | null;
+  opportunityScore?: number | null;
+  asOf?: string;
+  sourceRefs?: string[];
+  quality?: Network["quality"];
+  confidence?: Network["confidence"];
+  dataCoveragePct?: number;
 };
 
-type CoingeckoBasicsSnapshot = {
-  source: string;
-  generatedAt: string;
-  vsCurrency: string;
-  networks: Record<string, CoingeckoNetworkBasics>;
-};
-
-type DefillamaNetworkBasics = {
-  status: "ok" | "partial" | "missing_chain" | "missing_market_data";
-  chainName: string;
-  defiTvlUsd: number | null;
-  stablecoinLiquidityUsd: number | null;
-  lstTvlUsd: number | null;
-  sourceRefs: string[];
-};
-
-type DefillamaBasicsSnapshot = {
-  source: string;
-  generatedAt: string;
-  networks: Record<string, DefillamaNetworkBasics>;
-};
-
-const coingeckoNetworkIds = new Set([
-  "xdc",
-  "monad",
-  "sei",
-  "shardeum",
-  "sui",
-  "aptos",
-  "berachain",
-  "core",
-  "mantra",
-  "sonic"
-]);
-
-const defillamaNetworkIds = new Set([
-  "xdc",
-  "monad",
-  "sei",
-  "shardeum",
-  "sui",
-  "aptos",
-  "berachain",
-  "core",
-  "mantra",
-  "sonic"
-]);
-
-export const networks: Network[] = applyExternalBasics(
+export const networks: Network[] = applyGeneratedOverview(
   baseNetworks,
-  coingeckoBasics as CoingeckoBasicsSnapshot,
-  defillamaBasics as DefillamaBasicsSnapshot
+  networksGenerated as GeneratedOverviewRecord[]
 );
 
-function applyExternalBasics(
-  networks: Network[],
-  coingeckoSnapshot: CoingeckoBasicsSnapshot,
-  defillamaSnapshot: DefillamaBasicsSnapshot
-): Network[] {
+function toFiniteNumber(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
+function applyGeneratedOverview(networks: Network[], generated: GeneratedOverviewRecord[]): Network[] {
+  const generatedById = new Map(generated.map((entry) => [entry.networkId, entry]));
+
   return networks.map((network) => {
-    let merged: Network = { ...network };
-    const sourceRefs: string[] = [];
-    let observedCount = 0;
+    const live = generatedById.get(network.networkId);
 
-    if (coingeckoSnapshot?.source === "coingecko" && coingeckoNetworkIds.has(network.networkId)) {
-      const basics = coingeckoSnapshot.networks[network.networkId];
-      if (basics && basics.status !== "missing_coin_id" && basics.status !== "missing_market_data") {
-        merged = {
-          ...merged,
-          marketCapUsd: basics.marketCapUsd ?? merged.marketCapUsd,
-          fdvUsd: basics.fdvUsd ?? merged.fdvUsd,
-          circulatingSupply: basics.circulatingSupply ?? merged.circulatingSupply,
-          circulatingSupplyPct: basics.circulatingSupplyPct ?? merged.circulatingSupplyPct
-        };
+    const marketCapUsd = toFiniteNumber(live?.marketCapUsd) ?? network.marketCapUsd;
+    const circulatingSupply = toFiniteNumber(live?.circulatingSupply) ?? network.circulatingSupply;
+    const stakingRatioPct = toFiniteNumber(live?.stakingRatioPct) ?? network.stakingRatioPct;
+    const stakingApyPct = toFiniteNumber(live?.stakingApyPct) ?? network.stakingApyPct;
+    const defiTvlUsd = toFiniteNumber(live?.defiTvlUsd) ?? network.defiTvlUsd;
+    const stablecoinLiquidityUsd = toFiniteNumber(live?.stablecoinLiquidityUsd) ?? network.stablecoinLiquidityUsd;
+    const validatorCount = toFiniteNumber(live?.validatorCount) ?? network.validatorCount;
+    const lstTvlUsd = toFiniteNumber(live?.lstTvlUsd) ?? network.lstTvlUsd;
+    const globalLstHealthScore = toFiniteNumber(live?.globalLstHealthScore) ?? network.globalLstHealthScore;
+    const opportunityScore = toFiniteNumber(live?.opportunityScore) ?? network.opportunityScore;
 
-        if (basics.marketCapUsd !== null) observedCount += 1;
-        if (basics.fdvUsd !== null) observedCount += 1;
-        if (basics.circulatingSupply !== null) observedCount += 1;
-        if (basics.circulatingSupplyPct !== null) observedCount += 1;
-
-        sourceRefs.push(`coingecko:coins/markets:${basics.coinId ?? network.networkId}`);
-      }
-    }
-
-    if (defillamaSnapshot?.source === "defillama" && defillamaNetworkIds.has(network.networkId)) {
-      const basics = defillamaSnapshot.networks[network.networkId];
-      if (basics && basics.status !== "missing_chain" && basics.status !== "missing_market_data") {
-        merged = {
-          ...merged,
-          defiTvlUsd: basics.defiTvlUsd ?? merged.defiTvlUsd,
-          stablecoinLiquidityUsd: basics.stablecoinLiquidityUsd ?? merged.stablecoinLiquidityUsd,
-          lstTvlUsd: basics.lstTvlUsd ?? merged.lstTvlUsd
-        };
-
-        if (basics.defiTvlUsd !== null) observedCount += 1;
-        if (basics.stablecoinLiquidityUsd !== null) observedCount += 1;
-        if (basics.lstTvlUsd !== null) observedCount += 1;
-
-        sourceRefs.push(...basics.sourceRefs);
-      }
-    }
-
-    merged = applyDerivedMetrics(merged);
-
-    const asOf = resolveAsOf(coingeckoSnapshot?.generatedAt, defillamaSnapshot?.generatedAt);
-    const uniqueSourceRefs = [...new Set(sourceRefs)];
-
-    const quality: Network["quality"] = observedCount >= 5 ? "observed" : observedCount >= 3 ? "inferred" : "simulated";
-    const confidence: Network["confidence"] = observedCount >= 5 ? "high" : observedCount >= 3 ? "medium" : "low";
-
-    return {
-      ...merged,
-      asOf,
-      sourceRefs: uniqueSourceRefs.length > 0 ? uniqueSourceRefs : undefined,
-      quality,
-      confidence
+    const merged: Network = {
+      ...network,
+      marketCapUsd,
+      circulatingSupply,
+      priceUsd: toFiniteNumber(live?.priceUsd) ?? network.priceUsd ?? null,
+      volume24hUsd: toFiniteNumber(live?.volume24hUsd) ?? network.volume24hUsd ?? null,
+      stakingRatioPct,
+      stakingApyPct,
+      defiTvlUsd,
+      stablecoinLiquidityUsd,
+      validatorCount,
+      lstTvlUsd,
+      globalLstHealthScore,
+      opportunityScore,
+      asOf: live?.asOf ?? network.asOf,
+      sourceRefs: live?.sourceRefs ?? network.sourceRefs,
+      quality: live?.quality ?? network.quality,
+      confidence: live?.confidence ?? network.confidence,
+      dataCoveragePct: toFiniteNumber(live?.dataCoveragePct) ?? network.dataCoveragePct
     };
+
+    return applyDerivedMetrics(merged);
   });
 }
 

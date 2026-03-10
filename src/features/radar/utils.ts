@@ -10,11 +10,23 @@ import {
   SortState
 } from "@/features/radar/types";
 
-export function formatUsdCompact(value: number): string {
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+export function formatUsdCompact(value: number | null | undefined): string {
+  if (!isFiniteNumber(value)) {
+    return "N/A";
+  }
+
   return formatUsdCompactStable(value);
 }
 
-export function formatUsdFull(value: number): string {
+export function formatUsdFull(value: number | null | undefined): string {
+  if (!isFiniteNumber(value)) {
+    return "N/A";
+  }
+
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -22,13 +34,21 @@ export function formatUsdFull(value: number): string {
   }).format(value);
 }
 
-export function formatInteger(value: number): string {
+export function formatInteger(value: number | null | undefined): string {
+  if (!isFiniteNumber(value)) {
+    return "N/A";
+  }
+
   return new Intl.NumberFormat("en-US", {
     maximumFractionDigits: 0
   }).format(value);
 }
 
-export function formatPercent(value: number, digits = 1): string {
+export function formatPercent(value: number | null | undefined, digits = 1): string {
+  if (!isFiniteNumber(value)) {
+    return "N/A";
+  }
+
   return `${value.toFixed(digits)}%`;
 }
 
