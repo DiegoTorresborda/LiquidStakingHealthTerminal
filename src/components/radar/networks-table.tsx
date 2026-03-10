@@ -90,33 +90,44 @@ export function NetworksTable({
                 <Fragment key={network.networkId}>
                   <tr
                     className="cursor-pointer rounded-xl border border-ink-300/20 bg-ink-900/25 transition hover:border-[#7baff5]/30 hover:bg-ink-900/35"
-                    onClick={() => onOpenNetwork(network.networkId)}
+                    onClick={(event) => {
+                      if (shouldIgnoreRowNavigation(event.target)) {
+                        return;
+                      }
+                      onOpenNetwork(network.networkId);
+                    }}
                     role="link"
                     tabIndex={0}
                     onKeyDown={(event) => {
+                      if (shouldIgnoreRowNavigation(event.target)) {
+                        return;
+                      }
                       if (event.key === "Enter") {
                         onOpenNetwork(network.networkId);
                       }
                     }}
                   >
                     <td className="rounded-l-xl px-3 py-3 align-top">
-                      <div className="flex flex-col gap-1">
-                        <p className="font-semibold text-ink-50">{network.network}</p>
+                      <div className="flex flex-col gap-1.5">
+                        <div className="flex items-center gap-2">
+                          <p className="font-semibold text-ink-50">{network.network}</p>
+                          <span className={`inline-flex rounded-md border px-2 py-0.5 text-xs ${resolveStatusClass(network.status)}`}>
+                            {network.status}
+                          </span>
+                        </div>
                         <p className="text-xs text-ink-300">{network.category}</p>
-                        <span className={`inline-flex w-fit rounded-md border px-2 py-0.5 text-xs ${resolveStatusClass(network.status)}`}>
-                          {network.status}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={(event) => {
-                            event.stopPropagation();
-                            onToggleExpanded(network.networkId);
-                          }}
-                          className="mt-1 w-fit text-xs font-medium text-[#a9ceff] hover:text-[#c0dcff]"
-                        >
-                          {isExpanded ? "Hide details" : "Show details"}
-                        </button>
-                        <div className="mt-1">
+                        <div className="mt-0.5 flex flex-nowrap items-center gap-2 overflow-x-auto overflow-y-visible whitespace-nowrap pr-1">
+                          <button
+                            type="button"
+                            data-no-row-nav="true"
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              onToggleExpanded(network.networkId);
+                            }}
+                            className="inline-flex px-0 py-0 text-xs font-semibold text-[#cfe2ff] hover:text-[#e6f0ff]"
+                          >
+                            {isExpanded ? "Hide details" : "Show details"}
+                          </button>
                           <ChainResourcesQuickAction networkId={network.networkId} />
                         </div>
                       </div>
@@ -192,6 +203,22 @@ export function NetworksTable({
       </div>
     </section>
   );
+}
+
+function shouldIgnoreRowNavigation(target: EventTarget | null): boolean {
+  if (!target) {
+    return false;
+  }
+
+  if (target instanceof HTMLElement) {
+    return target.closest("[data-no-row-nav='true']") !== null;
+  }
+
+  if (target instanceof Text) {
+    return target.parentElement?.closest("[data-no-row-nav='true']") !== null;
+  }
+
+  return false;
 }
 
 function resolveSortIcon(sort: SortState, key: SortKey): string {
