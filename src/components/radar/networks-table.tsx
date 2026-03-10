@@ -2,6 +2,7 @@ import { Fragment } from "react";
 
 import type { RadarNetwork } from "@/features/radar/types";
 import type { SortKey, SortState } from "@/features/radar/types";
+import { ChainResourcesQuickAction } from "@/components/chain-resources";
 import {
   booleanLabel,
   formatInteger,
@@ -115,16 +116,9 @@ export function NetworksTable({
                         >
                           {isExpanded ? "Hide details" : "Show details"}
                         </button>
-                        <button
-                          type="button"
-                          onClick={(event) => {
-                            event.stopPropagation();
-                            onOpenNetwork(network.networkId);
-                          }}
-                          className="w-fit text-xs font-medium text-mint hover:text-[#7ef7d5]"
-                        >
-                          Open diagnosis
-                        </button>
+                        <div className="mt-1">
+                          <ChainResourcesQuickAction networkId={network.networkId} />
+                        </div>
                       </div>
                     </td>
                     <td className="px-3 py-3 text-sm text-ink-50">{network.token}</td>

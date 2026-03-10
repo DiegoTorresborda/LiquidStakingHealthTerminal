@@ -1,5 +1,6 @@
 import type { NetworkDetailData } from "@/features/network-detail/types";
 
+import { ChainResourcesSection } from "@/components/chain-resources";
 import { DetailModulesGrid } from "@/components/network-detail/detail-modules-grid";
 import { MiniVisualsPanel } from "@/components/network-detail/mini-visuals-panel";
 import { NetworkDetailHeader } from "@/components/network-detail/network-detail-header";
@@ -29,6 +30,8 @@ export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
           <StressSnapshotPanel stress={detail.stressSnapshot} />
         </div>
       </section>
+
+      <ChainResourcesSection networkId={detail.summary.networkId} showEmptyState />
 
       <RedFlagsPanel redFlags={detail.redFlags} />
 

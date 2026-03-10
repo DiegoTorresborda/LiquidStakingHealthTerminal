@@ -1,0 +1,106 @@
+{
+  "monad": [
+    { "label": "Website", "url": "https://www.monad.xyz", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.monad.xyz", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://testnet.monadexplorer.com", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/monad-labs", "category": "developer", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.monad.xyz", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/monad", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Monad", "category": "analytics", "priority": 2 },
+    { "label": "CoinGecko", "url": "https://www.coingecko.com/en/coins/monad", "category": "analytics", "priority": 3 }
+  ],
+
+  "sei": [
+    { "label": "Website", "url": "https://www.sei.io", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.sei.io", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://www.seiscan.app", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/sei-protocol", "category": "developer", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.sei.io/node", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/sei", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Sei", "category": "analytics", "priority": 2 },
+    { "label": "CoinGecko", "url": "https://www.coingecko.com/en/coins/sei-network", "category": "analytics", "priority": 3 }
+  ],
+
+  "sui": [
+    { "label": "Website", "url": "https://sui.io", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.sui.io", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://suiexplorer.com", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/MystenLabs", "category": "developer", "priority": 2 },
+    { "label": "Validator Guide", "url": "https://docs.sui.io/guides/operator", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/sui", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Sui", "category": "analytics", "priority": 2 },
+    { "label": "CoinGecko", "url": "https://www.coingecko.com/en/coins/sui", "category": "analytics", "priority": 3 }
+  ],
+
+  "aptos": [
+    { "label": "Website", "url": "https://aptosfoundation.org", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://aptos.dev", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://explorer.aptoslabs.com", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/aptos-labs", "category": "developer", "priority": 2 },
+    { "label": "Validator Guide", "url": "https://aptos.dev/nodes/validator-node", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/aptos", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Aptos", "category": "analytics", "priority": 2 },
+    { "label": "CoinGecko", "url": "https://www.coingecko.com/en/coins/aptos", "category": "analytics", "priority": 3 }
+  ],
+
+  "berachain": [
+    { "label": "Website", "url": "https://www.berachain.com", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.berachain.com", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://berascan.com", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/berachain", "category": "developer", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.berachain.com", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/berachain", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Berachain", "category": "analytics", "priority": 2 }
+  ],
+
+  "xdc": [
+    { "label": "Website", "url": "https://xdc.org", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.xdc.network", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://explorer.xinfin.network", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/XinFinOrg", "category": "developer", "priority": 2 },
+    { "label": "Validator Guide", "url": "https://docs.xdc.network/xdcchain/validators", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/xdc-network", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/XDC", "category": "analytics", "priority": 2 },
+    { "label": "CoinGecko", "url": "https://www.coingecko.com/en/coins/xdc-network", "category": "analytics", "priority": 3 }
+  ],
+
+  "shardeum": [
+    { "label": "Website", "url": "https://shardeum.org", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.shardeum.org", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://explorer.shardeum.org", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/shardeum", "category": "developer", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.shardeum.org/docs/category/node-operator", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/shardeum", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Shardeum", "category": "analytics", "priority": 2 }
+  ],
+
+  "core": [
+    { "label": "Website", "url": "https://coredao.org", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.coredao.org", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://scan.coredao.org", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/coredao-org", "category": "developer", "priority": 2 },
+    { "label": "BTC Staking Guide", "url": "https://docs.coredao.org/docs/Learn/products/btc-staking", "category": "staking", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.coredao.org/docs/Dev-Guide/run-a-node", "category": "validators", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Core", "category": "analytics", "priority": 2 }
+  ],
+
+  "sonic": [
+    { "label": "Website", "url": "https://www.soniclabs.com", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.soniclabs.com", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://sonicscan.org", "category": "explorer", "priority": 1 },
+    { "label": "Developer Docs", "url": "https://docs.soniclabs.com/sonic/build-on-sonic", "category": "developer", "priority": 2 },
+    { "label": "Validator Docs", "url": "https://docs.soniclabs.com/sonic/node", "category": "validators", "priority": 2 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/sonic", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Sonic", "category": "analytics", "priority": 2 }
+  ],
+
+  "mantra": [
+    { "label": "Website", "url": "https://www.mantrachain.io", "category": "official", "priority": 1 },
+    { "label": "Docs", "url": "https://docs.mantrachain.io", "category": "docs", "priority": 1 },
+    { "label": "Explorer", "url": "https://explorer.mantrachain.io", "category": "explorer", "priority": 1 },
+    { "label": "GitHub", "url": "https://github.com/MANTRA-Chain", "category": "developer", "priority": 2 },
+    { "label": "Chain Repository", "url": "https://github.com/MANTRA-Chain/mantrachain", "category": "developer", "priority": 3 },
+    { "label": "Staking Rewards", "url": "https://www.stakingrewards.com/asset/mantra", "category": "staking", "priority": 2 },
+    { "label": "DefiLlama", "url": "https://defillama.com/chain/Mantra", "category": "analytics", "priority": 2 }
+  ]
+}
