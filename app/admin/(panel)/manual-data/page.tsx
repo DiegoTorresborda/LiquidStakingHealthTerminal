@@ -147,6 +147,7 @@ export default function AdminManualDataPage() {
     }
 
     const next: FormState = { ...EMPTY_FORM };
+    const nextMutable = next as Record<keyof FormState, string>;
 
     for (const field of FIELD_CONFIGS) {
       const manualValue =
@@ -157,7 +158,7 @@ export default function AdminManualDataPage() {
       const currentValue = selectedRecord?.[field.key as string];
       const resolved = manualValue !== undefined ? manualValue : currentValue;
 
-      next[field.key] = serializeValueForInput(field.type, resolved) as FormState[typeof field.key];
+      nextMutable[field.key] = serializeValueForInput(field.type, resolved);
     }
 
     next.notes =

@@ -417,7 +417,7 @@ function applyGeneratedOverview(networks: Network[], generated: GeneratedOvervie
   return networks.map((network) => {
     const live = generatedById.get(network.networkId);
 
-    const category = toNullableString(live?.category) ?? network.category;
+    const category = (toNullableString(live?.category) as NetworkCategory | null) ?? network.category;
     const status = (toNullableString(live?.status) as NetworkStatus | null) ?? network.status;
     const fdvUsd = toFiniteNumber(live?.fdvUsd) ?? network.fdvUsd;
     const circulatingSupplyPct = toFiniteNumber(live?.circulatingSupplyPct) ?? network.circulatingSupplyPct;
