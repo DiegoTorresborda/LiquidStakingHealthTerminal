@@ -1,0 +1,38 @@
+{
+  "source": "manual-overrides",
+  "updatedAt": "2026-03-11T14:18:27.020Z",
+  "overrides": [
+    {
+      "id": "ovr_mmm4jj2k_wqhgap",
+      "networkId": "shardeum",
+      "field": "validatorCount",
+      "value": 21,
+      "reason": "manual data",
+      "timestamp": "2026-03-11T14:18:27.020Z"
+    },
+    {
+      "id": "ovr_mmm4dezq_xd8hym",
+      "networkId": "shardeum",
+      "field": "stakedTokens",
+      "value": 1368563629.09,
+      "reason": "dato manual",
+      "timestamp": "2026-03-11T14:13:41.798Z"
+    },
+    {
+      "id": "ovr_mmm46cab_yjveuo",
+      "networkId": "shardeum",
+      "field": "stakingApyPct",
+      "value": 49.47,
+      "reason": "dato manual",
+      "timestamp": "2026-03-11T14:08:11.699Z"
+    },
+    {
+      "id": "ovr_mmm3s1id_lvohz0",
+      "networkId": "shardeum",
+      "field": "lstTvlUsd",
+      "value": 0,
+      "reason": "no LST deployed",
+      "timestamp": "2026-03-11T13:57:04.549Z"
+    }
+  ]
+}

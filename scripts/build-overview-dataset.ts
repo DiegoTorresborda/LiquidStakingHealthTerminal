@@ -50,6 +50,26 @@ type DefillamaSnapshot = {
   networks?: Record<string, DefillamaSnapshotEntry>;
 };
 
+type ManualUiFieldEntry = {
+  category?: string;
+  status?: string;
+  fdvUsd?: number;
+  circulatingSupplyPct?: number;
+  stakerAddresses?: number;
+  lstProtocols?: number;
+  largestLst?: string;
+  lendingPresence?: boolean;
+  lstCollateralEnabled?: boolean;
+  mainBottleneck?: string;
+  mainOpportunity?: string;
+};
+
+type ManualUiFieldsSnapshot = {
+  source?: string;
+  updatedAt?: string;
+  networks?: Record<string, ManualUiFieldEntry>;
+};
+
 type NumberMetricCandidate = {
   value: number | null | undefined;
   quality: FieldDataClass;
@@ -191,6 +211,17 @@ const ETHERSCAN_FIELDS: EtherscanMetricField[] = [
 ];
 
 const COVERAGE_FIELDS: RadarOverviewField[] = [
+  "category",
+  "status",
+  "fdvUsd",
+  "circulatingSupplyPct",
+  "stakerAddresses",
+  "lstProtocols",
+  "largestLst",
+  "lendingPresence",
+  "lstCollateralEnabled",
+  "mainBottleneck",
+  "mainOpportunity",
   "marketCapUsd",
   "circulatingSupply",
   "priceUsd",
@@ -203,6 +234,7 @@ const COVERAGE_FIELDS: RadarOverviewField[] = [
   "rewardRatePct",
   "stakingMarketCapUsd",
   "stakedTokens",
+  "stakedValueUsd",
   "inflationRatePct",
   "verifiedProviders",
   "benchmarkCommissionPct",
@@ -302,19 +334,22 @@ async function readJson(path: string) {
 }
 
 async function loadFallbacks() {
-  const [coingeckoSnapshot, defillamaSnapshot, domainSnapshot] = await Promise.all([
+  const [coingeckoSnapshot, defillamaSnapshot, domainSnapshot, uiFieldsSnapshot] = await Promise.all([
     readJson("data/coingecko-basics.json").catch(() => ({ generatedAt: undefined, networks: {} })),
     readJson("data/defillama-basics.json").catch(() => ({ generatedAt: undefined, networks: {} })),
-    readJson("data/dashboard-domain-overrides.json").catch(() => ({ generatedAt: undefined, networks: {} }))
+    readJson("data/dashboard-domain-overrides.json").catch(() => ({ generatedAt: undefined, networks: {} })),
+    readJson("data/manual/network-ui-fields.json").catch(() => ({ source: "manual-ui-fields", updatedAt: undefined, networks: {} }))
   ]);
 
   return {
     coingeckoGeneratedAt: coingeckoSnapshot.generatedAt as string | undefined,
     defillamaGeneratedAt: defillamaSnapshot.generatedAt as string | undefined,
     domainGeneratedAt: domainSnapshot.generatedAt as string | undefined,
+    uiFieldsUpdatedAt: (uiFieldsSnapshot as ManualUiFieldsSnapshot).updatedAt as string | undefined,
     coingeckoSnapshot: coingeckoSnapshot.networks as SnapshotRecord,
     defillamaSnapshot: (defillamaSnapshot as DefillamaSnapshot).networks ?? {},
-    domainSnapshot: domainSnapshot.networks as SnapshotRecord
+    domainSnapshot: domainSnapshot.networks as SnapshotRecord,
+    uiFieldsSnapshot: (uiFieldsSnapshot as ManualUiFieldsSnapshot).networks ?? {}
   };
 }
 
@@ -349,7 +384,7 @@ function resolveRecordQuality(fieldQuality: Record<string, FieldDataClass>) {
 
 async function main() {
   const generatedAt = new Date().toISOString();
-  const { coingeckoSnapshot, defillamaSnapshot, domainSnapshot } = await loadFallbacks();
+  const { coingeckoSnapshot, defillamaSnapshot, domainSnapshot, uiFieldsSnapshot, uiFieldsUpdatedAt } = await loadFallbacks();
 
   const coinIdByNetwork = Object.fromEntries(NETWORKS.map((network) => [network.networkId, network.coingeckoId]));
   const chainNameByNetwork = Object.fromEntries(NETWORKS.map((network) => [network.networkId, network.defillamaChain]));
@@ -429,6 +464,7 @@ async function main() {
     const fallbackCg = coingeckoSnapshot[network.networkId] ?? {};
     const fallbackDefillama = defillamaSnapshot[network.networkId] ?? null;
     const fallbackDomain = domainSnapshot[network.networkId] ?? {};
+    const manualUi = uiFieldsSnapshot[network.networkId] ?? {};
 
     const marketCapMetric = metricFromCandidates(
       {
@@ -707,6 +743,18 @@ async function main() {
       []
     );
 
+    const category = typeof manualUi.category === "string" ? manualUi.category : null;
+    const status = typeof manualUi.status === "string" ? manualUi.status : null;
+    const fdvUsd = toNumberOrNull(manualUi.fdvUsd);
+    const circulatingSupplyPct = toNumberOrNull(manualUi.circulatingSupplyPct);
+    const stakerAddresses = toNumberOrNull(manualUi.stakerAddresses);
+    const lstProtocols = toNumberOrNull(manualUi.lstProtocols);
+    const largestLst = typeof manualUi.largestLst === "string" ? manualUi.largestLst : null;
+    const lendingPresence = typeof manualUi.lendingPresence === "boolean" ? manualUi.lendingPresence : null;
+    const lstCollateralEnabled = typeof manualUi.lstCollateralEnabled === "boolean" ? manualUi.lstCollateralEnabled : null;
+    const mainBottleneck = typeof manualUi.mainBottleneck === "string" ? manualUi.mainBottleneck : null;
+    const mainOpportunity = typeof manualUi.mainOpportunity === "string" ? manualUi.mainOpportunity : null;
+
     const marketCapUsd = marketCapMetric.value;
     const circulatingSupply = circulatingSupplyMetric.value;
     const priceUsd = priceMetric.value;
@@ -724,6 +772,21 @@ async function main() {
     const benchmarkCommissionPct = benchmarkCommissionMetric.value;
     const lstTvlUsd = lstTvlMetric.value;
 
+    fieldQuality.category = resolveDerivedQuality(category) === "derived" ? "inferred" : "missing";
+    fieldQuality.status = resolveDerivedQuality(status) === "derived" ? "inferred" : "missing";
+    fieldQuality.fdvUsd = resolveDerivedQuality(fdvUsd) === "derived" ? "inferred" : "missing";
+    fieldQuality.circulatingSupplyPct =
+      resolveDerivedQuality(circulatingSupplyPct) === "derived" ? "inferred" : "missing";
+    fieldQuality.stakerAddresses = resolveDerivedQuality(stakerAddresses) === "derived" ? "inferred" : "missing";
+    fieldQuality.lstProtocols = resolveDerivedQuality(lstProtocols) === "derived" ? "inferred" : "missing";
+    fieldQuality.largestLst = resolveDerivedQuality(largestLst) === "derived" ? "inferred" : "missing";
+    fieldQuality.lendingPresence = resolveDerivedQuality(lendingPresence) === "derived" ? "inferred" : "missing";
+    fieldQuality.lstCollateralEnabled =
+      resolveDerivedQuality(lstCollateralEnabled) === "derived" ? "inferred" : "missing";
+    fieldQuality.mainBottleneck = resolveDerivedQuality(mainBottleneck) === "derived" ? "inferred" : "missing";
+    fieldQuality.mainOpportunity =
+      resolveDerivedQuality(mainOpportunity) === "derived" ? "inferred" : "missing";
+
     fieldQuality.marketCapUsd = marketCapMetric.quality;
     fieldQuality.circulatingSupply = circulatingSupplyMetric.quality;
     fieldQuality.priceUsd = priceMetric.quality;
@@ -740,6 +803,26 @@ async function main() {
     fieldQuality.verifiedProviders = verifiedProvidersMetric.quality;
     fieldQuality.benchmarkCommissionPct = benchmarkCommissionMetric.quality;
     fieldQuality.lstTvlUsd = lstTvlMetric.quality;
+
+    const manualUiSourceRef = uiFieldsUpdatedAt
+      ? "manual-ui-fields:asOf=" + uiFieldsUpdatedAt + ":network=" + network.networkId
+      : "manual-ui-fields:network=" + network.networkId;
+
+    if (
+      category !== null ||
+      status !== null ||
+      fdvUsd !== null ||
+      circulatingSupplyPct !== null ||
+      stakerAddresses !== null ||
+      lstProtocols !== null ||
+      largestLst !== null ||
+      lendingPresence !== null ||
+      lstCollateralEnabled !== null ||
+      mainBottleneck !== null ||
+      mainOpportunity !== null
+    ) {
+      sourceRefs.push(manualUiSourceRef);
+    }
 
     sourceRefs.push(
       ...marketCapMetric.refs,
@@ -766,6 +849,7 @@ async function main() {
     const tvlToMarketCap = calculateRatio(defiTvlUsd, marketCapUsd);
     const lstPenetrationPct = calculateRatio(lstTvlUsd, stakedValueUsd);
 
+    fieldQuality.stakedValueUsd = resolveDerivedQuality(stakedValueUsd);
     fieldQuality.tvlToMarketCap = resolveDerivedQuality(tvlToMarketCap);
     fieldQuality.lstPenetrationPct = resolveDerivedQuality(lstPenetrationPct);
 
@@ -831,6 +915,17 @@ async function main() {
       chain: manualStaking?.chain ?? network.networkId,
       network: network.network,
       token: network.token,
+      category,
+      status,
+      fdvUsd,
+      circulatingSupplyPct,
+      stakerAddresses,
+      lstProtocols,
+      largestLst,
+      lendingPresence,
+      lstCollateralEnabled,
+      mainBottleneck,
+      mainOpportunity,
       marketCapUsd,
       circulatingSupply,
       priceUsd,
@@ -843,6 +938,7 @@ async function main() {
       rewardRatePct,
       stakingMarketCapUsd,
       stakedTokens,
+      stakedValueUsd,
       inflationRatePct,
       verifiedProviders,
       benchmarkCommissionPct,

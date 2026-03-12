@@ -32,6 +32,7 @@ export type Network = {
   fdvUsd: number;
   circulatingSupply: number;
   circulatingSupplyPct: number;
+  stakedTokens?: number | null;
   priceUsd?: number | null;
   volume24hUsd?: number | null;
   stakingRatioPct: number;
@@ -57,6 +58,7 @@ export type Network = {
   quality?: "observed" | "inferred" | "simulated";
   confidence?: "high" | "medium" | "low";
   dataCoveragePct?: number;
+  fieldQuality?: Record<string, "observed" | "derived" | "inferred" | "simulated" | "missing">;
   status: NetworkStatus;
 };
 
@@ -355,8 +357,20 @@ const baseNetworks: Network[] = [
 
 type GeneratedOverviewRecord = {
   networkId: string;
+  category?: string | null;
+  status?: NetworkStatus | null;
+  fdvUsd?: number | null;
+  circulatingSupplyPct?: number | null;
+  stakerAddresses?: number | null;
+  lstProtocols?: number | null;
+  largestLst?: string | null;
+  lendingPresence?: boolean | null;
+  lstCollateralEnabled?: boolean | null;
+  mainBottleneck?: string | null;
+  mainOpportunity?: string | null;
   marketCapUsd?: number | null;
   circulatingSupply?: number | null;
+  stakedTokens?: number | null;
   priceUsd?: number | null;
   volume24hUsd?: number | null;
   defiTvlUsd?: number | null;
@@ -372,6 +386,7 @@ type GeneratedOverviewRecord = {
   quality?: Network["quality"];
   confidence?: Network["confidence"];
   dataCoveragePct?: number;
+  fieldQuality?: Record<string, "observed" | "derived" | "inferred" | "simulated" | "missing">;
 };
 
 export const networks: Network[] = applyGeneratedOverview(
@@ -383,14 +398,39 @@ function toFiniteNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
+function toNullableString(value: unknown): string | null {
+  if (typeof value !== "string") {
+    return null;
+  }
+
+  const trimmed = value.trim();
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+function toNullableBoolean(value: unknown): boolean | null {
+  return typeof value === "boolean" ? value : null;
+}
+
 function applyGeneratedOverview(networks: Network[], generated: GeneratedOverviewRecord[]): Network[] {
   const generatedById = new Map(generated.map((entry) => [entry.networkId, entry]));
 
   return networks.map((network) => {
     const live = generatedById.get(network.networkId);
 
+    const category = toNullableString(live?.category) ?? network.category;
+    const status = (toNullableString(live?.status) as NetworkStatus | null) ?? network.status;
+    const fdvUsd = toFiniteNumber(live?.fdvUsd) ?? network.fdvUsd;
+    const circulatingSupplyPct = toFiniteNumber(live?.circulatingSupplyPct) ?? network.circulatingSupplyPct;
+    const stakerAddresses = toFiniteNumber(live?.stakerAddresses) ?? network.stakerAddresses;
+    const lstProtocols = toFiniteNumber(live?.lstProtocols) ?? network.lstProtocols;
+    const largestLst = toNullableString(live?.largestLst) ?? network.largestLst;
+    const lendingPresence = toNullableBoolean(live?.lendingPresence) ?? network.lendingPresence;
+    const lstCollateralEnabled = toNullableBoolean(live?.lstCollateralEnabled) ?? network.lstCollateralEnabled;
+    const mainBottleneck = toNullableString(live?.mainBottleneck) ?? network.mainBottleneck;
+    const mainOpportunity = toNullableString(live?.mainOpportunity) ?? network.mainOpportunity;
     const marketCapUsd = toFiniteNumber(live?.marketCapUsd) ?? network.marketCapUsd;
     const circulatingSupply = toFiniteNumber(live?.circulatingSupply) ?? network.circulatingSupply;
+    const stakedTokens = toFiniteNumber(live?.stakedTokens) ?? network.stakedTokens ?? null;
     const stakingRatioPct = toFiniteNumber(live?.stakingRatioPct) ?? network.stakingRatioPct;
     const stakingApyPct = toFiniteNumber(live?.stakingApyPct) ?? network.stakingApyPct;
     const defiTvlUsd = toFiniteNumber(live?.defiTvlUsd) ?? network.defiTvlUsd;
@@ -402,8 +442,20 @@ function applyGeneratedOverview(networks: Network[], generated: GeneratedOvervie
 
     const merged: Network = {
       ...network,
+      category,
+      status,
+      fdvUsd,
+      circulatingSupplyPct,
+      stakerAddresses,
+      lstProtocols,
+      largestLst,
+      lendingPresence,
+      lstCollateralEnabled,
+      mainBottleneck,
+      mainOpportunity,
       marketCapUsd,
       circulatingSupply,
+      stakedTokens,
       priceUsd: toFiniteNumber(live?.priceUsd) ?? network.priceUsd ?? null,
       volume24hUsd: toFiniteNumber(live?.volume24hUsd) ?? network.volume24hUsd ?? null,
       stakingRatioPct,
@@ -418,7 +470,8 @@ function applyGeneratedOverview(networks: Network[], generated: GeneratedOvervie
       sourceRefs: live?.sourceRefs ?? network.sourceRefs,
       quality: live?.quality ?? network.quality,
       confidence: live?.confidence ?? network.confidence,
-      dataCoveragePct: toFiniteNumber(live?.dataCoveragePct) ?? network.dataCoveragePct
+      dataCoveragePct: toFiniteNumber(live?.dataCoveragePct) ?? network.dataCoveragePct,
+      fieldQuality: live?.fieldQuality ?? network.fieldQuality
     };
 
     return applyDerivedMetrics(merged);
@@ -426,13 +479,26 @@ function applyGeneratedOverview(networks: Network[], generated: GeneratedOvervie
 }
 
 function applyDerivedMetrics(network: Network): Network {
-  const stakedValueUsd = (network.marketCapUsd * network.stakingRatioPct) / 100;
+  const hasTokenRatioInputs =
+    typeof network.stakedTokens === "number" &&
+    Number.isFinite(network.stakedTokens) &&
+    typeof network.circulatingSupply === "number" &&
+    Number.isFinite(network.circulatingSupply) &&
+    network.circulatingSupply > 0;
+
+  const derivedTokenRatioPct = hasTokenRatioInputs ? (network.stakedTokens! / network.circulatingSupply) * 100 : null;
+  const isDerivedTokenRatioUsable =
+    typeof derivedTokenRatioPct === "number" && Number.isFinite(derivedTokenRatioPct) && derivedTokenRatioPct >= 0 && derivedTokenRatioPct <= 100;
+
+  const resolvedStakingRatioPct = isDerivedTokenRatioUsable ? derivedTokenRatioPct : network.stakingRatioPct;
+
+  const stakedValueUsd = (network.marketCapUsd * resolvedStakingRatioPct) / 100;
   const tvlToMcapPct = network.marketCapUsd > 0 ? (network.defiTvlUsd / network.marketCapUsd) * 100 : network.tvlToMcapPct;
-  const lstPenetrationPct =
-    stakedValueUsd > 0 ? (network.lstTvlUsd / stakedValueUsd) * 100 : network.lstPenetrationPct;
+  const lstPenetrationPct = stakedValueUsd > 0 ? (network.lstTvlUsd / stakedValueUsd) * 100 : network.lstPenetrationPct;
 
   return {
     ...network,
+    stakingRatioPct: Number(resolvedStakingRatioPct.toFixed(2)),
     stakedValueUsd: Number(stakedValueUsd.toFixed(0)),
     tvlToMcapPct: Number(tvlToMcapPct.toFixed(1)),
     lstPenetrationPct: Number(lstPenetrationPct.toFixed(1))

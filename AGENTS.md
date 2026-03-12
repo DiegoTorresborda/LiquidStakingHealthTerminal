@@ -23,6 +23,18 @@ Purpose:
 - surface bottlenecks and risks
 - identify the highest-impact interventions
 
+### 3. Admin Data Control Panel
+An internal admin layer for managing the data powering the dashboard.
+
+Purpose:
+- trigger API source refresh
+- edit manual curated data
+- manage chain resources
+- apply overrides
+- rebuild generated datasets
+
+This layer exists to make the dashboard maintainable without editing code directly.
+
 ## Core objective
 Evaluate opportunities to improve an L1, its liquid staking layer, and its DeFi stack under the thesis that **liquid staking is the key monetary layer of the ecosystem**.
 
@@ -96,10 +108,13 @@ The intended user flow is:
 
 ## Data architecture principles
 - keep overview data separate from detail data
-- keep mock datasets external and structured
+- keep raw API snapshots separate from normalized generated datasets
+- keep manual curated data external and structured
+- keep overrides external and explicit
 - use reusable schemas
 - support future row-to-detail drill-down
 - make it easy to replace mock data with real data sources later
+- preserve data provenance, confidence, and source quality where possible
 
 ## Mandatory reading before work
 Before making architectural, product, or UI decisions, read in this order:
@@ -112,16 +127,24 @@ Also read, when relevant:
 - /docs/sample-network-universe.md
 - /docs/network-detail-spec.md
 - /docs/opportunity-engine-spec.md
+- /docs/scoring-engine-spec.md or /docs/lst-health-scoring.md
+- /docs/chain-resources-spec.md
+- /docs/admin-feature-spec.md
+- /docs/data-update-architecture.md
 
 ## Decision priority
 If instructions conflict, use this priority:
 1. /tasks/current-task.md
-2. /docs/network-detail-spec.md
-3. /docs/opportunity-engine-spec.md
-4. /docs/product-brief.md
-5. /docs/scoring-framework.md
-6. /docs/ui-reference.md
-7. /AGENTS.md
+2. /docs/lst-health-scoring.md or /docs/scoring-engine-spec.md
+3. /docs/admin-feature-spec.md
+4. /docs/data-update-architecture.md
+5. /docs/chain-resources-spec.md
+6. /docs/network-detail-spec.md
+7. /docs/opportunity-engine-spec.md
+8. /docs/product-brief.md
+9. /docs/scoring-framework.md
+10. /docs/ui-reference.md
+11. /AGENTS.md
 
 ## Tech assumptions
 - Frontend: Next.js
@@ -144,6 +167,9 @@ If instructions conflict, use this priority:
 ## UX guardrails
 - The homepage should tell a story quickly
 - The network detail page should explain why the network is strong or weak
+- Do not write directly into generated datasets from admin UI flows
+- Admin actions must update source layers (API snapshots, manual data, overrides) and then rebuild generated datasets
+- Keep curated registries such as chain resources external to the UI
 - Users should quickly understand:
   - how healthy the ecosystem is
   - what the biggest risks are

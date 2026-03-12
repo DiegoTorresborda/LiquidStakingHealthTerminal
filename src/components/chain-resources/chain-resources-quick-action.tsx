@@ -17,6 +17,8 @@ export function ChainResourcesQuickAction({ networkId }: ChainResourcesQuickActi
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
+  const MENU_WIDTH_PX = 288;
+  const VIEWPORT_PADDING_PX = 8;
 
   useEffect(() => {
     setMounted(true);
@@ -28,9 +30,25 @@ export function ChainResourcesQuickAction({ networkId }: ChainResourcesQuickActi
     function updatePosition() {
       const rect = triggerRef.current?.getBoundingClientRect();
       if (!rect) return;
+
+      const menuHeight = menuRef.current?.offsetHeight ?? 220;
+      const viewportHeight = window.innerHeight;
+      const viewportWidth = window.innerWidth;
+
+      const canOpenBelow =
+        rect.bottom + 8 + menuHeight <= viewportHeight - VIEWPORT_PADDING_PX;
+      const top = canOpenBelow
+        ? rect.bottom + 8
+        : Math.max(VIEWPORT_PADDING_PX, rect.top - menuHeight - 8);
+
+      const left = Math.min(
+        Math.max(VIEWPORT_PADDING_PX, rect.left),
+        viewportWidth - MENU_WIDTH_PX - VIEWPORT_PADDING_PX
+      );
+
       setPosition({
-        top: rect.bottom + 8,
-        left: rect.left
+        top,
+        left
       });
     }
 
@@ -46,6 +64,7 @@ export function ChainResourcesQuickAction({ networkId }: ChainResourcesQuickActi
     }
 
     updatePosition();
+    requestAnimationFrame(updatePosition);
     window.addEventListener("resize", updatePosition);
     window.addEventListener("scroll", updatePosition, true);
     document.addEventListener("mousedown", onPointerDown);

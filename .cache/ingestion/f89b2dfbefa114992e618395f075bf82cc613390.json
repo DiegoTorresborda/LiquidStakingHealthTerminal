@@ -1,8 +1,8 @@
 {
-  "cachedAt": 1773156677161,
+  "cachedAt": 1773320439973,
   "data": {
     "status": "0",
-    "message": "NOTOK-Missing/Invalid API Key, rate limit of 1/5sec applied",
-    "result": "Error! Missing Or invalid Module name (#1)"
+    "message": "NOTOK",
+    "result": "Max rate limit reached, please use API Key for higher rate limit"
   }
 }

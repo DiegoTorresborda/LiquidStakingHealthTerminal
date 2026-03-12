@@ -23,6 +23,11 @@ type NetworksTableProps = {
   onOpenNetwork: (networkId: string) => void;
 };
 
+type MockedVisibilityMode = "Show" | "No Show";
+
+const MOCKED_VISIBILITY_MODE: MockedVisibilityMode =
+  process.env.NEXT_PUBLIC_MOCKED_VISIBILITY_MODE === "No Show" ? "No Show" : "Show";
+
 type Column = {
   key: SortKey;
   label: string;
@@ -168,24 +173,45 @@ export function NetworksTable({
                           </div>
 
                           <div className="grid gap-3 text-sm sm:grid-cols-2 xl:grid-cols-4">
-                            <DetailItem label="FDV" value={formatUsdFull(network.fdvUsd)} />
-                            <DetailItem label="Tokens in Circulation" value={formatInteger(network.circulatingSupply)} />
-                            <DetailItem label="Circulating Supply %" value={formatPercent(network.circulatingSupplyPct)} />
-                            <DetailItem label="Staked Value USD" value={formatUsdFull(network.stakedValueUsd)} />
-                            <DetailItem label="Validator Count" value={formatInteger(network.validatorCount)} />
-                            <DetailItem label="Largest LST" value={network.largestLst} />
-                            <DetailItem label="Stablecoin Liquidity" value={formatUsdFull(network.stablecoinLiquidityUsd)} />
-                            <DetailItem label="Lending Presence" value={booleanLabel(network.lendingPresence)} />
-                            <DetailItem label="LST as Collateral" value={booleanLabel(network.lstCollateralEnabled)} />
-                            <DetailItem label="Health Score (Raw)" value={`${network.healthScoreRaw}`} />
+                            <DetailItem
+                              label="% Staked"
+                              value={formatStakedRatioDisplay(network.stakedTokens, network.circulatingSupply, network.stakingRatioPct)}
+                              mocked={isStakedRatioDisplayMocked(network)}
+                            />
+                            <DetailItem
+                              label="Tokens in Circulation"
+                              value={formatInteger(network.circulatingSupply)}
+                              mocked={isMetricMocked(network, "circulatingSupply")}
+                            />
+                            <DetailItem
+                              label="Tokens Staked"
+                              value={formatTokenStaked(network.stakedTokens, network.token)}
+                              mocked={isMetricMocked(network, "stakedTokens")}
+                            />
+                            <DetailItem label="Staked Value USD" value={formatUsdFull(network.stakedValueUsd)} mocked={isStakedValueMocked(network)} />
+                            <DetailItem
+                              label="Validator Count"
+                              value={formatInteger(network.validatorCount)}
+                              mocked={isMetricMocked(network, "validatorCount")}
+                            />
+                            <DetailItem label="Largest LST" value={network.largestLst || "N/A"} mocked={isLargestLstMocked(network)} />
+                            <DetailItem
+                              label="Stablecoin Liquidity"
+                              value={formatUsdFull(network.stablecoinLiquidityUsd)}
+                              mocked={isMetricMocked(network, "stablecoinLiquidityUsd")}
+                            />
+                            <DetailItem label="Lending Presence" value={booleanLabel(network.lendingPresence)} mocked />
+                            <DetailItem label="LST as Collateral" value={booleanLabel(network.lstCollateralEnabled)} mocked />
+                            <DetailItem label="Health Score (Raw)" value={`${network.healthScoreRaw}`} mocked />
                             <DetailItem
                               label="Health Penalties"
                               value={network.healthScorePenaltyPoints > 0 ? `-${network.healthScorePenaltyPoints}` : "0"}
+                              mocked
                             />
-                            <DetailItem label="Health Score (Capped)" value={`${network.healthScoreCapped}`} />
-                            <DetailItem label="Main Bottleneck" value={network.mainBottleneck} />
-                            <DetailItem label="Main Opportunity" value={network.mainOpportunity} />
-                            <DetailItem label="Status Tag" value={network.status} />
+                            <DetailItem label="Health Score (Capped)" value={`${network.healthScoreCapped}`} mocked />
+                            <DetailItem label="Main Bottleneck" value={network.mainBottleneck} mocked />
+                            <DetailItem label="Main Opportunity" value={network.mainOpportunity} mocked />
+                            <DetailItem label="Status Tag" value={network.status} mocked />
                             <DetailItem label="Data Quality" value={network.quality ?? "Unknown"} />
                             <DetailItem label="Confidence" value={network.confidence ?? "Unknown"} />
                             <DetailItem label="As Of" value={network.asOf ?? "Unknown"} />
@@ -221,6 +247,36 @@ function shouldIgnoreRowNavigation(target: EventTarget | null): boolean {
   return false;
 }
 
+function isMetricMocked(network: RadarNetwork, metric: string): boolean {
+  const quality = network.fieldQuality?.[metric];
+  return quality === "missing" || quality === "simulated";
+}
+
+function isStakedValueMocked(network: RadarNetwork): boolean {
+  return isMetricMocked(network, "marketCapUsd") || isMetricMocked(network, "stakingRatioPct");
+}
+
+function isStakedRatioDisplayMocked(network: RadarNetwork): boolean {
+  const hasValidTokenRatio =
+    typeof network.stakedTokens === "number" &&
+    Number.isFinite(network.stakedTokens) &&
+    typeof network.circulatingSupply === "number" &&
+    Number.isFinite(network.circulatingSupply) &&
+    network.circulatingSupply > 0 &&
+    network.stakedTokens >= 0 &&
+    (network.stakedTokens / network.circulatingSupply) * 100 <= 100;
+
+  if (hasValidTokenRatio) {
+    return isMetricMocked(network, "stakedTokens") || isMetricMocked(network, "circulatingSupply");
+  }
+
+  return isMetricMocked(network, "stakingRatioPct");
+}
+
+function isLargestLstMocked(network: RadarNetwork): boolean {
+  return !network.largestLst || network.largestLst.trim().length === 0;
+}
+
 function resolveSortIcon(sort: SortState, key: SortKey): string {
   if (sort.key !== key) {
     return "↕";
@@ -232,13 +288,63 @@ function resolveSortIcon(sort: SortState, key: SortKey): string {
 type DetailItemProps = {
   label: string;
   value: string;
+  mocked?: boolean;
 };
 
-function DetailItem({ label, value }: DetailItemProps) {
+function DetailItem({ label, value, mocked = false }: DetailItemProps) {
+  const showMockedStyling = MOCKED_VISIBILITY_MODE === "Show";
+  const effectiveMocked = mocked && showMockedStyling;
+
   return (
-    <div className="rounded-lg border border-ink-300/20 bg-slateglass-600/35 p-3">
-      <p className="text-xs uppercase tracking-[0.14em] text-ink-300">{label}</p>
-      <p className="mt-1 text-sm text-ink-50">{value}</p>
+    <div
+      className={`rounded-lg border p-3 ${
+        effectiveMocked ? "border-amber/45 bg-amber/10" : "border-ink-300/20 bg-slateglass-600/35"
+      }`}
+    >
+      <div className="flex items-center justify-between gap-2">
+        <p className={`text-xs uppercase tracking-[0.14em] ${effectiveMocked ? "text-amber" : "text-ink-300"}`}>{label}</p>
+        {effectiveMocked ? (
+          <span className="rounded border border-amber/45 bg-amber/15 px-1.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-amber">
+            Mock
+          </span>
+        ) : null}
+      </div>
+      <p className={`mt-1 text-sm ${effectiveMocked ? "font-semibold text-amber-200" : "text-ink-50"}`}>{value}</p>
     </div>
   );
+}
+
+function formatTokenStaked(value: number | null | undefined, token: string): string {
+  const amount = formatInteger(value ?? null);
+  if (amount === "N/A") {
+    return amount;
+  }
+
+  return `${amount} ${token}`;
+}
+
+function formatStakedRatioDisplay(
+  stakedTokens: number | null | undefined,
+  circulatingSupply: number | null | undefined,
+  fallbackRatioPct: number | null | undefined
+): string {
+  const hasTokenInputs =
+    typeof stakedTokens === "number" &&
+    Number.isFinite(stakedTokens) &&
+    typeof circulatingSupply === "number" &&
+    Number.isFinite(circulatingSupply) &&
+    circulatingSupply > 0;
+
+  if (hasTokenInputs) {
+    const ratioFromTokens = (stakedTokens / circulatingSupply) * 100;
+    if (Number.isFinite(ratioFromTokens) && ratioFromTokens >= 0 && ratioFromTokens <= 100) {
+      return `${ratioFromTokens.toFixed(1)}%`;
+    }
+  }
+
+  if (typeof fallbackRatioPct === "number" && Number.isFinite(fallbackRatioPct)) {
+    return `${fallbackRatioPct.toFixed(1)}%`;
+  }
+
+  return "N/A";
 }

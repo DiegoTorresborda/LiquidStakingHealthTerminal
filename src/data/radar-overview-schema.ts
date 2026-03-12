@@ -1,6 +1,17 @@
 export type FieldDataClass = "observed" | "derived" | "inferred" | "simulated" | "missing";
 
 export type RadarOverviewField =
+  | "category"
+  | "status"
+  | "fdvUsd"
+  | "circulatingSupplyPct"
+  | "stakerAddresses"
+  | "lstProtocols"
+  | "largestLst"
+  | "lendingPresence"
+  | "lstCollateralEnabled"
+  | "mainBottleneck"
+  | "mainOpportunity"
   | "marketCapUsd"
   | "circulatingSupply"
   | "priceUsd"
@@ -13,6 +24,7 @@ export type RadarOverviewField =
   | "rewardRatePct"
   | "stakingMarketCapUsd"
   | "stakedTokens"
+  | "stakedValueUsd"
   | "inflationRatePct"
   | "verifiedProviders"
   | "benchmarkCommissionPct"
@@ -60,6 +72,17 @@ export type RadarOverviewRecord = {
   chain: string;
   network: string;
   token: string;
+  category: string | null;
+  status: string | null;
+  fdvUsd: number | null;
+  circulatingSupplyPct: number | null;
+  stakerAddresses: number | null;
+  lstProtocols: number | null;
+  largestLst: string | null;
+  lendingPresence: boolean | null;
+  lstCollateralEnabled: boolean | null;
+  mainBottleneck: string | null;
+  mainOpportunity: string | null;
   marketCapUsd: number | null;
   circulatingSupply: number | null;
   priceUsd: number | null;
@@ -72,6 +95,7 @@ export type RadarOverviewRecord = {
   rewardRatePct: number | null;
   stakingMarketCapUsd: number | null;
   stakedTokens: number | null;
+  stakedValueUsd: number | null;
   inflationRatePct: number | null;
   verifiedProviders: number | null;
   benchmarkCommissionPct: number | null;

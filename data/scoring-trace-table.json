@@ -1,0 +1,3690 @@
+[
+  {
+    "networkId": "monad",
+    "network": "Monad",
+    "bases": {
+      "globalLstHealthScore": 71,
+      "opportunityScore": 86
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 11.41,
+      "stakedValueUsd": 27063168,
+      "tvlToMcapPct": 219.8,
+      "lstPenetrationPct": 39.8
+    },
+    "signals": {
+      "stableRatio": 7.7596237070249865,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": 5,
+      "validatorSignal": 7.4,
+      "yieldSignal": -3,
+      "redemptionSignal": 2,
+      "penetrationSignal": 1
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": true,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": false,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 72,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 210000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 27063168,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 39.8,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": 1
+          }
+        ],
+        "rawScore": 72,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 72,
+        "cappedScore": 72,
+        "finalScore": 72,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 78,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 210000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 27063168,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 78,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 78,
+        "cappedScore": 78,
+        "finalScore": 78,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 69,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 219.8,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 69,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 69,
+        "cappedScore": 69,
+        "finalScore": 69,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Security & Governance": {
+        "baseline": 82,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 169,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 237143934,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": 5
+          }
+        ],
+        "rawScore": 82,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 82,
+        "cappedScore": 82,
+        "finalScore": 82,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 85,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 169,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 142000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": 7.4
+          }
+        ],
+        "rawScore": 85,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 85,
+        "cappedScore": 85,
+        "finalScore": 85,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 62,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 16.01,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -3
+          }
+        ],
+        "rawScore": 62,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 62,
+        "cappedScore": 62,
+        "finalScore": 62,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 71,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 71,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 210000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 27063168,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 169,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 71,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 71,
+        "cappedScore": 71,
+        "finalScore": 71,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 74,
+      "moneyness": 69,
+      "credibility": 77
+    },
+    "global": {
+      "rawScore": 73,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 73,
+      "cappedScore": 73,
+      "finalScore": 73,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "sei",
+    "network": "Sei",
+    "bases": {
+      "globalLstHealthScore": 66,
+      "opportunityScore": 82
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 55.99,
+      "stakedValueUsd": 239081003,
+      "tvlToMcapPct": 13.9,
+      "lstPenetrationPct": 2.6
+    },
+    "signals": {
+      "stableRatio": 0.5855755925534577,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 2.0444444444444447,
+      "governanceSignal": -2,
+      "validatorSignal": -0.16666666666666607,
+      "yieldSignal": 1.1300000000000008,
+      "redemptionSignal": 2,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": false,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": true,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 64,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 140000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 239081003,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 2.6,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 64,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 64,
+        "cappedScore": 64,
+        "finalScore": 64,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 73,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 140000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 239081003,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 73,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 73,
+        "cappedScore": 73,
+        "finalScore": 73,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 51,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 13.9,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 2.0444444444444447
+          }
+        ],
+        "rawScore": 51,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 51,
+        "cappedScore": 51,
+        "finalScore": 51,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "LST not used as collateral",
+            "value": 55
+          }
+        ]
+      },
+      "Security & Governance": {
+        "baseline": 70,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 40,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 427005859,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 70,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 70,
+        "cappedScore": 70,
+        "finalScore": 70,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 73,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 40,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 185000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -0.16666666666666607
+          }
+        ],
+        "rawScore": 73,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 73,
+        "cappedScore": 55,
+        "finalScore": 55,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Extreme validator concentration",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "Extreme validator concentration",
+          "value": 55
+        }
+      },
+      "Incentive Sustainability": {
+        "baseline": 58,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 7.14,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": 1.1300000000000008
+          }
+        ],
+        "rawScore": 58,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 58,
+        "cappedScore": 58,
+        "finalScore": 58,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 64,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 66,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 140000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 239081003,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 40,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 64,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 64,
+        "cappedScore": 64,
+        "finalScore": 64,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 67,
+      "moneyness": 51,
+      "credibility": 62
+    },
+    "global": {
+      "rawScore": 61,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 61,
+      "cappedScore": 61,
+      "finalScore": 61,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "sui",
+    "network": "Sui",
+    "bases": {
+      "globalLstHealthScore": 74,
+      "opportunityScore": 68
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 74.89,
+      "stakedValueUsd": 2869314793,
+      "tvlToMcapPct": 23.9,
+      "lstPenetrationPct": 4.8
+    },
+    "signals": {
+      "stableRatio": 0.14637641050212924,
+      "stableDepthSignal": 2.5302383266083623,
+      "defiDepthSignal": 5.007407407407407,
+      "governanceSignal": 4.346666666666667,
+      "validatorSignal": 8.826666666666666,
+      "yieldSignal": 4,
+      "redemptionSignal": 2,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": true,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": false,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 69,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 420000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 2869314793,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 4.8,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 2.5302383266083623
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 69,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 69,
+        "cappedScore": 69,
+        "finalScore": 69,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 79,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 420000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 2869314793,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 2.5302383266083623
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 79,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 79,
+        "cappedScore": 79,
+        "finalScore": 79,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 69,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 23.9,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 5.007407407407407
+          }
+        ],
+        "rawScore": 69,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 69,
+        "cappedScore": 69,
+        "finalScore": 69,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Security & Governance": {
+        "baseline": 84,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 128,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 3831372404,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": 4.346666666666667
+          }
+        ],
+        "rawScore": 84,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 84,
+        "cappedScore": 84,
+        "finalScore": 84,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 90,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 128,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 210000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": 8.826666666666666
+          }
+        ],
+        "rawScore": 90,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 90,
+        "cappedScore": 90,
+        "finalScore": 90,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 72,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 1.73,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": 4
+          }
+        ],
+        "rawScore": 72,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 72,
+        "cappedScore": 72,
+        "finalScore": 72,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 72,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 74,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 420000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 2869314793,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 128,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 2.5302383266083623
+          }
+        ],
+        "rawScore": 72,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 72,
+        "cappedScore": 72,
+        "finalScore": 72,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 73,
+      "moneyness": 69,
+      "credibility": 82
+    },
+    "global": {
+      "rawScore": 74,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 74,
+      "cappedScore": 74,
+      "finalScore": 74,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "aptos",
+    "network": "Aptos",
+    "bases": {
+      "globalLstHealthScore": 70,
+      "opportunityScore": 64
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 98.16,
+      "stakedValueUsd": 708522684,
+      "tvlToMcapPct": 54.3,
+      "lstPenetrationPct": 6.2
+    },
+    "signals": {
+      "stableRatio": 0.49398559552681875,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": 3.506666666666666,
+      "validatorSignal": 6.246666666666666,
+      "yieldSignal": 1.375,
+      "redemptionSignal": 2,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": true,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": false,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 68,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 350000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 708522684,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 6.2,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 68,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 68,
+        "cappedScore": 68,
+        "finalScore": 68,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 77,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 350000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 708522684,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 77,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 77,
+        "cappedScore": 77,
+        "finalScore": 77,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 68,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 54.3,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 68,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 68,
+        "cappedScore": 68,
+        "finalScore": 68,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Security & Governance": {
+        "baseline": 80,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 119,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 721803875,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": 3.506666666666666
+          }
+        ],
+        "rawScore": 80,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 80,
+        "cappedScore": 80,
+        "finalScore": 80,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 83,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 119,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 165000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": 6.246666666666666
+          }
+        ],
+        "rawScore": 83,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 83,
+        "cappedScore": 83,
+        "finalScore": 83,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 65,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 7,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": 1.375
+          }
+        ],
+        "rawScore": 65,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 65,
+        "cappedScore": 65,
+        "finalScore": 65,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 70,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 70,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 350000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 708522684,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 119,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 3,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 70,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 70,
+        "cappedScore": 70,
+        "finalScore": 70,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 71,
+      "moneyness": 68,
+      "credibility": 76
+    },
+    "global": {
+      "rawScore": 71,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 71,
+      "cappedScore": 71,
+      "finalScore": 71,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "berachain",
+    "network": "Berachain",
+    "bases": {
+      "globalLstHealthScore": 63,
+      "opportunityScore": 91
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 43,
+      "stakedValueUsd": 56392697,
+      "tvlToMcapPct": 268.3,
+      "lstPenetrationPct": 185.5
+    },
+    "signals": {
+      "stableRatio": 5.319837779703993,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": -1.1600000000000001,
+      "validatorSignal": -2.02,
+      "yieldSignal": -2.6500000000000012,
+      "redemptionSignal": 2,
+      "penetrationSignal": 1
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": false,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": false,
+      "emissionsDominate": true
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 64,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 300000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 56392697,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 185.5,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": 1
+          }
+        ],
+        "rawScore": 64,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 64,
+        "cappedScore": 64,
+        "finalScore": 64,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 70,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 300000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 56392697,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 70,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 70,
+        "cappedScore": 70,
+        "finalScore": 70,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 54,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 268.3,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 54,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 54,
+        "cappedScore": 54,
+        "finalScore": 54,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "LST not used as collateral",
+            "value": 55
+          }
+        ]
+      },
+      "Security & Governance": {
+        "baseline": 68,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 69,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 131145807,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": -1.1600000000000001
+          }
+        ],
+        "rawScore": 68,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 68,
+        "cappedScore": 68,
+        "finalScore": 68,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 68,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 69,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 97000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -2.02
+          }
+        ],
+        "rawScore": 68,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 68,
+        "cappedScore": 68,
+        "finalScore": 68,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 51,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 9.3,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -2.6500000000000012
+          }
+        ],
+        "rawScore": 51,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 51,
+        "cappedScore": 51,
+        "finalScore": 51,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Emissions dominate ecosystem attractiveness",
+            "value": 55
+          }
+        ]
+      },
+      "Stress Resilience": {
+        "baseline": 61,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 63,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 300000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 56392697,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 69,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 61,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 61,
+        "cappedScore": 61,
+        "finalScore": 61,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 65,
+      "moneyness": 54,
+      "credibility": 63
+    },
+    "global": {
+      "rawScore": 61,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 61,
+      "cappedScore": 61,
+      "finalScore": 61,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "xdc",
+    "network": "XDC",
+    "bases": {
+      "globalLstHealthScore": 58,
+      "opportunityScore": 87
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 12.84,
+      "stakedValueUsd": 84406325,
+      "tvlToMcapPct": 1.7,
+      "lstPenetrationPct": 7.3
+    },
+    "signals": {
+      "stableRatio": 0.5449828552540346,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 0,
+      "governanceSignal": 2.4800000000000004,
+      "validatorSignal": 1.4599999999999997,
+      "yieldSignal": -3,
+      "redemptionSignal": -4,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": false,
+      "redemptionPathExists": false,
+      "extremeLpConcentrationPenalty": 10,
+      "persistentLargeDiscount": true,
+      "extremeVolatilityPenalty": 5,
+      "redemptionUnavailable": true,
+      "lstUsedAsCollateral": false,
+      "noAudits": true,
+      "noTimelockUpgrades": true,
+      "extremeConcentration": false,
+      "emissionsDominate": true
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 50,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 46000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 84406325,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 7.3,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 50,
+        "penaltyPoints": 10,
+        "scoreAfterPenalties": 40,
+        "cappedScore": 40,
+        "finalScore": 40,
+        "penalties": [
+          {
+            "reason": "Extreme LP concentration",
+            "points": 10
+          }
+        ],
+        "capsConsidered": [
+          {
+            "reason": "No stablecoin exit route",
+            "value": 55
+          },
+          {
+            "reason": "No redemption path",
+            "value": 60
+          }
+        ]
+      },
+      "Peg Stability": {
+        "baseline": 59,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 46000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 84406325,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          }
+        ],
+        "rawScore": 59,
+        "penaltyPoints": 5,
+        "scoreAfterPenalties": 54,
+        "cappedScore": 45,
+        "finalScore": 45,
+        "penalties": [
+          {
+            "reason": "Extreme discount volatility",
+            "points": 5
+          }
+        ],
+        "capsConsidered": [
+          {
+            "reason": "Persistent large discount",
+            "value": 45
+          },
+          {
+            "reason": "No redemption path",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "Persistent large discount",
+          "value": 45
+        }
+      },
+      "DeFi Moneyness": {
+        "baseline": 36,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 1.7,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 0
+          }
+        ],
+        "rawScore": 36,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 36,
+        "cappedScore": 36,
+        "finalScore": 36,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "LST not used as collateral",
+            "value": 55
+          }
+        ]
+      },
+      "Security & Governance": {
+        "baseline": 65,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 108,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 657355672,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": 2.4800000000000004
+          }
+        ],
+        "rawScore": 65,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 65,
+        "cappedScore": 50,
+        "finalScore": 50,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "No audits",
+            "value": 50
+          },
+          {
+            "reason": "No timelock upgrades",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "No audits",
+          "value": 50
+        }
+      },
+      "Validator Decentralization": {
+        "baseline": 66,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 108,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 61000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": 1.4599999999999997
+          }
+        ],
+        "rawScore": 66,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 66,
+        "cappedScore": 66,
+        "finalScore": 66,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 45,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 10,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -3
+          }
+        ],
+        "rawScore": 45,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 45,
+        "cappedScore": 45,
+        "finalScore": 45,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Emissions dominate ecosystem attractiveness",
+            "value": 55
+          }
+        ]
+      },
+      "Stress Resilience": {
+        "baseline": 55,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 58,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 46000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 84406325,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 108,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 55,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 55,
+        "cappedScore": 50,
+        "finalScore": 50,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Redemption unavailable",
+            "value": 50
+          }
+        ],
+        "capApplied": {
+          "reason": "Redemption unavailable",
+          "value": 50
+        }
+      }
+    },
+    "pillars": {
+      "exitability": 44,
+      "moneyness": 36,
+      "credibility": 53
+    },
+    "global": {
+      "rawScore": 44,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 44,
+      "cappedScore": 44,
+      "finalScore": 44,
+      "penalties": [],
+      "capsConsidered": [
+        {
+          "reason": "Exitability below 50",
+          "value": 60
+        }
+      ]
+    }
+  },
+  {
+    "networkId": "shardeum",
+    "network": "Shardeum",
+    "bases": {
+      "globalLstHealthScore": 54,
+      "opportunityScore": 92
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 14.14,
+      "stakedValueUsd": 116949,
+      "tvlToMcapPct": 9071,
+      "lstPenetrationPct": 0
+    },
+    "signals": {
+      "stableRatio": 179.5654516071108,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": -2,
+      "validatorSignal": -4.933333333333334,
+      "yieldSignal": -3,
+      "redemptionSignal": -4,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": false,
+      "redemptionPathExists": false,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": true,
+      "extremeVolatilityPenalty": 10,
+      "redemptionUnavailable": true,
+      "lstUsedAsCollateral": false,
+      "noAudits": false,
+      "noTimelockUpgrades": true,
+      "extremeConcentration": true,
+      "emissionsDominate": true
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 46,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 21000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 116949,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 0,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 0,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 46,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 46,
+        "cappedScore": 46,
+        "finalScore": 46,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "No stablecoin exit route",
+            "value": 55
+          },
+          {
+            "reason": "No redemption path",
+            "value": 60
+          }
+        ]
+      },
+      "Peg Stability": {
+        "baseline": 55,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 21000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 116949,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 0,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          }
+        ],
+        "rawScore": 55,
+        "penaltyPoints": 10,
+        "scoreAfterPenalties": 45,
+        "cappedScore": 45,
+        "finalScore": 45,
+        "penalties": [
+          {
+            "reason": "Extreme discount volatility",
+            "points": 10
+          }
+        ],
+        "capsConsidered": [
+          {
+            "reason": "Persistent large discount",
+            "value": 45
+          },
+          {
+            "reason": "No redemption path",
+            "value": 55
+          }
+        ]
+      },
+      "DeFi Moneyness": {
+        "baseline": 40,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 9071,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 40,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 40,
+        "cappedScore": 40,
+        "finalScore": 40,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "LST not used as collateral",
+            "value": 55
+          }
+        ]
+      },
+      "Security & Governance": {
+        "baseline": 57,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 21,
+            "origin": "inferred"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 826814,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 0,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 57,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 57,
+        "cappedScore": 55,
+        "finalScore": 55,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "No timelock upgrades",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "No timelock upgrades",
+          "value": 55
+        }
+      },
+      "Validator Decentralization": {
+        "baseline": 56,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 21,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 42000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -4.933333333333334
+          }
+        ],
+        "rawScore": 56,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 56,
+        "cappedScore": 55,
+        "finalScore": 55,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Extreme validator concentration",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "Extreme validator concentration",
+          "value": 55
+        }
+      },
+      "Incentive Sustainability": {
+        "baseline": 41,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 49.47,
+            "origin": "inferred"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -3
+          }
+        ],
+        "rawScore": 41,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 41,
+        "cappedScore": 41,
+        "finalScore": 41,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Emissions dominate ecosystem attractiveness",
+            "value": 55
+          }
+        ]
+      },
+      "Stress Resilience": {
+        "baseline": 49,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 54,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 21000000,
+            "origin": "inferred"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 116949,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 21,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 0,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 49,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 49,
+        "cappedScore": 49,
+        "finalScore": 49,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Redemption unavailable",
+            "value": 50
+          }
+        ]
+      }
+    },
+    "pillars": {
+      "exitability": 46,
+      "moneyness": 40,
+      "credibility": 51
+    },
+    "global": {
+      "rawScore": 45,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 45,
+      "cappedScore": 45,
+      "finalScore": 45,
+      "penalties": [],
+      "capsConsidered": [
+        {
+          "reason": "Exitability below 50",
+          "value": 60
+        }
+      ]
+    }
+  },
+  {
+    "networkId": "core",
+    "network": "Core",
+    "bases": {
+      "globalLstHealthScore": 67,
+      "opportunityScore": 73
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 55,
+      "stakedValueUsd": 47352736,
+      "tvlToMcapPct": 34.7,
+      "lstPenetrationPct": 2.6
+    },
+    "signals": {
+      "stableRatio": 2.534172471047924,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": 0.1466666666666665,
+      "validatorSignal": -0.3066666666666671,
+      "yieldSignal": 0.8500000000000005,
+      "redemptionSignal": 2,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": true,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": false,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 65,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 120000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 47352736,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 2.6,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 65,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 65,
+        "cappedScore": 65,
+        "finalScore": 65,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 74,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 120000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 47352736,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 74,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 74,
+        "cappedScore": 74,
+        "finalScore": 74,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 65,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 34.7,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 65,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 65,
+        "cappedScore": 65,
+        "finalScore": 65,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Security & Governance": {
+        "baseline": 73,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 83,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 86095883,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": 0.1466666666666665
+          }
+        ],
+        "rawScore": 73,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 73,
+        "cappedScore": 73,
+        "finalScore": 73,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 74,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 83,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 98000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -0.3066666666666671
+          }
+        ],
+        "rawScore": 74,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 74,
+        "cappedScore": 74,
+        "finalScore": 74,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Incentive Sustainability": {
+        "baseline": 62,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 7.3,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": 0.8500000000000005
+          }
+        ],
+        "rawScore": 62,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 62,
+        "cappedScore": 62,
+        "finalScore": 62,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 65,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 67,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 120000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 47352736,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 83,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 65,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 65,
+        "cappedScore": 65,
+        "finalScore": 65,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 68,
+      "moneyness": 65,
+      "credibility": 70
+    },
+    "global": {
+      "rawScore": 68,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 68,
+      "cappedScore": 68,
+      "finalScore": 68,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  },
+  {
+    "networkId": "sonic",
+    "network": "Sonic",
+    "bases": {
+      "globalLstHealthScore": 52,
+      "opportunityScore": 88
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 36,
+      "stakedValueUsd": 57249140,
+      "tvlToMcapPct": 35.7,
+      "lstPenetrationPct": 2.8
+    },
+    "signals": {
+      "stableRatio": 0.3318827147447106,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 8,
+      "governanceSignal": -1.9066666666666667,
+      "validatorSignal": -4.38,
+      "yieldSignal": -1.5999999999999988,
+      "redemptionSignal": -4,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": false,
+      "redemptionPathExists": false,
+      "extremeLpConcentrationPenalty": 10,
+      "persistentLargeDiscount": true,
+      "extremeVolatilityPenalty": 10,
+      "redemptionUnavailable": true,
+      "lstUsedAsCollateral": false,
+      "noAudits": true,
+      "noTimelockUpgrades": true,
+      "extremeConcentration": true,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 44,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 19000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 57249140,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 2.8,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 44,
+        "penaltyPoints": 10,
+        "scoreAfterPenalties": 34,
+        "cappedScore": 34,
+        "finalScore": 34,
+        "penalties": [
+          {
+            "reason": "Extreme LP concentration",
+            "points": 10
+          }
+        ],
+        "capsConsidered": [
+          {
+            "reason": "No stablecoin exit route",
+            "value": 55
+          },
+          {
+            "reason": "No redemption path",
+            "value": 60
+          }
+        ]
+      },
+      "Peg Stability": {
+        "baseline": 53,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 19000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 57249140,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": -4
+          }
+        ],
+        "rawScore": 53,
+        "penaltyPoints": 10,
+        "scoreAfterPenalties": 43,
+        "cappedScore": 43,
+        "finalScore": 43,
+        "penalties": [
+          {
+            "reason": "Extreme discount volatility",
+            "points": 10
+          }
+        ],
+        "capsConsidered": [
+          {
+            "reason": "Persistent large discount",
+            "value": 45
+          },
+          {
+            "reason": "No redemption path",
+            "value": 55
+          }
+        ]
+      },
+      "DeFi Moneyness": {
+        "baseline": 38,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 35.7,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 8
+          }
+        ],
+        "rawScore": 38,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 38,
+        "cappedScore": 38,
+        "finalScore": 38,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "LST not used as collateral",
+            "value": 55
+          }
+        ]
+      },
+      "Security & Governance": {
+        "baseline": 55,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 61,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 159025389,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": -1.9066666666666667
+          }
+        ],
+        "rawScore": 55,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 55,
+        "cappedScore": 50,
+        "finalScore": 50,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "No audits",
+            "value": 50
+          },
+          {
+            "reason": "No timelock upgrades",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "No audits",
+          "value": 50
+        }
+      },
+      "Validator Decentralization": {
+        "baseline": 55,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 61,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 55000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -4.38
+          }
+        ],
+        "rawScore": 55,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 55,
+        "cappedScore": 55,
+        "finalScore": 55,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Extreme validator concentration",
+            "value": 55
+          }
+        ]
+      },
+      "Incentive Sustainability": {
+        "baseline": 40,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 8.7,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": false,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": false,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -1.5999999999999988
+          }
+        ],
+        "rawScore": 40,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 40,
+        "cappedScore": 40,
+        "finalScore": 40,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 47,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 52,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 19000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 57249140,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 61,
+            "origin": "base-seed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 1,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 47,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 47,
+        "cappedScore": 47,
+        "finalScore": 47,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Redemption unavailable",
+            "value": 50
+          }
+        ]
+      }
+    },
+    "pillars": {
+      "exitability": 39,
+      "moneyness": 38,
+      "credibility": 49
+    },
+    "global": {
+      "rawScore": 41,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 41,
+      "cappedScore": 41,
+      "finalScore": 41,
+      "penalties": [],
+      "capsConsidered": [
+        {
+          "reason": "Peg Stability below 45",
+          "value": 55
+        },
+        {
+          "reason": "Exitability below 50",
+          "value": 60
+        }
+      ]
+    }
+  },
+  {
+    "networkId": "mantra",
+    "network": "Mantra",
+    "bases": {
+      "globalLstHealthScore": 68,
+      "opportunityScore": 79
+    },
+    "derivedInputs": {
+      "stakingRatioPct": 41.23,
+      "stakedValueUsd": 31759799,
+      "tvlToMcapPct": 0.9,
+      "lstPenetrationPct": 0
+    },
+    "signals": {
+      "stableRatio": 3.085661845655887,
+      "stableDepthSignal": 6,
+      "defiDepthSignal": 0,
+      "governanceSignal": -2,
+      "validatorSignal": -3.8,
+      "yieldSignal": -3,
+      "redemptionSignal": 2,
+      "penetrationSignal": -2
+    },
+    "flags": {
+      "stablecoinExitExists": true,
+      "redemptionPathExists": true,
+      "extremeLpConcentrationPenalty": 0,
+      "persistentLargeDiscount": false,
+      "extremeVolatilityPenalty": 0,
+      "redemptionUnavailable": false,
+      "lstUsedAsCollateral": true,
+      "noAudits": false,
+      "noTimelockUpgrades": false,
+      "extremeConcentration": true,
+      "emissionsDominate": false
+    },
+    "modules": {
+      "Liquidity & Exit": {
+        "baseline": 66,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 98000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 31759799,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstPenetrationPct",
+            "value": 0,
+            "origin": "derived(app)"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          },
+          {
+            "name": "penetrationSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 66,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 66,
+        "cappedScore": 66,
+        "finalScore": 66,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Peg Stability": {
+        "baseline": 75,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 98000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 31759799,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          },
+          {
+            "name": "redemptionSignal",
+            "value": 2
+          }
+        ],
+        "rawScore": 75,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 75,
+        "cappedScore": 75,
+        "finalScore": 75,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "DeFi Moneyness": {
+        "baseline": 58,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "tvlToMcapPct",
+            "value": 0.9,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "defiDepthSignal",
+            "value": 0
+          }
+        ],
+        "rawScore": 58,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 58,
+        "cappedScore": 58,
+        "finalScore": 58,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Security & Governance": {
+        "baseline": 72,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 38,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "marketCapUsd",
+            "value": 77038066,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "governanceSignal",
+            "value": -2
+          }
+        ],
+        "rawScore": 72,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 72,
+        "cappedScore": 72,
+        "finalScore": 72,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Validator Decentralization": {
+        "baseline": 71,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "validatorCount",
+            "value": 38,
+            "origin": "observed"
+          },
+          {
+            "field": "stakerAddresses",
+            "value": 76000,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "validatorSignal",
+            "value": -3.8
+          }
+        ],
+        "rawScore": 71,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 71,
+        "cappedScore": 55,
+        "finalScore": 55,
+        "penalties": [],
+        "capsConsidered": [
+          {
+            "reason": "Extreme validator concentration",
+            "value": 55
+          }
+        ],
+        "capApplied": {
+          "reason": "Extreme validator concentration",
+          "value": 55
+        }
+      },
+      "Incentive Sustainability": {
+        "baseline": 59,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "stakingApyPct",
+            "value": 18.58,
+            "origin": "observed"
+          },
+          {
+            "field": "lendingPresence",
+            "value": true,
+            "origin": "inferred"
+          },
+          {
+            "field": "lstCollateralEnabled",
+            "value": true,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "yieldSignal",
+            "value": -3
+          }
+        ],
+        "rawScore": 59,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 59,
+        "cappedScore": 59,
+        "finalScore": 59,
+        "penalties": [],
+        "capsConsidered": []
+      },
+      "Stress Resilience": {
+        "baseline": 63,
+        "sources": [
+          {
+            "field": "globalLstHealthScore",
+            "value": 68,
+            "origin": "generated"
+          },
+          {
+            "field": "stablecoinLiquidityUsd",
+            "value": 98000000,
+            "origin": "base-seed"
+          },
+          {
+            "field": "stakedValueUsd",
+            "value": 31759799,
+            "origin": "derived(app)"
+          },
+          {
+            "field": "validatorCount",
+            "value": 38,
+            "origin": "observed"
+          },
+          {
+            "field": "lstProtocols",
+            "value": 2,
+            "origin": "inferred"
+          }
+        ],
+        "signals": [
+          {
+            "name": "stableDepthSignal",
+            "value": 6
+          }
+        ],
+        "rawScore": 63,
+        "penaltyPoints": 0,
+        "scoreAfterPenalties": 63,
+        "cappedScore": 63,
+        "finalScore": 63,
+        "penalties": [],
+        "capsConsidered": []
+      }
+    },
+    "pillars": {
+      "exitability": 68,
+      "moneyness": 58,
+      "credibility": 63
+    },
+    "global": {
+      "rawScore": 64,
+      "penaltyPoints": 0,
+      "scoreAfterPenalties": 64,
+      "cappedScore": 64,
+      "finalScore": 64,
+      "penalties": [],
+      "capsConsidered": []
+    }
+  }
+]

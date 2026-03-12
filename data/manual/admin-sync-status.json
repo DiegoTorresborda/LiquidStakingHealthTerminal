@@ -1,0 +1,19 @@
+{
+  "updatedAt": "2026-03-11T11:41:56.598Z",
+  "sources": {
+    "coingecko": {
+      "source": "coingecko",
+      "status": "ok",
+      "updatedNetworks": 10,
+      "startedAt": "2026-03-11T11:39:19.276Z",
+      "endedAt": "2026-03-11T11:39:20.244Z"
+    },
+    "defillama": {
+      "source": "defillama",
+      "status": "ok",
+      "updatedNetworks": 9,
+      "startedAt": "2026-03-11T11:41:55.527Z",
+      "endedAt": "2026-03-11T11:41:56.138Z"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "source": "manual-network-data",
+  "updatedAt": "2026-03-12T13:02:55.206Z",
+  "networks": {
+    "shardeum": {
+      "stakingRatioPct": 41,
+      "stakingApyPct": 49.47,
+      "validatorCount": 21,
+      "notes": null,
+      "updatedAt": "2026-03-12T13:00:34.176Z"
+    },
+    "xdc": {
+      "stakingRatioPct": 12.84,
+      "stakingApyPct": 10,
+      "validatorCount": 108,
+      "inflationRatePct": 1.28,
+      "notes": null,
+      "updatedAt": "2026-03-12T13:02:55.206Z"
+    }
+  }
+}

@@ -10,7 +10,7 @@
     "data:sync:coingecko": "node scripts/sync-coingecko-basics.mjs",
     "data:sync:defillama": "node scripts/sync-defillama-basics.mjs",
     "data:sync:all": "npm run data:sync:coingecko && npm run data:sync:defillama",
-    "data:build:dataset": "tsx scripts/build-overview-dataset.ts",
+    "data:build:dataset": "tsx scripts/build-overview-dataset.ts && node scripts/apply-manual-overlays.mjs",
     "data:audit:dataset": "tsx scripts/audit-overview-dataset.ts",
     "data:refresh:overview": "npm run data:build:dataset && npm run data:audit:dataset"
   },

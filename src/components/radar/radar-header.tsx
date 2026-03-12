@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { NetworkStatus } from "@data/networks";
 
 import type { BinaryFilter, RadarFilters } from "@/features/radar/types";
@@ -40,11 +42,27 @@ export function RadarHeader({
             </p>
           </div>
 
-          <div className="rounded-xl border border-ink-300/25 bg-ink-900/30 px-4 py-3 text-sm text-ink-100">
-            <p className="text-xs uppercase tracking-[0.16em] text-ink-300">Coverage</p>
-            <p className="font-semibold text-ink-50">
-              {visibleCount} / {totalCount} networks in current view
-            </p>
+          <div className="flex flex-col gap-3 lg:items-end">
+            <div className="rounded-xl border border-ink-300/25 bg-ink-900/30 px-4 py-3 text-sm text-ink-100">
+              <p className="text-xs uppercase tracking-[0.16em] text-ink-300">Coverage</p>
+              <p className="font-semibold text-ink-50">
+                {visibleCount} / {totalCount} networks in current view
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 lg:justify-end">
+              <Link
+                href="/liquid-staking"
+                className="inline-flex items-center justify-center rounded-xl border border-[#7baff5]/45 bg-[#7baff5]/20 px-4 py-2 text-sm font-semibold text-[#dcecff] transition hover:bg-[#7baff5]/30"
+              >
+                Why Liquid Staking
+              </Link>
+              <Link
+                href="/methodology"
+                className="inline-flex items-center justify-center rounded-xl border border-ink-300/30 bg-ink-900/25 px-4 py-2 text-sm font-semibold text-ink-100 transition hover:bg-ink-900/40"
+              >
+                Open Methodology
+              </Link>
+            </div>
           </div>
         </div>
 
