@@ -1,0 +1,1646 @@
+{
+  "cachedAt": 1773416728837,
+  "data": [
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x51e883ba7c0b566a26cbc8a94cd33eb0abd418a77cc1e60ad22fd9b1f29cd2ab",
+      "pairAddress": "0x51e883ba7c0b566a26cbc8a94cd33eb0abd418a77cc1e60ad22fd9b1f29cd2ab",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02150",
+      "priceUsd": "1.021",
+      "txns": {
+        "m5": {
+          "buys": 144,
+          "sells": 80
+        },
+        "h1": {
+          "buys": 1208,
+          "sells": 1080
+        },
+        "h6": {
+          "buys": 4438,
+          "sells": 4677
+        },
+        "h24": {
+          "buys": 14254,
+          "sells": 14887
+        }
+      },
+      "volume": {
+        "h24": 10483258.42,
+        "h6": 3377597.84,
+        "h1": 896635.81,
+        "m5": 79536.26
+      },
+      "priceChange": {
+        "m5": -0.42,
+        "h1": -1.26,
+        "h6": -2.32,
+        "h24": 5.24
+      },
+      "liquidity": {
+        "usd": 2017136.46,
+        "base": 1258963,
+        "quote": 731096
+      },
+      "fdv": 10215075000,
+      "marketCap": 3983863609,
+      "pairCreatedAt": 1728468437000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "bluefin",
+      "url": "https://dexscreener.com/sui/0x15dbcac854b1fc68fc9467dbd9ab34270447aabd8cc0e04a5864d95ccb86b74a",
+      "pairAddress": "0x15dbcac854b1fc68fc9467dbd9ab34270447aabd8cc0e04a5864d95ccb86b74a",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01982",
+      "priceUsd": "1.019",
+      "txns": {
+        "m5": {
+          "buys": 15,
+          "sells": 24
+        },
+        "h1": {
+          "buys": 209,
+          "sells": 173
+        },
+        "h6": {
+          "buys": 701,
+          "sells": 1054
+        },
+        "h24": {
+          "buys": 2995,
+          "sells": 2934
+        }
+      },
+      "volume": {
+        "h24": 4074977.47,
+        "h6": 1208633.87,
+        "h1": 339408.62,
+        "m5": 36780.42
+      },
+      "priceChange": {
+        "m5": -0.54,
+        "h1": -1.31,
+        "h6": -2.46,
+        "h24": 4.91
+      },
+      "liquidity": {
+        "usd": 5892318.76,
+        "base": 1732788,
+        "quote": 4125181
+      },
+      "fdv": 10198231430,
+      "marketCap": 3977294643,
+      "pairCreatedAt": 1752675896000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xb8d7d9e66a60c239e7a60110efcf8de6c705580ed924d0dde141f4a0e2c90105",
+      "pairAddress": "0xb8d7d9e66a60c239e7a60110efcf8de6c705580ed924d0dde141f4a0e2c90105",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02180",
+      "priceUsd": "1.021",
+      "txns": {
+        "m5": {
+          "buys": 7,
+          "sells": 50
+        },
+        "h1": {
+          "buys": 155,
+          "sells": 253
+        },
+        "h6": {
+          "buys": 589,
+          "sells": 934
+        },
+        "h24": {
+          "buys": 2543,
+          "sells": 2465
+        }
+      },
+      "volume": {
+        "h24": 3441052.5,
+        "h6": 1058764.85,
+        "h1": 328755.38,
+        "m5": 52814.25
+      },
+      "priceChange": {
+        "m5": -0.18,
+        "h1": -1.1,
+        "h6": -2.43,
+        "h24": 5.4
+      },
+      "liquidity": {
+        "usd": 3914151.76,
+        "base": 2645212,
+        "quote": 1211265
+      },
+      "fdv": 10218030000,
+      "marketCap": 3985016055,
+      "pairCreatedAt": 1728397953000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "fullsail",
+      "url": "https://dexscreener.com/sui/0x7fc2f2f3807c6e19f0d418d1aaad89e6f0e866b5e4ea10b295ca0b686b6c4980",
+      "pairAddress": "0x7fc2f2f3807c6e19f0d418d1aaad89e6f0e866b5e4ea10b295ca0b686b6c4980",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02110",
+      "priceUsd": "1.021",
+      "txns": {
+        "m5": {
+          "buys": 3,
+          "sells": 17
+        },
+        "h1": {
+          "buys": 61,
+          "sells": 78
+        },
+        "h6": {
+          "buys": 298,
+          "sells": 411
+        },
+        "h24": {
+          "buys": 1238,
+          "sells": 1255
+        }
+      },
+      "volume": {
+        "h24": 564547.81,
+        "h6": 160504.72,
+        "h1": 34854.12,
+        "m5": 6391.09
+      },
+      "priceChange": {
+        "m5": -0.26,
+        "h1": -1.04,
+        "h6": -2.46,
+        "h24": 5.24
+      },
+      "liquidity": {
+        "usd": 251991.25,
+        "base": 88972,
+        "quote": 161140
+      },
+      "fdv": 10211007040,
+      "marketCap": 3982277111,
+      "pairCreatedAt": 1748471760000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "bluefin",
+      "url": "https://dexscreener.com/sui/0x3b585786b13af1d8ea067ab37101b6513a05d2f90cfe60e8b1d9e1b46a63c4fa",
+      "pairAddress": "0x3b585786b13af1d8ea067ab37101b6513a05d2f90cfe60e8b1d9e1b46a63c4fa",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01916",
+      "priceUsd": "1.019",
+      "txns": {
+        "m5": {
+          "buys": 5,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 50,
+          "sells": 29
+        },
+        "h6": {
+          "buys": 218,
+          "sells": 172
+        },
+        "h24": {
+          "buys": 797,
+          "sells": 533
+        }
+      },
+      "volume": {
+        "h24": 33113.52,
+        "h6": 10569.08,
+        "h1": 2512.94,
+        "m5": 69.15
+      },
+      "priceChange": {
+        "m5": -0.55,
+        "h1": -1.58,
+        "h6": -2.53,
+        "h24": 4.85
+      },
+      "liquidity": {
+        "usd": 651864.64,
+        "base": 430448,
+        "quote": 213166
+      },
+      "fdv": 10191635400,
+      "marketCap": 3974722201,
+      "pairCreatedAt": 1729677193000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xcf994611fd4c48e277ce3ffd4d4364c914af2c3cbb05f7bf6facd371de688630",
+      "pairAddress": "0xcf994611fd4c48e277ce3ffd4d4364c914af2c3cbb05f7bf6facd371de688630",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN",
+        "name": "USD Coin (Portal from Eth)",
+        "symbol": "wUSDC"
+      },
+      "priceNative": "1.01674",
+      "priceUsd": "1.016",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 12
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 46
+        },
+        "h6": {
+          "buys": 110,
+          "sells": 190
+        },
+        "h24": {
+          "buys": 599,
+          "sells": 547
+        }
+      },
+      "volume": {
+        "h24": 44663.09,
+        "h6": 9294.28,
+        "h1": 3294.72,
+        "m5": 1289.08
+      },
+      "priceChange": {
+        "m5": -0.79,
+        "h1": -1.65,
+        "h6": -2.8,
+        "h24": 4.84
+      },
+      "liquidity": {
+        "usd": 205249.51,
+        "base": 120005,
+        "quote": 83234
+      },
+      "fdv": 10167456124,
+      "marketCap": 3965292320,
+      "pairCreatedAt": 1683129424000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0xfe25614a57b5979cfa37fc4f9d269b0aae16ba25718b82f72dcfe7b123e45607",
+      "pairAddress": "0xfe25614a57b5979cfa37fc4f9d269b0aae16ba25718b82f72dcfe7b123e45607",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01974",
+      "priceUsd": "1.019",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 23,
+          "sells": 25
+        },
+        "h6": {
+          "buys": 93,
+          "sells": 111
+        },
+        "h24": {
+          "buys": 348,
+          "sells": 380
+        }
+      },
+      "volume": {
+        "h24": 2681.84,
+        "h6": 734.6,
+        "h1": 199.03,
+        "m5": 14.23
+      },
+      "priceChange": {
+        "m5": -0.34,
+        "h1": -1.36,
+        "h6": -2.31,
+        "h24": 4.99
+      },
+      "liquidity": {
+        "usd": 20220.97,
+        "base": 3967.1668,
+        "quote": 16175
+      },
+      "fdv": 10197499717,
+      "marketCap": 3977009276,
+      "pairCreatedAt": 1700087636000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x64e590b0e4d4f7dfc7ae9fae8e9983cd80ad83b658d8499bf550a9d4f6667076",
+      "pairAddress": "0x64e590b0e4d4f7dfc7ae9fae8e9983cd80ad83b658d8499bf550a9d4f6667076",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01976",
+      "priceUsd": "1.019",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 4
+        },
+        "h1": {
+          "buys": 13,
+          "sells": 18
+        },
+        "h6": {
+          "buys": 62,
+          "sells": 66
+        },
+        "h24": {
+          "buys": 339,
+          "sells": 283
+        }
+      },
+      "volume": {
+        "h24": 131134.34,
+        "h6": 36110.59,
+        "h1": 12118,
+        "m5": 2333.98
+      },
+      "priceChange": {
+        "m5": -1.28,
+        "h1": -2.28,
+        "h6": -2.91,
+        "h24": 5.5
+      },
+      "liquidity": {
+        "usd": 235554.71,
+        "base": 76951,
+        "quote": 157082
+      },
+      "fdv": 10197631620,
+      "marketCap": 3977060718,
+      "pairCreatedAt": 1759045273000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0xb0cc4ce941a6c6ac0ca6d8e6875ae5d86edbec392c3333d008ca88f377e5e181",
+      "pairAddress": "0xb0cc4ce941a6c6ac0ca6d8e6875ae5d86edbec392c3333d008ca88f377e5e181",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02027",
+      "priceUsd": "1.020",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h1": {
+          "buys": 16,
+          "sells": 15
+        },
+        "h6": {
+          "buys": 62,
+          "sells": 95
+        },
+        "h24": {
+          "buys": 267,
+          "sells": 224
+        }
+      },
+      "volume": {
+        "h24": 7398.67,
+        "h6": 2542.69,
+        "h1": 542.17,
+        "m5": 127.31
+      },
+      "priceChange": {
+        "m5": -0.38,
+        "h1": -1.23,
+        "h6": -2.41,
+        "h24": 5.29
+      },
+      "liquidity": {
+        "usd": 124248.68,
+        "base": 24361,
+        "quote": 99392
+      },
+      "fdv": 10202759545,
+      "marketCap": 3979060600
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x84fc1515fd3d2395b2d67b301dc2b60040e31af7e295f8731c84bd528733252f",
+      "pairAddress": "0x84fc1515fd3d2395b2d67b301dc2b60040e31af7e295f8731c84bd528733252f",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x375f70cf2ae4c00bf37117d0c85a2c71545e6ee05c4a5c7d282cd66a4504b068::usdt::USDT",
+        "name": "Tether",
+        "symbol": "USDT"
+      },
+      "priceNative": "1.01589",
+      "priceUsd": "1.015",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 7
+        },
+        "h1": {
+          "buys": 21,
+          "sells": 24
+        },
+        "h6": {
+          "buys": 61,
+          "sells": 89
+        },
+        "h24": {
+          "buys": 248,
+          "sells": 222
+        }
+      },
+      "volume": {
+        "h24": 2458.66,
+        "h6": 854.17,
+        "h1": 291.63,
+        "m5": 49.36
+      },
+      "priceChange": {
+        "m5": -0.83,
+        "h1": -1.59,
+        "h6": -2.94,
+        "h24": 4.84
+      },
+      "liquidity": {
+        "usd": 13554.3,
+        "base": 7445.2896,
+        "quote": 5990.7092
+      },
+      "fdv": 10158905661,
+      "marketCap": 3961957653,
+      "pairCreatedAt": 1735022092000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "bluefin",
+      "url": "https://dexscreener.com/sui/0xcd8294c7507df2c5b21e065067d1e36ddbea41f273425019bd9f9935bce40b58",
+      "pairAddress": "0xcd8294c7507df2c5b21e065067d1e36ddbea41f273425019bd9f9935bce40b58",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02049",
+      "priceUsd": "1.020",
+      "txns": {
+        "m5": {
+          "buys": 6,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 43,
+          "sells": 39
+        },
+        "h6": {
+          "buys": 166,
+          "sells": 172
+        },
+        "h24": {
+          "buys": 535,
+          "sells": 686
+        }
+      },
+      "volume": {
+        "h24": 1095.04,
+        "h6": 346.43,
+        "h1": 102.23,
+        "m5": 10.48
+      },
+      "priceChange": {
+        "m5": -0.55,
+        "h1": -1.2,
+        "h6": -2.37,
+        "h24": 5.36
+      },
+      "liquidity": {
+        "usd": 482.85,
+        "base": 213.2375,
+        "quote": 265.2446
+      },
+      "fdv": 10204976840,
+      "marketCap": 3979925342,
+      "pairCreatedAt": 1770399719000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x556d4a393ce033ba4ee77980b70b63ca7b824752583e51103c15e4038cc96e44",
+      "pairAddress": "0x556d4a393ce033ba4ee77980b70b63ca7b824752583e51103c15e4038cc96e44",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01647",
+      "priceUsd": "1.016",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 15
+        },
+        "h6": {
+          "buys": 36,
+          "sells": 66
+        },
+        "h24": {
+          "buys": 198,
+          "sells": 185
+        }
+      },
+      "volume": {
+        "h24": 4776.97,
+        "h6": 997.14,
+        "h1": 279.97,
+        "m5": 73.17
+      },
+      "priceChange": {
+        "m5": -0.85,
+        "h1": -1.73,
+        "h6": -2.84,
+        "h24": 4.86
+      },
+      "liquidity": {
+        "usd": 3219.82,
+        "base": 1923.6896,
+        "quote": 1264.4411
+      },
+      "fdv": 10164783009,
+      "marketCap": 3964249810,
+      "pairCreatedAt": 1758964264000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x06d8af9e6afd27262db436f0d37b304a041f710c3ea1fa4c3a9bab36b3569ad3",
+      "pairAddress": "0x06d8af9e6afd27262db436f0d37b304a041f710c3ea1fa4c3a9bab36b3569ad3",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN",
+        "name": "Tether (Portal from Eth)",
+        "symbol": "wUSDT"
+      },
+      "priceNative": "1.01642",
+      "priceUsd": "1.016",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 9,
+          "sells": 12
+        },
+        "h6": {
+          "buys": 31,
+          "sells": 52
+        },
+        "h24": {
+          "buys": 124,
+          "sells": 148
+        }
+      },
+      "volume": {
+        "h24": 658.61,
+        "h6": 193.19,
+        "h1": 53.17,
+        "m5": 14.35
+      },
+      "priceChange": {
+        "m5": -0.94,
+        "h1": -1.62,
+        "h6": -2.76,
+        "h24": 4.64
+      },
+      "liquidity": {
+        "usd": 2310.46,
+        "base": 1287.3367,
+        "quote": 1001.9891
+      },
+      "fdv": 10164230215,
+      "marketCap": 3964034221,
+      "pairCreatedAt": 1683381809000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0x74636888163f71d3c3fed4b4cde51a624322b5f812951462d64cfe29230fd4aa-0x0000000000000000000000000000000000000000000000000000000000000002::sui::sui-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::usdc",
+      "pairAddress": "0x74636888163f71d3c3fed4b4cde51a624322b5f812951462d64cfe29230fd4aa-0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02611",
+      "priceUsd": "1.026",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 2,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 1.34,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 3.19
+      },
+      "liquidity": {
+        "usd": 137195.23,
+        "base": 133703,
+        "quote": 0.1363
+      },
+      "fdv": 10261180541,
+      "marketCap": 4001844700
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x607d0e10cd2c5da7219e352604dbb8142727e11ea38c7dccd208c3d6f8ab02de",
+      "pairAddress": "0x607d0e10cd2c5da7219e352604dbb8142727e11ea38c7dccd208c3d6f8ab02de",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.03326",
+      "priceUsd": "1.033",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 15,
+          "sells": 44
+        }
+      },
+      "volume": {
+        "h24": 3.67,
+        "h6": 0.79,
+        "h1": 0.13,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.1,
+        "h6": -0.9,
+        "h24": 5.69
+      },
+      "liquidity": {
+        "usd": 17.87,
+        "base": 6.2238,
+        "quote": 11.4406
+      },
+      "fdv": 10332658760,
+      "marketCap": 4029721096,
+      "pairCreatedAt": 1749633049000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "bluefin",
+      "url": "https://dexscreener.com/sui/0xa701a909673dbc597e63b4586ace6643c02ac0e118382a78b9a21262a4a2e35d",
+      "pairAddress": "0xa701a909673dbc597e63b4586ace6643c02ac0e118382a78b9a21262a4a2e35d",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02199",
+      "priceUsd": "1.021",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 6,
+          "sells": 12
+        },
+        "h24": {
+          "buys": 15,
+          "sells": 19
+        }
+      },
+      "volume": {
+        "h24": 0.24,
+        "h6": 0.09,
+        "h1": 0.03,
+        "m5": 0
+      },
+      "priceChange": {
+        "m5": -0.7,
+        "h1": -2.12,
+        "h6": -0.74,
+        "h24": 5.45
+      },
+      "liquidity": {
+        "usd": 596.1,
+        "base": 335.5328,
+        "quote": 253.1865
+      },
+      "fdv": 10219972670,
+      "marketCap": 3985773693,
+      "pairCreatedAt": 1730346680000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x4eed0ec3402f2e728eec4d7f6c6649084f2aa243e13d585ac67e3bf81c34039b",
+      "pairAddress": "0x4eed0ec3402f2e728eec4d7f6c6649084f2aa243e13d585ac67e3bf81c34039b",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN",
+        "name": "Tether (Portal from Eth)",
+        "symbol": "wUSDT"
+      },
+      "priceNative": "1.03531",
+      "priceUsd": "1.035",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 9,
+          "sells": 24
+        }
+      },
+      "volume": {
+        "h24": 2.24,
+        "h6": 0.13,
+        "h1": 0.13,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -0.45,
+        "h6": -0.45,
+        "h24": 6.11
+      },
+      "liquidity": {
+        "usd": 32.89,
+        "base": 15.5843,
+        "quote": 16.7623
+      },
+      "fdv": 10353169963,
+      "marketCap": 4037720433,
+      "pairCreatedAt": 1688562993000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x2944d4508c6972f858e8919d6e03d3609dfa4a427007c1d637413066b8e93fa7",
+      "pairAddress": "0x2944d4508c6972f858e8919d6e03d3609dfa4a427007c1d637413066b8e93fa7",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN",
+        "name": "USD Coin (Portal from Eth)",
+        "symbol": "wUSDC"
+      },
+      "priceNative": "1.02432",
+      "priceUsd": "1.024",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 7,
+          "sells": 18
+        }
+      },
+      "volume": {
+        "h24": 1.47,
+        "h6": 0.54,
+        "h1": 0.24,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -2.03,
+        "h6": -0.33,
+        "h24": 5.11
+      },
+      "liquidity": {
+        "usd": 5.44,
+        "base": 3.4111,
+        "quote": 1.9481
+      },
+      "fdv": 10243294468,
+      "marketCap": 3994869158,
+      "pairCreatedAt": 1683378670000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xe63cedb411544f435221df201157db8666c910b7c7dd58c385cbc6a7a26f218b",
+      "pairAddress": "0xe63cedb411544f435221df201157db8666c910b7c7dd58c385cbc6a7a26f218b",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x909cba62ce96d54de25bec9502de5ca7b4f28901747bbf96b76c2e63ec5f1cba::coin::COIN",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02599",
+      "priceUsd": "1.025",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 7,
+          "sells": 6
+        }
+      },
+      "volume": {
+        "h24": 4.24,
+        "h6": 0.92,
+        "h1": 0.71,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.33,
+        "h6": -1.49,
+        "h24": 4.14
+      },
+      "liquidity": {
+        "usd": 59.18,
+        "base": 27.1591,
+        "quote": 31.3248
+      },
+      "fdv": 10259944239,
+      "marketCap": 4001362544,
+      "pairCreatedAt": 1684515041000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xd294b1ed60a16ef03790128f75b8c639f76c9be29b774297258f18a4b6823f70",
+      "pairAddress": "0xd294b1ed60a16ef03790128f75b8c639f76c9be29b774297258f18a4b6823f70",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.03169",
+      "priceUsd": "1.031",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 5
+        }
+      },
+      "volume": {
+        "h24": 1.65,
+        "h6": 0.42,
+        "h1": 0.24,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.4,
+        "h6": -0.13,
+        "h24": 5.3
+      },
+      "liquidity": {
+        "usd": 12.06,
+        "base": 8.4579,
+        "quote": 3.3405
+      },
+      "fdv": 10316920077,
+      "marketCap": 4023583033,
+      "pairCreatedAt": 1769938632000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x7f9719a9fdd200b6f65bcef7fb3e2992ecd7aca5331a1b4a7a6a38dd4d1aa282",
+      "pairAddress": "0x7f9719a9fdd200b6f65bcef7fb3e2992ecd7aca5331a1b4a7a6a38dd4d1aa282",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.04692",
+      "priceUsd": "1.046",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 5,
+          "sells": 4
+        }
+      },
+      "volume": {
+        "h24": 0.01,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 0.68,
+        "h6": 1.64,
+        "h24": 8.4
+      },
+      "liquidity": {
+        "usd": 1449.63,
+        "base": 1246.1553,
+        "quote": 145.005612
+      },
+      "fdv": 10469242902,
+      "marketCap": 4082988702,
+      "pairCreatedAt": 1749801326000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0x805c36229eeb03a6bf3f7df79fe1cb8082d1c36bb0359f5a388c85c2e475cc62",
+      "pairAddress": "0x805c36229eeb03a6bf3f7df79fe1cb8082d1c36bb0359f5a388c85c2e475cc62",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0x5d4b302506645c37ff133b98c4b50a5ae14841659738d6d733d59d0d217a93bf::coin::COIN",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.03729",
+      "priceUsd": "1.037",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 5,
+          "sells": 1
+        }
+      },
+      "volume": {
+        "h24": 0.62,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 6.62
+      },
+      "liquidity": {
+        "usd": 28.77,
+        "base": 13.8227,
+        "quote": 14.4386
+      },
+      "fdv": 10372919798,
+      "marketCap": 4045422839
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xec7b103adf56de4650c8127d92ad029c07cb153fc034723465cfb56a6c8f89e9",
+      "pairAddress": "0xec7b103adf56de4650c8127d92ad029c07cb153fc034723465cfb56a6c8f89e9",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01443",
+      "priceUsd": "1.014",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 0,
+          "sells": 4
+        }
+      },
+      "volume": {
+        "h24": 29.46,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": -1.4
+      },
+      "liquidity": {
+        "usd": 882.58,
+        "base": 481.1627,
+        "quote": 394.4814
+      },
+      "fdv": 10144315458,
+      "marketCap": 3956267496,
+      "pairCreatedAt": 1765306649000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x3419f5bff41522d945dbe9b73e6dd9aa85a78b9249f000d6483511f8d277ea85",
+      "pairAddress": "0x3419f5bff41522d945dbe9b73e6dd9aa85a78b9249f000d6483511f8d277ea85",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.03934",
+      "priceUsd": "1.039",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 4,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.13,
+        "h6": 0.03,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.64,
+        "h24": 3.83
+      },
+      "liquidity": {
+        "usd": 6.48,
+        "base": 3.2739,
+        "quote": 3.08199
+      },
+      "fdv": 10393406007,
+      "marketCap": 4053412429,
+      "pairCreatedAt": 1765232768000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0xc8f0698e476e38d15505b44221d10db8cacbe346127cf01c0d55275bd067f3f6-0x0000000000000000000000000000000000000000000000000000000000000002::sui::sui-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::usdc",
+      "pairAddress": "0xc8f0698e476e38d15505b44221d10db8cacbe346127cf01c0d55275bd067f3f6-0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02608",
+      "priceUsd": "1.026",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 3,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.15,
+        "h6": 0.1,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 0.99,
+        "h24": 1.51
+      },
+      "liquidity": {
+        "usd": 16837.46,
+        "base": 16409,
+        "quote": 0.00736
+      },
+      "fdv": 10260818785,
+      "marketCap": 4001703615
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0x70b0c24d018d33a01ecae6e57540be8f88e63950af1544eea01477e21760e317-0x0000000000000000000000000000000000000000000000000000000000000002::sui::sui-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::usdc",
+      "pairAddress": "0x70b0c24d018d33a01ecae6e57540be8f88e63950af1544eea01477e21760e317-0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02548",
+      "priceUsd": "1.025",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 3,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.08,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 5.92
+      },
+      "liquidity": {
+        "usd": 1631.87,
+        "base": 1591.3095,
+        "quote": 0.0048
+      },
+      "fdv": 10254859216,
+      "marketCap": 3999379392
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xee0c5ca0d63b5f86994a334058c7f427d74d013ed63667359461ecb68df03ec1",
+      "pairAddress": "0xee0c5ca0d63b5f86994a334058c7f427d74d013ed63667359461ecb68df03ec1",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02761",
+      "priceUsd": "1.027",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 1,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 0.04,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 1.23
+      },
+      "liquidity": {
+        "usd": 38.65,
+        "base": 34.3787,
+        "quote": 3.3312
+      },
+      "fdv": 10276189948,
+      "marketCap": 4007698345,
+      "pairCreatedAt": 1750229504000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0xa96b0178e9d66635ce3576561429acfa925eb388683992288207dbfffde94b65",
+      "pairAddress": "0xa96b0178e9d66635ce3576561429acfa925eb388683992288207dbfffde94b65",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN",
+        "name": "Tether (Portal from Eth)",
+        "symbol": "wUSDT"
+      },
+      "priceNative": "1.02887",
+      "priceUsd": "1.028",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 2,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.26,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 2.81
+      },
+      "liquidity": {
+        "usd": 10.27,
+        "base": 3.3234,
+        "quote": 6.8583
+      },
+      "fdv": 10288753599,
+      "marketCap": 4012598150,
+      "pairCreatedAt": 1684602465000
+    },
+    {
+      "chainId": "sui",
+      "dexId": "aftermath",
+      "url": "https://dexscreener.com/sui/0x74211775a0140ed768e7cc3334e57e99163f29aba6b61c24352e495d4e5c6652-0x0000000000000000000000000000000000000000000000000000000000000002::sui::sui-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::usdc",
+      "pairAddress": "0x74211775a0140ed768e7cc3334e57e99163f29aba6b61c24352e495d4e5c6652-0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI-0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "SUI",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.02936",
+      "priceUsd": "1.029",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 2,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.25,
+        "h6": 0.05,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 3.07,
+        "h24": 3.07
+      },
+      "liquidity": {
+        "usd": 8428.42,
+        "base": 8187.9592,
+        "quote": 0.008397
+      },
+      "fdv": 10293672737,
+      "marketCap": 4014516606
+    },
+    {
+      "chainId": "sui",
+      "dexId": "cetus",
+      "url": "https://dexscreener.com/sui/0x3b39d5c410f5d7cebaa3280524b8322f5a628aac4be2c65dba95a14dc07d9d01",
+      "pairAddress": "0x3b39d5c410f5d7cebaa3280524b8322f5a628aac4be2c65dba95a14dc07d9d01",
+      "baseToken": {
+        "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
+        "name": "Sui",
+        "symbol": "SUI"
+      },
+      "quoteToken": {
+        "address": "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "1.01375",
+      "priceUsd": "1.013",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 2,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.07,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 0.78
+      },
+      "liquidity": {
+        "usd": 2.81,
+        "base": 0.482,
+        "quote": 2.3225
+      },
+      "fdv": 10137582197,
+      "marketCap": 3953641535,
+      "pairCreatedAt": 1759234174000
+    }
+  ]
+}

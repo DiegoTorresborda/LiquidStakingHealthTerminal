@@ -10,7 +10,7 @@ export const ETHERSCAN_CHAINS: Record<string, EtherscanChainConfig> = {
   },
   sei: {
     networkId: "sei",
-    chainId: null
+    chainId: "1329"
   },
   sui: {
     networkId: "sui",
@@ -34,7 +34,7 @@ export const ETHERSCAN_CHAINS: Record<string, EtherscanChainConfig> = {
   },
   core: {
     networkId: "core",
-    chainId: "1116"
+    chainId: null
   },
   sonic: {
     networkId: "sonic",
@@ -42,7 +42,7 @@ export const ETHERSCAN_CHAINS: Record<string, EtherscanChainConfig> = {
   },
   mantra: {
     networkId: "mantra",
-    chainId: "169"
+    chainId: null
   }
 };
 

@@ -224,6 +224,8 @@ async function etherscanRequest<T>(input: EtherscanRequestInput): Promise<Ethers
   const apiKey = process.env.ETHERSCAN_API_KEY ?? process.env.ETHERSCAN_API_V2_KEY;
   if (apiKey) {
     search.set("apikey", apiKey);
+  } else {
+    console.warn("[etherscan] no API key found (checked ETHERSCAN_API_KEY, ETHERSCAN_API_V2_KEY)");
   }
 
   for (const [key, value] of Object.entries(input.params ?? {})) {
@@ -232,7 +234,17 @@ async function etherscanRequest<T>(input: EtherscanRequestInput): Promise<Ethers
   }
 
   const url = `${ETHERSCAN_BASE_URL}?${search.toString()}`;
-  return fetchJsonWithCache<EtherscanEnvelope<T>>(url);
+  console.log("[etherscan] request: chainid=%s module=%s action=%s", input.chainId, input.module, input.action);
+
+  const envelope = await fetchJsonWithCache<EtherscanEnvelope<T>>(url);
+
+  if (!isSuccessfulResponse(envelope)) {
+    console.warn("[etherscan] error response: chainid=%s module=%s action=%s → status=%s message=%s result=%s",
+      input.chainId, input.module, input.action,
+      envelope.status, envelope.message, String(envelope.result ?? "").slice(0, 200));
+  }
+
+  return envelope;
 }
 
 function sourceRefFor(input: EtherscanRequestInput): string {
@@ -467,6 +479,28 @@ export async function getNativeBalance(chainId: string, address: string): Promis
   return wei / 1e18;
 }
 
+async function getGasPriceViaProxy(chainId: string): Promise<EtherscanGasOracle | null> {
+  const response = await etherscanRequest<string>({
+    chainId,
+    module: "proxy",
+    action: "eth_gasPrice"
+  });
+
+  const hex = response.result;
+  if (typeof hex !== "string" || !hex.startsWith("0x")) return null;
+
+  const gweiValue = Number(BigInt(hex)) / 1e9;
+  if (!Number.isFinite(gweiValue)) return null;
+
+  const gweiStr = gweiValue.toFixed(6);
+  return {
+    SafeGasPrice: gweiStr,
+    ProposeGasPrice: gweiStr,
+    FastGasPrice: gweiStr,
+    suggestBaseFee: gweiStr
+  };
+}
+
 export async function getGasOracle(chainId: string): Promise<EtherscanGasOracle | null> {
   const response = await etherscanRequest<EtherscanGasOracle>({
     chainId,
@@ -474,11 +508,12 @@ export async function getGasOracle(chainId: string): Promise<EtherscanGasOracle 
     action: "gasoracle"
   });
 
-  if (!isSuccessfulResponse(response) || !response.result || typeof response.result !== "object") {
-    return null;
+  if (isSuccessfulResponse(response) && response.result && typeof response.result === "object") {
+    return response.result;
   }
 
-  return response.result;
+  console.log("[etherscan] gastracker not available for chainId=%s, falling back to eth_gasPrice", chainId);
+  return getGasPriceViaProxy(chainId);
 }
 
 export async function collectEtherscanMetrics(input: EtherscanCollectionInput): Promise<EtherscanCollectionResult> {
@@ -487,6 +522,7 @@ export async function collectEtherscanMetrics(input: EtherscanCollectionInput): 
   const sourceRefs: string[] = [];
 
   if (!input.chainId) {
+    console.log("[etherscan] skipping — no chainId configured");
     return {
       metrics,
       fieldQuality,
@@ -495,6 +531,8 @@ export async function collectEtherscanMetrics(input: EtherscanCollectionInput): 
   }
 
   const chainId = input.chainId;
+  console.log("[etherscan] collecting metrics for chainId=%s lstToken=%s protocol=%s treasury=%s",
+    chainId, input.lstTokenAddress ?? "none", input.protocolContractAddress ?? "none", input.treasuryAddress ?? "none");
 
   const gasRequest: EtherscanRequestInput = {
     chainId,
@@ -509,8 +547,10 @@ export async function collectEtherscanMetrics(input: EtherscanCollectionInput): 
     metrics.proposeGasPrice = toFiniteNumber(gas?.ProposeGasPrice);
     metrics.fastGasPrice = toFiniteNumber(gas?.FastGasPrice);
     metrics.suggestedBaseFee = toFiniteNumber(gas?.suggestBaseFee);
-  } catch {
-    // Leave null when request fails.
+    console.log("[etherscan] gas oracle chainId=%s → safe=%s propose=%s fast=%s baseFee=%s",
+      chainId, metrics.safeGasPrice, metrics.proposeGasPrice, metrics.fastGasPrice, metrics.suggestedBaseFee);
+  } catch (error) {
+    console.error("[etherscan] gas oracle failed for chainId=%s:", chainId, error instanceof Error ? error.message : error);
   }
 
   setFieldQuality(fieldQuality, "safeGasPrice", metrics.safeGasPrice, "observed");

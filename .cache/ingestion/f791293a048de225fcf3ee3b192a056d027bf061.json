@@ -1,5 +1,5 @@
 {
-  "cachedAt": 1773320439225,
+  "cachedAt": 1773416728788,
   "data": [
     {
       "chainId": "berachain",
@@ -19,48 +19,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5751",
-      "priceUsd": "0.5751",
+      "priceNative": "0.6007",
+      "priceUsd": "0.6007",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 45
+          "buys": 2,
+          "sells": 41
         },
         "h1": {
-          "buys": 19,
-          "sells": 659
+          "buys": 15,
+          "sells": 665
         },
         "h6": {
-          "buys": 208,
-          "sells": 4128
+          "buys": 766,
+          "sells": 4234
         },
         "h24": {
-          "buys": 3467,
-          "sells": 20486
+          "buys": 1647,
+          "sells": 17203
         }
       },
       "volume": {
-        "h24": 277499.41,
-        "h6": 27985.37,
-        "h1": 2933.59,
-        "m5": 0.01
+        "h24": 429282.96,
+        "h6": 111227.49,
+        "h1": 3732.01,
+        "m5": 120.55
       },
       "priceChange": {
-        "h1": 0.53,
-        "h6": -1.55,
-        "h24": 3.24
+        "m5": -0.04,
+        "h1": -0.33,
+        "h6": -2.35,
+        "h24": 4.43
       },
       "liquidity": {
-        "usd": 665138.14,
-        "base": 642250,
-        "quote": 295717
+        "usd": 680632.18,
+        "base": 619056,
+        "quote": 308705
       },
-      "fdv": 21452542,
-      "marketCap": 21452542,
+      "fdv": 23138983,
+      "marketCap": 23138983,
       "pairCreatedAt": 1738819676000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -101,48 +102,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5740",
-      "priceUsd": "0.5740",
+      "priceNative": "0.6016",
+      "priceUsd": "0.6016",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 58
+          "sells": 1
         },
         "h1": {
-          "buys": 8,
-          "sells": 374
+          "buys": 4,
+          "sells": 9
         },
         "h6": {
-          "buys": 55,
-          "sells": 2364
+          "buys": 156,
+          "sells": 666
         },
         "h24": {
-          "buys": 691,
-          "sells": 5593
+          "buys": 406,
+          "sells": 5475
         }
       },
       "volume": {
-        "h24": 1765.31,
-        "h6": 176.44,
-        "h1": 14.66,
-        "m5": 0
+        "h24": 1076.85,
+        "h6": 345.07,
+        "h1": 24.25,
+        "m5": 0.72
       },
       "priceChange": {
-        "h1": 0.21,
-        "h6": -1.7,
-        "h24": 2.95
+        "m5": -0.03,
+        "h1": -0.24,
+        "h6": -2.08,
+        "h24": 4.43
       },
       "liquidity": {
-        "usd": 9816.64,
-        "base": 8550.6035,
-        "quote": 4908.32
+        "usd": 10053.94,
+        "base": 8354.7533,
+        "quote": 5026.9724
       },
-      "fdv": 21409073,
-      "marketCap": 21409073,
+      "fdv": 23173447,
+      "marketCap": 23173447,
       "pairCreatedAt": 1738837461000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -183,48 +185,49 @@
         "name": "Bridged USDC (Stargate)",
         "symbol": "USDC.e"
       },
-      "priceNative": "0.5750",
-      "priceUsd": "0.5750",
+      "priceNative": "0.6007",
+      "priceUsd": "0.6007",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 7
+          "sells": 1
         },
         "h1": {
-          "buys": 24,
-          "sells": 67
+          "buys": 8,
+          "sells": 24
         },
         "h6": {
-          "buys": 97,
-          "sells": 442
+          "buys": 299,
+          "sells": 339
         },
         "h24": {
-          "buys": 1225,
-          "sells": 1467
+          "buys": 760,
+          "sells": 1094
         }
       },
       "volume": {
-        "h24": 208387.19,
-        "h6": 22502.62,
-        "h1": 2534.4,
-        "m5": 0.09
+        "h24": 172863.39,
+        "h6": 43985.37,
+        "h1": 2438.53,
+        "m5": 26.35
       },
       "priceChange": {
-        "h1": 0.54,
-        "h6": -1.57,
-        "h24": 3.3
+        "m5": -0.01,
+        "h1": -0.34,
+        "h6": -2.3,
+        "h24": 4.52
       },
       "liquidity": {
-        "usd": 207201.75,
-        "base": 115279,
-        "quote": 140907
+        "usd": 197378.91,
+        "base": 90544,
+        "quote": 142982
       },
-      "fdv": 21448066,
-      "marketCap": 21448066,
+      "fdv": 23138028,
+      "marketCap": 23138028,
       "pairCreatedAt": 1738948050000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -265,49 +268,49 @@
         "name": "WETH",
         "symbol": "WETH"
       },
-      "priceNative": "0.0002779",
-      "priceUsd": "0.5751",
+      "priceNative": "0.0002807",
+      "priceUsd": "0.6035",
       "txns": {
         "m5": {
-          "buys": 5,
-          "sells": 0
+          "buys": 8,
+          "sells": 1
         },
         "h1": {
-          "buys": 17,
-          "sells": 46
+          "buys": 48,
+          "sells": 30
         },
         "h6": {
-          "buys": 91,
-          "sells": 326
+          "buys": 301,
+          "sells": 373
         },
         "h24": {
-          "buys": 1123,
-          "sells": 1698
+          "buys": 823,
+          "sells": 1380
         }
       },
       "volume": {
-        "h24": 238995.05,
-        "h6": 29272.36,
-        "h1": 1589.22,
-        "m5": 174.82
+        "h24": 309440.55,
+        "h6": 83863.06,
+        "h1": 10882.19,
+        "m5": 1522.5
       },
       "priceChange": {
-        "m5": 0.05,
-        "h1": 0.35,
-        "h6": -1.59,
-        "h24": 3.19
+        "m5": 0.07,
+        "h1": -0.56,
+        "h6": -1.9,
+        "h24": 4.38
       },
       "liquidity": {
-        "usd": 631303.63,
-        "base": 515447,
-        "quote": 161.7715
+        "usd": 726660.64,
+        "base": 562095,
+        "quote": 180.1789
       },
-      "fdv": 21452347,
-      "marketCap": 21452347,
+      "fdv": 23246644,
+      "marketCap": 23246644,
       "pairCreatedAt": 1738831121000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -345,49 +348,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5769",
-      "priceUsd": "0.5769",
+      "priceNative": "0.5994",
+      "priceUsd": "0.5994",
       "txns": {
         "m5": {
-          "buys": 1,
-          "sells": 0
+          "buys": 0,
+          "sells": 3
         },
         "h1": {
-          "buys": 11,
-          "sells": 12
+          "buys": 7,
+          "sells": 14
         },
         "h6": {
-          "buys": 51,
-          "sells": 204
+          "buys": 214,
+          "sells": 423
         },
         "h24": {
-          "buys": 1197,
-          "sells": 1908
+          "buys": 497,
+          "sells": 1269
         }
       },
       "volume": {
-        "h24": 63432.59,
-        "h6": 6754.9,
-        "h1": 636.27,
-        "m5": 16.01
+        "h24": 40565.12,
+        "h6": 14442.43,
+        "h1": 804.77,
+        "m5": 147.95
       },
       "priceChange": {
-        "m5": 0.11,
-        "h1": 0.44,
-        "h6": -1.45,
-        "h24": 3.23
+        "m5": -0.12,
+        "h1": -0.32,
+        "h6": -2.3,
+        "h24": 4.42
       },
       "liquidity": {
-        "usd": 315177.74,
-        "base": 273514,
-        "quote": 157360
+        "usd": 321443.33,
+        "base": 267816,
+        "quote": 160902
       },
-      "fdv": 21506083,
-      "marketCap": 21506083,
+      "fdv": 23094695,
+      "marketCap": 23094695,
       "pairCreatedAt": 1738831120000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -428,49 +431,49 @@
         "name": "Wrapped BTC",
         "symbol": "WBTC"
       },
-      "priceNative": "0.000008179",
-      "priceUsd": "0.5756",
+      "priceNative": "0.000008360",
+      "priceUsd": "0.6036",
       "txns": {
         "m5": {
-          "buys": 1,
+          "buys": 11,
           "sells": 0
         },
         "h1": {
-          "buys": 9,
-          "sells": 4
+          "buys": 32,
+          "sells": 23
         },
         "h6": {
-          "buys": 46,
-          "sells": 130
+          "buys": 122,
+          "sells": 194
         },
         "h24": {
-          "buys": 582,
-          "sells": 637
+          "buys": 464,
+          "sells": 541
         }
       },
       "volume": {
-        "h24": 183751.61,
-        "h6": 22055.18,
-        "h1": 1548.52,
-        "m5": 445.97
+        "h24": 188367.63,
+        "h6": 46776.75,
+        "h1": 6830.76,
+        "m5": 1116.44
       },
       "priceChange": {
-        "m5": 0.16,
-        "h1": 0.52,
-        "h6": -1.29,
-        "h24": 3
+        "m5": 0.1,
+        "h1": -0.34,
+        "h6": -1.83,
+        "h24": 5.8
       },
       "liquidity": {
-        "usd": 563493.25,
-        "base": 503127,
-        "quote": 3.8916
+        "usd": 584938.82,
+        "base": 492670,
+        "quote": 3.9827
       },
-      "fdv": 21468792,
-      "marketCap": 21468792,
+      "fdv": 23248261,
+      "marketCap": 23248261,
       "pairCreatedAt": 1738948919000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -511,48 +514,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5741",
-      "priceUsd": "0.5741",
+      "priceNative": "0.6010",
+      "priceUsd": "0.6010",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 2
         },
         "h1": {
-          "buys": 11,
-          "sells": 175
+          "buys": 14,
+          "sells": 21
         },
         "h6": {
-          "buys": 96,
-          "sells": 1342
+          "buys": 121,
+          "sells": 1419
         },
         "h24": {
-          "buys": 510,
-          "sells": 3429
+          "buys": 409,
+          "sells": 6021
         }
       },
       "volume": {
-        "h24": 0.32,
-        "h6": 0.07,
-        "h1": 0,
+        "h24": 0.28,
+        "h6": 0.08,
+        "h1": 0.01,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.16,
-        "h6": -1.56,
-        "h24": 3.03
+        "m5": -0.07,
+        "h1": -0.22,
+        "h6": -2.25,
+        "h24": 4.14
       },
       "liquidity": {
-        "usd": 63.51,
-        "base": 52.5738,
-        "quote": 33.3303
+        "usd": 64.92,
+        "base": 52.5499,
+        "quote": 33.3446
       },
-      "fdv": 21412150,
-      "marketCap": 21412150,
+      "fdv": 23148038,
+      "marketCap": 23148038,
       "pairCreatedAt": 1738838116000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -590,129 +594,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5749",
-      "priceUsd": "0.5749",
+      "priceNative": "0.6017",
+      "priceUsd": "0.6017",
       "txns": {
         "m5": {
-          "buys": 0,
+          "buys": 48,
           "sells": 10
         },
         "h1": {
-          "buys": 39,
-          "sells": 53
+          "buys": 210,
+          "sells": 106
         },
         "h6": {
-          "buys": 378,
-          "sells": 166
+          "buys": 316,
+          "sells": 476
         },
         "h24": {
-          "buys": 2190,
-          "sells": 3031
+          "buys": 697,
+          "sells": 3898
         }
       },
       "volume": {
-        "h24": 1458.82,
-        "h6": 155.47,
-        "h1": 31.6,
-        "m5": 0.21
+        "h24": 656,
+        "h6": 243.03,
+        "h1": 48.66,
+        "m5": 6.3
       },
       "priceChange": {
-        "m5": -0.02,
-        "h1": 0.27,
-        "h6": -1.55,
-        "h24": 3.35
+        "m5": 0.2,
+        "h1": -0.32,
+        "h6": -2.14,
+        "h24": 4.79
       },
       "liquidity": {
-        "usd": 564.62,
-        "base": 582.8082,
-        "quote": 229.5635
+        "usd": 579.66,
+        "base": 513.3758,
+        "quote": 270.7465
       },
-      "fdv": 21441921,
-      "marketCap": 21441921,
+      "fdv": 23175096,
+      "marketCap": 23175096,
       "pairCreatedAt": 1738969946000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
-        "websites": [
-          {
-            "url": "https://www.berachain.com/",
-            "label": "Website"
-          }
-        ],
-        "socials": [
-          {
-            "url": "https://x.com/berachain",
-            "type": "twitter"
-          },
-          {
-            "url": "https://t.me/BerachainPortal",
-            "type": "telegram"
-          },
-          {
-            "url": "https://discord.com/invite/berachain",
-            "type": "discord"
-          }
-        ]
-      }
-    },
-    {
-      "chainId": "berachain",
-      "dexId": "winnieswap",
-      "url": "https://dexscreener.com/berachain/0x3b9dba6dacf92eea27dff0a1f9c646e12d739df2",
-      "pairAddress": "0x3B9dbA6DAcf92Eea27DfF0A1F9c646E12d739dF2",
-      "baseToken": {
-        "address": "0x6969696969696969696969696969696969696969",
-        "name": "Wrapped Bera",
-        "symbol": "WBERA"
-      },
-      "quoteToken": {
-        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
-        "name": "Honey",
-        "symbol": "HONEY"
-      },
-      "priceNative": "0.5735",
-      "priceUsd": "0.5735",
-      "txns": {
-        "m5": {
-          "buys": 1,
-          "sells": 1
-        },
-        "h1": {
-          "buys": 24,
-          "sells": 15
-        },
-        "h6": {
-          "buys": 428,
-          "sells": 420
-        },
-        "h24": {
-          "buys": 2776,
-          "sells": 3342
-        }
-      },
-      "volume": {
-        "h24": 52.86,
-        "h6": 6.01,
-        "h1": 0.42,
-        "m5": 0.02
-      },
-      "priceChange": {
-        "m5": -0.08,
-        "h1": 0.16,
-        "h6": -1.66,
-        "h24": 2.95
-      },
-      "liquidity": {
-        "usd": 12.71,
-        "base": 7.8646,
-        "quote": 8.1996
-      },
-      "fdv": 21391926,
-      "marketCap": 21391926,
-      "pairCreatedAt": 1752606400000,
-      "info": {
-        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -750,48 +674,129 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5731",
-      "priceUsd": "0.5731",
+      "priceNative": "0.6022",
+      "priceUsd": "0.6022",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h1": {
-          "buys": 4,
-          "sells": 4
+          "buys": 2,
+          "sells": 3
         },
         "h6": {
           "buys": 21,
-          "sells": 141
+          "sells": 438
         },
         "h24": {
-          "buys": 140,
-          "sells": 816
+          "buys": 89,
+          "sells": 1569
         }
       },
       "volume": {
-        "h24": 2.52,
-        "h6": 0.43,
-        "h1": 0.09,
+        "h24": 1.52,
+        "h6": 0.62,
+        "h1": 0.05,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.04,
-        "h6": -1.55,
-        "h24": 2.86
+        "m5": -0.13,
+        "h1": -0.18,
+        "h6": -1.99,
+        "h24": 4.59
       },
       "liquidity": {
-        "usd": 25.31,
-        "base": 22.08158,
-        "quote": 12.6569
+        "usd": 25.95,
+        "base": 21.5465,
+        "quote": 12.9767
       },
-      "fdv": 21377710,
-      "marketCap": 21377710,
+      "fdv": 23195626,
+      "marketCap": 23195626,
       "pairCreatedAt": 1738923248000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://www.berachain.com/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/berachain",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/BerachainPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/berachain",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "berachain",
+      "dexId": "winnieswap",
+      "url": "https://dexscreener.com/berachain/0x3b9dba6dacf92eea27dff0a1f9c646e12d739df2",
+      "pairAddress": "0x3B9dbA6DAcf92Eea27DfF0A1F9c646E12d739dF2",
+      "baseToken": {
+        "address": "0x6969696969696969696969696969696969696969",
+        "name": "Wrapped Bera",
+        "symbol": "WBERA"
+      },
+      "quoteToken": {
+        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
+        "name": "Honey",
+        "symbol": "HONEY"
+      },
+      "priceNative": "0.6010",
+      "priceUsd": "0.6010",
+      "txns": {
+        "m5": {
+          "buys": 7,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 49,
+          "sells": 36
+        },
+        "h6": {
+          "buys": 850,
+          "sells": 538
+        },
+        "h24": {
+          "buys": 1994,
+          "sells": 2651
+        }
+      },
+      "volume": {
+        "h24": 42.63,
+        "h6": 13.75,
+        "h1": 0.81,
+        "m5": 0.05
+      },
+      "priceChange": {
+        "m5": 0.01,
+        "h1": -0.14,
+        "h6": -2.32,
+        "h24": 4.56
+      },
+      "liquidity": {
+        "usd": 12.9,
+        "base": 6.2098,
+        "quote": 9.1748
+      },
+      "fdv": 23149300,
+      "marketCap": 23149300,
+      "pairCreatedAt": 1752606400000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -829,48 +834,49 @@
         "name": "WETH",
         "symbol": "WETH"
       },
-      "priceNative": "0.0002774",
-      "priceUsd": "0.5741",
+      "priceNative": "0.0002807",
+      "priceUsd": "0.6055",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 2,
+          "buys": 4,
           "sells": 1
         },
+        "h1": {
+          "buys": 21,
+          "sells": 19
+        },
         "h6": {
-          "buys": 143,
-          "sells": 246
+          "buys": 184,
+          "sells": 220
         },
         "h24": {
-          "buys": 762,
-          "sells": 741
+          "buys": 388,
+          "sells": 771
         }
       },
       "volume": {
-        "h24": 111.97,
-        "h6": 24.05,
-        "h1": 0.12,
-        "m5": 0
+        "h24": 83.56,
+        "h6": 36.04,
+        "h1": 3.88,
+        "m5": 0.53
       },
       "priceChange": {
-        "h1": 0.15,
-        "h6": -1.61,
-        "h24": 3.09
+        "m5": 0.46,
+        "h1": 0.32,
+        "h6": -1.36,
+        "h24": 5.47
       },
       "liquidity": {
-        "usd": 95.38,
-        "base": 90.3958,
-        "quote": 0.021
+        "usd": 100.19,
+        "base": 88.8007,
+        "quote": 0.02152
       },
-      "fdv": 21413542,
-      "marketCap": 21413542,
+      "fdv": 23322307,
+      "marketCap": 23322307,
       "pairCreatedAt": 1738969186000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -911,48 +917,129 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5739",
-      "priceUsd": "0.5739",
+      "priceNative": "0.6013",
+      "priceUsd": "0.6013",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 0
+          "buys": 2,
+          "sells": 3
         },
         "h1": {
-          "buys": 3,
-          "sells": 6
+          "buys": 49,
+          "sells": 50
         },
         "h6": {
-          "buys": 87,
-          "sells": 99
+          "buys": 187,
+          "sells": 219
         },
         "h24": {
-          "buys": 748,
-          "sells": 699
+          "buys": 521,
+          "sells": 502
         }
       },
       "volume": {
-        "h24": 0.35,
-        "h6": 0.05,
-        "h1": 0,
+        "h24": 0.27,
+        "h6": 0.11,
+        "h1": 0.02,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.2,
-        "h6": -1.59,
-        "h24": 2.99
+        "m5": 0.02,
+        "h1": -0.14,
+        "h6": -2.23,
+        "h24": 4.14
       },
       "liquidity": {
-        "usd": 97.95,
-        "base": 25.2984,
-        "quote": 83.437
+        "usd": 98.64,
+        "base": 25.2739,
+        "quote": 83.4514
       },
-      "fdv": 21404185,
-      "marketCap": 21404185,
+      "fdv": 23158572,
+      "marketCap": 23158572,
       "pairCreatedAt": 1740309787000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://www.berachain.com/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/berachain",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/BerachainPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/berachain",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "berachain",
+      "dexId": "bulla",
+      "url": "https://dexscreener.com/berachain/0x90f79fdec42351e514c35cd93cb5f1b965585132",
+      "pairAddress": "0x90f79fDEC42351e514C35cD93CB5f1B965585132",
+      "baseToken": {
+        "address": "0x6969696969696969696969696969696969696969",
+        "name": "Wrapped Bera",
+        "symbol": "WBERA"
+      },
+      "quoteToken": {
+        "address": "0x549943e04f40284185054145c6E4e9568C1D3241",
+        "name": "Bridged USDC (Stargate)",
+        "symbol": "USDC.e"
+      },
+      "priceNative": "0.6017",
+      "priceUsd": "0.6017",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 4
+        },
+        "h6": {
+          "buys": 80,
+          "sells": 65
+        },
+        "h24": {
+          "buys": 192,
+          "sells": 151
+        }
+      },
+      "volume": {
+        "h24": 2.7,
+        "h6": 1.15,
+        "h1": 0.02,
+        "m5": 0
+      },
+      "priceChange": {
+        "m5": -0.14,
+        "h1": -0.2,
+        "h6": -2,
+        "h24": 4.69
+      },
+      "liquidity": {
+        "usd": 280.32,
+        "base": 337.8639,
+        "quote": 77.005501
+      },
+      "fdv": 23177420,
+      "marketCap": 23177420,
+      "pairCreatedAt": 1738873149000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -993,127 +1080,48 @@
         "name": "WETH",
         "symbol": "WETH"
       },
-      "priceNative": "0.0002772",
-      "priceUsd": "0.5739",
+      "priceNative": "0.0002803",
+      "priceUsd": "0.6040",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 3,
+          "buys": 19,
           "sells": 1
         },
         "h6": {
-          "buys": 31,
-          "sells": 43
+          "buys": 47,
+          "sells": 58
         },
         "h24": {
-          "buys": 224,
-          "sells": 153
+          "buys": 155,
+          "sells": 129
         }
       },
       "volume": {
-        "h24": 1.86,
-        "h6": 0.38,
-        "h1": 0,
+        "h24": 1.54,
+        "h6": 0.61,
+        "h1": 0.08,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.19,
-        "h6": -1.43,
-        "h24": 3.11
+        "h1": 0.14,
+        "h6": -1.65,
+        "h24": 5.11
       },
       "liquidity": {
-        "usd": 20.22,
-        "base": 17.6234,
-        "quote": 0.004886
+        "usd": 21.18,
+        "base": 17.5315,
+        "quote": 0.004914
       },
-      "fdv": 21404672,
-      "marketCap": 21404672,
+      "fdv": 23265137,
+      "marketCap": 23265137,
       "pairCreatedAt": 1738848209000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
-        "websites": [
-          {
-            "url": "https://www.berachain.com/",
-            "label": "Website"
-          }
-        ],
-        "socials": [
-          {
-            "url": "https://x.com/berachain",
-            "type": "twitter"
-          },
-          {
-            "url": "https://t.me/BerachainPortal",
-            "type": "telegram"
-          },
-          {
-            "url": "https://discord.com/invite/berachain",
-            "type": "discord"
-          }
-        ]
-      }
-    },
-    {
-      "chainId": "berachain",
-      "dexId": "bulla",
-      "url": "https://dexscreener.com/berachain/0x90f79fdec42351e514c35cd93cb5f1b965585132",
-      "pairAddress": "0x90f79fDEC42351e514C35cD93CB5f1B965585132",
-      "baseToken": {
-        "address": "0x6969696969696969696969696969696969696969",
-        "name": "Wrapped Bera",
-        "symbol": "WBERA"
-      },
-      "quoteToken": {
-        "address": "0x549943e04f40284185054145c6E4e9568C1D3241",
-        "name": "Bridged USDC (Stargate)",
-        "symbol": "USDC.e"
-      },
-      "priceNative": "0.5721",
-      "priceUsd": "0.5721",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 3
-        },
-        "h6": {
-          "buys": 16,
-          "sells": 37
-        },
-        "h24": {
-          "buys": 173,
-          "sells": 157
-        }
-      },
-      "volume": {
-        "h24": 2.37,
-        "h6": 0.25,
-        "h1": 0,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.09,
-        "h6": -1.83,
-        "h24": 2.67
-      },
-      "liquidity": {
-        "usd": 270.29,
-        "base": 338.2495,
-        "quote": 76.7753
-      },
-      "fdv": 21337862,
-      "marketCap": 21337862,
-      "pairCreatedAt": 1738873149000,
-      "info": {
-        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1154,48 +1162,49 @@
         "name": "Bridged USDC (Stargate)",
         "symbol": "USDC.e"
       },
-      "priceNative": "0.5733",
-      "priceUsd": "0.5733",
+      "priceNative": "0.6004",
+      "priceUsd": "0.6004",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h1": {
           "buys": 5,
-          "sells": 4
+          "sells": 7
         },
         "h6": {
-          "buys": 43,
-          "sells": 56
+          "buys": 46,
+          "sells": 57
         },
         "h24": {
-          "buys": 195,
-          "sells": 184
+          "buys": 157,
+          "sells": 148
         }
       },
       "volume": {
-        "h24": 0.67,
-        "h6": 0.16,
-        "h1": 0.01,
+        "h24": 0.58,
+        "h6": 0.2,
+        "h1": 0.02,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.2,
-        "h6": -1.67,
-        "h24": 2.98
+        "m5": -0.16,
+        "h1": -0.25,
+        "h6": -2.39,
+        "h24": 4.69
       },
       "liquidity": {
-        "usd": 58.17,
-        "base": 47.6214,
-        "quote": 30.8673
+        "usd": 59.46,
+        "base": 47.5518,
+        "quote": 30.9086
       },
-      "fdv": 21384559,
-      "marketCap": 21384559,
+      "fdv": 23124876,
+      "marketCap": 23124876,
       "pairCreatedAt": 1739038363000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1233,48 +1242,129 @@
         "name": "USDe",
         "symbol": "USDe"
       },
-      "priceNative": "0.5740",
-      "priceUsd": "0.5741",
+      "priceNative": "0.6021",
+      "priceUsd": "0.6022",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
           "sells": 2
         },
+        "h1": {
+          "buys": 3,
+          "sells": 8
+        },
         "h6": {
-          "buys": 10,
-          "sells": 19
+          "buys": 29,
+          "sells": 43
         },
         "h24": {
-          "buys": 204,
-          "sells": 145
+          "buys": 135,
+          "sells": 60
         }
       },
       "volume": {
-        "h24": 9.3,
-        "h6": 0.81,
-        "h1": 0.03,
-        "m5": 0
+        "h24": 4.71,
+        "h6": 1.88,
+        "h1": 0.15,
+        "m5": 0.04
       },
       "priceChange": {
-        "h1": -0.11,
-        "h6": -1.2,
-        "h24": 3.09
+        "m5": -0.14,
+        "h1": -0.32,
+        "h6": -2.29,
+        "h24": 4.85
       },
       "liquidity": {
-        "usd": 112.68,
-        "base": 98.1226,
-        "quote": 56.3347
+        "usd": 115.42,
+        "base": 95.8258,
+        "quote": 57.7003
       },
-      "fdv": 21415222,
-      "marketCap": 21415222,
+      "fdv": 23195171,
+      "marketCap": 23195171,
       "pairCreatedAt": 1771907006000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://www.berachain.com/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/berachain",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/BerachainPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/berachain",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "berachain",
+      "dexId": "0x134147627c2dC9a0E589EC43d3F8866AAA0Bd1ba",
+      "url": "https://dexscreener.com/berachain/0x4da032fa380926c1efe7d190efca11b9c32eedd0",
+      "pairAddress": "0x4da032Fa380926c1eFE7d190eFca11b9c32eEDD0",
+      "baseToken": {
+        "address": "0x6969696969696969696969696969696969696969",
+        "name": "Wrapped Bera",
+        "symbol": "WBERA"
+      },
+      "quoteToken": {
+        "address": "0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
+        "name": "WETH",
+        "symbol": "WETH"
+      },
+      "priceNative": "0.0002805",
+      "priceUsd": "0.6032",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 10,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 26,
+          "sells": 47
+        },
+        "h24": {
+          "buys": 88,
+          "sells": 80
+        }
+      },
+      "volume": {
+        "h24": 1.18,
+        "h6": 0.52,
+        "h1": 0.07,
+        "m5": 0.01
+      },
+      "priceChange": {
+        "m5": -0.05,
+        "h1": -0.12,
+        "h6": -1.96,
+        "h24": 4.9
+      },
+      "liquidity": {
+        "usd": 16.07,
+        "base": 13.322,
+        "quote": 0.003737
+      },
+      "fdv": 23233422,
+      "marketCap": 23233422,
+      "pairCreatedAt": 1738926412000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1312,47 +1402,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5724",
-      "priceUsd": "0.5724",
+      "priceNative": "0.6003",
+      "priceUsd": "0.6003",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 4
         },
         "h1": {
           "buys": 0,
-          "sells": 0
+          "sells": 10
         },
         "h6": {
-          "buys": 15,
-          "sells": 29
+          "buys": 24,
+          "sells": 75
         },
         "h24": {
-          "buys": 267,
-          "sells": 221
+          "buys": 167,
+          "sells": 96
         }
       },
       "volume": {
-        "h24": 0.93,
-        "h6": 0.08,
-        "h1": 0,
+        "h24": 0.54,
+        "h6": 0.2,
+        "h1": 0.01,
         "m5": 0
       },
       "priceChange": {
-        "h6": -1.84,
-        "h24": 2.44
+        "m5": -0.14,
+        "h1": -0.28,
+        "h6": -2.98,
+        "h24": 4.01
       },
       "liquidity": {
-        "usd": 14.64,
-        "base": 12.7671,
-        "quote": 7.3361
+        "usd": 15,
+        "base": 12.4645,
+        "quote": 7.5172
       },
-      "fdv": 21337695,
-      "marketCap": 21337695,
+      "fdv": 23130596,
+      "marketCap": 23130596,
       "pairCreatedAt": 1738849266000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1393,126 +1485,49 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5759",
-      "priceUsd": "0.5759",
+      "priceNative": "0.6062",
+      "priceUsd": "0.6062",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 3
         },
         "h1": {
           "buys": 0,
-          "sells": 2
+          "sells": 6
         },
         "h6": {
-          "buys": 0,
-          "sells": 10
+          "buys": 8,
+          "sells": 19
         },
         "h24": {
-          "buys": 154,
-          "sells": 79
+          "buys": 81,
+          "sells": 19
         }
       },
       "volume": {
-        "h24": 0.1,
-        "h6": 0,
+        "h24": 0.06,
+        "h6": 0.02,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.35,
-        "h6": -1,
-        "h24": 3.95
+        "m5": -0.16,
+        "h1": -0.25,
+        "h6": -1.06,
+        "h24": 5.14
       },
       "liquidity": {
-        "usd": 88.85,
-        "base": 14.000726,
-        "quote": 80.7937
+        "usd": 89.28,
+        "base": 13.9475,
+        "quote": 80.8257
       },
-      "fdv": 21481763,
-      "marketCap": 21481763,
+      "fdv": 23348620,
+      "marketCap": 23348620,
       "pairCreatedAt": 1738838133000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
-        "websites": [
-          {
-            "url": "https://www.berachain.com/",
-            "label": "Website"
-          }
-        ],
-        "socials": [
-          {
-            "url": "https://x.com/berachain",
-            "type": "twitter"
-          },
-          {
-            "url": "https://t.me/BerachainPortal",
-            "type": "telegram"
-          },
-          {
-            "url": "https://discord.com/invite/berachain",
-            "type": "discord"
-          }
-        ]
-      }
-    },
-    {
-      "chainId": "berachain",
-      "dexId": "0x134147627c2dC9a0E589EC43d3F8866AAA0Bd1ba",
-      "url": "https://dexscreener.com/berachain/0x4da032fa380926c1efe7d190efca11b9c32eedd0",
-      "pairAddress": "0x4da032Fa380926c1eFE7d190eFca11b9c32eEDD0",
-      "baseToken": {
-        "address": "0x6969696969696969696969696969696969696969",
-        "name": "Wrapped Bera",
-        "symbol": "WBERA"
-      },
-      "quoteToken": {
-        "address": "0x2F6F07CDcf3588944Bf4C42aC74ff24bF56e7590",
-        "name": "WETH",
-        "symbol": "WETH"
-      },
-      "priceNative": "0.0002772",
-      "priceUsd": "0.5723",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h6": {
-          "buys": 6,
-          "sells": 25
-        },
-        "h24": {
-          "buys": 121,
-          "sells": 95
-        }
-      },
-      "volume": {
-        "h24": 1.42,
-        "h6": 0.21,
-        "h1": 0,
-        "m5": 0
-      },
-      "priceChange": {
-        "h6": -1.7,
-        "h24": 1.3
-      },
-      "liquidity": {
-        "usd": 15.33,
-        "base": 13.4002,
-        "quote": 0.003714
-      },
-      "fdv": 21344561,
-      "marketCap": 21344561,
-      "pairCreatedAt": 1738926412000,
-      "info": {
-        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1553,8 +1568,8 @@
         "name": "Bridged USDC (Stargate)",
         "symbol": "USDC.e"
       },
-      "priceNative": "0.5706",
-      "priceUsd": "0.5706",
+      "priceNative": "0.6049",
+      "priceUsd": "0.6049",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1562,39 +1577,38 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 3
+          "sells": 0
         },
         "h6": {
-          "buys": 4,
-          "sells": 21
+          "buys": 5,
+          "sells": 12
         },
         "h24": {
-          "buys": 50,
-          "sells": 44
+          "buys": 40,
+          "sells": 23
         }
       },
       "volume": {
-        "h24": 0.12,
-        "h6": 0.01,
+        "h24": 0.07,
+        "h6": 0.02,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.42,
-        "h6": -1.59,
-        "h24": 2.97
+        "h6": -1.15,
+        "h24": 5.12
       },
       "liquidity": {
-        "usd": 23.01,
-        "base": 16.121,
-        "quote": 13.8125
+        "usd": 23.56,
+        "base": 16.06882,
+        "quote": 13.8438
       },
-      "fdv": 21283257,
-      "marketCap": 21283257,
+      "fdv": 23300031,
+      "marketCap": 23300031,
       "pairCreatedAt": 1738831120000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1632,47 +1646,48 @@
         "name": "WETH",
         "symbol": "WETH"
       },
-      "priceNative": "0.0002769",
-      "priceUsd": "0.5717",
+      "priceNative": "0.0002801",
+      "priceUsd": "0.6055",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
+          "buys": 10,
           "sells": 0
         },
         "h6": {
-          "buys": 3,
-          "sells": 14
+          "buys": 19,
+          "sells": 28
         },
         "h24": {
-          "buys": 78,
-          "sells": 52
+          "buys": 50,
+          "sells": 40
         }
       },
       "volume": {
-        "h24": 1.11,
-        "h6": 0.18,
-        "h1": 0,
+        "h24": 0.79,
+        "h6": 0.37,
+        "h1": 0.05,
         "m5": 0
       },
       "priceChange": {
-        "h6": -1.78,
-        "h24": 0.91
+        "h1": 0.37,
+        "h6": -1.66,
+        "h24": 5.27
       },
       "liquidity": {
-        "usd": 14.41,
-        "base": 12.608,
-        "quote": 0.003491
+        "usd": 15.18,
+        "base": 12.5384,
+        "quote": 0.003512
       },
-      "fdv": 21323561,
-      "marketCap": 21323561,
+      "fdv": 23323352,
+      "marketCap": 23323352,
       "pairCreatedAt": 1738833713000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1710,47 +1725,49 @@
         "name": "Bridged USDC (Stargate)",
         "symbol": "USDC.e"
       },
-      "priceNative": "0.5720",
-      "priceUsd": "0.5720",
+      "priceNative": "0.5997",
+      "priceUsd": "0.5997",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 2
         },
         "h1": {
           "buys": 0,
-          "sells": 0
+          "sells": 3
         },
         "h6": {
-          "buys": 2,
-          "sells": 5
+          "buys": 4,
+          "sells": 13
         },
         "h24": {
-          "buys": 41,
-          "sells": 35
+          "buys": 25,
+          "sells": 13
         }
       },
       "volume": {
-        "h24": 1.65,
-        "h6": 0.1,
-        "h1": 0,
+        "h24": 0.64,
+        "h6": 0.23,
+        "h1": 0.05,
         "m5": 0
       },
       "priceChange": {
-        "h6": -1.5,
-        "h24": 2.84
+        "m5": -0.49,
+        "h1": -1.77,
+        "h6": -2.53,
+        "h24": 4.31
       },
       "liquidity": {
-        "usd": 23.02,
-        "base": 20.1134,
-        "quote": 11.5156
+        "usd": 23.57,
+        "base": 19.6101,
+        "quote": 11.8149
       },
-      "fdv": 21321127,
-      "marketCap": 21321127,
+      "fdv": 23107137,
+      "marketCap": 23107137,
       "pairCreatedAt": 1738848212000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1788,8 +1805,8 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5794",
-      "priceUsd": "0.5794",
+      "priceNative": "0.6046",
+      "priceUsd": "0.6046",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1797,37 +1814,39 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h6": {
-          "buys": 0,
-          "sells": 0
+          "buys": 9,
+          "sells": 1
         },
         "h24": {
-          "buys": 7,
-          "sells": 4
+          "buys": 13,
+          "sells": 2
         }
       },
       "volume": {
-        "h24": 0.15,
-        "h6": 0,
-        "h1": 0,
+        "h24": 0.13,
+        "h6": 0.12,
+        "h1": 0.02,
         "m5": 0
       },
       "priceChange": {
-        "h24": 2.29
+        "h1": -0.95,
+        "h6": 3.87,
+        "h24": 4.37
       },
       "liquidity": {
-        "usd": 16.71,
-        "base": 10.308,
-        "quote": 10.7413
+        "usd": 16.97,
+        "base": 10.155,
+        "quote": 10.832
       },
-      "fdv": 21611873,
-      "marketCap": 21611873,
+      "fdv": 23286718,
+      "marketCap": 23286718,
       "pairCreatedAt": 1742597860000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1865,8 +1884,8 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5889",
-      "priceUsd": "0.5889",
+      "priceNative": "0.6023",
+      "priceUsd": "0.6023",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1877,34 +1896,35 @@
           "sells": 0
         },
         "h6": {
-          "buys": 0,
+          "buys": 4,
           "sells": 0
         },
         "h24": {
-          "buys": 7,
-          "sells": 0
+          "buys": 8,
+          "sells": 4
         }
       },
       "volume": {
-        "h24": 0.03,
+        "h24": 0.02,
         "h6": 0,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h24": 8.7
+        "h6": 1.71,
+        "h24": 2.64
       },
       "liquidity": {
-        "usd": 11.52,
-        "base": 1.9181,
-        "quote": 10.3924
+        "usd": 11.54,
+        "base": 1.9029,
+        "quote": 10.4015
       },
-      "fdv": 21964456,
-      "marketCap": 21964456,
+      "fdv": 23197552,
+      "marketCap": 23197552,
       "pairCreatedAt": 1740060587000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -1942,8 +1962,8 @@
         "name": "Honey",
         "symbol": "HONEY"
       },
-      "priceNative": "0.5709",
-      "priceUsd": "0.5709",
+      "priceNative": "0.6032",
+      "priceUsd": "0.6032",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1951,39 +1971,39 @@
         },
         "h1": {
           "buys": 1,
-          "sells": 68
+          "sells": 2
         },
         "h6": {
-          "buys": 5,
-          "sells": 717
+          "buys": 8,
+          "sells": 263
         },
         "h24": {
-          "buys": 33,
-          "sells": 1463
+          "buys": 24,
+          "sells": 1102
         }
       },
       "volume": {
-        "h24": 0.02,
+        "h24": 0.01,
         "h6": 0,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.56,
-        "h6": -1.26,
-        "h24": 2.02
+        "h1": 0.01,
+        "h6": -1.51,
+        "h24": 4.77
       },
       "liquidity": {
-        "usd": 0.96,
-        "base": 0.8108,
-        "quote": 0.5003
+        "usd": 0.98,
+        "base": 0.8057,
+        "quote": 0.5033
       },
-      "fdv": 21294890,
-      "marketCap": 21294890,
+      "fdv": 23234755,
+      "marketCap": 23234755,
       "pairCreatedAt": 1739628076000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -2021,127 +2041,49 @@
         "name": "WETH",
         "symbol": "WETH"
       },
-      "priceNative": "0.0002779",
-      "priceUsd": "0.5753",
+      "priceNative": "0.0002809",
+      "priceUsd": "0.6040",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 0
+          "buys": 11,
+          "sells": 2
         },
         "h1": {
-          "buys": 15,
-          "sells": 11
+          "buys": 47,
+          "sells": 29
         },
         "h6": {
-          "buys": 82,
-          "sells": 112
+          "buys": 202,
+          "sells": 207
         },
         "h24": {
-          "buys": 753,
-          "sells": 669
+          "buys": 532,
+          "sells": 530
         }
       },
       "volume": {
-        "h24": 8.58,
-        "h6": 1.26,
-        "h1": 0.17,
-        "m5": 0
+        "h24": 7.19,
+        "h6": 2.75,
+        "h1": 0.41,
+        "m5": 0.06
       },
       "priceChange": {
-        "h1": 0.22,
-        "h6": -1.35,
-        "h24": 3.24
+        "m5": 0.16,
+        "h1": -0.09,
+        "h6": -1.83,
+        "h24": 6.03
       },
       "liquidity": {
-        "usd": 5.52,
-        "base": 5.6385,
-        "quote": 0.001101
+        "usd": 5.77,
+        "base": 5.5003,
+        "quote": 0.00114
       },
-      "fdv": 21456554,
-      "marketCap": 21456554,
+      "fdv": 23263638,
+      "marketCap": 23263638,
       "pairCreatedAt": 1756280717000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
-        "websites": [
-          {
-            "url": "https://www.berachain.com/",
-            "label": "Website"
-          }
-        ],
-        "socials": [
-          {
-            "url": "https://x.com/berachain",
-            "type": "twitter"
-          },
-          {
-            "url": "https://t.me/BerachainPortal",
-            "type": "telegram"
-          },
-          {
-            "url": "https://discord.com/invite/berachain",
-            "type": "discord"
-          }
-        ]
-      }
-    },
-    {
-      "chainId": "berachain",
-      "dexId": "0x541e6B9067823Dd49cb08a59C44096D925920A2C",
-      "url": "https://dexscreener.com/berachain/0x4e2f55a252d7abac81bf282f818ba327b6bf5bd8",
-      "pairAddress": "0x4e2f55A252d7AbAC81Bf282f818bA327B6BF5bD8",
-      "baseToken": {
-        "address": "0x6969696969696969696969696969696969696969",
-        "name": "Wrapped Bera",
-        "symbol": "WBERA"
-      },
-      "quoteToken": {
-        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
-        "name": "Honey",
-        "symbol": "HONEY"
-      },
-      "priceNative": "0.5738",
-      "priceUsd": "0.5738",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 2
-        },
-        "h6": {
-          "buys": 21,
-          "sells": 34
-        },
-        "h24": {
-          "buys": 293,
-          "sells": 195
-        }
-      },
-      "volume": {
-        "h24": 0.13,
-        "h6": 0.01,
-        "h1": 0,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.05,
-        "h6": -1.3,
-        "h24": 3.04
-      },
-      "liquidity": {
-        "usd": 1.63,
-        "base": 1.4229,
-        "quote": 0.8166
-      },
-      "fdv": 21404136,
-      "marketCap": 21404136,
-      "pairCreatedAt": 1746453933000,
-      "info": {
-        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -2182,126 +2124,49 @@
         "name": "USD₮0",
         "symbol": "USD₮0"
       },
-      "priceNative": "0.5738",
-      "priceUsd": "0.5738",
+      "priceNative": "0.6008",
+      "priceUsd": "0.6008",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h1": {
-          "buys": 3,
-          "sells": 3
+          "buys": 5,
+          "sells": 4
         },
         "h6": {
-          "buys": 26,
-          "sells": 45
+          "buys": 48,
+          "sells": 38
         },
         "h24": {
-          "buys": 225,
-          "sells": 209
+          "buys": 137,
+          "sells": 108
         }
       },
       "volume": {
-        "h24": 1.62,
-        "h6": 0.24,
-        "h1": 0.01,
+        "h24": 0.93,
+        "h6": 0.33,
+        "h1": 0.02,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.21,
-        "h6": -1.48,
-        "h24": 2.87
+        "m5": -0.17,
+        "h1": -0.16,
+        "h6": -2.3,
+        "h24": 4.6
       },
       "liquidity": {
-        "usd": 9.3,
-        "base": 7.7533,
-        "quote": 4.8519
+        "usd": 9.5,
+        "base": 7.5881,
+        "quote": 4.9496
       },
-      "fdv": 21401317,
-      "marketCap": 21401317,
+      "fdv": 23139226,
+      "marketCap": 23139226,
       "pairCreatedAt": 1746982810000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
-        "websites": [
-          {
-            "url": "https://www.berachain.com/",
-            "label": "Website"
-          }
-        ],
-        "socials": [
-          {
-            "url": "https://x.com/berachain",
-            "type": "twitter"
-          },
-          {
-            "url": "https://t.me/BerachainPortal",
-            "type": "telegram"
-          },
-          {
-            "url": "https://discord.com/invite/berachain",
-            "type": "discord"
-          }
-        ]
-      }
-    },
-    {
-      "chainId": "berachain",
-      "dexId": "0x551236031BE7dcD6b09f7e529C4A66217B4BfEB2",
-      "url": "https://dexscreener.com/berachain/0xa6af35acb6e2ce3a4d9e0230ba90802128984509",
-      "pairAddress": "0xa6Af35acb6E2Ce3a4d9e0230ba90802128984509",
-      "baseToken": {
-        "address": "0x6969696969696969696969696969696969696969",
-        "name": "Wrapped Bera",
-        "symbol": "WBERA"
-      },
-      "quoteToken": {
-        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
-        "name": "Honey",
-        "symbol": "HONEY"
-      },
-      "priceNative": "0.5734",
-      "priceUsd": "0.5734",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 1,
-          "sells": 1
-        },
-        "h6": {
-          "buys": 24,
-          "sells": 24
-        },
-        "h24": {
-          "buys": 167,
-          "sells": 157
-        }
-      },
-      "volume": {
-        "h24": 2.01,
-        "h6": 0.29,
-        "h1": 0,
-        "m5": 0
-      },
-      "priceChange": {
-        "h6": -1.67,
-        "h24": 2.78
-      },
-      "liquidity": {
-        "usd": 9.18,
-        "base": 8.01097,
-        "quote": 4.5936
-      },
-      "fdv": 21386152,
-      "marketCap": 21386152,
-      "pairCreatedAt": 1744011111000,
-      "info": {
-        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",
@@ -2342,48 +2207,209 @@
         "name": "Bridged USDC (Stargate)",
         "symbol": "USDC.e"
       },
-      "priceNative": "0.5723",
-      "priceUsd": "0.5723",
+      "priceNative": "0.6016",
+      "priceUsd": "0.6016",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 0
+          "buys": 1,
+          "sells": 2
         },
         "h1": {
-          "buys": 2,
-          "sells": 3
+          "buys": 4,
+          "sells": 4
         },
         "h6": {
-          "buys": 23,
-          "sells": 29
+          "buys": 31,
+          "sells": 30
         },
         "h24": {
-          "buys": 157,
-          "sells": 97
+          "buys": 111,
+          "sells": 63
         }
       },
       "volume": {
-        "h24": 0.53,
-        "h6": 0.08,
+        "h24": 0.33,
+        "h6": 0.12,
+        "h1": 0.01,
+        "m5": 0
+      },
+      "priceChange": {
+        "m5": -0.27,
+        "h1": -0.26,
+        "h6": -1.98,
+        "h24": 4.64
+      },
+      "liquidity": {
+        "usd": 5.49,
+        "base": 4.5707,
+        "quote": 2.7499
+      },
+      "fdv": 23171599,
+      "marketCap": 23171599,
+      "pairCreatedAt": 1738827952000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://www.berachain.com/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/berachain",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/BerachainPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/berachain",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "berachain",
+      "dexId": "0x541e6B9067823Dd49cb08a59C44096D925920A2C",
+      "url": "https://dexscreener.com/berachain/0x4e2f55a252d7abac81bf282f818ba327b6bf5bd8",
+      "pairAddress": "0x4e2f55A252d7AbAC81Bf282f818bA327B6BF5bD8",
+      "baseToken": {
+        "address": "0x6969696969696969696969696969696969696969",
+        "name": "Wrapped Bera",
+        "symbol": "WBERA"
+      },
+      "quoteToken": {
+        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
+        "name": "Honey",
+        "symbol": "HONEY"
+      },
+      "priceNative": "0.6019",
+      "priceUsd": "0.6019",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h1": {
+          "buys": 3,
+          "sells": 10
+        },
+        "h6": {
+          "buys": 27,
+          "sells": 55
+        },
+        "h24": {
+          "buys": 153,
+          "sells": 79
+        }
+      },
+      "volume": {
+        "h24": 0.07,
+        "h6": 0.02,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.21,
-        "h6": -1.69,
-        "h24": 2.52
+        "m5": -0.16,
+        "h1": -0.31,
+        "h6": -2.25,
+        "h24": 4.86
       },
       "liquidity": {
-        "usd": 5.36,
-        "base": 4.6853,
-        "quote": 2.6815
+        "usd": 1.67,
+        "base": 1.3895,
+        "quote": 0.8364
       },
-      "fdv": 21345552,
-      "marketCap": 21345552,
-      "pairCreatedAt": 1738827952000,
+      "fdv": 23185171,
+      "marketCap": 23185171,
+      "pairCreatedAt": 1746453933000,
       "info": {
         "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
-        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773320400000",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://www.berachain.com/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/berachain",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/BerachainPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/berachain",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "berachain",
+      "dexId": "0x551236031BE7dcD6b09f7e529C4A66217B4BfEB2",
+      "url": "https://dexscreener.com/berachain/0xa6af35acb6e2ce3a4d9e0230ba90802128984509",
+      "pairAddress": "0xa6Af35acb6E2Ce3a4d9e0230ba90802128984509",
+      "baseToken": {
+        "address": "0x6969696969696969696969696969696969696969",
+        "name": "Wrapped Bera",
+        "symbol": "WBERA"
+      },
+      "quoteToken": {
+        "address": "0xFCBD14DC51f0A4d49d5E53C2E0950e0bC26d0Dce",
+        "name": "Honey",
+        "symbol": "HONEY"
+      },
+      "priceNative": "0.6004",
+      "priceUsd": "0.6004",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 4,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 39,
+          "sells": 49
+        },
+        "h24": {
+          "buys": 104,
+          "sells": 92
+        }
+      },
+      "volume": {
+        "h24": 1.19,
+        "h6": 0.56,
+        "h1": 0.05,
+        "m5": 0
+      },
+      "priceChange": {
+        "m5": -0.25,
+        "h1": -0.3,
+        "h6": -2.28,
+        "h24": 4.22
+      },
+      "liquidity": {
+        "usd": 9.4,
+        "base": 7.8289,
+        "quote": 4.7005
+      },
+      "fdv": 23124064,
+      "marketCap": 23124064,
+      "pairCreatedAt": 1744011111000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/661864683e5b7efb73bdfd6de21279fc30819e42cb3c53d0553a39674b51c99d?width=800&height=800&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/berachain/0x6969696969696969696969696969696969696969?timestamp=1773416700000",
         "websites": [
           {
             "url": "https://www.berachain.com/",

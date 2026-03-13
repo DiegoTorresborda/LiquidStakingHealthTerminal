@@ -12,13 +12,13 @@ export const DEXSCREENER_CHAINS: Record<string, DexscreenerChainConfig> = {
   },
   sei: {
     networkId: "sei",
-    chainId: "sei",
-    baseTokenAddress: null
+    chainId: "seiv2",
+    baseTokenAddress: "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7"
   },
   sui: {
     networkId: "sui",
     chainId: "sui",
-    baseTokenAddress: null
+    baseTokenAddress: "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI"
   },
   aptos: {
     networkId: "aptos",
@@ -48,7 +48,7 @@ export const DEXSCREENER_CHAINS: Record<string, DexscreenerChainConfig> = {
   sonic: {
     networkId: "sonic",
     chainId: "sonic",
-    baseTokenAddress: null
+    baseTokenAddress: "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38"
   },
   mantra: {
     networkId: "mantra",

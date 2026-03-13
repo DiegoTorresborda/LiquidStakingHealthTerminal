@@ -16,11 +16,11 @@ type SyncState = {
   snapshots?: Record<string, string | null>;
 };
 
-const ACTIONS: Array<{ source: SyncSource; label: string }> = [
+const ACTIONS: Array<{ source: SyncSource; label: string; disabled?: boolean }> = [
   { source: "coingecko", label: "Sync CoinGecko" },
   { source: "defillama", label: "Sync DefiLlama" },
   { source: "dexscreener", label: "Sync Dexscreener" },
-  { source: "explorer", label: "Sync Explorer metrics" },
+  { source: "explorer", label: "Sync Explorer metrics", disabled: true },
   { source: "all", label: "Sync All Sources" }
 ];
 
@@ -92,10 +92,11 @@ export default function AdminDataSyncPage() {
                 key={action.source}
                 type="button"
                 onClick={() => triggerSync(action.source)}
-                disabled={activeSource !== null}
+                disabled={activeSource !== null || action.disabled === true}
                 className="rounded-lg border border-[#7baff5]/40 bg-[#7baff5]/15 px-3 py-2 text-sm font-semibold text-[#dcecff] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {running ? "Running..." : action.label}
+                {action.disabled ? " (coming soon)" : ""}
               </button>
             );
           })}

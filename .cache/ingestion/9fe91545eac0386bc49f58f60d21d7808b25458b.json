@@ -1,5 +1,5 @@
 {
-  "cachedAt": 1773320439230,
+  "cachedAt": 1773416728787,
   "data": [
     {
       "chainId": "aptos",
@@ -16,44 +16,45 @@
         "name": "LayerZero • USD Coin",
         "symbol": "zUSDC"
       },
-      "priceNative": "0.9264",
-      "priceUsd": "0.9264",
+      "priceNative": "0.9511",
+      "priceUsd": "0.9511",
       "txns": {
         "m5": {
-          "buys": 0,
-          "sells": 0
+          "buys": 2,
+          "sells": 9
         },
         "h1": {
-          "buys": 73,
-          "sells": 24
+          "buys": 124,
+          "sells": 158
         },
         "h6": {
-          "buys": 188,
-          "sells": 122
+          "buys": 441,
+          "sells": 571
         },
         "h24": {
-          "buys": 814,
-          "sells": 765
+          "buys": 1147,
+          "sells": 1374
         }
       },
       "volume": {
-        "h24": 11394.05,
-        "h6": 2823.85,
-        "h1": 1204.06,
-        "m5": 0
+        "h24": 18629.41,
+        "h6": 6909.46,
+        "h1": 1795.72,
+        "m5": 53.31
       },
       "priceChange": {
-        "h1": 0.03,
-        "h6": -0.2,
-        "h24": -2.87
+        "m5": -0.35,
+        "h1": -1.45,
+        "h6": 3.39,
+        "h24": 4.2
       },
       "liquidity": {
-        "usd": 124584.01,
-        "base": 67269,
-        "quote": 62264
+        "usd": 126233.33,
+        "base": 66332,
+        "quote": 63144
       },
-      "fdv": 1110940242,
-      "marketCap": 723940177
+      "fdv": 1140666693,
+      "marketCap": 754200203
     },
     {
       "chainId": "aptos",
@@ -70,97 +71,43 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9242",
-      "priceUsd": "0.9242",
+      "priceNative": "0.9535",
+      "priceUsd": "0.9535",
       "txns": {
         "m5": {
-          "buys": 30,
-          "sells": 121
+          "buys": 18,
+          "sells": 77
         },
         "h1": {
-          "buys": 306,
-          "sells": 1712
+          "buys": 245,
+          "sells": 2216
         },
         "h6": {
-          "buys": 1165,
-          "sells": 6741
+          "buys": 1407,
+          "sells": 11304
         },
         "h24": {
-          "buys": 4242,
-          "sells": 25544
+          "buys": 4615,
+          "sells": 30139
         }
       },
       "volume": {
-        "h24": 20579.23,
-        "h6": 3802.73,
-        "h1": 1010.8,
-        "m5": 2.07
+        "h24": 29009.7,
+        "h6": 11573.93,
+        "h1": 2544.99,
+        "m5": 1.47
       },
       "priceChange": {
-        "h1": -0.25,
-        "h6": -0.62,
-        "h24": -3.24
+        "h1": -1.25,
+        "h6": 3.52,
+        "h24": 4.48
       },
       "liquidity": {
-        "usd": 425811.53,
-        "base": 230350,
-        "quote": 212905
+        "usd": 432582.94,
+        "base": 226834,
+        "quote": 216291
       },
       "pairCreatedAt": 1666643975000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "cellana",
-      "url": "https://dexscreener.com/aptos/0x802960f795a5a6055c2662db55ec7dcb8610e12c0569fb8ed7953dc9a8e77876",
-      "pairAddress": "0x802960f795a5a6055c2662db55ec7dcb8610e12c0569fb8ed7953dc9a8e77876",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
-        "name": "LayerZero • Tether USD",
-        "symbol": "zUSDT"
-      },
-      "priceNative": "0.9262",
-      "priceUsd": "0.9262",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 19,
-          "sells": 9
-        },
-        "h6": {
-          "buys": 66,
-          "sells": 124
-        },
-        "h24": {
-          "buys": 244,
-          "sells": 316
-        }
-      },
-      "volume": {
-        "h24": 468.2,
-        "h6": 81.46,
-        "h1": 17.78,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.12,
-        "h6": -0.35,
-        "h24": -3.01
-      },
-      "liquidity": {
-        "usd": 3626.09,
-        "base": 1958.6305,
-        "quote": 1811.853
-      },
-      "fdv": 1110786205,
-      "marketCap": 723839799
     },
     {
       "chainId": "aptos",
@@ -177,41 +124,41 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9238",
-      "priceUsd": "0.9238",
+      "priceNative": "0.9541",
+      "priceUsd": "0.9541",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 15,
-          "sells": 1
+          "buys": 10,
+          "sells": 45
         },
         "h6": {
-          "buys": 90,
-          "sells": 15
+          "buys": 112,
+          "sells": 117
         },
         "h24": {
-          "buys": 331,
-          "sells": 109
+          "buys": 278,
+          "sells": 258
         }
       },
       "volume": {
-        "h24": 5541.78,
-        "h6": 1289.51,
-        "h1": 216.81,
+        "h24": 6581.26,
+        "h6": 2606.72,
+        "h1": 494.75,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.25,
-        "h6": -0.45,
-        "h24": -3.31
+        "h1": -1.23,
+        "h6": 3.54,
+        "h24": 4.6
       },
       "liquidity": {
-        "usd": 96144.01,
-        "base": 52034,
-        "quote": 48072
+        "usd": 97724.51,
+        "base": 51210,
+        "quote": 48862
       },
       "pairCreatedAt": 1666174578000
     },
@@ -230,43 +177,98 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9238",
-      "priceUsd": "0.9238",
+      "priceNative": "0.9539",
+      "priceUsd": "0.9539",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
-          "sells": 3
+          "buys": 7,
+          "sells": 30
         },
         "h6": {
-          "buys": 10,
-          "sells": 23
+          "buys": 77,
+          "sells": 49
         },
         "h24": {
-          "buys": 74,
-          "sells": 117
+          "buys": 174,
+          "sells": 122
         }
       },
       "volume": {
-        "h24": 1511.19,
-        "h6": 155.7,
-        "h1": 20.96,
+        "h24": 1614.11,
+        "h6": 647.88,
+        "h1": 134.51,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.29,
-        "h6": -0.73,
-        "h24": -3.36
+        "h1": -1.24,
+        "h6": 3.48,
+        "h24": 4.45
       },
       "liquidity": {
-        "usd": 28698.23,
-        "base": 15531,
-        "quote": 14349
+        "usd": 29165.8,
+        "base": 15286,
+        "quote": 14582
       },
       "pairCreatedAt": 1666197020000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "cellana",
+      "url": "https://dexscreener.com/aptos/0x802960f795a5a6055c2662db55ec7dcb8610e12c0569fb8ed7953dc9a8e77876",
+      "pairAddress": "0x802960f795a5a6055c2662db55ec7dcb8610e12c0569fb8ed7953dc9a8e77876",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
+        "name": "LayerZero • Tether USD",
+        "symbol": "zUSDT"
+      },
+      "priceNative": "0.9520",
+      "priceUsd": "0.9520",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 21,
+          "sells": 36
+        },
+        "h6": {
+          "buys": 123,
+          "sells": 143
+        },
+        "h24": {
+          "buys": 322,
+          "sells": 347
+        }
+      },
+      "volume": {
+        "h24": 514.48,
+        "h6": 187.3,
+        "h1": 38.96,
+        "m5": 0.63
+      },
+      "priceChange": {
+        "m5": -0.21,
+        "h1": -1.15,
+        "h6": 3.43,
+        "h24": 4.38
+      },
+      "liquidity": {
+        "usd": 3676.25,
+        "base": 1930.004968,
+        "quote": 1838.7264
+      },
+      "fdv": 1141845338,
+      "marketCap": 754979514
     },
     {
       "chainId": "aptos",
@@ -286,41 +288,42 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9265",
-      "priceUsd": "0.9265",
+      "priceNative": "0.9513",
+      "priceUsd": "0.9513",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h1": {
-          "buys": 60,
-          "sells": 17
+          "buys": 17,
+          "sells": 41
         },
         "h6": {
-          "buys": 89,
-          "sells": 44
+          "buys": 123,
+          "sells": 101
         },
         "h24": {
-          "buys": 236,
-          "sells": 228
+          "buys": 338,
+          "sells": 290
         }
       },
       "volume": {
-        "h24": 2517.43,
-        "h6": 1841.12,
-        "h1": 1739.73,
-        "m5": 0
+        "h24": 1524.29,
+        "h6": 461.23,
+        "h1": 105.91,
+        "m5": 2.52
       },
       "priceChange": {
-        "h1": 0.12,
-        "h6": -0.18,
-        "h24": -2.76
+        "m5": -0.32,
+        "h1": -1.31,
+        "h6": 3.09,
+        "h24": 4.46
       },
       "liquidity": {
-        "usd": 11544.98,
-        "base": 6234.8625,
-        "quote": 5768.2607
+        "usd": 11700,
+        "base": 6145.9371,
+        "quote": 5853.1344
       },
       "pairCreatedAt": 1680212081000
     },
@@ -339,41 +342,41 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9237",
-      "priceUsd": "0.9237",
+      "priceNative": "0.9539",
+      "priceUsd": "0.9539",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
-          "sells": 5
+          "buys": 3,
+          "sells": 20
         },
         "h6": {
-          "buys": 6,
-          "sells": 14
+          "buys": 58,
+          "sells": 39
         },
         "h24": {
-          "buys": 48,
-          "sells": 82
+          "buys": 138,
+          "sells": 120
         }
       },
       "volume": {
-        "h24": 170.55,
-        "h6": 22.06,
-        "h1": 4.51,
+        "h24": 288.94,
+        "h6": 119.34,
+        "h1": 27.51,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.32,
-        "h6": -0.68,
-        "h24": -3.41
+        "h1": -1.19,
+        "h6": 3.53,
+        "h24": 4.55
       },
       "liquidity": {
-        "usd": 5610.13,
-        "base": 3036.4612,
-        "quote": 2805.06782
+        "usd": 5701.51,
+        "base": 2988.493,
+        "quote": 2850.7572
       },
       "pairCreatedAt": 1666151556000
     },
@@ -392,41 +395,41 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9235",
-      "priceUsd": "0.9235",
+      "priceNative": "0.9542",
+      "priceUsd": "0.9542",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 2,
-          "sells": 3
+          "buys": 3,
+          "sells": 12
         },
         "h6": {
-          "buys": 5,
-          "sells": 9
+          "buys": 46,
+          "sells": 20
         },
         "h24": {
-          "buys": 39,
-          "sells": 65
+          "buys": 100,
+          "sells": 61
         }
       },
       "volume": {
-        "h24": 140.38,
-        "h6": 22.04,
-        "h1": 7.56,
+        "h24": 206.47,
+        "h6": 90.11,
+        "h1": 20.37,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.45,
-        "h6": -0.86,
-        "h24": -3.55
+        "h1": -1.31,
+        "h6": 3.42,
+        "h24": 4.59
       },
       "liquidity": {
-        "usd": 4527.52,
-        "base": 2451.04496,
-        "quote": 2263.7604
+        "usd": 4602.88,
+        "base": 2411.6554,
+        "quote": 2301.4409
       },
       "pairCreatedAt": 1666237606000
     },
@@ -445,201 +448,43 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9230",
-      "priceUsd": "0.9230",
+      "priceNative": "0.9536",
+      "priceUsd": "0.9536",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
-          "sells": 5
+          "buys": 3,
+          "sells": 19
         },
         "h6": {
-          "buys": 6,
-          "sells": 17
+          "buys": 53,
+          "sells": 52
         },
         "h24": {
-          "buys": 49,
-          "sells": 86
+          "buys": 111,
+          "sells": 126
         }
       },
       "volume": {
-        "h24": 73.37,
-        "h6": 9.58,
-        "h1": 1.64,
+        "h24": 122.35,
+        "h6": 54.47,
+        "h1": 12.56,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.3,
-        "h6": -0.74,
-        "h24": -3.49
+        "h1": -1.26,
+        "h6": 3.57,
+        "h24": 4.62
       },
       "liquidity": {
-        "usd": 2158.35,
-        "base": 1169.1198,
-        "quote": 1079.1764
+        "usd": 2194.2,
+        "base": 1150.3896,
+        "quote": 1097.1035
       },
       "pairCreatedAt": 1670706389000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "pancakeswap",
-      "url": "https://dexscreener.com/aptos/pcs-145",
-      "pairAddress": "pcs-145",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
-        "name": "Tether USD",
-        "symbol": "USDT"
-      },
-      "priceNative": "0.9243",
-      "priceUsd": "0.9243",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 5,
-          "sells": 4
-        },
-        "h6": {
-          "buys": 14,
-          "sells": 18
-        },
-        "h24": {
-          "buys": 57,
-          "sells": 78
-        }
-      },
-      "volume": {
-        "h24": 61.6,
-        "h6": 12.34,
-        "h1": 3.59,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.44,
-        "h6": -0.78,
-        "h24": -3.4
-      },
-      "liquidity": {
-        "usd": 1567.44,
-        "base": 847.8717,
-        "quote": 783.7231
-      },
-      "pairCreatedAt": 1667314329000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "aux",
-      "url": "https://dexscreener.com/aptos/aux-0x1-aptos_coin-aptoscoin-0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea-coin-t",
-      "pairAddress": "aux-0x1-aptos_coin-aptoscoin-0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea-coin-t",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
-        "name": "USD Coin",
-        "symbol": "USDC"
-      },
-      "priceNative": "0.9239",
-      "priceUsd": "0.9239",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 1,
-          "sells": 3
-        },
-        "h6": {
-          "buys": 9,
-          "sells": 9
-        },
-        "h24": {
-          "buys": 47,
-          "sells": 67
-        }
-      },
-      "volume": {
-        "h24": 100.6,
-        "h6": 18.39,
-        "h1": 4.39,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.37,
-        "h6": -0.69,
-        "h24": -3.25
-      },
-      "liquidity": {
-        "usd": 3075.33,
-        "base": 1664.2922,
-        "quote": 1537.6673
-      }
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "liquidswap",
-      "url": "https://dexscreener.com/aptos/liquidswap-27",
-      "pairAddress": "liquidswap-27",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852::coin::T",
-        "name": "Tether USD",
-        "symbol": "USDT"
-      },
-      "priceNative": "0.9243",
-      "priceUsd": "0.9243",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 2
-        },
-        "h6": {
-          "buys": 1,
-          "sells": 7
-        },
-        "h24": {
-          "buys": 30,
-          "sells": 60
-        }
-      },
-      "volume": {
-        "h24": 48.36,
-        "h6": 5.21,
-        "h1": 2.42,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.53,
-        "h6": -0.94,
-        "h24": -3.43
-      },
-      "liquidity": {
-        "usd": 1811.85,
-        "base": 980.1197,
-        "quote": 905.926
-      },
-      "pairCreatedAt": 1666156393000
     },
     {
       "chainId": "aptos",
@@ -659,43 +504,96 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9265",
-      "priceUsd": "0.9265",
+      "priceNative": "0.9519",
+      "priceUsd": "0.9519",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 4,
-          "sells": 2
+          "buys": 13,
+          "sells": 29
         },
         "h6": {
-          "buys": 26,
-          "sells": 33
+          "buys": 76,
+          "sells": 84
         },
         "h24": {
-          "buys": 128,
-          "sells": 173
+          "buys": 175,
+          "sells": 182
         }
       },
       "volume": {
-        "h24": 182.55,
-        "h6": 11.55,
-        "h1": 1.4,
+        "h24": 147.49,
+        "h6": 85.21,
+        "h1": 21.1,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.17,
-        "h6": -0.31,
-        "h24": -3.01
+        "h1": -1.28,
+        "h6": 3.25,
+        "h24": 4.41
       },
       "liquidity": {
-        "usd": 272.13,
-        "base": 255.3558,
-        "quote": 35.5359
+        "usd": 278.59,
+        "base": 245.8748,
+        "quote": 44.5336
       },
       "pairCreatedAt": 1685010953000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "cellana",
+      "url": "https://dexscreener.com/aptos/0x88d8f983716892262354a2364bf041c045de74a8904d2ccc77d615b4f26640f0",
+      "pairAddress": "0x88d8f983716892262354a2364bf041c045de74a8904d2ccc77d615b4f26640f0",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
+        "name": "Wormhole • USD Coin",
+        "symbol": "wUSDC"
+      },
+      "priceNative": "0.9329",
+      "priceUsd": "0.9329",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 5,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.01,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.44,
+        "h24": 2.25
+      },
+      "liquidity": {
+        "usd": 2.13,
+        "base": 1.14,
+        "quote": 1.0716
+      },
+      "fdv": 1118909078,
+      "marketCap": 739814232
     },
     {
       "chainId": "aptos",
@@ -715,49 +613,49 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9262",
-      "priceUsd": "0.9262",
+      "priceNative": "0.9532",
+      "priceUsd": "0.9532",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 6,
-          "sells": 3
+          "buys": 8,
+          "sells": 21
         },
         "h6": {
-          "buys": 35,
-          "sells": 59
+          "buys": 66,
+          "sells": 69
         },
         "h24": {
-          "buys": 111,
-          "sells": 160
+          "buys": 171,
+          "sells": 182
         }
       },
       "volume": {
-        "h24": 56.7,
-        "h6": 15.44,
-        "h1": 1.14,
+        "h24": 77.08,
+        "h6": 34.92,
+        "h1": 7.44,
         "m5": 0
       },
       "priceChange": {
-        "h1": 0.12,
-        "h6": -0.24,
-        "h24": -3.06
+        "h1": -1.05,
+        "h6": 3.41,
+        "h24": 4.19
       },
       "liquidity": {
-        "usd": 103.32,
-        "base": 73.04722,
-        "quote": 35.6609
+        "usd": 105.25,
+        "base": 67.04946,
+        "quote": 41.3439
       },
       "pairCreatedAt": 1680884313000
     },
     {
       "chainId": "aptos",
-      "dexId": "cellana",
-      "url": "https://dexscreener.com/aptos/0x88d8f983716892262354a2364bf041c045de74a8904d2ccc77d615b4f26640f0",
-      "pairAddress": "0x88d8f983716892262354a2364bf041c045de74a8904d2ccc77d615b4f26640f0",
+      "dexId": "aux",
+      "url": "https://dexscreener.com/aptos/aux-0x1-aptos_coin-aptoscoin-0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea-coin-t",
+      "pairAddress": "aux-0x1-aptos_coin-aptoscoin-0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea-coin-t",
       "baseToken": {
         "address": "0x1::aptos_coin::AptosCoin",
         "name": "Aptos Coin",
@@ -765,95 +663,151 @@
       },
       "quoteToken": {
         "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
-        "name": "Wormhole • USD Coin",
-        "symbol": "wUSDC"
+        "name": "USD Coin",
+        "symbol": "USDC"
       },
-      "priceNative": "0.9323",
-      "priceUsd": "0.9323",
+      "priceNative": "0.9560",
+      "priceUsd": "0.9560",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
-          "sells": 0
+          "buys": 4,
+          "sells": 12
         },
         "h6": {
-          "buys": 0,
-          "sells": 0
+          "buys": 51,
+          "sells": 36
         },
         "h24": {
-          "buys": 3,
-          "sells": 5
+          "buys": 104,
+          "sells": 97
         }
       },
       "volume": {
-        "h24": 0.05,
-        "h6": 0,
-        "h1": 0,
+        "h24": 148.21,
+        "h6": 60.99,
+        "h1": 14.23,
         "m5": 0
       },
       "priceChange": {
-        "h24": -2.79
+        "h1": -0.88,
+        "h6": 3.68,
+        "h24": 4.88
       },
       "liquidity": {
-        "usd": 2.13,
-        "base": 1.1392,
-        "quote": 1.07232
-      },
-      "fdv": 1118119653,
-      "marketCap": 728618614
+        "usd": 3128.51,
+        "base": 1636.1813,
+        "quote": 1564.2574
+      }
     },
     {
       "chainId": "aptos",
-      "dexId": "cellana",
-      "url": "https://dexscreener.com/aptos/0xfd93a65d9ca8bb3743c55a2acfabf02e1258da75a4fe33b3300a09fa9b5ee1ee",
-      "pairAddress": "0xfd93a65d9ca8bb3743c55a2acfabf02e1258da75a4fe33b3300a09fa9b5ee1ee",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/aptos/pcs-145",
+      "pairAddress": "pcs-145",
       "baseToken": {
         "address": "0x1::aptos_coin::AptosCoin",
         "name": "Aptos Coin",
         "symbol": "APT"
       },
       "quoteToken": {
-        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC",
-        "name": "LayerZero • USD Coin",
-        "symbol": "zUSDC"
+        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT",
+        "name": "Tether USD",
+        "symbol": "USDT"
       },
-      "priceNative": "0.9459",
-      "priceUsd": "0.9459",
+      "priceNative": "0.9547",
+      "priceUsd": "0.9547",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 0,
-          "sells": 0
+          "buys": 3,
+          "sells": 13
         },
         "h6": {
-          "buys": 0,
-          "sells": 1
+          "buys": 45,
+          "sells": 27
         },
         "h24": {
-          "buys": 0,
-          "sells": 1
+          "buys": 97,
+          "sells": 71
         }
       },
       "volume": {
-        "h24": 0,
-        "h6": 0,
-        "h1": 0,
+        "h24": 80.42,
+        "h6": 33.74,
+        "h1": 6.89,
         "m5": 0
       },
-      "priceChange": {},
-      "liquidity": {
-        "usd": 0.09,
-        "base": 0.06185,
-        "quote": 0.03598
+      "priceChange": {
+        "h1": -1.07,
+        "h6": 3.59,
+        "h24": 4.52
       },
-      "fdv": 1134377783,
-      "marketCap": 739213166
+      "liquidity": {
+        "usd": 1593.24,
+        "base": 834.3823,
+        "quote": 796.6248
+      },
+      "pairCreatedAt": 1667314329000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "liquidswap",
+      "url": "https://dexscreener.com/aptos/liquidswap-27",
+      "pairAddress": "liquidswap-27",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852::coin::T",
+        "name": "Tether USD",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.9554",
+      "priceUsd": "0.9554",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 11
+        },
+        "h6": {
+          "buys": 43,
+          "sells": 17
+        },
+        "h24": {
+          "buys": 87,
+          "sells": 45
+        }
+      },
+      "volume": {
+        "h24": 65.88,
+        "h6": 31.46,
+        "h1": 7.4,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.18,
+        "h6": 3.46,
+        "h24": 4.74
+      },
+      "liquidity": {
+        "usd": 1842.3,
+        "base": 964.0754,
+        "quote": 921.1512
+      },
+      "pairCreatedAt": 1666156393000
     },
     {
       "chainId": "aptos",
@@ -870,96 +824,44 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.4928",
-      "priceUsd": "0.4928",
+      "priceNative": "0.5507",
+      "priceUsd": "0.5507",
       "txns": {
         "m5": {
           "buys": 0,
-          "sells": 0
+          "sells": 1
         },
         "h1": {
-          "buys": 9,
-          "sells": 6
+          "buys": 12,
+          "sells": 22
         },
         "h6": {
-          "buys": 23,
-          "sells": 21
+          "buys": 72,
+          "sells": 52
         },
         "h24": {
-          "buys": 107,
-          "sells": 124
+          "buys": 159,
+          "sells": 136
         }
       },
       "volume": {
-        "h24": 138.58,
-        "h6": 24.16,
-        "h1": 9.98,
-        "m5": 0
+        "h24": 154.95,
+        "h6": 72.77,
+        "h1": 19.17,
+        "m5": 0.47
       },
       "priceChange": {
-        "h1": -0.67,
-        "h6": -1.74,
-        "h24": -11.46
+        "m5": -0.43,
+        "h1": -5.79,
+        "h6": 12.84,
+        "h24": 16.56
       },
       "liquidity": {
-        "usd": 322.75,
-        "base": 327.4102,
-        "quote": 161.3781
+        "usd": 346.67,
+        "base": 314.7143,
+        "quote": 173.3365
       },
       "pairCreatedAt": 1666229971000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "pancakeswap",
-      "url": "https://dexscreener.com/aptos/pcs-139",
-      "pairAddress": "pcs-139",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdcCoin",
-        "name": "USD Coin",
-        "symbol": "USDC"
-      },
-      "priceNative": "0.9659",
-      "priceUsd": "0.9659",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 1,
-          "sells": 3
-        },
-        "h6": {
-          "buys": 2,
-          "sells": 10
-        },
-        "h24": {
-          "buys": 18,
-          "sells": 33
-        }
-      },
-      "volume": {
-        "h24": 7.93,
-        "h6": 1.78,
-        "h1": 0.8,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.45,
-        "h6": -1.03,
-        "h24": -2.8
-      },
-      "liquidity": {
-        "usd": 624.79,
-        "base": 323.3943,
-        "quote": 312.3986
-      },
-      "pairCreatedAt": 1667193236000
     },
     {
       "chainId": "aptos",
@@ -976,8 +878,61 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.4919",
-      "priceUsd": "0.4919",
+      "priceNative": "0.5516",
+      "priceUsd": "0.5516",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 11
+        },
+        "h6": {
+          "buys": 35,
+          "sells": 24
+        },
+        "h24": {
+          "buys": 68,
+          "sells": 53
+        }
+      },
+      "volume": {
+        "h24": 57.4,
+        "h6": 28.89,
+        "h1": 7.69,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -5.57,
+        "h6": 12.58,
+        "h24": 17.73
+      },
+      "liquidity": {
+        "usd": 156.1,
+        "base": 141.4956,
+        "quote": 78.05133
+      },
+      "pairCreatedAt": 1666216982000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/aptos/pcs-139",
+      "pairAddress": "pcs-139",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdcCoin",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.9743",
+      "priceUsd": "0.9743",
       "txns": {
         "m5": {
           "buys": 0,
@@ -985,34 +940,34 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 2
         },
         "h6": {
-          "buys": 7,
-          "sells": 9
+          "buys": 17,
+          "sells": 8
         },
         "h24": {
           "buys": 41,
-          "sells": 54
+          "sells": 25
         }
       },
       "volume": {
-        "h24": 45.32,
-        "h6": 7.44,
-        "h1": 0.46,
+        "h24": 13.43,
+        "h6": 6.11,
+        "h1": 0.67,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.97,
-        "h6": -1.92,
-        "h24": -12.27
+        "h1": -0.43,
+        "h6": 1.89,
+        "h24": 2.06
       },
       "liquidity": {
-        "usd": 145.01,
-        "base": 147.3827,
-        "quote": 72.5096
+        "usd": 627.54,
+        "base": 322.01735,
+        "quote": 313.773
       },
-      "pairCreatedAt": 1666216982000
+      "pairCreatedAt": 1667193236000
     },
     {
       "chainId": "aptos",
@@ -1029,8 +984,8 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9256",
-      "priceUsd": "0.9256",
+      "priceNative": "0.9564",
+      "priceUsd": "0.9564",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1038,34 +993,87 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 3
         },
         "h6": {
-          "buys": 1,
+          "buys": 14,
           "sells": 3
         },
         "h24": {
-          "buys": 12,
-          "sells": 22
+          "buys": 27,
+          "sells": 12
         }
       },
       "volume": {
-        "h24": 16.12,
-        "h6": 1.85,
-        "h1": 0.46,
+        "h24": 18.45,
+        "h6": 8.23,
+        "h1": 1.43,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.31,
-        "h6": -0.62,
-        "h24": -3.37
+        "h1": -0.94,
+        "h6": 3.63,
+        "h24": 4.61
       },
       "liquidity": {
-        "usd": 595.71,
-        "base": 321.7824,
-        "quote": 297.8562
+        "usd": 605.59,
+        "base": 316.5952,
+        "quote": 302.7994
       },
       "pairCreatedAt": 1666226058000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "aux",
+      "url": "https://dexscreener.com/aptos/aux-0x1-aptos_coin-aptoscoin-0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa-asset-usdc",
+      "pairAddress": "aux-0x1-aptos_coin-aptoscoin-0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa-asset-usdc",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.9560",
+      "priceUsd": "0.9560",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 7
+        },
+        "h6": {
+          "buys": 27,
+          "sells": 15
+        },
+        "h24": {
+          "buys": 63,
+          "sells": 44
+        }
+      },
+      "volume": {
+        "h24": 31.46,
+        "h6": 11.87,
+        "h1": 2.16,
+        "m5": 0.24
+      },
+      "priceChange": {
+        "m5": -0.29,
+        "h1": -0.78,
+        "h6": 3.44,
+        "h24": 4.92
+      },
+      "liquidity": {
+        "usd": 589.03,
+        "base": 308.05491,
+        "quote": 294.5184
+      }
     },
     {
       "chainId": "aptos",
@@ -1085,41 +1093,41 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9237",
-      "priceUsd": "0.9237",
+      "priceNative": "0.9526",
+      "priceUsd": "0.9526",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 1,
-          "sells": 1
+          "buys": 0,
+          "sells": 4
         },
         "h6": {
-          "buys": 5,
-          "sells": 7
+          "buys": 11,
+          "sells": 6
         },
         "h24": {
-          "buys": 17,
-          "sells": 28
+          "buys": 31,
+          "sells": 31
         }
       },
       "volume": {
-        "h24": 2.21,
-        "h6": 0.37,
-        "h1": 0.03,
+        "h24": 4.15,
+        "h6": 1.62,
+        "h1": 0.38,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.14,
-        "h6": -0.78,
-        "h24": -3.35
+        "h1": -1.41,
+        "h6": 3.59,
+        "h24": 4.2
       },
       "liquidity": {
-        "usd": 73.89,
-        "base": 40.0173,
-        "quote": 36.9291
+        "usd": 75.04,
+        "base": 39.3789,
+        "quote": 37.5312
       },
       "pairCreatedAt": 1685973921000
     },
@@ -1138,8 +1146,8 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9252",
-      "priceUsd": "0.9252",
+      "priceNative": "0.9544",
+      "priceUsd": "0.9544",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1147,86 +1155,140 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 3
         },
         "h6": {
-          "buys": 1,
+          "buys": 12,
           "sells": 3
         },
         "h24": {
-          "buys": 8,
-          "sells": 16
+          "buys": 23,
+          "sells": 11
         }
       },
       "volume": {
-        "h24": 11.53,
-        "h6": 1.85,
-        "h1": 0.46,
+        "h24": 15.93,
+        "h6": 7.12,
+        "h1": 1.43,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.38,
-        "h6": -0.76,
-        "h24": -3.5
+        "h1": -1.16,
+        "h6": 3.53,
+        "h24": 4.33
       },
       "liquidity": {
-        "usd": 485.59,
-        "base": 262.4189,
-        "quote": 242.7974
+        "usd": 493.24,
+        "base": 258.4046,
+        "quote": 246.6231
       },
       "pairCreatedAt": 1666163862000
     },
     {
       "chainId": "aptos",
-      "dexId": "aux",
-      "url": "https://dexscreener.com/aptos/aux-0x1-aptos_coin-aptoscoin-0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa-asset-usdc",
-      "pairAddress": "aux-0x1-aptos_coin-aptoscoin-0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa-asset-usdc",
+      "dexId": "liquidswap",
+      "url": "https://dexscreener.com/aptos/liquidswap-38",
+      "pairAddress": "liquidswap-38",
       "baseToken": {
         "address": "0x1::aptos_coin::AptosCoin",
         "name": "Aptos Coin",
         "symbol": "APT"
       },
       "quoteToken": {
-        "address": "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDC",
+        "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9231",
-      "priceUsd": "0.9231",
+      "priceNative": "0.5530",
+      "priceUsd": "0.5530",
       "txns": {
         "m5": {
           "buys": 0,
           "sells": 0
         },
         "h1": {
-          "buys": 1,
-          "sells": 2
+          "buys": 2,
+          "sells": 4
         },
         "h6": {
-          "buys": 5,
-          "sells": 8
+          "buys": 12,
+          "sells": 7
         },
         "h24": {
-          "buys": 27,
-          "sells": 43
+          "buys": 23,
+          "sells": 16
         }
       },
       "volume": {
-        "h24": 19.42,
-        "h6": 3.3,
-        "h1": 0.82,
+        "h24": 18.55,
+        "h6": 8.83,
+        "h1": 2.63,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.68,
-        "h6": -0.88,
-        "h24": -3.3
+        "h1": -6.26,
+        "h6": 12.4,
+        "h24": 22.34
       },
       "liquidity": {
-        "usd": 578.77,
-        "base": 313.4794,
-        "quote": 289.3851
-      }
+        "usd": 58.39,
+        "base": 52.7925,
+        "quote": 29.1962
+      },
+      "pairCreatedAt": 1666157860000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/aptos/pcs-513",
+      "pairAddress": "pcs-513",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852::coin::T",
+        "name": "Tether USD",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.9576",
+      "priceUsd": "0.9576",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 14,
+          "sells": 11
+        },
+        "h24": {
+          "buys": 25,
+          "sells": 17
+        }
+      },
+      "volume": {
+        "h24": 3.5,
+        "h6": 2.45,
+        "h1": 0.13,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.07,
+        "h6": 3.51,
+        "h24": 4.73
+      },
+      "liquidity": {
+        "usd": 49.97,
+        "base": 26.09295,
+        "quote": 24.9886
+      },
+      "pairCreatedAt": 1686408260000
     },
     {
       "chainId": "aptos",
@@ -1246,8 +1308,8 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9231",
-      "priceUsd": "0.9231",
+      "priceNative": "0.9532",
+      "priceUsd": "0.9532",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1255,192 +1317,34 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 3
         },
         "h6": {
-          "buys": 3,
-          "sells": 5
-        },
-        "h24": {
-          "buys": 14,
-          "sells": 25
-        }
-      },
-      "volume": {
-        "h24": 3.14,
-        "h6": 0.4,
-        "h1": 0.03,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -0.24,
-        "h6": -0.8,
-        "h24": -3.48
-      },
-      "liquidity": {
-        "usd": 109.75,
-        "base": 59.3734,
-        "quote": 54.9396
-      },
-      "pairCreatedAt": 1683572269000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "liquidswap",
-      "url": "https://dexscreener.com/aptos/liquidswap-38",
-      "pairAddress": "liquidswap-38",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0x5e156f1207d0ebfa19a9eeff00d62a282278fb8719f4fab3a586a0a2c0fffbea::coin::T",
-        "name": "USD Coin",
-        "symbol": "USDC"
-      },
-      "priceNative": "0.4873",
-      "priceUsd": "0.4873",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 1
-        },
-        "h6": {
-          "buys": 2,
+          "buys": 13,
           "sells": 3
         },
         "h24": {
-          "buys": 13,
-          "sells": 18
+          "buys": 26,
+          "sells": 16
         }
       },
       "volume": {
-        "h24": 14.74,
-        "h6": 2.32,
-        "h1": 0.46,
+        "h24": 4.03,
+        "h6": 1.59,
+        "h1": 0.3,
         "m5": 0
       },
       "priceChange": {
-        "h1": -2.58,
-        "h6": -2.57,
-        "h24": -14.37
+        "h1": -1.28,
+        "h6": 3.57,
+        "h24": 4.28
       },
       "liquidity": {
-        "usd": 53.82,
-        "base": 55.223,
-        "quote": 26.9118
+        "usd": 111.53,
+        "base": 58.4321,
+        "quote": 55.8316
       },
-      "pairCreatedAt": 1666157860000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "pancakeswap",
-      "url": "https://dexscreener.com/aptos/pcs-513",
-      "pairAddress": "pcs-513",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852::coin::T",
-        "name": "Tether USD",
-        "symbol": "USDT"
-      },
-      "priceNative": "0.9291",
-      "priceUsd": "0.9291",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h6": {
-          "buys": 2,
-          "sells": 1
-        },
-        "h24": {
-          "buys": 8,
-          "sells": 11
-        }
-      },
-      "volume": {
-        "h24": 1.4,
-        "h6": 0.25,
-        "h1": 0,
-        "m5": 0
-      },
-      "priceChange": {
-        "h6": -0.54,
-        "h24": -3.56
-      },
-      "liquidity": {
-        "usd": 49.21,
-        "base": 26.4853,
-        "quote": 24.609
-      },
-      "pairCreatedAt": 1686408260000
-    },
-    {
-      "chainId": "aptos",
-      "dexId": "pancakeswap",
-      "url": "https://dexscreener.com/aptos/pcs-192",
-      "pairAddress": "pcs-192",
-      "baseToken": {
-        "address": "0x1::aptos_coin::AptosCoin",
-        "name": "Aptos Coin",
-        "symbol": "APT"
-      },
-      "quoteToken": {
-        "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdtCoin",
-        "name": "Tether USD",
-        "symbol": "USDT"
-      },
-      "priceNative": "0.9896",
-      "priceUsd": "0.9896",
-      "txns": {
-        "m5": {
-          "buys": 0,
-          "sells": 0
-        },
-        "h1": {
-          "buys": 1,
-          "sells": 2
-        },
-        "h6": {
-          "buys": 4,
-          "sells": 4
-        },
-        "h24": {
-          "buys": 6,
-          "sells": 6
-        }
-      },
-      "volume": {
-        "h24": 0.97,
-        "h6": 0.65,
-        "h1": 0.19,
-        "m5": 0
-      },
-      "priceChange": {
-        "h1": -1.03,
-        "h6": -1.01,
-        "h24": -2.56
-      },
-      "liquidity": {
-        "usd": 39.49,
-        "base": 19.9537,
-        "quote": 19.7467
-      },
-      "pairCreatedAt": 1670306984000
+      "pairCreatedAt": 1683572269000
     },
     {
       "chainId": "aptos",
@@ -1457,8 +1361,8 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9283",
-      "priceUsd": "0.9283",
+      "priceNative": "0.9590",
+      "priceUsd": "0.9590",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1466,32 +1370,32 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 2
         },
         "h6": {
-          "buys": 1,
-          "sells": 4
+          "buys": 9,
+          "sells": 2
         },
         "h24": {
-          "buys": 7,
-          "sells": 15
+          "buys": 19,
+          "sells": 11
         }
       },
       "volume": {
-        "h24": 2.46,
-        "h6": 0.6,
-        "h1": 0.1,
+        "h24": 3.65,
+        "h6": 1.44,
+        "h1": 0.26,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.44,
-        "h6": -1.06,
-        "h24": -2.89
+        "h1": 0.03,
+        "h6": 3.43,
+        "h24": 5.21
       },
       "liquidity": {
-        "usd": 106.41,
-        "base": 57.3144,
-        "quote": 53.2084
+        "usd": 108.16,
+        "base": 56.3911,
+        "quote": 54.08368
       }
     },
     {
@@ -1509,8 +1413,8 @@
         "name": "Tether USD",
         "symbol": "USDT"
       },
-      "priceNative": "0.9326",
-      "priceUsd": "0.9326",
+      "priceNative": "0.9627",
+      "priceUsd": "0.9627",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1521,28 +1425,28 @@
           "sells": 0
         },
         "h6": {
-          "buys": 0,
-          "sells": 1
+          "buys": 5,
+          "sells": 0
         },
         "h24": {
-          "buys": 1,
-          "sells": 4
+          "buys": 8,
+          "sells": 2
         }
       },
       "volume": {
-        "h24": 0.44,
-        "h6": 0.07,
+        "h24": 0.79,
+        "h6": 0.4,
         "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h6": -0.58,
-        "h24": -2.71
+        "h6": 3.24,
+        "h24": 4.9
       },
       "liquidity": {
-        "usd": 49.67,
-        "base": 26.6295,
-        "quote": 24.8352
+        "usd": 50.46,
+        "base": 26.2114,
+        "quote": 25.2342
       },
       "pairCreatedAt": 1666166485000
     },
@@ -1564,8 +1468,8 @@
         "name": "USD Coin",
         "symbol": "USDC"
       },
-      "priceNative": "0.9312",
-      "priceUsd": "0.9312",
+      "priceNative": "0.9611",
+      "priceUsd": "0.9611",
       "txns": {
         "m5": {
           "buys": 0,
@@ -1573,34 +1477,136 @@
         },
         "h1": {
           "buys": 0,
-          "sells": 1
+          "sells": 0
         },
         "h6": {
-          "buys": 0,
-          "sells": 1
+          "buys": 6,
+          "sells": 0
         },
         "h24": {
-          "buys": 1,
-          "sells": 4
+          "buys": 12,
+          "sells": 2
         }
       },
       "volume": {
-        "h24": 0.27,
-        "h6": 0.05,
-        "h1": 0.05,
+        "h24": 0.48,
+        "h6": 0.2,
+        "h1": 0,
         "m5": 0
       },
       "priceChange": {
-        "h1": -0.95,
-        "h6": -0.95,
-        "h24": -3.52
+        "h6": 4.26,
+        "h24": 4.71
       },
       "liquidity": {
-        "usd": 30.45,
-        "base": 26.1796,
-        "quote": 6.07839
+        "usd": 31.23,
+        "base": 25.9971,
+        "quote": 6.2517
       },
       "pairCreatedAt": 1680542678000
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "aux",
+      "url": "https://dexscreener.com/aptos/aux-0x1-aptos_coin-aptoscoin-0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852-coin-t",
+      "pairAddress": "aux-0x1-aptos_coin-aptoscoin-0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852-coin-t",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0xa2eda21a58856fda86451436513b867c97eecb4ba099da5775520e0f7492e852::coin::T",
+        "name": "Tether USD",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.9518",
+      "priceUsd": "0.9518",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 4,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 0.64,
+        "h6": 0.29,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.95,
+        "h24": 4.02
+      },
+      "liquidity": {
+        "usd": 35.85,
+        "base": 18.8341,
+        "quote": 17.9274
+      }
+    },
+    {
+      "chainId": "aptos",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/aptos/pcs-192",
+      "pairAddress": "pcs-192",
+      "baseToken": {
+        "address": "0x1::aptos_coin::AptosCoin",
+        "name": "Aptos Coin",
+        "symbol": "APT"
+      },
+      "quoteToken": {
+        "address": "0x8d87a65ba30e09357fa2edea2c80dbac296e5dec2b18287113500b902942929d::celer_coin_manager::UsdtCoin",
+        "name": "Tether USD",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.9882",
+      "priceUsd": "0.9882",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 4,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 0.35,
+        "h6": 0.07,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 0.81,
+        "h24": 1.22
+      },
+      "liquidity": {
+        "usd": 39.46,
+        "base": 19.9689,
+        "quote": 19.7344
+      },
+      "pairCreatedAt": 1670306984000
     }
   ]
 }
