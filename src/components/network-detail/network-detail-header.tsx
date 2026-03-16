@@ -46,11 +46,16 @@ export function NetworkDetailHeader({ summary }: NetworkDetailHeaderProps) {
                 Health Score: {summary.globalLstHealthScore}
               </span>
               <span className={`rounded-md border px-2.5 py-1 text-sm font-semibold ${opportunityScoreClass(summary.opportunityScore)}`}>
-                Opportunity Score: {summary.opportunityScore}
+                Score Potential: {summary.opportunityScore}
               </span>
               <span className={`rounded-md border px-2.5 py-1 text-sm font-semibold ${lpAttractivenessClass(summary.lpAttractiveness)}`}>
                 LP Attractiveness: {summary.lpAttractiveness}
               </span>
+              {summary.scoringMode && (
+                <span className={`rounded-md border px-2.5 py-1 text-sm font-semibold ${summary.scoringMode === "lst-active" ? "border-cyan-400/40 bg-cyan-400/10 text-cyan-300" : "border-amber-400/40 bg-amber-400/10 text-amber-300"}`}>
+                  {summary.scoringMode === "lst-active" ? "LST Active" : "Pre-LST"}
+                </span>
+              )}
             </div>
           </div>
         </div>

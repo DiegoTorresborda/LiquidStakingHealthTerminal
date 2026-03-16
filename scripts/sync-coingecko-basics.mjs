@@ -67,6 +67,12 @@ const TARGET_NETWORKS = [
     preferredCoinId: "sonic-3",
     symbol: "s",
     nameIncludes: ["sonic"]
+  },
+  {
+    networkId: "canton",
+    preferredCoinId: "canton",
+    symbol: "cc",
+    nameIncludes: ["canton"]
   }
 ];
 

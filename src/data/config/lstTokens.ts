@@ -76,5 +76,12 @@ export const LST_TOKENS: Record<string, LstTokenConfig> = {
     lstTokenAddress: null,
     dexscreenerChainId: "mantra",
     etherscanTokenAddress: null
+  },
+  canton: {
+    networkId: "canton",
+    lstSymbol: "stCC",
+    lstTokenAddress: null,
+    dexscreenerChainId: null,
+    etherscanTokenAddress: null
   }
 };

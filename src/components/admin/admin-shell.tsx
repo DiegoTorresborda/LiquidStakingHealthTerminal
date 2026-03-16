@@ -9,7 +9,9 @@ const NAV_ITEMS = [
   { href: "/admin/data-sync", label: "Data Sync" },
   { href: "/admin/manual-data", label: "Manual Data" },
   { href: "/admin/resources", label: "Resources" },
-  { href: "/admin/overrides", label: "Overrides" }
+  { href: "/admin/overrides", label: "Overrides" },
+  { href: "/admin/add-chain", label: "Add Chain" },
+  { href: "/admin/networks", label: "Networks" }
 ];
 
 type AdminShellProps = {

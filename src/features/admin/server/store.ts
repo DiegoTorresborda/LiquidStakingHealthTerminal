@@ -190,6 +190,11 @@ function normalizeManualUiEntry(entry: ManualUiFieldEntry): ManualUiFieldEntry {
     lstCollateralEnabled: normalizeBoolean(entry.lstCollateralEnabled),
     mainBottleneck: normalizeString(entry.mainBottleneck),
     mainOpportunity: normalizeString(entry.mainOpportunity),
+    // V2 scoring fields
+    hasLst: normalizeBoolean(entry.hasLst),
+    unbondingDays: normalizeNumber(entry.unbondingDays),
+    auditCount: normalizeNumber(entry.auditCount),
+    hasTimelock: normalizeBoolean(entry.hasTimelock),
     updatedAt: typeof entry.updatedAt === "string" ? entry.updatedAt : undefined
   };
 }

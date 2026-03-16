@@ -1,19 +1,33 @@
 {
-  "updatedAt": "2026-03-11T11:41:56.598Z",
+  "updatedAt": "2026-03-15T14:32:15.887Z",
   "sources": {
     "coingecko": {
       "source": "coingecko",
       "status": "ok",
       "updatedNetworks": 10,
-      "startedAt": "2026-03-11T11:39:19.276Z",
-      "endedAt": "2026-03-11T11:39:20.244Z"
+      "startedAt": "2026-03-15T14:22:49.144Z",
+      "endedAt": "2026-03-15T14:22:50.034Z"
     },
     "defillama": {
       "source": "defillama",
       "status": "ok",
       "updatedNetworks": 9,
-      "startedAt": "2026-03-11T11:41:55.527Z",
-      "endedAt": "2026-03-11T11:41:56.138Z"
+      "startedAt": "2026-03-15T14:23:25.808Z",
+      "endedAt": "2026-03-15T14:23:26.590Z"
+    },
+    "dexscreener": {
+      "source": "dexscreener",
+      "status": "ok",
+      "updatedNetworks": 6,
+      "startedAt": "2026-03-15T14:32:15.445Z",
+      "endedAt": "2026-03-15T14:32:15.865Z"
+    },
+    "explorer": {
+      "source": "explorer",
+      "status": "ok",
+      "updatedNetworks": 0,
+      "startedAt": "2026-03-15T14:24:32.359Z",
+      "endedAt": "2026-03-15T14:24:32.773Z"
     }
   }
 }

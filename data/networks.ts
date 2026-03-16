@@ -64,6 +64,35 @@ export type Network = {
 
 const baseNetworks: Network[] = [
   {
+    networkId: "canton",
+    network: "Canton Network",
+    token: "CC",
+    category: "Enterprise-focused L1",
+    marketCapUsd: 0,
+    fdvUsd: 0,
+    circulatingSupply: 0,
+    circulatingSupplyPct: 0,
+    stakingRatioPct: 0,
+    stakingApyPct: 0,
+    stakedValueUsd: 0,
+    stakerAddresses: 0,
+    validatorCount: 0,
+    globalLstHealthScore: 0,
+    lstProtocols: 0,
+    largestLst: "stCC",
+    lstTvlUsd: 0,
+    lstPenetrationPct: 0,
+    defiTvlUsd: 0,
+    tvlToMcapPct: 0,
+    stablecoinLiquidityUsd: 0,
+    lendingPresence: false,
+    lstCollateralEnabled: false,
+    opportunityScore: 0,
+    mainBottleneck: "TBD",
+    mainOpportunity: "TBD",
+    status: "Watchlist"
+  },
+  {
     networkId: "monad",
     network: "Monad",
     token: "MON",
@@ -433,10 +462,13 @@ function applyGeneratedOverview(networks: Network[], generated: GeneratedOvervie
     const stakedTokens = toFiniteNumber(live?.stakedTokens) ?? network.stakedTokens ?? null;
     const stakingRatioPct = toFiniteNumber(live?.stakingRatioPct) ?? network.stakingRatioPct;
     const stakingApyPct = toFiniteNumber(live?.stakingApyPct) ?? network.stakingApyPct;
-    const defiTvlUsd = toFiniteNumber(live?.defiTvlUsd) ?? network.defiTvlUsd;
-    const stablecoinLiquidityUsd = toFiniteNumber(live?.stablecoinLiquidityUsd) ?? network.stablecoinLiquidityUsd;
+    // For TVL fields: if a generated record exists, trust its value even if null
+    // (null = explicitly no data, not "data missing"). Only fall back to hardcoded
+    // when there is NO generated record for this network at all.
+    const defiTvlUsd = live !== undefined ? (toFiniteNumber(live.defiTvlUsd) ?? 0) : network.defiTvlUsd;
+    const stablecoinLiquidityUsd = live !== undefined ? (toFiniteNumber(live.stablecoinLiquidityUsd) ?? 0) : network.stablecoinLiquidityUsd;
     const validatorCount = toFiniteNumber(live?.validatorCount) ?? network.validatorCount;
-    const lstTvlUsd = toFiniteNumber(live?.lstTvlUsd) ?? network.lstTvlUsd;
+    const lstTvlUsd = live !== undefined ? (toFiniteNumber(live.lstTvlUsd) ?? 0) : network.lstTvlUsd;
     const globalLstHealthScore = toFiniteNumber(live?.globalLstHealthScore) ?? network.globalLstHealthScore;
     const opportunityScore = toFiniteNumber(live?.opportunityScore) ?? network.opportunityScore;
 

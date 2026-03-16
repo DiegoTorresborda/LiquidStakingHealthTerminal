@@ -2,6 +2,7 @@ import type { NetworkDetailData } from "@/features/network-detail/types";
 
 import { ChainResourcesSection } from "@/components/chain-resources";
 import { DetailModulesGrid } from "@/components/network-detail/detail-modules-grid";
+import { ImprovementPlanPanel } from "@/components/network-detail/improvement-plan-panel";
 import { MiniVisualsPanel } from "@/components/network-detail/mini-visuals-panel";
 import { NetworkDetailHeader } from "@/components/network-detail/network-detail-header";
 import { RedFlagsPanel } from "@/components/network-detail/red-flags-panel";
@@ -18,9 +19,18 @@ export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
     <main className="mx-auto flex w-full max-w-[1480px] flex-col gap-6 px-4 py-6 md:px-8 md:py-8">
       <NetworkDetailHeader summary={detail.summary} />
 
-      {detail.scoring ? <ScoringModelPanel scoring={detail.scoring} /> : null}
+      {detail.scoring ? (
+        <ScoringModelPanel scoring={detail.scoring} mode={detail.summary.scoringMode} />
+      ) : null}
 
       <DetailModulesGrid modules={detail.modules} scoring={detail.scoring} />
+
+      {detail.radarRecord && detail.v2Result && (
+        <ImprovementPlanPanel
+          record={detail.radarRecord}
+          currentResult={detail.v2Result}
+        />
+      )}
 
       <section className="grid gap-4 xl:grid-cols-3">
         <div className="xl:col-span-2">

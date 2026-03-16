@@ -17,7 +17,8 @@ const TARGET_NETWORKS = [
   { networkId: "mantra", chainName: "Mantra" },
   { networkId: "sonic", chainName: "Sonic" },
   { networkId: "xdc", chainName: "XDC" },
-  { networkId: "shardeum", chainName: "Shardeum" }
+  { networkId: "shardeum", chainName: "Shardeum" },
+  { networkId: "canton", chainName: "Canton" }
 ];
 
 function normalizeChainKey(value) {

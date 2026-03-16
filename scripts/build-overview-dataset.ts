@@ -57,11 +57,15 @@ type ManualUiFieldEntry = {
   circulatingSupplyPct?: number;
   stakerAddresses?: number;
   lstProtocols?: number;
-  largestLst?: string;
+  largestLst?: string | null;
   lendingPresence?: boolean;
   lstCollateralEnabled?: boolean;
   mainBottleneck?: string;
   mainOpportunity?: string;
+  hasLst?: boolean;
+  unbondingDays?: number | null;
+  auditCount?: number | null;
+  hasTimelock?: boolean | null;
 };
 
 type ManualUiFieldsSnapshot = {
@@ -157,6 +161,15 @@ const NETWORKS: NetworkConfig[] = [
     defillamaChain: "Sonic",
     globalLstHealthScore: 52,
     opportunityScore: 88
+  },
+  {
+    networkId: "canton",
+    network: "Canton Network",
+    token: "CC",
+    coingeckoId: "canton",
+    defillamaChain: "Canton",
+    globalLstHealthScore: 0,
+    opportunityScore: 0
   },
   {
     networkId: "mantra",
@@ -754,6 +767,10 @@ async function main() {
     const lstCollateralEnabled = typeof manualUi.lstCollateralEnabled === "boolean" ? manualUi.lstCollateralEnabled : null;
     const mainBottleneck = typeof manualUi.mainBottleneck === "string" ? manualUi.mainBottleneck : null;
     const mainOpportunity = typeof manualUi.mainOpportunity === "string" ? manualUi.mainOpportunity : null;
+    const hasLst = typeof manualUi.hasLst === "boolean" ? manualUi.hasLst : null;
+    const unbondingDays = manualUi.unbondingDays != null ? Number(manualUi.unbondingDays) : null;
+    const auditCount = manualUi.auditCount != null ? Number(manualUi.auditCount) : null;
+    const hasTimelock = typeof manualUi.hasTimelock === "boolean" ? manualUi.hasTimelock : null;
 
     const marketCapUsd = marketCapMetric.value;
     const circulatingSupply = circulatingSupplyMetric.value;
@@ -996,6 +1013,10 @@ async function main() {
       proposeGasPrice,
       fastGasPrice,
       suggestedBaseFee,
+      hasLst,
+      unbondingDays,
+      auditCount,
+      hasTimelock,
       globalLstHealthScore: network.globalLstHealthScore,
       opportunityScore: network.opportunityScore,
       asOf: generatedAt,
