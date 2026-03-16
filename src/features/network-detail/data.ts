@@ -3,12 +3,14 @@ import { explicitNetworkDetails } from "@data/network-details";
 import { networks, type Network } from "@data/networks";
 import networksGenerated from "@data/networks.generated.json";
 
-import type { DetailMetric, DetailModule, NetworkDetailData } from "@/features/network-detail/types";
+import type { DetailMetric, DetailModule, DetailRedFlag, NetworkDetailData } from "@/features/network-detail/types";
 import { resolveLpAttractivenessFromScore, scoreNetworkWithMockModel } from "@/features/scoring";
 import type { RadarOverviewRecord } from "@/data/radar-overview-schema";
 import { computeV2Score } from "@/features/scoring/v2/index";
+import type { V2ScoringResult } from "@/features/scoring/v2/index";
 import { adaptV2ToLstResult } from "@/features/scoring/v2/adapter";
-import { computeMaxPotentialScore } from "@/features/improvement-plan/opportunity-detector";
+import { computeMaxPotentialScore, detectOpportunities } from "@/features/improvement-plan/opportunity-detector";
+import type { ImprovementOpportunity } from "@/features/improvement-plan/types";
 import { formatUsdCompactStable } from "@/lib/number-format";
 
 const radarRecords = networksGenerated as unknown as RadarOverviewRecord[];
@@ -151,6 +153,93 @@ function buildFallbackDetail(network: Network): NetworkDetailData {
   };
 }
 
+// ─── V2-aware red flag generator ─────────────────────────────────────────────
+
+function buildV2RedFlags(
+  v2Result: V2ScoringResult,
+  record: RadarOverviewRecord,
+  opportunities: ImprovementOpportunity[]
+): DetailRedFlag[] {
+  const flags: DetailRedFlag[] = [];
+
+  /** Find the best-matching opportunity for a given module */
+  const linkOpp = (moduleName: string) => {
+    const opp = opportunities.find((o) => o.module === moduleName || o.module.includes(moduleName));
+    return { linkedOpportunityId: opp?.id, linkedOpportunityTitle: opp?.title };
+  };
+
+  // 1. Pre-LST: no LST deployed
+  if (v2Result.mode === "pre-lst") {
+    const launchOpp = opportunities.find((o) => o.id === "strategic-launch-lst");
+    flags.push({
+      id: "flag-no-lst",
+      title: "No LST protocol deployed",
+      detail:
+        "This network operates in pre-LST mode. Without an LST, the scoring ceiling is structurally lower and institutional LP demand cannot materialize.",
+      severity: "High",
+      linkedOpportunityId: launchOpp?.id,
+      linkedOpportunityTitle: launchOpp?.title,
+    });
+  }
+
+  // 2. Score caps — highest severity signals
+  for (const [moduleName, moduleResult] of Object.entries(v2Result.moduleScores)) {
+    if (!moduleResult.capApplied) continue;
+    const severity: DetailRedFlag["severity"] = moduleResult.finalScore < 35 ? "High" : "Medium";
+    const link = linkOpp(moduleName);
+    flags.push({
+      id: `flag-cap-${moduleName}`.replace(/[\s&+]/g, "-").toLowerCase(),
+      title: `${moduleName} score is hard-capped`,
+      detail: `A score cap is active on ${moduleName} (reason: "${moduleResult.capApplied.reason}"). This limits the module regardless of other improvements — resolving it is the highest-leverage action for this module.`,
+      linkedModule: moduleName as DetailRedFlag["linkedModule"],
+      severity,
+      ...link,
+    });
+  }
+
+  // 3. Critically low modules (< 35, no cap — raw underperformance)
+  for (const [moduleName, moduleResult] of Object.entries(v2Result.moduleScores)) {
+    if (moduleResult.capApplied) continue; // already flagged above
+    if (moduleResult.finalScore >= 35) continue;
+    const link = linkOpp(moduleName);
+    flags.push({
+      id: `flag-low-${moduleName}`.replace(/[\s&+]/g, "-").toLowerCase(),
+      title: `${moduleName} is critically underperforming`,
+      detail: `${moduleName} scores ${moduleResult.finalScore}/100, indicating structural weaknesses that limit LP attractiveness. Immediate action is recommended.`,
+      linkedModule: moduleName as DetailRedFlag["linkedModule"],
+      severity: "High",
+      ...link,
+    });
+  }
+
+  // 4. Negative real yield
+  const apy = record.stakingApyPct ?? 0;
+  const infl = record.inflationRatePct ?? 0;
+  if (apy - infl < -1) {
+    const link = linkOpp("Incentive Sustainability");
+    flags.push({
+      id: "flag-negative-real-yield",
+      title: "Negative real yield",
+      detail: `Staking APY (${apy}%) is below inflation (${infl}%), meaning stakers lose real purchasing power. This is a structural deterrent for long-term capital allocation.`,
+      linkedModule: "Incentive Sustainability",
+      severity: "Medium",
+      ...link,
+    });
+  }
+
+  // Sort: High first, then Medium, then Low; deduplicate by id
+  const seen = new Set<string>();
+  const severityOrder = { High: 0, Medium: 1, Low: 2 };
+  return flags
+    .filter((f) => {
+      if (seen.has(f.id)) return false;
+      seen.add(f.id);
+      return true;
+    })
+    .sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity])
+    .slice(0, 5);
+}
+
 function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetailData {
   const radarRecord = getRadarRecord(network.networkId);
   const v2Result = radarRecord ? computeV2Score(radarRecord) : null;
@@ -178,6 +267,14 @@ function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetai
     ? computeMaxPotentialScore(radarRecord, v2Result)
     : detail.summary.opportunityScore;
 
+  // Build v2-aligned red flags when we have real scoring data
+  const opportunities = (radarRecord && v2Result)
+    ? detectOpportunities(radarRecord, v2Result)
+    : null;
+  const redFlags = (radarRecord && v2Result && opportunities)
+    ? buildV2RedFlags(v2Result, radarRecord, opportunities)
+    : detail.redFlags;
+
   return {
     ...detail,
     summary: {
@@ -188,6 +285,7 @@ function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetai
       scoringMode: v2Result?.mode
     },
     modules,
+    redFlags,
     scoring,
     radarRecord: radarRecord ?? undefined,
     v2Result: v2Result ?? undefined,

@@ -8,7 +8,6 @@ import { NetworkDetailHeader } from "@/components/network-detail/network-detail-
 import { RedFlagsPanel } from "@/components/network-detail/red-flags-panel";
 import { ScoringModelPanel } from "@/components/network-detail/scoring-model-panel";
 import { StressSnapshotPanel } from "@/components/network-detail/stress-snapshot-panel";
-import { TopOpportunitiesPanel } from "@/components/network-detail/top-opportunities-panel";
 
 type NetworkDiagnosisPageProps = {
   detail: NetworkDetailData;
@@ -32,14 +31,7 @@ export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
         />
       )}
 
-      <section className="grid gap-4 xl:grid-cols-3">
-        <div className="xl:col-span-2">
-          <TopOpportunitiesPanel opportunities={detail.opportunities} />
-        </div>
-        <div className="xl:col-span-1">
-          <StressSnapshotPanel stress={detail.stressSnapshot} />
-        </div>
-      </section>
+      <StressSnapshotPanel stress={detail.stressSnapshot} />
 
       <ChainResourcesSection networkId={detail.summary.networkId} showEmptyState />
 

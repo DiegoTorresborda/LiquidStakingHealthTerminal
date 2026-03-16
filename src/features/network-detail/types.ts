@@ -42,6 +42,10 @@ export type DetailRedFlag = {
   detail: string;
   linkedModule?: ModuleName;
   severity: "High" | "Medium" | "Low";
+  /** ID of the Improvement Plan opportunity that addresses this flag */
+  linkedOpportunityId?: string;
+  /** Title of the Improvement Plan opportunity that addresses this flag */
+  linkedOpportunityTitle?: string;
 };
 
 export type StressSnapshot = {

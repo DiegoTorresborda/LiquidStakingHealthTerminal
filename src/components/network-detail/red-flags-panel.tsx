@@ -28,6 +28,15 @@ export function RedFlagsPanel({ redFlags }: RedFlagsPanelProps) {
               <p className="text-xs uppercase tracking-[0.14em] text-ink-300">{flag.linkedModule}</p>
             ) : null}
             <p className="mt-2 text-sm text-ink-100">{flag.detail}</p>
+            {flag.linkedOpportunityTitle && (
+              <div className="mt-2 flex items-center gap-1.5 text-xs">
+                <svg className="h-3 w-3 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+                <span className="text-ink-400">Fix in Improvement Plan:</span>
+                <span className="font-medium text-emerald-300">{flag.linkedOpportunityTitle}</span>
+              </div>
+            )}
           </article>
         ))}
       </div>

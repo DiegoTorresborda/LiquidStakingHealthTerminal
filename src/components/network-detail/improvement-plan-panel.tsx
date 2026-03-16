@@ -194,7 +194,7 @@ function OpportunityCard({
 
   const categoryLabel = {
     "cap-removal": "Cap Removal",
-    "low-input": "Low Score",
+    "low-input": "Needs Boost",
     "missing-data": "Missing Data",
     "growth-opportunity": "Growth",
     strategic: "Strategic",
@@ -239,6 +239,22 @@ function OpportunityCard({
 
           <p className="mt-1 text-xs text-ink-300">{opp.description}</p>
 
+          {/* Why it matters + Expected benefit */}
+          <div className="mt-2 space-y-1.5">
+            <div>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-ink-400">
+                Why it matters
+              </span>
+              <p className="mt-0.5 text-xs text-ink-200">{opp.whyItMatters}</p>
+            </div>
+            <div>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.1em] text-ink-400">
+                Expected benefit
+              </span>
+              <p className="mt-0.5 text-xs text-ink-200">{opp.expectedBenefit}</p>
+            </div>
+          </div>
+
           {/* Module score delta */}
           <div className="mt-2 flex flex-wrap items-center gap-3 text-xs">
             <span className="text-ink-400">{opp.module}:</span>
@@ -262,9 +278,12 @@ function OpportunityCard({
           )}
         </div>
 
-        {/* Global delta badge */}
-        <span className="shrink-0 rounded-full border border-emerald-400/30 bg-emerald-900/20 px-2.5 py-1 text-sm font-semibold tabular-nums text-emerald-300">
-          +{opp.globalDelta}
+        {/* Marginal delta badge — incremental pts when stacked with higher-priority improvements */}
+        <span
+          className="shrink-0 rounded-full border border-emerald-400/30 bg-emerald-900/20 px-2.5 py-1 text-sm font-semibold tabular-nums text-emerald-300"
+          title="Points added on top of all higher-priority improvements"
+        >
+          +{opp.marginalDelta} pts
         </span>
       </div>
     </div>
