@@ -26,72 +26,96 @@ const LP_THESIS_PILLARS = [
 const DIAGNOSTIC_MODULES = [
   {
     name: "Liquidity & Exit",
-    measures: "Depth, slippage, route quality, and stablecoin exit capacity.",
-    matters: "Large LPs optimize for executable exits, not only for entry yield.",
-    failureMode: "TVL exists, but stable exit path breaks or becomes too expensive at size."
+    weight: "25%",
+    measures: "DEX depth, slippage routes, stablecoin exit capacity, and redemption anchor.",
+    matters: "Large LPs optimize for executable exits at size, not only entry yield.",
+    caps: "Cap 45 (pre-LST, no stable exit) · Cap 55 (no stable exit) · Cap 60 (no redemption)"
   },
   {
     name: "Peg Stability",
-    measures: "Discount behavior versus NAV, redemption anchors, and recovery speed.",
+    weight: "15%",
+    measures: "Redemption anchor quality, unbonding period, and stablecoin buffer depth.",
     matters: "Protocols and LPs need confidence that the LST stays economically anchored.",
-    failureMode: "Persistent discounts due to weak redemption/arbitrage mechanics."
+    caps: "Cap 50 (no native redemption)"
   },
   {
     name: "DeFi Moneyness",
-    measures: "Collateral usage, integration breadth, utilization, and demand quality.",
+    weight: "15%",
+    measures: "Collateral usage, DeFi integration breadth, LST-to-DeFi depth ratio.",
     matters: "Money-like utility creates structural demand beyond emissions.",
-    failureMode: "Token exists but remains idle or constrained to shallow LP incentives."
+    caps: "Cap 55 (LST not used as collateral)"
   },
   {
     name: "Security & Governance",
-    measures: "Audit posture, admin controls, upgrade safety, and transparency.",
+    weight: "15%",
+    measures: "Audit count, timelock/governance controls, and protocol maturity.",
     matters: "Institutional liquidity avoids systems with opaque or discretionary control risk.",
-    failureMode: "Centralized admin powers overshadow otherwise strong on-chain metrics."
+    caps: "Cap 50 (zero audits) · Cap 55 (no timelock)"
   },
   {
     name: "Validator Decentralization",
-    measures: "Delegation concentration, validator breadth, uptime, and slashing risk.",
+    weight: "10%",
+    measures: "Validator breadth, verified operator ratio, and commission competitiveness.",
     matters: "Concentrated validator exposure increases correlated operational risk.",
-    failureMode: "A few operators dominate delegated stake, weakening resilience."
+    caps: "Cap 40 (fewer than 20 validators)"
   },
   {
     name: "Incentive Sustainability",
-    measures: "Dependence on emissions versus durable, utility-driven demand.",
+    weight: "10%",
+    measures: "Real yield (APY minus inflation), LST adoption depth, structural demand quality.",
     matters: "Temporary farming demand is not equivalent to investable liquidity depth.",
-    failureMode: "TVL and volume collapse when reward programs decline."
-  },
-  {
-    name: "Stress Resilience",
-    measures: "Behavior under price shock, stablecoin run, and contagion scenarios.",
-    matters: "Serious LPs care about drawdown pathways and exit haircuts under stress.",
-    failureMode: "Normal conditions look healthy, but exits degrade sharply in risk-off periods."
+    caps: "Cap 45 (negative real yield + no collateral or lending demand)"
   }
 ] as const;
 
 const HEALTH_SCORE_FORMULAS = [
   {
+    title: "Module Weights",
+    lines: [
+      "Liquidity & Exit — 25%",
+      "Peg Stability — 15%",
+      "DeFi Moneyness — 15%",
+      "Security & Governance — 15%",
+      "Validator Decentralization — 10%",
+      "Incentive Sustainability — 10%"
+    ]
+  },
+  {
     title: "Pillar Construction",
     lines: [
-      "Exitability = 0.50 x Liquidity & Exit + 0.30 x Peg Stability + 0.20 x Stress Resilience",
-      "Moneyness = DeFi Moneyness",
-      "Credibility = 0.40 x Security & Governance + 0.30 x Validator Decentralization + 0.30 x Incentive Sustainability"
+      "Exitability = (L&E×0.25 + Peg×0.15) / 0.40",
+      "Moneyness = DeFi Moneyness (direct)",
+      "Credibility = (Sec×0.15 + Val×0.10 + Inc×0.10) / 0.35"
     ]
   },
   {
     title: "Global Aggregation",
     lines: [
-      "Global LST Health Score = 0.45 x Exitability + 0.30 x Moneyness + 0.25 x Credibility",
-      "Score range: 0-100"
-    ]
-  },
-  {
-    title: "Penalties and Caps",
-    lines: [
-      "Module-level caps and penalties apply when structural conditions fail (for example: no stablecoin exit route, no redemption path, extreme concentration).",
-      "Global caps apply when gating conditions are weak: Exitability < 50, Peg Stability < 45, or Security & Governance < 50."
+      "Global Score = weighted sum / 0.90",
+      "(Weights sum to 0.90; renormalized to 0–100)",
+      "Score range: 0–100"
     ]
   }
 ] as const;
+
+const PRE_LST_INFO = [
+  {
+    label: "Mode trigger",
+    text: "hasLst = false or null → pre-LST mode"
+  },
+  {
+    label: "Structural penalty",
+    text: "L&E, Peg Stability, and DeFi Moneyness each include a lstReadiness term with 15% weight, always scored as 0. This lowers their theoretical ceiling by ~15 points."
+  },
+  {
+    label: "Rationale",
+    text: "A network without an LST has no redemption path, no collateral integrations, and no DEX liquidity for the token — these structural gaps should be reflected in the score, not masked by proxy metrics."
+  },
+  {
+    label: "Path to remove penalty",
+    text: "Launch an LST protocol. Once hasLst = true, the network switches to lst-active mode and the lstReadiness penalty is lifted."
+  }
+];
 
 const INSTITUTIONAL_READINESS_CONDITIONS = [
   "Credible stablecoin exits with enough depth to unwind meaningful position sizes.",
@@ -103,10 +127,10 @@ const INSTITUTIONAL_READINESS_CONDITIONS = [
 ] as const;
 
 const SCORE_BANDS = [
-  "85-100: Institutional Grade",
-  "70-84: Strong",
-  "55-69: Usable but Constrained",
-  "40-54: Fragile",
+  "85–100: Institutional Grade",
+  "70–84: Strong",
+  "55–69: Usable but Constrained",
+  "40–54: Fragile",
   "Below 40: Unhealthy"
 ] as const;
 
@@ -130,13 +154,14 @@ export function MethodologyPage() {
       </section>
 
       <section className="surface-grid rounded-2xl border border-ink-300/20 bg-slateglass-700/45 p-6 shadow-glow backdrop-blur">
-        <p className="text-xs uppercase tracking-[0.22em] text-ink-300">Methodology</p>
+        <p className="text-xs uppercase tracking-[0.22em] text-ink-300">Methodology · Scoring Model v2</p>
         <h1 className="mt-2 font-[var(--font-heading)] text-3xl font-semibold text-ink-50 md:text-4xl">
           LST Ecosystem Scoring Model
         </h1>
         <p className="mt-3 max-w-4xl text-sm leading-relaxed text-ink-100 md:text-base">
-          This framework explains how the dashboard evaluates investability for liquidity providers and how L1 teams can
-          move from yield availability to institutional liquidity readiness.
+          A 6-module framework that evaluates investability for liquidity providers across two modes:{" "}
+          <span className="font-semibold text-amber-300">pre-LST</span> (network has no liquid staking protocol yet) and{" "}
+          <span className="font-semibold text-emerald-300">LST-active</span> (an LST exists). Scores reflect current ecosystem health and where structural gaps remain.
         </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -151,8 +176,7 @@ export function MethodologyPage() {
       <section className="rounded-2xl border border-ink-300/20 bg-slateglass-700/35 p-5 shadow-card">
         <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">1. The Liquidity Provider Thesis</h2>
         <p className="mt-2 text-sm text-ink-100">
-          LP behavior is multi-dimensional. Capital allocation depends on carry, utility, exits, and risk controls at the
-          same time.
+          LP behavior is multi-dimensional. Capital allocation depends on carry, utility, exits, and risk controls simultaneously.
         </p>
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {LP_THESIS_PILLARS.map((pillar) => (
@@ -186,48 +210,46 @@ export function MethodologyPage() {
         </article>
 
         <article className="rounded-2xl border border-ink-300/20 bg-slateglass-700/35 p-5 shadow-card">
-          <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">3. Seven Diagnostic Modules</h2>
+          <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">3. Two Scoring Modes</h2>
           <p className="mt-2 text-sm text-ink-100">
-            The model diagnoses quality through seven modules. Each module isolates a structural dimension of LP
-            attractiveness.
+            Mode is detected automatically from{" "}
+            <code className="rounded bg-ink-900/40 px-1 py-0.5 text-xs text-[#dcecff]">hasLst</code>. Different module formulas apply — the same inputs are interpreted differently based on whether a liquid staking protocol exists.
           </p>
+          <div className="mt-3 grid gap-2">
+            <div className="rounded-lg border border-amber-400/20 bg-ink-900/20 p-3 text-sm">
+              <span className="font-semibold text-amber-300">pre-LST</span>
+              <span className="ml-2 text-ink-200">No LST deployed yet. Modules use proxy metrics (DEX liquidity, staking ratio, DeFi TVL). A 15% lstReadiness penalty applies to 3 modules.</span>
+            </div>
+            <div className="rounded-lg border border-emerald-400/20 bg-ink-900/20 p-3 text-sm">
+              <span className="font-semibold text-emerald-300">LST-active</span>
+              <span className="ml-2 text-ink-200">LST exists. Modules score actual LST metrics: DEX liquidity, redemption path, collateral integrations, audit posture.</span>
+            </div>
+          </div>
         </article>
       </section>
 
-      <section className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-        {DIAGNOSTIC_MODULES.map((module) => (
-          <article key={module.name} className="rounded-xl border border-ink-300/20 bg-ink-900/25 p-4 shadow-card">
-            <h3 className="text-base font-semibold text-ink-50">{module.name}</h3>
-            <div className="mt-3 space-y-2 text-sm leading-relaxed text-ink-100">
-              <p>
-                <span className="font-semibold text-[#dcecff]">Measures:</span> {module.measures}
-              </p>
-              <p>
-                <span className="font-semibold text-[#dcecff]">Why it matters:</span> {module.matters}
-              </p>
-              <p>
-                <span className="font-semibold text-[#dcecff]">Typical failure mode:</span> {module.failureMode}
-              </p>
-            </div>
-          </article>
-        ))}
-      </section>
-
       <section className="rounded-2xl border border-ink-300/20 bg-slateglass-700/35 p-5 shadow-card">
-        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">4. Score Construction</h2>
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">4. Six Diagnostic Modules</h2>
         <p className="mt-2 text-sm text-ink-100">
-          Module outputs are aggregated into pillars, then into the Global LST Health Score. Structural caps prevent
-          over-scoring when gating risks are unresolved.
+          Each module isolates a structural dimension of LP attractiveness. Module-level caps prevent over-scoring when gating conditions fail.
         </p>
-
-        <div className="mt-4 grid gap-3 md:grid-cols-3">
-          {HEALTH_SCORE_FORMULAS.map((formula) => (
-            <article key={formula.title} className="rounded-xl border border-ink-300/20 bg-ink-900/25 p-4">
-              <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#dcecff]">{formula.title}</h3>
-              <div className="mt-2 space-y-2 text-sm text-ink-100">
-                {formula.lines.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
+        <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {DIAGNOSTIC_MODULES.map((module) => (
+            <article key={module.name} className="rounded-xl border border-ink-300/20 bg-ink-900/25 p-4 shadow-card">
+              <div className="flex items-center justify-between">
+                <h3 className="text-base font-semibold text-ink-50">{module.name}</h3>
+                <span className="rounded-md border border-[#7baff5]/30 bg-[#7baff5]/10 px-2 py-0.5 text-xs font-semibold text-[#dcecff]">{module.weight}</span>
+              </div>
+              <div className="mt-3 space-y-2 text-sm leading-relaxed text-ink-100">
+                <p>
+                  <span className="font-semibold text-[#dcecff]">Measures:</span> {module.measures}
+                </p>
+                <p>
+                  <span className="font-semibold text-[#dcecff]">Why it matters:</span> {module.matters}
+                </p>
+                <p className="text-xs text-ink-400">
+                  <span className="font-semibold text-ink-300">Caps:</span> {module.caps}
+                </p>
               </div>
             </article>
           ))}
@@ -235,10 +257,46 @@ export function MethodologyPage() {
       </section>
 
       <section className="rounded-2xl border border-ink-300/20 bg-slateglass-700/35 p-5 shadow-card">
-        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">5. Institutional Liquidity Readiness</h2>
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">5. Score Construction</h2>
         <p className="mt-2 text-sm text-ink-100">
-          To attract large LP capital, a network must demonstrate durable execution quality across liquidity,
-          moneyness, and risk controls.
+          Module outputs aggregate into three pillars, then into the Global LST Health Score. The six module weights sum to 0.90 — the global score is renormalized by dividing by 0.90.
+        </p>
+
+        <div className="mt-4 grid gap-3 md:grid-cols-3">
+          {HEALTH_SCORE_FORMULAS.map((formula) => (
+            <article key={formula.title} className="rounded-xl border border-ink-300/20 bg-ink-900/25 p-4">
+              <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#dcecff]">{formula.title}</h3>
+              <div className="mt-2 space-y-1.5">
+                {formula.lines.map((line) => (
+                  <p key={line} className="font-mono text-xs text-ink-100">{line}</p>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-amber-400/20 bg-amber-400/5 p-5 shadow-card">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">6. Pre-LST Structural Penalty</h2>
+        <p className="mt-2 text-sm text-ink-100">
+          Networks without an LST score structurally lower due to a built-in{" "}
+          <code className="rounded bg-ink-900/40 px-1 py-0.5 text-xs text-amber-300">lstReadiness</code>{" "}
+          term in three modules.
+        </p>
+        <div className="mt-4 grid gap-3 md:grid-cols-2">
+          {PRE_LST_INFO.map((item) => (
+            <div key={item.label} className="rounded-lg border border-amber-400/15 bg-ink-900/20 p-3 text-sm">
+              <span className="font-semibold text-amber-300">{item.label}: </span>
+              <span className="text-ink-100">{item.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-ink-300/20 bg-slateglass-700/35 p-5 shadow-card">
+        <h2 className="font-[var(--font-heading)] text-2xl font-semibold text-ink-50">7. Institutional Liquidity Readiness</h2>
+        <p className="mt-2 text-sm text-ink-100">
+          To attract large LP capital, a network must demonstrate durable execution quality across liquidity, moneyness, and risk controls.
         </p>
 
         <div className="mt-4 grid gap-3 md:grid-cols-2">

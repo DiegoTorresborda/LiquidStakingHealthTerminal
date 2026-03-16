@@ -65,7 +65,11 @@ export type RadarOverviewField =
   | "safeGasPrice"
   | "proposeGasPrice"
   | "fastGasPrice"
-  | "suggestedBaseFee";
+  | "suggestedBaseFee"
+  | "hasLst"
+  | "unbondingDays"
+  | "auditCount"
+  | "hasTimelock";
 
 export type RadarOverviewRecord = {
   networkId: string;
@@ -153,6 +157,10 @@ export type RadarOverviewRecord = {
   proposeGasPrice: number | null;
   fastGasPrice: number | null;
   suggestedBaseFee: number | null;
+  hasLst: boolean | null;
+  unbondingDays: number | null;
+  auditCount: number | null;
+  hasTimelock: boolean | null;
   globalLstHealthScore: number;
   opportunityScore: number;
   asOf: string;

@@ -29,6 +29,11 @@ export type ManualUiFieldEntry = {
   lstCollateralEnabled?: boolean | null;
   mainBottleneck?: string | null;
   mainOpportunity?: string | null;
+  // V2 scoring fields
+  hasLst?: boolean | null;
+  unbondingDays?: ManualUiFieldNumber;
+  auditCount?: ManualUiFieldNumber;
+  hasTimelock?: boolean | null;
   updatedAt?: string;
 };
 

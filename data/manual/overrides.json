@@ -1,7 +1,47 @@
 {
   "source": "manual-overrides",
-  "updatedAt": "2026-03-11T14:18:27.020Z",
+  "updatedAt": "2026-03-15T21:18:16.718Z",
   "overrides": [
+    {
+      "id": "ovr_mms9au8e_i9e66u",
+      "networkId": "mantra",
+      "field": "status",
+      "value": "Early Opportunity",
+      "reason": "more precise",
+      "timestamp": "2026-03-15T21:18:16.718Z"
+    },
+    {
+      "id": "ovr_mms99tzj_2tbye4",
+      "networkId": "core",
+      "field": "status",
+      "value": "Emerging",
+      "reason": "more precise",
+      "timestamp": "2026-03-15T21:17:29.743Z"
+    },
+    {
+      "id": "ovr_mms99aou_0t2wz0",
+      "networkId": "berachain",
+      "field": "status",
+      "value": "Emerging",
+      "reason": "more precise",
+      "timestamp": "2026-03-15T21:17:04.734Z"
+    },
+    {
+      "id": "ovr_mms97y3s_y45w7s",
+      "networkId": "xdc",
+      "field": "status",
+      "value": "Early Opportunity",
+      "reason": "more precise",
+      "timestamp": "2026-03-15T21:16:01.768Z"
+    },
+    {
+      "id": "ovr_mmrv25t3_f24g16",
+      "networkId": "shardeum",
+      "field": "defiTvlUsd",
+      "value": null,
+      "reason": "no data",
+      "timestamp": "2026-03-15T14:39:37.191Z"
+    },
     {
       "id": "ovr_mmm4jj2k_wqhgap",
       "networkId": "shardeum",
@@ -33,6 +73,14 @@
       "value": 0,
       "reason": "no LST deployed",
       "timestamp": "2026-03-11T13:57:04.549Z"
+    },
+    {
+      "id": "ovr_canton_lsttvl",
+      "networkId": "canton",
+      "field": "lstTvlUsd",
+      "value": 0,
+      "reason": "no LST deployed",
+      "timestamp": "2026-03-15T22:00:00.000Z"
     }
   ]
 }

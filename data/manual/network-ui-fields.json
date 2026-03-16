@@ -9,11 +9,15 @@
       "circulatingSupplyPct": 44,
       "stakerAddresses": 142000,
       "lstProtocols": 2,
-      "largestLst": "stMON",
+      "largestLst": "sMON",
       "lendingPresence": true,
       "lstCollateralEnabled": true,
       "mainBottleneck": "Stablecoin exit liquidity",
-      "mainOpportunity": "Expand LST collateral integrations"
+      "mainOpportunity": "Expand LST collateral integrations",
+      "hasLst": true,
+      "unbondingDays": 14,
+      "auditCount": 2,
+      "hasTimelock": false
     },
     "sei": {
       "category": "High-throughput trading L1",
@@ -22,11 +26,15 @@
       "circulatingSupplyPct": 59,
       "stakerAddresses": 185000,
       "lstProtocols": 2,
-      "largestLst": "stSEI",
+      "largestLst": "iSEI",
       "lendingPresence": true,
       "lstCollateralEnabled": false,
       "mainBottleneck": "Weak LST DeFi integration",
-      "mainOpportunity": "Enable lending collateral usage"
+      "mainOpportunity": "Enable lending collateral usage",
+      "hasLst": true,
+      "unbondingDays": 21,
+      "auditCount": 1,
+      "hasTimelock": null
     },
     "sui": {
       "category": "Object-centric L1",
@@ -35,11 +43,15 @@
       "circulatingSupplyPct": 48,
       "stakerAddresses": 210000,
       "lstProtocols": 3,
-      "largestLst": "stSUI",
+      "largestLst": "afSUI",
       "lendingPresence": true,
       "lstCollateralEnabled": true,
       "mainBottleneck": "LST fragmentation",
-      "mainOpportunity": "Consolidate liquidity across LSTs"
+      "mainOpportunity": "Consolidate liquidity across LSTs",
+      "hasLst": true,
+      "unbondingDays": 1,
+      "auditCount": 2,
+      "hasTimelock": null
     },
     "aptos": {
       "category": "Move-based L1",
@@ -48,11 +60,15 @@
       "circulatingSupplyPct": 54,
       "stakerAddresses": 165000,
       "lstProtocols": 3,
-      "largestLst": "stAPT",
+      "largestLst": "amAPT",
       "lendingPresence": true,
       "lstCollateralEnabled": true,
       "mainBottleneck": "Limited LST liquidity depth",
-      "mainOpportunity": "Expand LST market-making infrastructure"
+      "mainOpportunity": "Expand LST market-making infrastructure",
+      "hasLst": true,
+      "unbondingDays": 14,
+      "auditCount": 3,
+      "hasTimelock": null
     },
     "berachain": {
       "category": "DeFi-native L1",
@@ -61,11 +77,15 @@
       "circulatingSupplyPct": 36,
       "stakerAddresses": 97000,
       "lstProtocols": 2,
-      "largestLst": "stBERA",
+      "largestLst": "iBERA",
       "lendingPresence": true,
       "lstCollateralEnabled": false,
       "mainBottleneck": "LST penetration still low",
-      "mainOpportunity": "Make LST core collateral asset"
+      "mainOpportunity": "Make LST core collateral asset",
+      "hasLst": true,
+      "unbondingDays": 7,
+      "auditCount": 2,
+      "hasTimelock": null
     },
     "xdc": {
       "category": "Enterprise-focused L1",
@@ -73,12 +93,16 @@
       "fdvUsd": 1232167539,
       "circulatingSupplyPct": 79,
       "stakerAddresses": 1000,
-      "lstProtocols": 1,
-      "largestLst": "stXDC",
+      "lstProtocols": 0,
+      "largestLst": null,
       "lendingPresence": false,
       "lstCollateralEnabled": false,
-      "mainBottleneck": "Weak DeFi ecosystem",
-      "mainOpportunity": "Build core DeFi + LST stack",
+      "mainBottleneck": "No LST ecosystem exists",
+      "mainOpportunity": "Launch foundational LST infrastructure",
+      "hasLst": false,
+      "unbondingDays": null,
+      "auditCount": null,
+      "hasTimelock": null,
       "updatedAt": "2026-03-12T13:02:55.206Z"
     },
     "shardeum": {
@@ -88,11 +112,15 @@
       "circulatingSupplyPct": 15,
       "stakerAddresses": 2500,
       "lstProtocols": 0,
-      "largestLst": "no SLT",
+      "largestLst": null,
       "lendingPresence": false,
       "lstCollateralEnabled": false,
-      "mainBottleneck": "Ecosystem still early",
+      "mainBottleneck": "No LST ecosystem exists",
       "mainOpportunity": "Launch foundational LST infrastructure",
+      "hasLst": false,
+      "unbondingDays": null,
+      "auditCount": null,
+      "hasTimelock": null,
       "updatedAt": "2026-03-12T13:00:34.176Z"
     },
     "core": {
@@ -106,20 +134,28 @@
       "lendingPresence": true,
       "lstCollateralEnabled": true,
       "mainBottleneck": "Moderate liquidity depth",
-      "mainOpportunity": "Expand LST adoption in DeFi"
+      "mainOpportunity": "Expand LST adoption in DeFi",
+      "hasLst": true,
+      "unbondingDays": 7,
+      "auditCount": 1,
+      "hasTimelock": false
     },
     "sonic": {
-      "category": "Gaming-focused L1",
+      "category": "EVM L1 (ex-Fantom)",
       "status": "Early Opportunity",
       "fdvUsd": 2600000000,
       "circulatingSupplyPct": 42,
       "stakerAddresses": 55000,
       "lstProtocols": 1,
-      "largestLst": "stSONIC",
+      "largestLst": "stS",
       "lendingPresence": false,
       "lstCollateralEnabled": false,
       "mainBottleneck": "Weak financial layer",
-      "mainOpportunity": "Introduce DeFi primitives for LST"
+      "mainOpportunity": "Introduce DeFi primitives for LST",
+      "hasLst": true,
+      "unbondingDays": 14,
+      "auditCount": 2,
+      "hasTimelock": true
     },
     "mantra": {
       "category": "RWA-focused L1",
@@ -127,12 +163,33 @@
       "fdvUsd": 4200000000,
       "circulatingSupplyPct": 43,
       "stakerAddresses": 76000,
-      "lstProtocols": 2,
-      "largestLst": "stOM",
+      "lstProtocols": 0,
+      "largestLst": null,
       "lendingPresence": true,
-      "lstCollateralEnabled": true,
-      "mainBottleneck": "Limited stablecoin liquidity",
-      "mainOpportunity": "Expand DeFi credit markets"
+      "lstCollateralEnabled": false,
+      "mainBottleneck": "LST not yet launched",
+      "mainOpportunity": "Launch and integrate LST as core collateral",
+      "hasLst": false,
+      "unbondingDays": null,
+      "auditCount": null,
+      "hasTimelock": null
+    },
+    "canton": {
+      "category": "Enterprise-focused L1",
+      "status": "Watchlist",
+      "fdvUsd": 0,
+      "circulatingSupplyPct": 0,
+      "stakerAddresses": 0,
+      "lstProtocols": 0,
+      "largestLst": null,
+      "lendingPresence": false,
+      "lstCollateralEnabled": false,
+      "mainBottleneck": "TBD",
+      "mainOpportunity": "TBD",
+      "hasLst": false,
+      "unbondingDays": null,
+      "auditCount": null,
+      "hasTimelock": null
     }
   }
 }

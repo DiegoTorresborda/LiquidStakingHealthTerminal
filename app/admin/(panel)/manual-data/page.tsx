@@ -27,7 +27,7 @@ type FieldConfig = {
   key: keyof FormState;
   label: string;
   type: FieldType;
-  group: "staking" | "identity" | "strategy";
+  group: "staking" | "identity" | "strategy" | "v2";
 };
 
 type FormState = {
@@ -47,6 +47,11 @@ type FormState = {
   mainBottleneck: string;
   mainOpportunity: string;
   notes: string;
+  // V2 scoring fields
+  hasLst: "" | "true" | "false";
+  unbondingDays: string;
+  auditCount: string;
+  hasTimelock: "" | "true" | "false";
 };
 
 const FIELD_CONFIGS: FieldConfig[] = [
@@ -66,7 +71,12 @@ const FIELD_CONFIGS: FieldConfig[] = [
   { key: "lendingPresence", label: "lendingPresence", type: "boolean", group: "strategy" },
   { key: "lstCollateralEnabled", label: "lstCollateralEnabled", type: "boolean", group: "strategy" },
   { key: "mainBottleneck", label: "mainBottleneck", type: "string", group: "strategy" },
-  { key: "mainOpportunity", label: "mainOpportunity", type: "string", group: "strategy" }
+  { key: "mainOpportunity", label: "mainOpportunity", type: "string", group: "strategy" },
+
+  { key: "hasLst", label: "hasLst — LST exists? (drives pre-lst vs lst-active mode)", type: "boolean", group: "v2" },
+  { key: "unbondingDays", label: "unbondingDays — redemption period in days", type: "number", group: "v2" },
+  { key: "auditCount", label: "auditCount — number of protocol security audits", type: "number", group: "v2" },
+  { key: "hasTimelock", label: "hasTimelock — governance changes are time-locked", type: "boolean", group: "v2" }
 ];
 
 const EMPTY_FORM: FormState = {
@@ -85,7 +95,11 @@ const EMPTY_FORM: FormState = {
   lstCollateralEnabled: "",
   mainBottleneck: "",
   mainOpportunity: "",
-  notes: ""
+  notes: "",
+  hasLst: "",
+  unbondingDays: "",
+  auditCount: "",
+  hasTimelock: ""
 };
 
 export default function AdminManualDataPage() {
@@ -201,7 +215,11 @@ export default function AdminManualDataPage() {
           lstCollateralEnabled: form.lstCollateralEnabled,
           mainBottleneck: form.mainBottleneck,
           mainOpportunity: form.mainOpportunity,
-          notes: form.notes
+          notes: form.notes,
+          hasLst: form.hasLst,
+          unbondingDays: form.unbondingDays,
+          auditCount: form.auditCount,
+          hasTimelock: form.hasTimelock
         })
       });
 
@@ -273,6 +291,18 @@ export default function AdminManualDataPage() {
 
         <FieldGroup title="Strategy Fields">
           {FIELD_CONFIGS.filter((field) => field.group === "strategy").map((field) => (
+            <FieldInput
+              key={field.key}
+              field={field}
+              value={form[field.key]}
+              currentValue={selectedRecord?.[field.key as string]}
+              onChange={(value) => setForm((current) => ({ ...current, [field.key]: value }))}
+            />
+          ))}
+        </FieldGroup>
+
+        <FieldGroup title="V2 Scoring Fields">
+          {FIELD_CONFIGS.filter((field) => field.group === "v2").map((field) => (
             <FieldInput
               key={field.key}
               field={field}

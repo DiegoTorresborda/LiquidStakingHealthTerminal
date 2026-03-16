@@ -1,5 +1,7 @@
 import type { ModuleName } from "@/config/scoring";
 import type { LstHealthScoringResult } from "@/features/scoring/types";
+import type { RadarOverviewRecord } from "@/data/radar-overview-schema";
+import type { V2ScoringResult } from "@/features/scoring/v2/index";
 
 export type LpAttractivenessLabel = "Strong" | "Medium" | "Cautious" | "Opportunistic";
 
@@ -10,6 +12,7 @@ export type OpportunityImpact = "Very High" | "High" | "Medium" | "Low";
 export type DetailMetric = {
   label: string;
   value: string;
+  description?: string;
 };
 
 export type DetailModule = {
@@ -69,6 +72,7 @@ export type NetworkDetailSummary = {
   opportunityScore: number;
   lpAttractiveness: LpAttractivenessLabel;
   diagnosis: string;
+  scoringMode?: "pre-lst" | "lst-active";
 };
 
 export type NetworkDetailData = {
@@ -79,4 +83,6 @@ export type NetworkDetailData = {
   stressSnapshot: StressSnapshot;
   miniVisuals?: DetailMiniVisuals;
   scoring?: LstHealthScoringResult;
+  radarRecord?: RadarOverviewRecord;
+  v2Result?: V2ScoringResult;
 };

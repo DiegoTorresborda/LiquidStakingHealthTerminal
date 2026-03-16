@@ -76,6 +76,13 @@ export const PROTOCOL_CONTRACTS: Record<string, ProtocolContractConfig> = {
     logsFromBlock: null,
     mintEventTopic0: null,
     redeemEventTopic0: null
+  },
+  canton: {
+    networkId: "canton",
+    primaryContractAddress: null,
+    logsFromBlock: null,
+    mintEventTopic0: null,
+    redeemEventTopic0: null
   }
 };
 

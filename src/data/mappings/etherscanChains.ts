@@ -42,6 +42,10 @@ export const ETHERSCAN_CHAINS: Record<string, EtherscanChainConfig> = {
   },
   mantra: {
     networkId: "mantra",
+    chainId: "169"
+  },
+  canton: {
+    networkId: "canton",
     chainId: null
   }
 };

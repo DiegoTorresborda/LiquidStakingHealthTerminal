@@ -1,13 +1,13 @@
 {
   "source": "defillama",
-  "generatedAt": "2026-03-13T15:39:06.894Z",
+  "generatedAt": "2026-03-15T14:23:26.582Z",
   "networks": {
     "monad": {
       "status": "ok",
       "chainName": "Monad",
-      "defiTvlUsd": 537924865.1290393,
+      "defiTvlUsd": 553453880.2095578,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 11180718.601420827,
+      "lstTvlUsd": 11214283.426048785,
       "sourceRefs": [
         "defillama:chains:Monad",
         "defillama:protocols:category=liquid staking:chain=Monad",
@@ -17,9 +17,9 @@
     "sei": {
       "status": "ok",
       "chainName": "Sei",
-      "defiTvlUsd": 62210733.58290958,
+      "defiTvlUsd": 61379575.47881793,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 6625226.808740774,
+      "lstTvlUsd": 6577915.744342446,
       "sourceRefs": [
         "defillama:chains:Sei",
         "defillama:protocols:category=liquid staking:chain=Sei",
@@ -29,9 +29,9 @@
     "sui": {
       "status": "ok",
       "chainName": "Sui",
-      "defiTvlUsd": 945170309.9598113,
+      "defiTvlUsd": 936759589.2560012,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 148273789.1497676,
+      "lstTvlUsd": 142064990.3406577,
       "sourceRefs": [
         "defillama:chains:Sui",
         "defillama:protocols:category=liquid staking:chain=Sui",
@@ -41,9 +41,9 @@
     "aptos": {
       "status": "ok",
       "chainName": "Aptos",
-      "defiTvlUsd": 395709285.89384836,
+      "defiTvlUsd": 389580874.29295236,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 45804140.5027526,
+      "lstTvlUsd": 43980513.11072375,
       "sourceRefs": [
         "defillama:chains:Aptos",
         "defillama:protocols:category=liquid staking:chain=Aptos",
@@ -53,9 +53,9 @@
     "berachain": {
       "status": "ok",
       "chainName": "Berachain",
-      "defiTvlUsd": 349341446.83467263,
+      "defiTvlUsd": 325993446.6520212,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 83375021.019783,
+      "lstTvlUsd": 87903640.94119237,
       "sourceRefs": [
         "defillama:chains:Berachain",
         "defillama:protocols:category=liquid staking:chain=Berachain",
@@ -65,9 +65,9 @@
     "core": {
       "status": "ok",
       "chainName": "CORE",
-      "defiTvlUsd": 30810866.510659415,
+      "defiTvlUsd": 30007576.2012483,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 1281763.7195669846,
+      "lstTvlUsd": 1245537.8393173206,
       "sourceRefs": [
         "defillama:chains:CORE",
         "defillama:protocols:category=liquid staking:chain=CORE",
@@ -77,7 +77,7 @@
     "mantra": {
       "status": "ok",
       "chainName": "Mantra",
-      "defiTvlUsd": 666169.0060188771,
+      "defiTvlUsd": 5907.059586206014,
       "stablecoinLiquidityUsd": null,
       "lstTvlUsd": 0,
       "sourceRefs": [
@@ -89,9 +89,9 @@
     "sonic": {
       "status": "ok",
       "chainName": "Sonic",
-      "defiTvlUsd": 57998094.490919985,
+      "defiTvlUsd": 59383625.008515015,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 1689977.6940858436,
+      "lstTvlUsd": 1680649.6640188857,
       "sourceRefs": [
         "defillama:chains:Sonic",
         "defillama:protocols:category=liquid staking:chain=Sonic",
@@ -101,9 +101,9 @@
     "xdc": {
       "status": "ok",
       "chainName": "XDC",
-      "defiTvlUsd": 11321220.359785298,
+      "defiTvlUsd": 10981456.79997733,
       "stablecoinLiquidityUsd": null,
-      "lstTvlUsd": 6290289.846494256,
+      "lstTvlUsd": 6272561.173327655,
       "sourceRefs": [
         "defillama:chains:XDC",
         "defillama:protocols:category=liquid staking:chain=XDC",

@@ -54,6 +54,11 @@ export const IMPORTANT_ADDRESSES: Record<string, ImportantAddressConfig> = {
     networkId: "mantra",
     transferMonitorAddress: null,
     treasuryAddress: null
+  },
+  canton: {
+    networkId: "canton",
+    transferMonitorAddress: null,
+    treasuryAddress: null
   }
 };
 

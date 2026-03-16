@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 
+import networksGenerated from "@data/networks.generated.json";
 import { networks as networkUniverse } from "@data/networks";
 
 import { KpiSummaryBar } from "@/components/radar/kpi-summary-bar";
@@ -18,26 +19,35 @@ import {
   toggleSortDirection
 } from "@/features/radar/utils";
 import { scoreNetworkWithMockModel } from "@/features/scoring";
+import type { RadarOverviewRecord } from "@/data/radar-overview-schema";
+import { computeV2Score } from "@/features/scoring/v2/index";
 
-export function LstOpportunityRadar() {
+const radarRecords = networksGenerated as unknown as RadarOverviewRecord[];
+
+export function LstOpportunityRadar({ hiddenNetworkIds = [] }: { hiddenNetworkIds?: string[] }) {
   const router = useRouter();
   const [filters, setFilters] = useState<RadarFilters>(DEFAULT_FILTERS);
   const [sort, setSort] = useState<SortState>(DEFAULT_SORT);
   const [expandedNetwork, setExpandedNetwork] = useState<string | null>(null);
 
   const networkDataset = useMemo(() => {
-    return networkUniverse.map((network) => {
-      const scoring = scoreNetworkWithMockModel(network);
+    return networkUniverse
+      .filter((network) => !hiddenNetworkIds.includes(network.networkId))
+      .map((network) => {
+      const radarRecord = radarRecords.find((r) => r.networkId === network.networkId);
+      const globalScore = radarRecord
+        ? computeV2Score(radarRecord).globalScore
+        : scoreNetworkWithMockModel(network).globalScore.finalScore;
 
       return {
         ...network,
-        globalLstHealthScore: scoring.globalScore.finalScore,
-        healthScoreRaw: scoring.globalScore.rawScore,
-        healthScorePenaltyPoints: scoring.globalScore.penaltyPoints,
-        healthScoreCapped: scoring.globalScore.cappedScore
+        globalLstHealthScore: globalScore,
+        healthScoreRaw: globalScore,
+        healthScorePenaltyPoints: 0,
+        healthScoreCapped: globalScore
       };
     });
-  }, []);
+  }, [hiddenNetworkIds]);
 
   const statusOptions = useMemo(() => getStatusOptions(networkDataset), [networkDataset]);
 
