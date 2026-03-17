@@ -419,6 +419,49 @@ const baseNetworks: Network[] = [
     quality: "observed",
     confidence: "medium",
     dataCoveragePct: 74
+  },
+  {
+    networkId: "zigchain",
+    network: "ZigChain",
+    token: "ZIG",
+    category: "DeFi-native L1",
+    marketCapUsd: 53_598_810,
+    fdvUsd: 76_000_000,
+    circulatingSupply: 1_410_000_000,
+    circulatingSupplyPct: 70.5,
+    priceUsd: 0.03803,
+    volume24hUsd: 711_164,
+    stakingRatioPct: 16.19,
+    stakingApyPct: 7.0,
+    stakedTokens: 376_274_901,
+    stakedValueUsd: 14_313_895,
+    stakerAddresses: 0,               // missing — not publicly indexed
+    validatorCount: 33,
+    globalLstHealthScore: 0,          // computed by v2 engine
+    lstProtocols: 1,
+    largestLst: "stZIG",
+    lstTvlUsd: 7_990_000,
+    lstPenetrationPct: 14.9,
+    defiTvlUsd: 14_000_000,
+    tvlToMcapPct: 26.1,
+    stablecoinLiquidityUsd: 50_000,   // inferred — Oroswap DEX nascent
+    lendingPresence: false,           // Permapod upcoming, not live
+    lstCollateralEnabled: false,
+    opportunityScore: 0,              // computed by v2 engine
+    mainBottleneck: "stZIG has no DEX liquidity pairs — LST is not liquid in practice yet",
+    mainOpportunity: "Seed stZIG/USDC pool on Oroswap and integrate as collateral in Permapod once live",
+    status: "Growing",
+    asOf: "2026-03-17",
+    sourceRefs: [
+      "coingecko.com/en/coins/zigchain",
+      "staking-explorer.com/explorer/zigchain",
+      "defillama.com/chain/zignaly",
+      "docs.valdora.finance",
+      "docs.zigchain.com"
+    ],
+    quality: "observed",
+    confidence: "medium",
+    dataCoveragePct: 74
   }
 ];
 

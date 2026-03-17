@@ -70,6 +70,23 @@ Master reference of all data sources used or evaluated for the Liquid Staking He
 
 ---
 
+### staking-explorer.com  ← *discovered during ZigChain integration (2026-03)*
+- **URL:** `https://staking-explorer.com/explorer/{chain}`
+  - Example: `https://staking-explorer.com/explorer/zigchain`
+- **Fields supplied:**
+  - `stakingRatioPct` (bonded supply %)
+  - `stakingApyPct` / `stakingApyPct` (APR and APY)
+  - `inflationRatePct` (coded and real inflation)
+  - Real Staking Reward (RSR = APR − real inflation)
+  - `stakedTokens` (bonded tokens)
+  - Annual provision (token emissions)
+  - Block time, validator count
+- **When to use:** Primary source for Cosmos SDK chains. Covers many chains not indexed by StakingRewards. Provides coded vs. real inflation distinction which is useful for real yield calculation.
+- **Notes:** Free, no API key needed. Data is live. URL slug is usually the chain name lowercase (e.g., `zigchain`, `osmosis`, `cosmos`).
+- **Quality:** `observed`
+
+---
+
 ### daic.capital  ← *discovered during Vara integration (2026-03)*
 - **URL:** `https://daic.capital/staking/{network-slug}-{token}`
   - Example: `https://daic.capital/staking/vara-network-vara`
@@ -190,9 +207,9 @@ When multiple sources provide the same field, use this priority order:
 | `priceUsd`, `marketCapUsd`, `fdvUsd` | CoinGecko → manual fallback |
 | `defiTvlUsd` | DefiLlama → DexScreener (sum of pools) |
 | `stablecoinLiquidityUsd` | DexScreener → chain DEX UI |
-| `stakingApyPct` | StakingRewards → daic.capital → chain docs |
-| `stakingRatioPct` | StakingRewards → daic.capital → Subscan/Mintscan |
-| `inflationRatePct` | StakingRewards → daic.capital → tokenomics wiki |
+| `stakingApyPct` | StakingRewards → staking-explorer.com (Cosmos) → daic.capital → chain docs |
+| `stakingRatioPct` | StakingRewards → staking-explorer.com (Cosmos) → daic.capital → Subscan/Mintscan |
+| `inflationRatePct` | StakingRewards → staking-explorer.com (Cosmos) → daic.capital → tokenomics wiki |
 | `validatorCount` | Subscan/Mintscan → StakingRewards |
 | `benchmarkCommissionPct` | Subscan/Mintscan → StakingRewards |
 | `unbondingDays` | Chain docs → Subscan/Mintscan → StakingRewards |
