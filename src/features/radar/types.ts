@@ -16,7 +16,6 @@ export type SortKey =
   | "marketCapUsd"
   | "stakingRatioPct"
   | "stakingApyPct"
-  | "stakerAddresses"
   | "globalLstHealthScore"
   | "lstProtocols"
   | "lstPenetrationPct"

@@ -21,6 +21,7 @@ import {
 import { scoreNetworkWithMockModel } from "@/features/scoring";
 import type { RadarOverviewRecord } from "@/data/radar-overview-schema";
 import { computeV2Score } from "@/features/scoring/v2/index";
+import { computeMaxPotentialScore } from "@/features/improvement-plan/opportunity-detector";
 
 const radarRecords = networksGenerated as unknown as RadarOverviewRecord[];
 
@@ -35,16 +36,22 @@ export function LstOpportunityRadar({ hiddenNetworkIds = [] }: { hiddenNetworkId
       .filter((network) => !hiddenNetworkIds.includes(network.networkId))
       .map((network) => {
       const radarRecord = radarRecords.find((r) => r.networkId === network.networkId);
-      const globalScore = radarRecord
-        ? computeV2Score(radarRecord).globalScore
+      const v2Result = radarRecord ? computeV2Score(radarRecord) : null;
+      const globalScore = v2Result
+        ? v2Result.globalScore
         : scoreNetworkWithMockModel(network).globalScore.finalScore;
+      // Score Potential: max achievable global score when all improvement initiatives are applied
+      const opportunityScore = (radarRecord && v2Result)
+        ? computeMaxPotentialScore(radarRecord, v2Result)
+        : network.opportunityScore;
 
       return {
         ...network,
         globalLstHealthScore: globalScore,
         healthScoreRaw: globalScore,
         healthScorePenaltyPoints: 0,
-        healthScoreCapped: globalScore
+        healthScoreCapped: globalScore,
+        opportunityScore,
       };
     });
   }, [hiddenNetworkIds]);

@@ -5,9 +5,48 @@ import { moduleScoreClass } from "@/features/network-detail/utils";
 type DetailModuleCardProps = {
   module: DetailModule;
   scoreBreakdown?: ScoreBreakdown;
+  /** When true the module is N/A for the current scoring mode (e.g. Peg Stability in pre-LST). */
+  excluded?: boolean;
 };
 
-export function DetailModuleCard({ module, scoreBreakdown }: DetailModuleCardProps) {
+export function DetailModuleCard({ module, scoreBreakdown, excluded }: DetailModuleCardProps) {
+  // ─── Greyed-out N/A card for excluded modules ──────────────────────────────
+  if (excluded) {
+    return (
+      <article className="relative flex h-full flex-col gap-4 rounded-2xl border border-ink-300/10 bg-slateglass-600/25 p-5 opacity-50">
+        {/* Diagonal "N/A" watermark */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden rounded-2xl">
+          <span className="rotate-[-20deg] select-none text-[4rem] font-bold tracking-widest text-ink-300/10">
+            N/A
+          </span>
+        </div>
+
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h3 className="font-[var(--font-heading)] text-lg font-semibold text-ink-300">
+              {module.name}
+            </h3>
+            <p className="mt-1 text-sm leading-relaxed text-ink-400">
+              Not scored in pre-LST mode
+            </p>
+          </div>
+          <span className="rounded-md border border-ink-300/20 bg-ink-700/40 px-3 py-1 text-sm font-semibold text-ink-400">
+            N/A
+          </span>
+        </div>
+
+        <div className="mt-auto rounded-xl border border-ink-300/10 bg-ink-900/20 p-3 text-sm text-ink-400">
+          <p className="text-xs uppercase tracking-[0.14em] text-ink-500">Why not scored</p>
+          <p className="mt-1">
+            Peg Stability requires an LST with a redemption mechanism. Once an LST is deployed this
+            module becomes fully active and is included in the global score.
+          </p>
+        </div>
+      </article>
+    );
+  }
+
+  // ─── Normal card ───────────────────────────────────────────────────────────
   return (
     <article className="flex h-full flex-col gap-4 rounded-2xl border border-ink-300/20 bg-slateglass-600/60 p-5 shadow-card">
       <div className="flex items-start justify-between gap-4">

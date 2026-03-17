@@ -77,6 +77,8 @@ export type NetworkDetailSummary = {
   lpAttractiveness: LpAttractivenessLabel;
   diagnosis: string;
   scoringMode?: "pre-lst" | "lst-active";
+  /** For pre-LST networks: the projected global score immediately after an LST is launched (before any other improvements). */
+  lstLaunchProjectedScore?: number;
 };
 
 export type NetworkDetailData = {

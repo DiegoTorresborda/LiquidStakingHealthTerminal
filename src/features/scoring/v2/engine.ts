@@ -171,23 +171,13 @@ export function scoreLiquidityExit(input: LiquidityExitInput): ModuleScoreResult
 
 export function scorePegStability(input: PegStabilityInput): ModuleScoreResult {
   if (input.mode === "pre-lst") {
-    const defiScore = logScale(
-      input.defiTvlUsd != null && input.marketCapUsd
-        ? input.defiTvlUsd / input.marketCapUsd
-        : 0,
-      0.02, 0.30
-    )
-    const stakingScore = linScale(input.stakingRatioPct ?? 0, 5, 60)
-    const lstReadiness = 0
-    const rawScore = Math.round(defiScore * 0.50 + stakingScore * 0.35 + lstReadiness * 0.15)
+    // Peg Stability is not meaningful without an LST — the module is excluded from
+    // the global score in pre-LST mode. UI renders it greyed-out as "N/A".
     return {
       module: "Peg Stability", mode: "pre-lst",
-      rawScore, finalScore: rawScore, capApplied: null,
-      breakdown: {
-        defiDepth: { score: Math.round(defiScore), rawValue: input.defiTvlUsd, source: "primary" },
-        stakingDepth: { score: Math.round(stakingScore), rawValue: input.stakingRatioPct, source: "primary" },
-        lstReadiness: { score: lstReadiness, rawValue: null, source: "primary" as const, note: "No LST protocol exists" }
-      }
+      rawScore: 0, finalScore: 0, capApplied: null,
+      excluded: true,
+      breakdown: {}
     }
   }
 

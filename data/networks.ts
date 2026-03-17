@@ -10,7 +10,8 @@ export type NetworkCategory =
   | "Dynamic sharded L1"
   | "Bitcoin-aligned PoS"
   | "Gaming-focused L1"
-  | "RWA-focused L1";
+  | "RWA-focused L1"
+  | "WASM-native L1";
 
 export type NetworkStatus =
   | "High Potential"
@@ -381,6 +382,43 @@ const baseNetworks: Network[] = [
     mainBottleneck: "Limited stablecoin liquidity",
     mainOpportunity: "Expand DeFi credit markets",
     status: "Emerging"
+  },
+  {
+    networkId: "vara",
+    network: "Vara",
+    token: "VARA",
+    category: "WASM-native L1",
+    marketCapUsd: 4_973_758,
+    fdvUsd: 9_392_463,
+    circulatingSupply: 5_295_478_204,
+    circulatingSupplyPct: 52.95,
+    priceUsd: 0.00093925,
+    volume24hUsd: 57_742,
+    stakingRatioPct: 39.34,
+    stakingApyPct: 8.4,
+    stakedTokens: 3_934_000_000,
+    stakedValueUsd: 3_694_285,
+    stakerAddresses: 8_500,
+    validatorCount: 59,
+    globalLstHealthScore: 0,       // computed by v2 engine
+    lstProtocols: 0,
+    largestLst: "",
+    lstTvlUsd: 0,
+    lstPenetrationPct: 0,
+    defiTvlUsd: 350_000,
+    tvlToMcapPct: 7.04,
+    stablecoinLiquidityUsd: 150_000,
+    lendingPresence: true,          // vStreet lending protocol
+    lstCollateralEnabled: false,
+    opportunityScore: 0,           // computed by v2 engine
+    mainBottleneck: "No LST deployed — network locked in pre-LST scoring mode",
+    mainOpportunity: "Launch a VARA liquid staking protocol to unlock full scoring ceiling",
+    status: "Early Opportunity",
+    asOf: "2026-03-17",
+    sourceRefs: ["coingecko.com/en/coins/vara-network", "vara.subscan.io", "daic.capital/staking/vara-network-vara"],
+    quality: "observed",
+    confidence: "medium",
+    dataCoveragePct: 74
   }
 ];
 

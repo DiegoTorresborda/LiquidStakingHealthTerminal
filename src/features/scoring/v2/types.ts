@@ -16,6 +16,12 @@ export type ModuleScoreResult = {
   finalScore: number
   capApplied: { reason: string; value: number } | null
   breakdown: Record<string, InputBreakdown>
+  /**
+   * When true the module is structurally N/A in the current scoring mode
+   * (e.g. Peg Stability in pre-LST mode) and is excluded from the global
+   * weighted average. The UI should render it greyed-out.
+   */
+  excluded?: boolean
 }
 
 // ─── Liquidity & Exit ────────────────────────────────────────────────────────

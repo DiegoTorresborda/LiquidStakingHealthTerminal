@@ -603,13 +603,18 @@ const STRATEGIC_RULES: StrategicRule[] = [
     module: "All Modules",
     detect: (r, v2) => {
       if (v2.mode !== "pre-lst") return null;
+      const mc = r.marketCapUsd ?? 1_000_000;
       return {
         hasLst: true,
         unbondingDays: 7,
-        lstTvlUsd: (r.marketCapUsd ?? 1_000_000) * 0.02,
+        lstTvlUsd: mc * 0.02,
         lstPenetrationPct: 2,
-        lstDexLiquidityUsd: (r.marketCapUsd ?? 1_000_000) * 0.005,
-        auditCount: 1,
+        lstDexLiquidityUsd: mc * 0.005,
+        // Stable exit is required to clear the "Sin ruta stable" cap in lst-active mode.
+        // Without it, switching modes drops L&E and Peg scores to zero, netting 0 pts.
+        stableExitRouteExists: true,
+        stableExitLiquidityUsd: Math.max(r.stableExitLiquidityUsd ?? 0, mc * 0.01),
+        auditCount: Math.max(r.auditCount ?? 0, 1),
       };
     },
     effort: "High",
@@ -795,7 +800,27 @@ export function detectOpportunities(
   const opportunities: ImprovementOpportunity[] = [];
   const seenTitles = new Set<string>();
 
-  const modules = v2Result.moduleScores;
+  // ── Pre-LST dual baseline ──────────────────────────────────────────────────
+  // For pre-LST networks, non-LST improvements are evaluated in LST-active
+  // context so their deltas reflect their real value once an LST is deployed.
+  const isPreLst = v2Result.mode === "pre-lst";
+  let lstLaunchRecord: RadarOverviewRecord = record;
+  let lstLaunchResult: V2ScoringResult = v2Result;
+
+  if (isPreLst) {
+    const lstRule = STRATEGIC_RULES.find((r) => r.id === "strategic-launch-lst");
+    const lstOverrides = lstRule?.detect(record, v2Result);
+    if (lstOverrides) {
+      lstLaunchRecord = { ...record, ...lstOverrides } as RadarOverviewRecord;
+      lstLaunchResult = simulateScore(record, lstOverrides);
+    }
+  }
+
+  // For Passes 1-4, scan the module breakdowns in the correct mode context:
+  // pre-LST networks use the LST-active baseline so we detect the right caps/inputs.
+  const baseRec = isPreLst ? lstLaunchRecord : record;
+  const baseRes = isPreLst ? lstLaunchResult : v2Result;
+  const modules = baseRes.moduleScores;
 
   // ═══ Pass 1: Cap removals (highest impact) ═══
   for (const [moduleName, moduleResult] of Object.entries(modules) as [
@@ -810,7 +835,7 @@ export function detectOpportunities(
     );
     if (!fix || seenTitles.has(fix.title)) continue;
 
-    const overrides = fix.overrides(record);
+    const overrides = fix.overrides(baseRec);
     const opp = buildOpportunity(
       `cap-${moduleName}-${capReason}`.replace(/\s+/g, "-").toLowerCase(),
       fix.title,
@@ -820,8 +845,8 @@ export function detectOpportunities(
       moduleName,
       "cap-removal",
       overrides,
-      record,
-      v2Result,
+      baseRec,
+      baseRes,
       fix.effort,
       fix.timeHorizon
     );
@@ -845,7 +870,7 @@ export function detectOpportunities(
       );
       if (!fix || seenTitles.has(fix.title)) continue;
 
-      const overrides = fix.overrides(record);
+      const overrides = fix.overrides(baseRec);
       const opp = buildOpportunity(
         `low-${moduleName}-${key}`.replace(/\s+/g, "-").toLowerCase(),
         fix.title,
@@ -855,8 +880,8 @@ export function detectOpportunities(
         moduleName,
         "low-input",
         overrides,
-        record,
-        v2Result,
+        baseRec,
+        baseRes,
         fix.effort,
         fix.timeHorizon
       );
@@ -881,7 +906,7 @@ export function detectOpportunities(
       );
       if (!fix || seenTitles.has(fix.title)) continue;
 
-      const overrides = fix.overrides(record);
+      const overrides = fix.overrides(baseRec);
       const opp = buildOpportunity(
         `missing-${moduleName}-${key}`.replace(/\s+/g, "-").toLowerCase(),
         fix.title,
@@ -891,8 +916,8 @@ export function detectOpportunities(
         moduleName,
         "missing-data",
         overrides,
-        record,
-        v2Result,
+        baseRec,
+        baseRes,
         fix.effort,
         fix.timeHorizon
       );
@@ -918,7 +943,7 @@ export function detectOpportunities(
       if (!fix || !fix.growthOverrides || seenTitles.has(fix.growthTitle ?? fix.title))
         continue;
 
-      const overrides = fix.growthOverrides(record);
+      const overrides = fix.growthOverrides(baseRec);
       const title = fix.growthTitle ?? fix.title;
       const opp = buildOpportunity(
         `growth-${moduleName}-${key}`.replace(/\s+/g, "-").toLowerCase(),
@@ -929,8 +954,8 @@ export function detectOpportunities(
         moduleName,
         "growth-opportunity",
         overrides,
-        record,
-        v2Result,
+        baseRec,
+        baseRes,
         fix.growthEffort ?? fix.effort,
         fix.growthTimeHorizon ?? fix.timeHorizon
       );
@@ -946,8 +971,16 @@ export function detectOpportunities(
   for (const rule of STRATEGIC_RULES) {
     if (seenTitles.has(rule.title)) continue;
 
+    // Always detect against the original record so mode-gating works correctly
+    // (e.g., strategic-launch-lst only fires in pre-lst mode)
     const overrides = rule.detect(record, v2Result);
     if (!overrides) continue;
+
+    // Launch LST is evaluated against the original baseline (it IS the mode switch).
+    // All other strategic rules are evaluated against the LST-active baseline for pre-LST networks.
+    const isLaunchLst = rule.id === "strategic-launch-lst";
+    const oppRec = (isPreLst && !isLaunchLst) ? lstLaunchRecord : record;
+    const oppRes = (isPreLst && !isLaunchLst) ? lstLaunchResult : v2Result;
 
     const opp = buildOpportunity(
       rule.id,
@@ -958,20 +991,26 @@ export function detectOpportunities(
       rule.module,
       "strategic",
       overrides,
-      record,
-      v2Result,
+      oppRec,
+      oppRes,
       rule.effort,
       rule.timeHorizon
     );
 
     if (opp) {
-      opportunities.push(opp);
+      opportunities.push(isLaunchLst ? { ...opp, isLstModeUnlock: true } : opp);
       seenTitles.add(rule.title);
     }
   }
 
-  // Sort by individual global impact descending
-  opportunities.sort((a, b) => b.globalDelta - a.globalDelta);
+  // Sort by individual global impact descending.
+  // For pre-LST networks, pin the mode-unlock (Launch LST) initiative first
+  // so the marginal-delta accumulation starts from the correct baseline.
+  opportunities.sort((a, b) => {
+    if (a.isLstModeUnlock) return -1;
+    if (b.isLstModeUnlock) return 1;
+    return b.globalDelta - a.globalDelta;
+  });
 
   // Deduplicate by override fields: keep only the highest-delta opportunity per field.
   // This removes redundant improvements that modify the same underlying data (e.g.,

@@ -10,6 +10,7 @@ import { computeV2Score } from "@/features/scoring/v2/index";
 import type { V2ScoringResult } from "@/features/scoring/v2/index";
 import { adaptV2ToLstResult } from "@/features/scoring/v2/adapter";
 import { computeMaxPotentialScore, detectOpportunities } from "@/features/improvement-plan/opportunity-detector";
+import { simulateScore } from "@/features/improvement-plan/simulator";
 import type { ImprovementOpportunity } from "@/features/improvement-plan/types";
 import { formatUsdCompactStable } from "@/lib/number-format";
 
@@ -162,9 +163,29 @@ function buildV2RedFlags(
 ): DetailRedFlag[] {
   const flags: DetailRedFlag[] = [];
 
-  /** Find the best-matching opportunity for a given module */
+  /**
+   * Find the best-matching opportunity for a given module.
+   * Falls back to a field-based lookup so modules like "Security & Governance"
+   * in pre-lst mode (which has no LST-specific override) still get a linked opp.
+   */
+  const FIELD_FALLBACK: Record<string, string[]> = {
+    "Security & Governance": ["auditCount", "hasTimelock", "validatorCount"],
+    "Validator Decentralization": ["validatorCount", "verifiedProviders", "benchmarkCommissionPct"],
+    "Incentive Sustainability": ["stakingApyPct", "inflationRatePct", "lstPenetrationPct"],
+    "Peg Stability": ["stableExitLiquidityUsd", "stableExitRouteExists", "defiTvlUsd"],
+    "Liquidity & Exit": ["lstDexLiquidityUsd", "stableExitLiquidityUsd", "unbondingDays"],
+    "DeFi Moneyness": ["lstCollateralEnabled", "lendingPresence", "defiTvlUsd"],
+  };
   const linkOpp = (moduleName: string) => {
-    const opp = opportunities.find((o) => o.module === moduleName || o.module.includes(moduleName));
+    // 1. Exact or contains match on module name
+    let opp = opportunities.find((o) => o.module === moduleName || o.module.includes(moduleName));
+    // 2. Field-based fallback: find first opp whose overrides include a relevant field
+    if (!opp) {
+      const fallbackFields = FIELD_FALLBACK[moduleName] ?? [];
+      opp = opportunities.find((o) =>
+        fallbackFields.some((f) => f in o.overrides)
+      );
+    }
     return { linkedOpportunityId: opp?.id, linkedOpportunityTitle: opp?.title };
   };
 
@@ -184,6 +205,7 @@ function buildV2RedFlags(
 
   // 2. Score caps — highest severity signals
   for (const [moduleName, moduleResult] of Object.entries(v2Result.moduleScores)) {
+    if (moduleResult.excluded) continue; // excluded modules don't generate flags
     if (!moduleResult.capApplied) continue;
     const severity: DetailRedFlag["severity"] = moduleResult.finalScore < 35 ? "High" : "Medium";
     const link = linkOpp(moduleName);
@@ -199,6 +221,7 @@ function buildV2RedFlags(
 
   // 3. Critically low modules (< 35, no cap — raw underperformance)
   for (const [moduleName, moduleResult] of Object.entries(v2Result.moduleScores)) {
+    if (moduleResult.excluded) continue; // excluded modules are N/A, not underperforming
     if (moduleResult.capApplied) continue; // already flagged above
     if (moduleResult.finalScore >= 35) continue;
     const link = linkOpp(moduleName);
@@ -275,6 +298,12 @@ function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetai
     ? buildV2RedFlags(v2Result, radarRecord, opportunities)
     : detail.redFlags;
 
+  // For pre-LST networks: compute the projected score immediately after LST launch
+  const lstLaunchOpp = opportunities?.find((o) => o.id === "strategic-launch-lst");
+  const lstLaunchProjectedScore = (lstLaunchOpp && radarRecord)
+    ? simulateScore(radarRecord, lstLaunchOpp.overrides).globalScore
+    : undefined;
+
   return {
     ...detail,
     summary: {
@@ -282,7 +311,8 @@ function applyScoring(detail: NetworkDetailData, network: Network): NetworkDetai
       globalLstHealthScore: globalHealth,
       opportunityScore,
       lpAttractiveness: resolveLpAttractivenessFromScore(globalHealth),
-      scoringMode: v2Result?.mode
+      scoringMode: v2Result?.mode,
+      lstLaunchProjectedScore,
     },
     modules,
     redFlags,

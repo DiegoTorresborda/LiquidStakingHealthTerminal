@@ -73,7 +73,9 @@ export function ScoringModelPanel({ scoring, mode }: ScoringModelPanelProps) {
           <p className="mt-0.5 text-ink-300">
             {wasCapped
               ? `Raw ${scoring.globalScore.rawScore} → capped to ${scoring.globalScore.cappedScore}`
-              : `${activeModules.length}-module weighted average`}
+              : mode === "pre-lst"
+                ? `${activeModules.length - 1}-module weighted average (Peg Stability N/A)`
+                : `${activeModules.length}-module weighted average`}
           </p>
         </div>
       </div>

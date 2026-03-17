@@ -16,8 +16,12 @@ function clamp(val: number, min = 0, max = 100): number {
  */
 export function logScale(val: number, floor: number, ceiling: number): number {
   if (val <= 0 || floor <= 0 || ceiling <= floor) return 0
+  // Return 0 when val is below the floor (covers both USD amounts and ratios correctly).
+  // NOTE: Do NOT use Math.max(val, 1) here — that guard was only valid for large USD values
+  // and inflates scores when called with ratios or small numbers (< 1).
+  if (val < floor) return 0
   const normalized =
-    (Math.log(Math.max(val, 1)) - Math.log(floor)) /
+    (Math.log(val) - Math.log(floor)) /
     (Math.log(ceiling) - Math.log(floor))
   return clamp(normalized * 100)
 }

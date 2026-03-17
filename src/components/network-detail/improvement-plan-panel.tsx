@@ -12,24 +12,33 @@ import { healthScoreClass } from "@/features/network-detail/utils";
 type Props = {
   record: RadarOverviewRecord;
   currentResult: V2ScoringResult;
+  /** For pre-LST networks: the projected global score immediately after LST launch (before other improvements). */
+  lstLaunchProjectedScore?: number;
+  /** Controlled mode: pass from a shared parent to sync with RedFlagsPanel */
+  enabledIds?: Set<string>;
+  onToggle?: (id: string) => void;
 };
 
-export function ImprovementPlanPanel({ record, currentResult }: Props) {
+export function ImprovementPlanPanel({ record, currentResult, lstLaunchProjectedScore, enabledIds: externalIds, onToggle: externalToggle }: Props) {
   const opportunities = useMemo(
     () => detectOpportunities(record, currentResult),
     [record, currentResult]
   );
 
-  const [enabledIds, setEnabledIds] = useState<Set<string>>(new Set());
+  // Internal state used only when no controlled props are provided
+  const [internalIds, setInternalIds] = useState<Set<string>>(new Set());
+  const enabledIds = externalIds ?? internalIds;
 
-  const toggle = useCallback((id: string) => {
-    setEnabledIds((prev) => {
+  const internalToggle = useCallback((id: string) => {
+    setInternalIds((prev) => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
       return next;
     });
   }, []);
+
+  const toggle = externalToggle ?? internalToggle;
 
   const projected = useMemo(() => {
     if (enabledIds.size === 0) return null;
@@ -42,6 +51,21 @@ export function ImprovementPlanPanel({ record, currentResult }: Props) {
   const projectedGlobal = projected?.globalScore ?? currentResult.globalScore;
   const globalDelta = projectedGlobal - currentResult.globalScore;
 
+  // Pre-LST trajectory
+  const isPreLst = currentResult.mode === "pre-lst";
+  const lstLaunchOpp = useMemo(
+    () => opportunities.find((o) => o.isLstModeUnlock),
+    [opportunities]
+  );
+  const lstAfterScore =
+    lstLaunchProjectedScore ??
+    lstLaunchOpp?.projectedGlobalScore ??
+    currentResult.globalScore;
+  const maxPotentialScore = useMemo(() => {
+    if (opportunities.length === 0) return currentResult.globalScore;
+    return simulateMultiple(record, opportunities.map((o) => o.overrides)).globalScore;
+  }, [record, opportunities, currentResult.globalScore]);
+
   if (opportunities.length === 0) return null;
 
   return (
@@ -53,7 +77,9 @@ export function ImprovementPlanPanel({ record, currentResult }: Props) {
             Improvement Plan
           </h2>
           <p className="mt-1 text-sm text-ink-300">
-            Select improvements to simulate their impact on the health score
+            {isPreLst
+              ? "Non-LST improvements shown in LST-active context — their value once the LST is deployed"
+              : "Select improvements to simulate their impact on the health score"}
           </p>
         </div>
         <span className="rounded-md border border-sky-400/30 bg-sky-900/25 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-300">
@@ -61,7 +87,31 @@ export function ImprovementPlanPanel({ record, currentResult }: Props) {
         </span>
       </div>
 
-      {/* Score Projection Bar */}
+      {/* Score Trajectory — pre-LST only */}
+      {isPreLst && lstLaunchOpp && (
+        <div className="mt-4 rounded-xl border border-indigo-400/15 bg-indigo-900/10 p-4">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-indigo-300">
+            Score Trajectory
+          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <ScoreStep label="Current (pre-LST)" score={currentResult.globalScore} />
+            <TrajectoryArrow />
+            <ScoreStep
+              label="After LST Launch"
+              score={lstAfterScore}
+              delta={lstAfterScore - currentResult.globalScore}
+            />
+            <TrajectoryArrow />
+            <ScoreStep
+              label="Full Potential"
+              score={maxPotentialScore}
+              delta={maxPotentialScore - lstAfterScore}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Interactive Score Projection Bar */}
       <div className="mt-4 rounded-xl border border-ink-300/20 bg-ink-900/30 p-4">
         <div className="flex flex-wrap items-center gap-4">
           {/* Current */}
@@ -136,6 +186,7 @@ export function ImprovementPlanPanel({ record, currentResult }: Props) {
             opportunity={opp}
             enabled={enabledIds.has(opp.id)}
             onToggle={() => toggle(opp.id)}
+            isPreLst={isPreLst}
           />
         ))}
       </div>
@@ -144,6 +195,35 @@ export function ImprovementPlanPanel({ record, currentResult }: Props) {
 }
 
 // ─── Sub-components ──────────────────────────────────────────────────────────
+
+function ScoreStep({ label, score, delta }: { label: string; score: number; delta?: number }) {
+  return (
+    <div className="text-center">
+      <p className="text-[10px] uppercase tracking-[0.12em] text-indigo-300/70">{label}</p>
+      <div className="mt-1 flex items-center gap-1.5">
+        <span
+          className={`inline-block rounded-lg border px-2.5 py-1 font-[var(--font-heading)] text-2xl font-bold tabular-nums ${healthScoreClass(score)}`}
+        >
+          {score}
+        </span>
+        {delta != null && delta > 0 && (
+          <span className="text-xs font-semibold text-emerald-400">+{delta}</span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function TrajectoryArrow() {
+  return (
+    <div className="flex items-center gap-1 text-indigo-300/50">
+      <div className="h-px w-6 bg-indigo-300/30" />
+      <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </div>
+  );
+}
 
 function PillarDelta({
   label,
@@ -177,10 +257,12 @@ function OpportunityCard({
   opportunity: opp,
   enabled,
   onToggle,
+  isPreLst,
 }: {
   opportunity: ImprovementOpportunity;
   enabled: boolean;
   onToggle: () => void;
+  isPreLst: boolean;
 }) {
   const service = SERVICE_CATALOG.find((s) => s.id === opp.serviceId);
 
@@ -205,7 +287,9 @@ function OpportunityCard({
       className={`rounded-xl border p-4 transition-colors ${
         enabled
           ? "border-emerald-400/30 bg-emerald-900/10"
-          : "border-ink-300/20 bg-ink-900/20"
+          : opp.isLstModeUnlock
+            ? "border-indigo-400/20 bg-indigo-900/10"
+            : "border-ink-300/20 bg-ink-900/20"
       }`}
     >
       <div className="flex flex-wrap items-start gap-3">
@@ -235,6 +319,11 @@ function OpportunityCard({
             >
               {categoryLabel}
             </span>
+            {opp.isLstModeUnlock && (
+              <span className="rounded border border-indigo-400/40 bg-indigo-900/30 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-indigo-300">
+                Mode Unlock
+              </span>
+            )}
           </div>
 
           <p className="mt-1 text-xs text-ink-300">{opp.description}</p>
@@ -263,6 +352,9 @@ function OpportunityCard({
               <span className="text-ink-400"> → </span>
               <span className="text-emerald-400">{opp.projectedModuleScore}</span>
             </span>
+            {isPreLst && !opp.isLstModeUnlock && (
+              <span className="italic text-ink-500">in LST-active context</span>
+            )}
           </div>
 
           {/* Service + metadata */}
