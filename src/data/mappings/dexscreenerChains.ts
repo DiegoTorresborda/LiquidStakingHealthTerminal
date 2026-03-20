@@ -33,7 +33,7 @@ export const DEXSCREENER_CHAINS: Record<string, DexscreenerChainConfig> = {
   xdc: {
     networkId: "xdc",
     chainId: "xdc",
-    baseTokenAddress: null
+    baseTokenAddress: "0x96578887c6E91BdE4aE73073fd49691A6e8e4ecF"
   },
   shardeum: {
     networkId: "shardeum",

@@ -9,8 +9,8 @@ export type LstTokenConfig = {
 export const LST_TOKENS: Record<string, LstTokenConfig> = {
   monad: {
     networkId: "monad",
-    lstSymbol: "stMON",
-    lstTokenAddress: null,
+    lstSymbol: "sMON",
+    lstTokenAddress: "0xA3227C5969757783154C60bF0bC1944180ed81B9",
     dexscreenerChainId: "monad",
     etherscanTokenAddress: null
   },
