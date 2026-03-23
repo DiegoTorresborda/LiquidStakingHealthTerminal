@@ -339,8 +339,10 @@ function buildV2ModuleMetrics(
   if (moduleName === "Liquidity & Exit") {
     if (mode === "lst-active") {
       return [
-        { label: "LST DEX Liquidity", value: usd(r.lstDexLiquidityUsd), description: "Total liquidity of LST pairs on DEXes. Higher depth means lower slippage on large exits." },
-        { label: "Stable Exit Depth", value: usd(r.stableExitLiquidityUsd), description: "Stablecoin liquidity available to absorb LST sells. Critical for USDC/USDT exit quality." },
+        { label: "Native DEX Depth", value: usd(r.baseTokenDexLiquidityUsd), description: "Total DEX liquidity of the native token on its home chain (all pairs). Primary driver of on-chain exit capacity." },
+        { label: "Stable Exit Depth", value: usd(r.stableExitLiquidityUsd), description: "Stablecoin liquidity available for direct USDC/USDT exit on the native chain." },
+        { label: "LST DEX Liquidity", value: usd(r.lstDexLiquidityUsd), description: "Total liquidity of LST token pairs on DEXes. Measures how liquid the staked derivative itself is." },
+        { label: "Cross-Chain Exit", value: usd(r.crossChainExitLiquidityUsd), description: "Qualifying exit liquidity (>$100K per pair) on officially bridged chains. Adds alternative exit routes." },
         { label: "Unbonding Period", value: days(r.unbondingDays), description: "Days to redeem staked tokens via the protocol. Longer unbonding increases redemption risk." }
       ];
     }

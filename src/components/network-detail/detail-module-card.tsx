@@ -70,7 +70,7 @@ export function DetailModuleCard({ module, scoreBreakdown, excluded }: DetailMod
       ) : null}
 
       <div className="grid gap-2 rounded-xl border border-ink-300/20 bg-ink-900/30 p-3">
-        {module.keyMetrics.slice(0, 4).map((metric) => (
+        {module.keyMetrics.slice(0, 5).map((metric) => (
           <div key={metric.label} className="flex items-center justify-between gap-2 text-sm">
             <span className="flex items-center gap-1.5 text-ink-300">
               {metric.label}

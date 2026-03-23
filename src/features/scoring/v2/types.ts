@@ -49,10 +49,15 @@ export type LiquidityExitActiveLstInput = {
   lstDexSource: DataSource
   // Reference for relative normalization of LST liquidity
   lstTvlUsd: number | null
-  // Stable exit: same logic as pre-lst
+  // Stable exit: same logic as pre-lst (native chain stablecoin pairs only)
   stableExitValue: number | null
   stableExitSource: DataSource
-  // Reference for relative normalization of stable exit
+  // Native DEX liquidity: base token (WMON/SEI/etc) across all pairs on native chain
+  baseTokenDexLiquidityUsd: number | null
+  baseTokenDexSource: DataSource
+  // Cross-chain exit: official bridged token liquidity on other chains (pairs > $100K threshold)
+  crossChainExitLiquidityUsd: number | null
+  // Reference for relative normalization
   marketCapUsd: number | null
   // Redemption anchor
   redemptionExists: boolean

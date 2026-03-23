@@ -31,10 +31,13 @@ function detectMode(network: RadarOverviewRecord): "pre-lst" | "lst-active" {
 // ─── Shared resolution helpers ────────────────────────────────────────────────
 
 /**
- * Stable exit depth:
- *   primary  → stableExitLiquidityUsd  (DEXScreener best/sum pair)
+ * Stable exit depth (native chain only):
+ *   primary  → stableExitLiquidityUsd  (DexScreener best/sum pair for base token vs stables)
  *   proxy    → stablecoinLiquidityUsd × 0.05  (chain stables, heavy discount)
  *   missing  → null
+ *
+ * Note: cross-chain exit liquidity (crossChainExitLiquidityUsd) is handled as a
+ * separate scoring component in LST-active mode, not summed here.
  */
 function resolveStableExit(network: RadarOverviewRecord): {
   value: number | null
@@ -106,6 +109,13 @@ function buildActiveLst(
   const { value: stableExitValue, source: stableExitSource } = resolveStableExit(network)
   const stableExitExists = resolveStableExitExists(network, stableExitValue)
 
+  // Native DEX liquidity: base token pairs on the native chain (all counterparties)
+  const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
+  const baseTokenDexSource: DataSource = baseTokenDexLiquidityUsd != null ? "primary" : "missing"
+
+  // Cross-chain exit: official bridged token pairs > $100K on other chains
+  const crossChainExitLiquidityUsd = network.crossChainExitLiquidityUsd ?? null
+
   // Redemption: hasLst=true implies protocol exists; unbondingDays now in dataset
   const redemptionExists = network.hasLst ?? (network.lstProtocols ?? 0) >= 1
 
@@ -116,6 +126,9 @@ function buildActiveLst(
     lstTvlUsd: network.lstTvlUsd,
     stableExitValue,
     stableExitSource,
+    baseTokenDexLiquidityUsd,
+    baseTokenDexSource,
+    crossChainExitLiquidityUsd,
     marketCapUsd: network.marketCapUsd,
     redemptionExists,
     unbondingDays: network.unbondingDays ?? null,

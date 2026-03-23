@@ -92,12 +92,24 @@ function scorePreLst(
 
 // ─── Mode B: LST Active ───────────────────────────────────────────────────────
 
+/**
+ * LST-active L&E formula (5 components, weights sum to 0.95 → normalized):
+ *
+ *   lstScore       ×  0.10  — LST DEX depth vs LST TVL (2%–20%)
+ *   stableScore    ×  0.35  — native stablecoin exit depth vs market cap (0.3%–5%)
+ *   redemptionScore×  0.15  — redemption quality (unbonding days); -20 penalty if no mechanism
+ *   nativeDexScore ×  0.25  — base token DEX depth vs market cap (0.5%–10%)
+ *   crossChainScore×  0.10  — official cross-chain exit liquidity vs market cap (0.1%–5%)
+ *
+ * Caps: !stableExitExists → cap 55
+ */
 function scoreActiveLst(
   input: Extract<LiquidityExitInput, { mode: "lst-active" }>
 ): ModuleScoreResult {
   const mc = input.marketCapUsd
+  const WEIGHT_SUM = 0.95
 
-  // lstLiquidity: no proxy — null data scores as 0
+  // lstLiquidity: no proxy — null data scores as 0 (weight reduced to 0.10)
   const lstScore = usdScore(
     input.lstDexLiquidityUsd ?? 0,
     input.lstTvlUsd,
@@ -105,21 +117,52 @@ function scoreActiveLst(
     0.20   // rel ceiling: 20% of LST TVL
   )
 
+  // Stable exit: native chain stablecoin pairs only
   const stableScore = usdScore(
     input.stableExitValue ?? 0,
     mc,
-    0.003,
-    0.05
+    0.003, // 0.3% of market cap
+    0.05   // 5% of market cap
   )
 
+  // Redemption quality: same scale, weight 0.15
   const redemptionScore = scoreRedemption(input.redemptionExists, input.unbondingDays)
 
-  const rawScore = Math.round(lstScore * 0.45 + stableScore * 0.35 + redemptionScore * 0.20)
+  // Native DEX depth: base token (WMON/stSEI/etc) across all pairs on native chain
+  const nativeDexScore = usdScore(
+    input.baseTokenDexLiquidityUsd ?? 0,
+    mc,
+    0.005, // 0.5% of market cap
+    0.10   // 10% of market cap
+  )
 
-  // Apply lowest active cap
+  // Cross-chain exit: officially bridged token pairs > $100K on other chains
+  const crossChainScore = usdScore(
+    input.crossChainExitLiquidityUsd ?? 0,
+    mc,
+    0.001, // 0.1% of market cap
+    0.05   // 5% of market cap
+  )
+
+  // Normalize by weight sum (0.95) so that all-100 components = final score 100
+  let rawScore = Math.round(
+    (lstScore * 0.10 +
+      stableScore * 0.35 +
+      redemptionScore * 0.15 +
+      nativeDexScore * 0.25 +
+      crossChainScore * 0.10) /
+      WEIGHT_SUM
+  )
+
+  // Redemption penalty: -20 on raw score if no redemption mechanism exists
+  // (replaces the previous cap=60 for !redemptionExists)
+  if (!input.redemptionExists) {
+    rawScore = Math.max(0, rawScore - 20)
+  }
+
+  // Cap: no stable exit route documented
   const caps = [
-    !input.stableExitExists && { reason: "Sin ruta stable", value: 55 },
-    !input.redemptionExists && { reason: "Sin redención nativa", value: 60 }
+    !input.stableExitExists && { reason: "Sin ruta stable", value: 55 }
   ].filter(Boolean) as { reason: string; value: number }[]
 
   const capApplied = caps.filter((c) => c.value < rawScore).sort((a, b) => a.value - b.value)[0] ?? null
@@ -128,13 +171,13 @@ function scoreActiveLst(
     ? input.unbondingDays != null
       ? `${input.unbondingDays} días`
       : "días desconocidos"
-    : "no existe"
+    : "no existe — penalidad -20"
 
   return {
     module: "Liquidity & Exit",
     mode: "lst-active",
     rawScore,
-    finalScore: capApplied ? capApplied.value : rawScore,
+    finalScore: capApplied ? Math.min(capApplied.value, rawScore) : rawScore,
     capApplied,
     breakdown: {
       lstLiquidity: {
@@ -153,6 +196,18 @@ function scoreActiveLst(
         rawValue: input.unbondingDays,
         source: input.redemptionExists ? "primary" : "missing",
         note: unbondingNote
+      },
+      nativeDexDepth: {
+        score: Math.round(nativeDexScore),
+        rawValue: input.baseTokenDexLiquidityUsd,
+        source: input.baseTokenDexSource,
+        note: input.baseTokenDexLiquidityUsd == null ? "sin dato — scored as 0" : undefined
+      },
+      crossChainExit: {
+        score: Math.round(crossChainScore),
+        rawValue: input.crossChainExitLiquidityUsd,
+        source: input.crossChainExitLiquidityUsd != null ? "primary" : "missing",
+        note: input.crossChainExitLiquidityUsd == null ? "sin deployments cross-chain" : undefined
       }
     }
   }
