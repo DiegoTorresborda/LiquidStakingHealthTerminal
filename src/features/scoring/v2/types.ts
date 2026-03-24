@@ -62,8 +62,6 @@ export type LiquidityExitActiveLstInput = {
   // Redemption anchor
   redemptionExists: boolean
   unbondingDays: number | null // null = exists but days unknown
-  // Cap triggers
-  stableExitExists: boolean
 }
 
 export type LiquidityExitInput = LiquidityExitPreLstInput | LiquidityExitActiveLstInput

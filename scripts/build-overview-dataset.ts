@@ -540,7 +540,7 @@ async function main() {
         {
           value: fallbackDefillama?.defiTvlUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.defiTvlUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.defiTvlUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.defiTvlUsd),
@@ -560,7 +560,7 @@ async function main() {
         {
           value: fallbackDefillama?.stablecoinLiquidityUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.stablecoinLiquidityUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.stablecoinLiquidityUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.stablecoinLiquidityUsd),
@@ -583,7 +583,7 @@ async function main() {
         {
           value: fallbackDefillama?.lstTvlUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.lstTvlUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.lstTvlUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.lstTvlUsd),

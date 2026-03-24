@@ -106,8 +106,26 @@ function buildActiveLst(
   const lstDexLiquidityUsd = network.lstDexLiquidityUsd ?? null
   const lstDexSource: DataSource = lstDexLiquidityUsd != null ? "primary" : "missing"
 
-  const { value: stableExitValue, source: stableExitSource } = resolveStableExit(network)
-  const stableExitExists = resolveStableExitExists(network, stableExitValue)
+  // 24h volume: primary = CoinGecko total, proxy = DEX-only volume
+  let volume24hUsd: number | null
+  let volumeSource: DataSource
+  if (network.volume24hUsd != null) {
+    volume24hUsd = network.volume24hUsd
+    volumeSource = "primary"
+  } else if (network.baseTokenDexVolume24hUsd != null) {
+    volume24hUsd = network.baseTokenDexVolume24hUsd
+    volumeSource = "proxy"
+  } else {
+    volume24hUsd = null
+    volumeSource = "missing"
+  }
+
+  // Native DEX liquidity: base token pairs on the native chain (all counterparties)
+  const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
+  const baseTokenDexSource: DataSource = baseTokenDexLiquidityUsd != null ? "primary" : "missing"
+
+  // Cross-chain exit: official bridged token pairs > $100K on other chains
+  const crossChainExitLiquidityUsd = network.crossChainExitLiquidityUsd ?? null
 
   // Native DEX liquidity: base token pairs on the native chain (all counterparties)
   const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
@@ -131,8 +149,7 @@ function buildActiveLst(
     crossChainExitLiquidityUsd,
     marketCapUsd: network.marketCapUsd,
     redemptionExists,
-    unbondingDays: network.unbondingDays ?? null,
-    stableExitExists
+    unbondingDays: network.unbondingDays ?? null
   }
 }
 

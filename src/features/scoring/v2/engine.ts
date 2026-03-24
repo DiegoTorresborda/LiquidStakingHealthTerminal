@@ -165,7 +165,22 @@ function scoreActiveLst(
     !input.stableExitExists && { reason: "Sin ruta stable", value: 55 }
   ].filter(Boolean) as { reason: string; value: number }[]
 
-  const capApplied = caps.filter((c) => c.value < rawScore).sort((a, b) => a.value - b.value)[0] ?? null
+  // Normalize by weight sum (0.95) so that all-100 components = final score 100
+  let rawScore = Math.round(
+    (lstScore * 0.10 +
+      volumeScore * 0.35 +
+      redemptionScore * 0.15 +
+      nativeDexScore * 0.25 +
+      crossChainScore * 0.10) /
+      WEIGHT_SUM
+  )
+
+  // Redemption penalty: -20 on raw score if no redemption mechanism exists
+  if (!input.redemptionExists) {
+    rawScore = Math.max(0, rawScore - 20)
+  }
+
+  const capApplied = null
 
   const unbondingNote = input.redemptionExists
     ? input.unbondingDays != null
@@ -186,10 +201,11 @@ function scoreActiveLst(
         source: input.lstDexSource,
         note: input.lstDexLiquidityUsd == null ? "sin dato — scored as 0" : undefined
       },
-      stableExit: {
-        score: Math.round(stableScore),
-        rawValue: input.stableExitValue,
-        source: input.stableExitSource
+      tradingVolume: {
+        score: Math.round(volumeScore),
+        rawValue: input.volume24hUsd,
+        source: input.volumeSource,
+        note: input.volume24hUsd == null ? "sin dato — scored as 0" : undefined
       },
       redemptionAnchor: {
         score: Math.round(redemptionScore),

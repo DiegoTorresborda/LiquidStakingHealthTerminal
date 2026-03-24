@@ -40,7 +40,7 @@ export function linScale(val: number, floor: number, ceiling: number): number {
  * without severe slippage?
  * floor = 2× ticket (barely viable), ceiling = 25× ticket (comfortable).
  */
-export function execScore(val: number, ticketSize = SCORING_CONFIG.ticketSizeUsd): number {
+export function execScore(val: number, ticketSize: number = SCORING_CONFIG.ticketSizeUsd): number {
   return logScale(val, ticketSize * 2, ticketSize * 25)
 }
 
@@ -59,7 +59,7 @@ export function usdScore(
   marketRef: number | null,
   relFloor: number,
   relCeiling: number,
-  ticketSize = SCORING_CONFIG.ticketSizeUsd
+  ticketSize: number = SCORING_CONFIG.ticketSizeUsd
 ): number {
   if (val <= 0) return 0
   const exec = execScore(val, ticketSize)
