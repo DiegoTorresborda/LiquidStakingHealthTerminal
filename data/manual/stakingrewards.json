@@ -40,7 +40,7 @@
   },
   "xdc": {
     "source": "stakingrewards",
-    "timestamp": "2026-03-10",
+    "timestamp": "2026-03-24",
     "price": 0.03,
     "rewardRatePct": 10,
     "stakingRatioPct": 12.84,
@@ -48,7 +48,7 @@
     "stakedTokens": 2560000000,
     "inflationRatePct": 1.28,
     "validators": 108,
-    "verifiedProviders": 0,
+    "verifiedProviders": 3,
     "benchmarkCommissionPct": 0
   },
   "aptos": {
