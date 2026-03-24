@@ -49,9 +49,9 @@ export type LiquidityExitActiveLstInput = {
   lstDexSource: DataSource
   // Reference for relative normalization of LST liquidity
   lstTvlUsd: number | null
-  // Stable exit: same logic as pre-lst (native chain stablecoin pairs only)
-  stableExitValue: number | null
-  stableExitSource: DataSource
+  // 24h trading volume: primary = volume24hUsd (CoinGecko total), proxy = baseTokenDexVolume24hUsd
+  volume24hUsd: number | null
+  volumeSource: DataSource
   // Native DEX liquidity: base token (WMON/SEI/etc) across all pairs on native chain
   baseTokenDexLiquidityUsd: number | null
   baseTokenDexSource: DataSource
