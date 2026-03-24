@@ -16,6 +16,7 @@ import { fetchStakingMetricsByNetwork } from "../src/data/adapters/stakingReward
 import { fetchManualStakingRewardsByNetwork } from "../src/data/adapters/stakingRewardsManual.ts";
 import { IMPORTANT_ADDRESSES } from "../src/data/config/importantAddresses.ts";
 import { LST_TOKENS } from "../src/data/config/lstTokens.ts";
+import { NETWORK_TOKEN_REGISTRY } from "../src/data/config/networkTokenRegistry.ts";
 import { PROTOCOL_CONTRACTS } from "../src/data/config/protocolContracts.ts";
 import { DEXSCREENER_CHAINS } from "../src/data/mappings/dexscreenerChains.ts";
 import { ETHERSCAN_CHAINS } from "../src/data/mappings/etherscanChains.ts";
@@ -428,10 +429,12 @@ async function main() {
         const chainConfig = DEXSCREENER_CHAINS[network.networkId];
         const lstConfig = LST_TOKENS[network.networkId];
 
+        const registryConfig = NETWORK_TOKEN_REGISTRY[network.networkId];
         const metrics = await collectDexscreenerMetrics({
           chainId: chainConfig?.chainId ?? null,
           baseTokenAddress: chainConfig?.baseTokenAddress ?? null,
-          lstTokenAddress: lstConfig?.lstTokenAddress ?? null
+          lstTokenAddress: lstConfig?.lstTokenAddress ?? null,
+          crossChainDeployments: registryConfig?.crossChainDeployments ?? []
         });
 
         return [network.networkId, metrics] as const;
@@ -537,7 +540,7 @@ async function main() {
         {
           value: fallbackDefillama?.defiTvlUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.defiTvlUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.defiTvlUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.defiTvlUsd),
@@ -557,7 +560,7 @@ async function main() {
         {
           value: fallbackDefillama?.stablecoinLiquidityUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.stablecoinLiquidityUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.stablecoinLiquidityUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.stablecoinLiquidityUsd),
@@ -580,7 +583,7 @@ async function main() {
         {
           value: fallbackDefillama?.lstTvlUsd,
           quality: "inferred",
-          refs: fallbackDefillama?.lstTvlUsd !== null ? fallbackDefillama.sourceRefs : []
+          refs: fallbackDefillama?.lstTvlUsd != null ? fallbackDefillama.sourceRefs : []
         },
         {
           value: toNumberOrNull(fallbackDomain.lstTvlUsd),
@@ -880,6 +883,7 @@ async function main() {
     const baseTokenPoolConcentration = dexMetrics?.baseTokenPoolConcentration ?? null;
     const stableExitRouteExists = dexMetrics?.stableExitRouteExists ?? null;
     const stableExitLiquidityUsd = dexMetrics?.stableExitLiquidityUsd ?? null;
+    const crossChainExitLiquidityUsd = dexMetrics?.crossChainExitLiquidityUsd ?? null;
     const stableExitPairAddress = dexMetrics?.stableExitPairAddress ?? null;
     const stableExitQuoteToken = dexMetrics?.stableExitQuoteToken ?? null;
     const stableExitDexId = dexMetrics?.stableExitDexId ?? null;
@@ -985,6 +989,7 @@ async function main() {
       baseTokenPoolConcentration,
       stableExitRouteExists,
       stableExitLiquidityUsd,
+      crossChainExitLiquidityUsd,
       stableExitPairAddress,
       stableExitQuoteToken,
       stableExitDexId,

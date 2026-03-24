@@ -16,8 +16,12 @@ function clamp(val: number, min = 0, max = 100): number {
  */
 export function logScale(val: number, floor: number, ceiling: number): number {
   if (val <= 0 || floor <= 0 || ceiling <= floor) return 0
+  // Return 0 when val is below the floor (covers both USD amounts and ratios correctly).
+  // NOTE: Do NOT use Math.max(val, 1) here — that guard was only valid for large USD values
+  // and inflates scores when called with ratios or small numbers (< 1).
+  if (val < floor) return 0
   const normalized =
-    (Math.log(Math.max(val, 1)) - Math.log(floor)) /
+    (Math.log(val) - Math.log(floor)) /
     (Math.log(ceiling) - Math.log(floor))
   return clamp(normalized * 100)
 }
@@ -36,7 +40,7 @@ export function linScale(val: number, floor: number, ceiling: number): number {
  * without severe slippage?
  * floor = 2× ticket (barely viable), ceiling = 25× ticket (comfortable).
  */
-export function execScore(val: number, ticketSize = SCORING_CONFIG.ticketSizeUsd): number {
+export function execScore(val: number, ticketSize: number = SCORING_CONFIG.ticketSizeUsd): number {
   return logScale(val, ticketSize * 2, ticketSize * 25)
 }
 
@@ -55,7 +59,7 @@ export function usdScore(
   marketRef: number | null,
   relFloor: number,
   relCeiling: number,
-  ticketSize = SCORING_CONFIG.ticketSizeUsd
+  ticketSize: number = SCORING_CONFIG.ticketSizeUsd
 ): number {
   if (val <= 0) return 0
   const exec = execScore(val, ticketSize)

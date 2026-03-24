@@ -31,10 +31,13 @@ function detectMode(network: RadarOverviewRecord): "pre-lst" | "lst-active" {
 // ─── Shared resolution helpers ────────────────────────────────────────────────
 
 /**
- * Stable exit depth:
- *   primary  → stableExitLiquidityUsd  (DEXScreener best/sum pair)
+ * Stable exit depth (native chain only):
+ *   primary  → stableExitLiquidityUsd  (DexScreener best/sum pair for base token vs stables)
  *   proxy    → stablecoinLiquidityUsd × 0.05  (chain stables, heavy discount)
  *   missing  → null
+ *
+ * Note: cross-chain exit liquidity (crossChainExitLiquidityUsd) is handled as a
+ * separate scoring component in LST-active mode, not summed here.
  */
 function resolveStableExit(network: RadarOverviewRecord): {
   value: number | null
@@ -103,8 +106,26 @@ function buildActiveLst(
   const lstDexLiquidityUsd = network.lstDexLiquidityUsd ?? null
   const lstDexSource: DataSource = lstDexLiquidityUsd != null ? "primary" : "missing"
 
-  const { value: stableExitValue, source: stableExitSource } = resolveStableExit(network)
-  const stableExitExists = resolveStableExitExists(network, stableExitValue)
+  // 24h volume: primary = CoinGecko total, proxy = DEX-only volume
+  let volume24hUsd: number | null
+  let volumeSource: DataSource
+  if (network.volume24hUsd != null) {
+    volume24hUsd = network.volume24hUsd
+    volumeSource = "primary"
+  } else if (network.baseTokenDexVolume24hUsd != null) {
+    volume24hUsd = network.baseTokenDexVolume24hUsd
+    volumeSource = "proxy"
+  } else {
+    volume24hUsd = null
+    volumeSource = "missing"
+  }
+
+  // Native DEX liquidity: base token pairs on the native chain (all counterparties)
+  const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
+  const baseTokenDexSource: DataSource = baseTokenDexLiquidityUsd != null ? "primary" : "missing"
+
+  // Cross-chain exit: official bridged token pairs > $100K on other chains
+  const crossChainExitLiquidityUsd = network.crossChainExitLiquidityUsd ?? null
 
   // Redemption: hasLst=true implies protocol exists; unbondingDays now in dataset
   const redemptionExists = network.hasLst ?? (network.lstProtocols ?? 0) >= 1
@@ -114,12 +135,14 @@ function buildActiveLst(
     lstDexLiquidityUsd,
     lstDexSource,
     lstTvlUsd: network.lstTvlUsd,
-    stableExitValue,
-    stableExitSource,
+    volume24hUsd,
+    volumeSource,
+    baseTokenDexLiquidityUsd,
+    baseTokenDexSource,
+    crossChainExitLiquidityUsd,
     marketCapUsd: network.marketCapUsd,
     redemptionExists,
-    unbondingDays: network.unbondingDays ?? null,
-    stableExitExists
+    unbondingDays: network.unbondingDays ?? null
   }
 }
 

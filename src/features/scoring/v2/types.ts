@@ -16,6 +16,12 @@ export type ModuleScoreResult = {
   finalScore: number
   capApplied: { reason: string; value: number } | null
   breakdown: Record<string, InputBreakdown>
+  /**
+   * When true the module is structurally N/A in the current scoring mode
+   * (e.g. Peg Stability in pre-LST mode) and is excluded from the global
+   * weighted average. The UI should render it greyed-out.
+   */
+  excluded?: boolean
 }
 
 // ─── Liquidity & Exit ────────────────────────────────────────────────────────
@@ -43,16 +49,19 @@ export type LiquidityExitActiveLstInput = {
   lstDexSource: DataSource
   // Reference for relative normalization of LST liquidity
   lstTvlUsd: number | null
-  // Stable exit: same logic as pre-lst
-  stableExitValue: number | null
-  stableExitSource: DataSource
-  // Reference for relative normalization of stable exit
+  // 24h trading volume: primary = volume24hUsd (CoinGecko total), proxy = baseTokenDexVolume24hUsd
+  volume24hUsd: number | null
+  volumeSource: DataSource
+  // Native DEX liquidity: base token (WMON/SEI/etc) across all pairs on native chain
+  baseTokenDexLiquidityUsd: number | null
+  baseTokenDexSource: DataSource
+  // Cross-chain exit: official bridged token liquidity on other chains (pairs > $100K threshold)
+  crossChainExitLiquidityUsd: number | null
+  // Reference for relative normalization
   marketCapUsd: number | null
   // Redemption anchor
   redemptionExists: boolean
   unbondingDays: number | null // null = exists but days unknown
-  // Cap triggers
-  stableExitExists: boolean
 }
 
 export type LiquidityExitInput = LiquidityExitPreLstInput | LiquidityExitActiveLstInput
