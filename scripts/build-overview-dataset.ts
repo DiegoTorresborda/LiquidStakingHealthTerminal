@@ -884,6 +884,7 @@ async function main() {
     const stableExitRouteExists = dexMetrics?.stableExitRouteExists ?? null;
     const stableExitLiquidityUsd = dexMetrics?.stableExitLiquidityUsd ?? null;
     const crossChainExitLiquidityUsd = dexMetrics?.crossChainExitLiquidityUsd ?? null;
+    const crossChainAllLiquidityUsd = dexMetrics?.crossChainAllLiquidityUsd ?? null;
     const stableExitPairAddress = dexMetrics?.stableExitPairAddress ?? null;
     const stableExitQuoteToken = dexMetrics?.stableExitQuoteToken ?? null;
     const stableExitDexId = dexMetrics?.stableExitDexId ?? null;
@@ -990,6 +991,7 @@ async function main() {
       stableExitRouteExists,
       stableExitLiquidityUsd,
       crossChainExitLiquidityUsd,
+      crossChainAllLiquidityUsd,
       stableExitPairAddress,
       stableExitQuoteToken,
       stableExitDexId,

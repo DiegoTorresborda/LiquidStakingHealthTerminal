@@ -342,7 +342,7 @@ function buildV2ModuleMetrics(
         { label: "Native DEX Depth", value: usd(r.baseTokenDexLiquidityUsd), description: "Total DEX liquidity of the native token on its home chain (all pairs). Primary driver of on-chain exit capacity." },
         { label: "24h Trading Volume", value: usd(r.volume24hUsd), description: "Total 24h trading volume (CEX + DEX). Captures real exit capacity and market activity breadth." },
         { label: "LST DEX Liquidity", value: usd(r.lstDexLiquidityUsd), description: "Total liquidity of LST token pairs on DEXes. Measures how liquid the staked derivative itself is." },
-        { label: "Cross-Chain Exit", value: usd(r.crossChainExitLiquidityUsd), description: "Qualifying exit liquidity (>$100K per pair) on officially bridged chains. Adds alternative exit routes." },
+        { label: "Cross-Chain Exit", value: usd(r.crossChainAllLiquidityUsd ?? r.crossChainExitLiquidityUsd), description: "Total exit liquidity on officially bridged chains. Pairs below $100K threshold are shown but don't contribute to score." },
         { label: "Unbonding Period", value: days(r.unbondingDays), description: "Days to redeem staked tokens via the protocol. Longer unbonding increases redemption risk." }
       ];
     }

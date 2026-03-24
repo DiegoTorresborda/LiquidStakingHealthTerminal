@@ -70,7 +70,8 @@ export type RadarOverviewField =
   | "unbondingDays"
   | "auditCount"
   | "hasTimelock"
-  | "crossChainExitLiquidityUsd";
+  | "crossChainExitLiquidityUsd"
+  | "crossChainAllLiquidityUsd";
 
 export type RadarOverviewRecord = {
   networkId: string;
@@ -130,9 +131,11 @@ export type RadarOverviewRecord = {
   baseTokenPoolConcentration: number | null;
   stableExitRouteExists: boolean | null;
   stableExitLiquidityUsd: number | null;
-  /** Sum of qualifying cross-chain exit pairs (>$100K liquidity) for the native token
-   * on officially bridged chains. Added to stableExitLiquidityUsd in L&E scoring. */
+  /** Sum of qualifying cross-chain exit pairs (>=$100K liquidity) for the native token
+   * on officially bridged chains. Used for scoring. */
   crossChainExitLiquidityUsd: number | null;
+  /** Sum of ALL cross-chain exit pairs regardless of threshold. Used for display only. */
+  crossChainAllLiquidityUsd: number | null;
   stableExitPairAddress: string | null;
   stableExitQuoteToken: string | null;
   stableExitDexId: string | null;

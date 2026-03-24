@@ -26,7 +26,8 @@ const DEX_FIELDS = [
   "lstHasStablePair",
   "baseTokenVolumeLiquidityRatio",
   "lstVolumeLiquidityRatio",
-  "crossChainExitLiquidityUsd"
+  "crossChainExitLiquidityUsd",
+  "crossChainAllLiquidityUsd"
 ] as const;
 
 const STABLE_PRIORITY = ["USDC", "USDT", "DAI", "USDE"] as const;
@@ -79,9 +80,11 @@ export type DexscreenerNormalizedMetrics = {
   lstHasStablePair: boolean | null;
   baseTokenVolumeLiquidityRatio: number | null;
   lstVolumeLiquidityRatio: number | null;
-  /** Sum of qualifying cross-chain exit pairs (> CROSS_CHAIN_MIN_LIQUIDITY_USD) for the native
-   * token on officially bridged chains. null if no cross-chain deployments are configured. */
+  /** Sum of qualifying cross-chain exit pairs (>= CROSS_CHAIN_MIN_LIQUIDITY_USD) for the native
+   * token on officially bridged chains. null if no cross-chain deployments are configured. Used for scoring. */
   crossChainExitLiquidityUsd: number | null;
+  /** Sum of ALL cross-chain exit pairs regardless of threshold. Used for display only. */
+  crossChainAllLiquidityUsd: number | null;
 };
 
 export type DexscreenerMetricField = (typeof DEX_FIELDS)[number];
@@ -139,7 +142,8 @@ function emptyDexMetrics(): DexscreenerNormalizedMetrics {
     lstHasStablePair: null,
     baseTokenVolumeLiquidityRatio: null,
     lstVolumeLiquidityRatio: null,
-    crossChainExitLiquidityUsd: null
+    crossChainExitLiquidityUsd: null,
+    crossChainAllLiquidityUsd: null
   };
 }
 
@@ -266,11 +270,13 @@ function isCrossChainExitToken(token: DexscreenerToken | null): boolean {
 async function fetchCrossChainExitLiquidity(
   deployments: Array<{ chainId: string; address: string }>,
   sourceRefs: string[]
-): Promise<number | null> {
-  if (deployments.length === 0) return null;
+): Promise<{ qualifying: number | null; all: number | null }> {
+  if (deployments.length === 0) return { qualifying: null, all: null };
 
-  let total = 0;
-  let found = false;
+  let qualifyingTotal = 0;
+  let allTotal = 0;
+  let qualifyingFound = false;
+  let allFound = false;
 
   for (const deployment of deployments) {
     const ref = `dexscreener:token-pairs:v1:${deployment.chainId}:${deployment.address}`;
@@ -285,9 +291,13 @@ async function fetchCrossChainExitLiquidity(
         if (!isCrossChainExitToken(counterparty)) continue;
 
         const liquidity = extractPairLiquidityUsd(pair) ?? 0;
+        if (liquidity > 0) {
+          allTotal += liquidity;
+          allFound = true;
+        }
         if (liquidity >= CROSS_CHAIN_MIN_LIQUIDITY_USD) {
-          total += liquidity;
-          found = true;
+          qualifyingTotal += liquidity;
+          qualifyingFound = true;
         }
       }
     } catch {
@@ -295,7 +305,10 @@ async function fetchCrossChainExitLiquidity(
     }
   }
 
-  return found ? total : null;
+  return {
+    qualifying: qualifyingFound ? qualifyingTotal : null,
+    all: allFound ? allTotal : null
+  };
 }
 
 export async function searchPairs(query: string): Promise<DexscreenerPair[]> {
@@ -647,8 +660,9 @@ export async function collectDexscreenerMetrics(input: DexscreenerCollectionInpu
   // Cross-chain exit liquidity: fetch qualifying pairs from officially bridged chains
   const deployments = input.crossChainDeployments ?? [];
   if (deployments.length > 0) {
-    const crossChainValue = await fetchCrossChainExitLiquidity(deployments, sourceRefs);
-    metrics.crossChainExitLiquidityUsd = crossChainValue;
+    const crossChainResult = await fetchCrossChainExitLiquidity(deployments, sourceRefs);
+    metrics.crossChainExitLiquidityUsd = crossChainResult.qualifying;
+    metrics.crossChainAllLiquidityUsd = crossChainResult.all;
     setFieldQuality(fieldQuality, "crossChainExitLiquidityUsd", metrics.crossChainExitLiquidityUsd, "derived");
   }
 
