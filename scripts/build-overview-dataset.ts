@@ -180,6 +180,24 @@ const NETWORKS: NetworkConfig[] = [
     defillamaChain: "Mantra",
     globalLstHealthScore: 68,
     opportunityScore: 79
+  },
+  {
+    networkId: "vara",
+    network: "Vara",
+    token: "VARA",
+    coingeckoId: "vara-network",
+    defillamaChain: "Vara",
+    globalLstHealthScore: 0,
+    opportunityScore: 0
+  },
+  {
+    networkId: "zigchain",
+    network: "ZigChain",
+    token: "ZIG",
+    coingeckoId: "zignaly",
+    defillamaChain: "Zignaly",
+    globalLstHealthScore: 0,
+    opportunityScore: 0
   }
 ];
 

@@ -190,6 +190,40 @@
       "unbondingDays": null,
       "auditCount": null,
       "hasTimelock": null
+    },
+    "vara": {
+      "category": "WASM-native L1",
+      "status": "Early Opportunity",
+      "fdvUsd": 9392463,
+      "circulatingSupplyPct": 52.95,
+      "stakerAddresses": 8500,
+      "lstProtocols": 0,
+      "largestLst": null,
+      "lendingPresence": true,
+      "lstCollateralEnabled": false,
+      "mainBottleneck": "No LST deployed — network locked in pre-LST scoring mode",
+      "mainOpportunity": "Launch a VARA liquid staking protocol to unlock full scoring ceiling",
+      "hasLst": false,
+      "unbondingDays": null,
+      "auditCount": null,
+      "hasTimelock": null
+    },
+    "zigchain": {
+      "category": "DeFi-native L1",
+      "status": "Growing",
+      "fdvUsd": 76000000,
+      "circulatingSupplyPct": 70.5,
+      "stakerAddresses": 0,
+      "lstProtocols": 1,
+      "largestLst": "stZIG",
+      "lendingPresence": false,
+      "lstCollateralEnabled": false,
+      "mainBottleneck": "stZIG has no DEX liquidity pairs — LST is not liquid in practice yet",
+      "mainOpportunity": "Seed stZIG/USDC pool on Oroswap and integrate as collateral in Permapod once live",
+      "hasLst": true,
+      "unbondingDays": 21,
+      "auditCount": null,
+      "hasTimelock": null
     }
   }
 }

@@ -59,5 +59,15 @@ export const DEXSCREENER_CHAINS: Record<string, DexscreenerChainConfig> = {
     networkId: "canton",
     chainId: null,
     baseTokenAddress: null
+  },
+  vara: {
+    networkId: "vara",
+    chainId: "vara",
+    baseTokenAddress: null // VARA is the native gas token; no wrapped address on DEXScreener
+  },
+  zigchain: {
+    networkId: "zigchain",
+    chainId: "zigchain",
+    baseTokenAddress: null // ZIG pairs indexed by DEXScreener but no canonical wrapped address
   }
 };
