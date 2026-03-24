@@ -121,7 +121,10 @@ function buildActiveLst(
   }
 
   // Native DEX liquidity: base token pairs on the native chain (all counterparties)
-  const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
+  // Treat 0 as null — DEXScreener returns 0 when token address yields no indexed pairs,
+  // which is indistinguishable from "no pairs exist". Only trust positive values.
+  const baseTokenDexRaw = network.baseTokenDexLiquidityUsd
+  const baseTokenDexLiquidityUsd = (baseTokenDexRaw != null && baseTokenDexRaw > 0) ? baseTokenDexRaw : null
   const baseTokenDexSource: DataSource = baseTokenDexLiquidityUsd != null ? "primary" : "missing"
 
   // Cross-chain exit: official bridged token pairs > $100K on other chains
