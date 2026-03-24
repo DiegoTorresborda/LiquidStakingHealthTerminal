@@ -1,0 +1,1697 @@
+{
+  "cachedAt": 1773416728797,
+  "data": [
+    {
+      "chainId": "sonic",
+      "dexId": "shadow-exchange",
+      "url": "https://dexscreener.com/sonic/0x324963c267c354c7660ce8ca3f5f167e05649970",
+      "pairAddress": "0x324963c267C354c7660Ce8CA3F5f167E05649970",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04326",
+      "priceUsd": "0.04326",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 18
+        },
+        "h1": {
+          "buys": 25,
+          "sells": 64
+        },
+        "h6": {
+          "buys": 162,
+          "sells": 178
+        },
+        "h24": {
+          "buys": 652,
+          "sells": 456
+        }
+      },
+      "volume": {
+        "h24": 211677.27,
+        "h6": 61646.07,
+        "h1": 13815.28,
+        "m5": 1990.55
+      },
+      "priceChange": {
+        "m5": -0.28,
+        "h1": -0.8,
+        "h6": -0.65,
+        "h24": 3.63
+      },
+      "liquidity": {
+        "usd": 388125.26,
+        "base": 5676788,
+        "quote": 142496
+      },
+      "fdv": 14254589,
+      "marketCap": 14254589,
+      "pairCreatedAt": 1735267612000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "sushiswap",
+      "url": "https://dexscreener.com/sonic/0x038c4ae17e2d4ad56106e3252265f53904837564",
+      "pairAddress": "0x038C4aE17E2D4aD56106e3252265F53904837564",
+      "labels": [
+        "V3"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04323",
+      "priceUsd": "0.04323",
+      "txns": {
+        "m5": {
+          "buys": 85,
+          "sells": 54
+        },
+        "h1": {
+          "buys": 367,
+          "sells": 339
+        },
+        "h6": {
+          "buys": 1263,
+          "sells": 1376
+        },
+        "h24": {
+          "buys": 4266,
+          "sells": 4810
+        }
+      },
+      "volume": {
+        "h24": 264791.3,
+        "h6": 81611.04,
+        "h1": 20441.45,
+        "m5": 4577.77
+      },
+      "priceChange": {
+        "m5": -0.31,
+        "h1": -0.8,
+        "h6": -0.67,
+        "h24": 3.49
+      },
+      "liquidity": {
+        "usd": 18202.14,
+        "base": 134119,
+        "quote": 12403
+      },
+      "fdv": 14242565,
+      "marketCap": 14242565,
+      "pairCreatedAt": 1772937631000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "swapx",
+      "url": "https://dexscreener.com/sonic/0x5c4b7d607aaf7b5cde9f09b5f03cf3b5c923aeea",
+      "pairAddress": "0x5C4B7d607aAF7B5CDE9F09b5F03Cf3b5c923AEEa",
+      "labels": [
+        "v3"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04323",
+      "priceUsd": "0.04323",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 13
+        },
+        "h1": {
+          "buys": 36,
+          "sells": 69
+        },
+        "h6": {
+          "buys": 228,
+          "sells": 247
+        },
+        "h24": {
+          "buys": 624,
+          "sells": 602
+        }
+      },
+      "volume": {
+        "h24": 81040.7,
+        "h6": 38833.72,
+        "h1": 8718.09,
+        "m5": 1274.14
+      },
+      "priceChange": {
+        "m5": -0.26,
+        "h1": -0.78,
+        "h6": -0.64,
+        "h24": 3.64
+      },
+      "liquidity": {
+        "usd": 62572.24,
+        "base": 588214,
+        "quote": 37141
+      },
+      "fdv": 14243081,
+      "marketCap": 14243081
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "defive",
+      "url": "https://dexscreener.com/sonic/0x6eb32c8db5ff2878acbcb6a1ec5e301f60884da4",
+      "pairAddress": "0x6eB32C8dB5Ff2878acbCB6a1Ec5e301F60884dA4",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04327",
+      "priceUsd": "0.04327",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 14,
+          "sells": 17
+        },
+        "h6": {
+          "buys": 55,
+          "sells": 55
+        },
+        "h24": {
+          "buys": 224,
+          "sells": 190
+        }
+      },
+      "volume": {
+        "h24": 4669.55,
+        "h6": 1192.63,
+        "h1": 407.83,
+        "m5": 15.97
+      },
+      "priceChange": {
+        "m5": -0.12,
+        "h1": -0.58,
+        "h6": -0.57,
+        "h24": 3.65
+      },
+      "liquidity": {
+        "usd": 51263.65,
+        "base": 592337,
+        "quote": 25631
+      },
+      "fdv": 14255683,
+      "marketCap": 14255683,
+      "pairCreatedAt": 1736067305000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "wagmi",
+      "url": "https://dexscreener.com/sonic/0x25f746bb206041ed8da6f08ed1d32454a5856d37",
+      "pairAddress": "0x25f746bB206041Ed8dA6F08Ed1D32454A5856D37",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04322",
+      "priceUsd": "0.04322",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 46,
+          "sells": 65
+        },
+        "h6": {
+          "buys": 213,
+          "sells": 253
+        },
+        "h24": {
+          "buys": 756,
+          "sells": 835
+        }
+      },
+      "volume": {
+        "h24": 17859.83,
+        "h6": 4970.49,
+        "h1": 1551.28,
+        "m5": 56.87
+      },
+      "priceChange": {
+        "m5": -0.27,
+        "h1": -0.81,
+        "h6": -0.72,
+        "h24": 3.67
+      },
+      "liquidity": {
+        "usd": 45082.49,
+        "base": 870543,
+        "quote": 7449.5986
+      },
+      "fdv": 14241470,
+      "marketCap": 14241470,
+      "pairCreatedAt": 1735035626000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "equalizer",
+      "url": "https://dexscreener.com/sonic/0xb1bc4b830fcba2184b92e15b9133c41160518038",
+      "pairAddress": "0xb1BC4B830FCbA2184B92e15b9133c41160518038",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04324",
+      "priceUsd": "0.04324",
+      "txns": {
+        "m5": {
+          "buys": 26,
+          "sells": 22
+        },
+        "h1": {
+          "buys": 116,
+          "sells": 120
+        },
+        "h6": {
+          "buys": 393,
+          "sells": 377
+        },
+        "h24": {
+          "buys": 1463,
+          "sells": 1561
+        }
+      },
+      "volume": {
+        "h24": 103314.23,
+        "h6": 31073.01,
+        "h1": 9042.72,
+        "m5": 1842.18
+      },
+      "priceChange": {
+        "m5": -0.27,
+        "h1": -0.81,
+        "h6": -0.7,
+        "h24": 3.64
+      },
+      "liquidity": {
+        "usd": 30399.06,
+        "base": 346374,
+        "quote": 15421
+      },
+      "fdv": 14245672,
+      "marketCap": 14245672,
+      "pairCreatedAt": 1735359824000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "beets",
+      "url": "https://dexscreener.com/sonic/0x3849ad7f879f8b8f5f41807dc2a6940765d8f14e",
+      "pairAddress": "0x3849AD7f879f8b8F5f41807dC2a6940765d8F14E",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04329",
+      "priceUsd": "0.04329",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h1": {
+          "buys": 6,
+          "sells": 18
+        },
+        "h6": {
+          "buys": 54,
+          "sells": 67
+        },
+        "h24": {
+          "buys": 252,
+          "sells": 230
+        }
+      },
+      "volume": {
+        "h24": 23609.77,
+        "h6": 5917.53,
+        "h1": 1171.54,
+        "m5": 291.82
+      },
+      "priceChange": {
+        "m5": -0.31,
+        "h1": -0.72,
+        "h6": -0.5,
+        "h24": 3.69
+      },
+      "liquidity": {
+        "usd": 43442.44,
+        "base": 307199,
+        "quote": 30142
+      },
+      "fdv": 14264371,
+      "marketCap": 14264371
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "wagmi",
+      "url": "https://dexscreener.com/sonic/0xe72b6dd415cdaceac76616df2c9278b33079e0d3",
+      "pairAddress": "0xE72b6DD415cDACeAC76616Df2C9278B33079E0D3",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04348",
+      "priceUsd": "0.04348",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 9,
+          "sells": 5
+        }
+      },
+      "volume": {
+        "h24": 1.27,
+        "h6": 0.22,
+        "h1": 0.16,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -1.14,
+        "h6": -0.68,
+        "h24": 3.1
+      },
+      "liquidity": {
+        "usd": 22475.97,
+        "base": 495977,
+        "quote": 908.8912
+      },
+      "fdv": 14325427,
+      "marketCap": 14325427,
+      "pairCreatedAt": 1735035637000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "beets",
+      "url": "https://dexscreener.com/sonic/0xaef211ff62d7f7e6f00e9f8c5188ba2cfd33d409",
+      "pairAddress": "0xaeF211FF62d7f7e6F00E9F8c5188BA2Cfd33d409",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04330",
+      "priceUsd": "0.04330",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 8
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 20
+        },
+        "h6": {
+          "buys": 29,
+          "sells": 34
+        },
+        "h24": {
+          "buys": 192,
+          "sells": 112
+        }
+      },
+      "volume": {
+        "h24": 14928.56,
+        "h6": 3664.79,
+        "h1": 874,
+        "m5": 196.3
+      },
+      "priceChange": {
+        "m5": -0.34,
+        "h1": -0.83,
+        "h6": -0.53,
+        "h24": 3.88
+      },
+      "liquidity": {
+        "usd": 11060.84,
+        "base": 50423,
+        "quote": 8877.2981
+      },
+      "fdv": 14267544,
+      "marketCap": 14267544
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x0b14a4e25a5b7788e05dafea84347fee23a6b5d2",
+      "pairAddress": "0x0b14a4e25A5b7788e05dAFEa84347FEE23A6B5d2",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0xd3DCe716f3eF535C5Ff8d041c1A41C3bd89b97aE",
+        "name": "Sonic USD",
+        "symbol": "scUSD"
+      },
+      "priceNative": "0.04329",
+      "priceUsd": "0.04329",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 8
+        },
+        "h1": {
+          "buys": 74,
+          "sells": 82
+        },
+        "h6": {
+          "buys": 348,
+          "sells": 365
+        },
+        "h24": {
+          "buys": 1480,
+          "sells": 1342
+        }
+      },
+      "volume": {
+        "h24": 54026.24,
+        "h6": 11268.69,
+        "h1": 1306.96,
+        "m5": 3.06
+      },
+      "priceChange": {
+        "m5": -0.24,
+        "h1": -0.68,
+        "h6": -0.48,
+        "h24": 3.62
+      },
+      "liquidity": {
+        "usd": 1986.64,
+        "base": 44009,
+        "quote": 81.07371
+      },
+      "fdv": 14264885,
+      "marketCap": 14264885,
+      "pairCreatedAt": 1745433849000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x32c0d87389e72e46b54bc4ea6310c1a0e921c4dc",
+      "pairAddress": "0x32c0D87389E72E46b54bc4Ea6310C1a0e921C4DC",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04326",
+      "priceUsd": "0.04326",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 18
+        },
+        "h1": {
+          "buys": 32,
+          "sells": 74
+        },
+        "h6": {
+          "buys": 245,
+          "sells": 280
+        },
+        "h24": {
+          "buys": 1112,
+          "sells": 977
+        }
+      },
+      "volume": {
+        "h24": 22583.26,
+        "h6": 5292.48,
+        "h1": 265.51,
+        "m5": 48.13
+      },
+      "priceChange": {
+        "m5": -0.4,
+        "h1": -0.88,
+        "h6": -0.52,
+        "h24": 3.62
+      },
+      "liquidity": {
+        "usd": 2754.64,
+        "base": 59691,
+        "quote": 172.1141
+      },
+      "fdv": 14253480,
+      "marketCap": 14253480,
+      "pairCreatedAt": 1745434002000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "solidlycom",
+      "url": "https://dexscreener.com/sonic/0x67bced305725349783d986362af4092252a7f51a",
+      "pairAddress": "0x67bcED305725349783d986362Af4092252A7F51A",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04323",
+      "priceUsd": "0.04323",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 5
+        },
+        "h6": {
+          "buys": 7,
+          "sells": 13
+        },
+        "h24": {
+          "buys": 255,
+          "sells": 248
+        }
+      },
+      "volume": {
+        "h24": 7139.77,
+        "h6": 7.62,
+        "h1": 2.21,
+        "m5": 0.32
+      },
+      "priceChange": {
+        "m5": -0.31,
+        "h1": -0.98,
+        "h6": -0.43,
+        "h24": 3.61
+      },
+      "liquidity": {
+        "usd": 4348.16,
+        "base": 97507,
+        "quote": 132.8605
+      },
+      "fdv": 14241987,
+      "marketCap": 14241987,
+      "pairCreatedAt": 1734535541000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "oku",
+      "url": "https://dexscreener.com/sonic/0xecb04e075503bd678241f00155abcb532c0a15eb",
+      "pairAddress": "0xEcb04e075503Bd678241f00155AbCB532c0a15Eb",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04327",
+      "priceUsd": "0.04327",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 8,
+          "sells": 27
+        },
+        "h6": {
+          "buys": 67,
+          "sells": 85
+        },
+        "h24": {
+          "buys": 299,
+          "sells": 257
+        }
+      },
+      "volume": {
+        "h24": 8058.18,
+        "h6": 1862.74,
+        "h1": 428.07,
+        "m5": 54.66
+      },
+      "priceChange": {
+        "m5": -0.21,
+        "h1": -0.82,
+        "h6": -0.46,
+        "h24": 3.7
+      },
+      "liquidity": {
+        "usd": 7565.39,
+        "base": 74418,
+        "quote": 4345.102
+      },
+      "fdv": 14255791,
+      "marketCap": 14255791,
+      "pairCreatedAt": 1735255982000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "equalizer",
+      "url": "https://dexscreener.com/sonic/0xdc85f86d5e3189e0d4a776e6ae3b3911ec7b0133",
+      "pairAddress": "0xdc85F86d5E3189e0d4a776e6Ae3B3911eC7B0133",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04332",
+      "priceUsd": "0.04332",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 16,
+          "sells": 21
+        },
+        "h6": {
+          "buys": 75,
+          "sells": 69
+        },
+        "h24": {
+          "buys": 224,
+          "sells": 159
+        }
+      },
+      "volume": {
+        "h24": 480.65,
+        "h6": 163.9,
+        "h1": 42.57,
+        "m5": 3.14
+      },
+      "priceChange": {
+        "m5": -0.3,
+        "h1": -0.87,
+        "h6": -0.55,
+        "h24": 3.93
+      },
+      "liquidity": {
+        "usd": 4172.19,
+        "base": 48147,
+        "quote": 2086.09529
+      },
+      "fdv": 14273800,
+      "marketCap": 14273800,
+      "pairCreatedAt": 1734601372000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x11d899dec22fb03a0047212b1a20a7ad8d699420",
+      "pairAddress": "0x11D899DEc22fb03a0047212B1a20A7Ad8d699420",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04330",
+      "priceUsd": "0.04330",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 7
+        },
+        "h1": {
+          "buys": 14,
+          "sells": 36
+        },
+        "h6": {
+          "buys": 93,
+          "sells": 118
+        },
+        "h24": {
+          "buys": 432,
+          "sells": 368
+        }
+      },
+      "volume": {
+        "h24": 3097.96,
+        "h6": 917.1,
+        "h1": 303.3,
+        "m5": 45.27
+      },
+      "priceChange": {
+        "m5": -0.3,
+        "h1": -0.9,
+        "h6": -0.5,
+        "h24": 3.66
+      },
+      "liquidity": {
+        "usd": 1533,
+        "base": 14927,
+        "quote": 886.6297
+      },
+      "fdv": 14265299,
+      "marketCap": 14265299,
+      "pairCreatedAt": 1745433988000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "atlantis",
+      "url": "https://dexscreener.com/sonic/0xc50fa4ac07627715e50bea932b1b75b0e9ad9e89",
+      "pairAddress": "0xC50fa4Ac07627715e50Bea932B1B75b0e9Ad9e89",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04322",
+      "priceUsd": "0.04322",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 4
+        },
+        "h1": {
+          "buys": 6,
+          "sells": 15
+        },
+        "h6": {
+          "buys": 42,
+          "sells": 53
+        },
+        "h24": {
+          "buys": 198,
+          "sells": 183
+        }
+      },
+      "volume": {
+        "h24": 1448.88,
+        "h6": 388.68,
+        "h1": 83.69,
+        "m5": 12.47
+      },
+      "priceChange": {
+        "m5": -0.33,
+        "h1": -0.84,
+        "h6": -0.59,
+        "h24": 3.5
+      },
+      "liquidity": {
+        "usd": 740.1,
+        "base": 9102.006993,
+        "quote": 346.6301
+      },
+      "fdv": 14241620,
+      "marketCap": 14241620
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x56b404073c990e828691af936bcfff710f6c97a1",
+      "pairAddress": "0x56B404073C990E828691aF936bcfFf710f6c97A1",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04335",
+      "priceUsd": "0.04335",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 9
+        },
+        "h6": {
+          "buys": 23,
+          "sells": 30
+        },
+        "h24": {
+          "buys": 133,
+          "sells": 98
+        }
+      },
+      "volume": {
+        "h24": 390.48,
+        "h6": 94.2,
+        "h1": 21.06,
+        "m5": 3.68
+      },
+      "priceChange": {
+        "m5": -0.2,
+        "h1": -0.8,
+        "h6": -0.4,
+        "h24": 3.66
+      },
+      "liquidity": {
+        "usd": 1469.07,
+        "base": 30590,
+        "quote": 142.6892
+      },
+      "fdv": 14284945,
+      "marketCap": 14284945
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x0f7d17b47660a4c1f9702dcbf654a2697ba264ce",
+      "pairAddress": "0x0F7d17b47660A4C1F9702DCBF654A2697bA264ce",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04116",
+      "priceUsd": "0.04116",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 1,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {},
+      "liquidity": {
+        "usd": 1940.09,
+        "base": 193.2867,
+        "quote": 1932.1364
+      },
+      "fdv": 13560867,
+      "marketCap": 13560867,
+      "pairCreatedAt": 1745433978000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0xebcce8b534a35e93c7cf25f3fff2f8202f9f0655",
+      "pairAddress": "0xEbcCE8b534A35E93c7Cf25f3FfF2F8202F9f0655",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0xd3DCe716f3eF535C5Ff8d041c1A41C3bd89b97aE",
+        "name": "Sonic USD",
+        "symbol": "scUSD"
+      },
+      "priceNative": "0.04379",
+      "priceUsd": "0.04379",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 33,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.95,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 5.12
+      },
+      "liquidity": {
+        "usd": 1417.93,
+        "base": 32331,
+        "quote": 1.9792
+      },
+      "fdv": 14428367,
+      "marketCap": 14428367
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "spookyswap",
+      "url": "https://dexscreener.com/sonic/0x216a86c8716fad79e05d23b1622ca432a739582a",
+      "pairAddress": "0x216A86c8716Fad79E05D23b1622cA432A739582A",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04335",
+      "priceUsd": "0.04335",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h6": {
+          "buys": 6,
+          "sells": 7
+        },
+        "h24": {
+          "buys": 37,
+          "sells": 20
+        }
+      },
+      "volume": {
+        "h24": 19.52,
+        "h6": 4.14,
+        "h1": 1.08,
+        "m5": 0.37
+      },
+      "priceChange": {
+        "m5": -0.3,
+        "h1": -0.86,
+        "h6": -0.48,
+        "h24": 3.7
+      },
+      "liquidity": {
+        "usd": 680.7,
+        "base": 6430.4096,
+        "quote": 401.9279
+      },
+      "fdv": 14282263,
+      "marketCap": 14282263,
+      "pairCreatedAt": 1734600447000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "silverswap",
+      "url": "https://dexscreener.com/sonic/0x9f46dd8f2a4016c26c1cf1f4ef90e5e1928d756b",
+      "pairAddress": "0x9f46dd8F2A4016C26c1Cf1f4ef90e5E1928D756B",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04328",
+      "priceUsd": "0.04328",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 5,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 30,
+          "sells": 26
+        }
+      },
+      "volume": {
+        "h24": 37.98,
+        "h6": 6.05,
+        "h1": 1.1,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -0.85,
+        "h6": -0.38,
+        "h24": 2.87
+      },
+      "liquidity": {
+        "usd": 968.89,
+        "base": 15804,
+        "quote": 284.8805
+      },
+      "fdv": 14258555,
+      "marketCap": 14258555
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x002fdd8ee94c15de29d79539b1c197fd1dbc4288",
+      "pairAddress": "0x002FdD8ee94C15DE29D79539b1C197Fd1DBc4288",
+      "labels": [
+        "dlmm"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0xd3DCe716f3eF535C5Ff8d041c1A41C3bd89b97aE",
+        "name": "Sonic USD",
+        "symbol": "scUSD"
+      },
+      "priceNative": "0.04330",
+      "priceUsd": "0.04330",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 74,
+          "sells": 25
+        }
+      },
+      "volume": {
+        "h24": 32.54,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 3.66
+      },
+      "liquidity": {
+        "usd": 161.38,
+        "base": 3121.7829,
+        "quote": 26.2075
+      },
+      "fdv": 14265299,
+      "marketCap": 14265299,
+      "pairCreatedAt": 1745433864000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "sushiswap",
+      "url": "https://dexscreener.com/sonic/0x822147994cee6704dc06dcac17c0d2805f4fcc29",
+      "pairAddress": "0x822147994cEe6704dc06DCAC17C0D2805F4FCc29",
+      "labels": [
+        "V3"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04342",
+      "priceUsd": "0.04342",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 20,
+          "sells": 11
+        }
+      },
+      "volume": {
+        "h24": 10.81,
+        "h6": 2.63,
+        "h1": 0.64,
+        "m5": 0.32
+      },
+      "priceChange": {
+        "m5": -0.33,
+        "h1": -0.66,
+        "h6": -0.56,
+        "h24": 4.05
+      },
+      "liquidity": {
+        "usd": 177.31,
+        "base": 3250.03936,
+        "quote": 36.1812
+      },
+      "fdv": 14306487,
+      "marketCap": 14306487,
+      "pairCreatedAt": 1735217361000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "shadow-exchange",
+      "url": "https://dexscreener.com/sonic/0x23efa8092dab315fa519bd9880597af56c5a9b12",
+      "pairAddress": "0x23EfA8092dab315Fa519bd9880597AF56C5a9B12",
+      "labels": [
+        "v2"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04335",
+      "priceUsd": "0.04335",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 13,
+          "sells": 9
+        }
+      },
+      "volume": {
+        "h24": 2.54,
+        "h6": 0.51,
+        "h1": 0.16,
+        "m5": 0.16
+      },
+      "priceChange": {
+        "m5": -0.76,
+        "h1": -0.76,
+        "h6": -0.82,
+        "h24": 3.08
+      },
+      "liquidity": {
+        "usd": 85.11,
+        "base": 981.6126,
+        "quote": 42.5562
+      },
+      "fdv": 14282405,
+      "marketCap": 14282405,
+      "pairCreatedAt": 1738333785000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "zkswap",
+      "url": "https://dexscreener.com/sonic/0xd85b9ca9b52ab79136f930452cdd8f51d9f7ad3e",
+      "pairAddress": "0xd85b9Ca9B52AB79136f930452cDd8f51D9f7AD3e",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04338",
+      "priceUsd": "0.04338",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 4
+        },
+        "h24": {
+          "buys": 11,
+          "sells": 9
+        }
+      },
+      "volume": {
+        "h24": 2.8,
+        "h6": 0.68,
+        "h1": 0.24,
+        "m5": 0.16
+      },
+      "priceChange": {
+        "m5": -0.73,
+        "h1": -1.07,
+        "h6": -0.74,
+        "h24": 3.06
+      },
+      "liquidity": {
+        "usd": 91.22,
+        "base": 1051.385,
+        "quote": 45.6134
+      },
+      "fdv": 14292516,
+      "marketCap": 14292516,
+      "pairCreatedAt": 1745891544000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "spookyswap",
+      "url": "https://dexscreener.com/sonic/0x6cc7e9bb6c020cf18a44b0593cf110a16df32c0c",
+      "pairAddress": "0x6cC7e9BB6C020CF18A44b0593cf110A16Df32C0C",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04360",
+      "priceUsd": "0.04360",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 11,
+          "sells": 8
+        }
+      },
+      "volume": {
+        "h24": 20.32,
+        "h6": 0.33,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 0.08,
+        "h24": 4.28
+      },
+      "liquidity": {
+        "usd": 44.38,
+        "base": 508.9389,
+        "quote": 22.1901
+      },
+      "fdv": 14363875,
+      "marketCap": 14363875,
+      "pairCreatedAt": 1734600973000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "spookyswap",
+      "url": "https://dexscreener.com/sonic/0xc2a4817f5563152ba6bc54e1b521e2831e79d7e8",
+      "pairAddress": "0xc2a4817F5563152bA6bC54E1b521e2831e79D7E8",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04369",
+      "priceUsd": "0.04369",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 10,
+          "sells": 6
+        }
+      },
+      "volume": {
+        "h24": 1.03,
+        "h6": 0.32,
+        "h1": 0.07,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.04,
+        "h6": -0.03,
+        "h24": 3.23
+      },
+      "liquidity": {
+        "usd": 31.75,
+        "base": 340.1288,
+        "quote": 16.8875
+      },
+      "fdv": 14395877,
+      "marketCap": 14395877,
+      "pairCreatedAt": 1737209111000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "9mm",
+      "url": "https://dexscreener.com/sonic/0x4a4924c8afa845a0177bb1044bd0d1a56e397137",
+      "pairAddress": "0x4A4924C8AfA845a0177bB1044Bd0d1A56e397137",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04352",
+      "priceUsd": "0.04352",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 5,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 1.65,
+        "h6": 0.09,
+        "h1": 0.09,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -0.93,
+        "h6": -0.93,
+        "h24": -0.96
+      },
+      "liquidity": {
+        "usd": 42.77,
+        "base": 491.4334,
+        "quote": 21.3888
+      },
+      "fdv": 14338406,
+      "marketCap": 14338406,
+      "pairCreatedAt": 1740594728000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "metropolis",
+      "url": "https://dexscreener.com/sonic/0x2ca54f3ff85599dff6adb0b6d8688077a7e7c8df",
+      "pairAddress": "0x2Ca54f3FF85599dfF6aDB0B6D8688077a7E7C8df",
+      "labels": [
+        "v2"
+      ],
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04401",
+      "priceUsd": "0.04401",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 4,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.15,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 4.06
+      },
+      "liquidity": {
+        "usd": 12.25,
+        "base": 139.2269,
+        "quote": 6.1276
+      },
+      "fdv": 14499316,
+      "marketCap": 14499316,
+      "pairCreatedAt": 1734600800000
+    },
+    {
+      "chainId": "sonic",
+      "dexId": "mobiusdex",
+      "url": "https://dexscreener.com/sonic/0xeedbfc66b751b5411c1c182d7c836d5044708441",
+      "pairAddress": "0xEedBFc66b751b5411C1C182D7c836D5044708441",
+      "baseToken": {
+        "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38",
+        "name": "Wrapped Sonic",
+        "symbol": "wS"
+      },
+      "quoteToken": {
+        "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.04377",
+      "priceUsd": "0.04377",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 3,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.24,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h24": 3.5
+      },
+      "liquidity": {
+        "usd": 18.92,
+        "base": 216.1563,
+        "quote": 9.4617
+      },
+      "fdv": 14420470,
+      "marketCap": 14420470,
+      "pairCreatedAt": 1735050893000
+    }
+  ]
+}

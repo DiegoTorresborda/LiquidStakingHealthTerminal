@@ -2,13 +2,12 @@ import type { NetworkDetailData } from "@/features/network-detail/types";
 
 import { ChainResourcesSection } from "@/components/chain-resources";
 import { DetailModulesGrid } from "@/components/network-detail/detail-modules-grid";
-import { ImprovementPlanPanel } from "@/components/network-detail/improvement-plan-panel";
+import { DiagnosisInteractiveSection } from "@/components/network-detail/diagnosis-interactive-section";
 import { MiniVisualsPanel } from "@/components/network-detail/mini-visuals-panel";
 import { NetworkDetailHeader } from "@/components/network-detail/network-detail-header";
 import { RedFlagsPanel } from "@/components/network-detail/red-flags-panel";
 import { ScoringModelPanel } from "@/components/network-detail/scoring-model-panel";
 import { StressSnapshotPanel } from "@/components/network-detail/stress-snapshot-panel";
-import { TopOpportunitiesPanel } from "@/components/network-detail/top-opportunities-panel";
 
 type NetworkDiagnosisPageProps = {
   detail: NetworkDetailData;
@@ -23,27 +22,23 @@ export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
         <ScoringModelPanel scoring={detail.scoring} mode={detail.summary.scoringMode} />
       ) : null}
 
-      <DetailModulesGrid modules={detail.modules} scoring={detail.scoring} />
+      <DetailModulesGrid modules={detail.modules} scoring={detail.scoring} v2Result={detail.v2Result} />
 
-      {detail.radarRecord && detail.v2Result && (
-        <ImprovementPlanPanel
+      {/* Red Flags + Improvement Plan share state: selecting an improvement resolves its linked flag */}
+      {detail.radarRecord && detail.v2Result ? (
+        <DiagnosisInteractiveSection
           record={detail.radarRecord}
           currentResult={detail.v2Result}
+          redFlags={detail.redFlags}
+          lstLaunchProjectedScore={detail.summary.lstLaunchProjectedScore}
         />
+      ) : (
+        <RedFlagsPanel redFlags={detail.redFlags} />
       )}
 
-      <section className="grid gap-4 xl:grid-cols-3">
-        <div className="xl:col-span-2">
-          <TopOpportunitiesPanel opportunities={detail.opportunities} />
-        </div>
-        <div className="xl:col-span-1">
-          <StressSnapshotPanel stress={detail.stressSnapshot} />
-        </div>
-      </section>
+      <StressSnapshotPanel stress={detail.stressSnapshot} />
 
       <ChainResourcesSection networkId={detail.summary.networkId} showEmptyState />
-
-      <RedFlagsPanel redFlags={detail.redFlags} />
 
       <MiniVisualsPanel miniVisuals={detail.miniVisuals} />
     </main>

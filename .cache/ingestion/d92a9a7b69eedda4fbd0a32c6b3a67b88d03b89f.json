@@ -1,0 +1,2018 @@
+{
+  "cachedAt": 1773416728774,
+  "data": [
+    {
+      "chainId": "seiv2",
+      "dexId": "oku",
+      "url": "https://dexscreener.com/seiv2/0x5cfa8db453c9904511c4ea9eb0bfc903e36b9f5f",
+      "pairAddress": "0x5cFA8dB453C9904511C4eA9eb0bfc903E36b9F5F",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+        "name": "Noble USDC",
+        "symbol": "USDC.n"
+      },
+      "priceNative": "0.06755",
+      "priceUsd": "0.06755",
+      "txns": {
+        "m5": {
+          "buys": 24,
+          "sells": 23
+        },
+        "h1": {
+          "buys": 129,
+          "sells": 147
+        },
+        "h6": {
+          "buys": 622,
+          "sells": 720
+        },
+        "h24": {
+          "buys": 2172,
+          "sells": 2446
+        }
+      },
+      "volume": {
+        "h24": 146317.64,
+        "h6": 43084.97,
+        "h1": 8540,
+        "m5": 1386.59
+      },
+      "priceChange": {
+        "m5": -0.63,
+        "h1": -0.02,
+        "h6": 0.84,
+        "h24": 6.95
+      },
+      "liquidity": {
+        "usd": 30433.57,
+        "base": 211882,
+        "quote": 16120
+      },
+      "fdv": 21177166,
+      "marketCap": 21177166,
+      "pairCreatedAt": 1718292270000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xc75c669a62a7ece0c8d37904b747970467432ad3",
+      "pairAddress": "0xC75C669a62A7eCe0C8d37904b747970467432ad3",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+        "name": "Noble USDC",
+        "symbol": "USDC.n"
+      },
+      "priceNative": "0.06773",
+      "priceUsd": "0.06773",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 8,
+          "sells": 5
+        },
+        "h6": {
+          "buys": 33,
+          "sells": 47
+        },
+        "h24": {
+          "buys": 134,
+          "sells": 94
+        }
+      },
+      "volume": {
+        "h24": 776.16,
+        "h6": 310.07,
+        "h1": 38.26,
+        "m5": 17.74
+      },
+      "priceChange": {
+        "m5": -0.42,
+        "h1": 0.07,
+        "h6": 1.4,
+        "h24": 7.32
+      },
+      "liquidity": {
+        "usd": 16762.02,
+        "base": 123739,
+        "quote": 8381.01338
+      },
+      "fdv": 21233158,
+      "marketCap": 21233158,
+      "pairCreatedAt": 1716918414000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x882f62fe8e9594470d1da0f70bc85096f6c60423",
+      "pairAddress": "0x882f62fe8E9594470D1da0f70Bc85096F6c60423",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+        "name": "Noble USDC",
+        "symbol": "USDC.n"
+      },
+      "priceNative": "0.06777",
+      "priceUsd": "0.06777",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 3
+        },
+        "h6": {
+          "buys": 29,
+          "sells": 25
+        },
+        "h24": {
+          "buys": 99,
+          "sells": 54
+        }
+      },
+      "volume": {
+        "h24": 120.5,
+        "h6": 47.73,
+        "h1": 4.67,
+        "m5": 1.49
+      },
+      "priceChange": {
+        "m5": -0.35,
+        "h1": 0.04,
+        "h6": 1.51,
+        "h24": 7.45
+      },
+      "liquidity": {
+        "usd": 6782.65,
+        "base": 69996,
+        "quote": 2038.6887
+      },
+      "fdv": 21246811,
+      "marketCap": 21246811,
+      "pairCreatedAt": 1724167634000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x48904b7b93f4af97a687168fdbfaab80f28eae54",
+      "pairAddress": "0x48904b7B93F4AF97a687168fdBfaaB80F28eAE54",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.06805",
+      "priceUsd": "0.06805",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.08,
+        "h6": 0.03,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 2.4,
+        "h24": 6.79
+      },
+      "liquidity": {
+        "usd": 2708.72,
+        "base": 26228,
+        "quote": 923.7745
+      },
+      "fdv": 21334698,
+      "marketCap": 21334698,
+      "pairCreatedAt": 1726232106000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x8d5261cff8d63e71c772574eba63e64e6726ee06",
+      "pairAddress": "0x8D5261cFF8d63E71C772574EbA63E64E6726EE06",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.06828",
+      "priceUsd": "0.06828",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 3,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 19,
+          "sells": 19
+        },
+        "h24": {
+          "buys": 90,
+          "sells": 44
+        }
+      },
+      "volume": {
+        "h24": 71.23,
+        "h6": 26.97,
+        "h1": 2.64,
+        "m5": 1.35
+      },
+      "priceChange": {
+        "m5": -0.3,
+        "h1": -0.01,
+        "h6": 1.4,
+        "h24": 7.29
+      },
+      "liquidity": {
+        "usd": 1814.59,
+        "base": 13286,
+        "quote": 907.2952
+      },
+      "fdv": 21407617,
+      "marketCap": 21407617,
+      "pairCreatedAt": 1716918406000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0x6b06be53bef15f6afefc934b318be5b930afdc34",
+      "pairAddress": "0x6B06BE53Bef15F6afEFC934b318bE5b930AfDc34",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.06833",
+      "priceUsd": "0.06833",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 5,
+          "sells": 3
+        },
+        "h6": {
+          "buys": 26,
+          "sells": 28
+        },
+        "h24": {
+          "buys": 114,
+          "sells": 78
+        }
+      },
+      "volume": {
+        "h24": 63.55,
+        "h6": 19.95,
+        "h1": 2.27,
+        "m5": 0.85
+      },
+      "priceChange": {
+        "m5": -0.31,
+        "h1": 0.07,
+        "h6": 1.34,
+        "h24": 7.32
+      },
+      "liquidity": {
+        "usd": 1118.6,
+        "base": 8184.7826,
+        "quote": 559.3003
+      },
+      "fdv": 21422298,
+      "marketCap": 21422298,
+      "pairCreatedAt": 1719926434000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0xfd1ca2735bc49ba8f1442059bbf44d4326f882d5",
+      "pairAddress": "0xfD1cA2735BC49Ba8F1442059BBF44D4326f882d5",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+        "name": "Noble USDC",
+        "symbol": "USDC.n"
+      },
+      "priceNative": "0.06773",
+      "priceUsd": "0.06773",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 4
+        },
+        "h1": {
+          "buys": 4,
+          "sells": 4
+        },
+        "h6": {
+          "buys": 22,
+          "sells": 19
+        },
+        "h24": {
+          "buys": 93,
+          "sells": 57
+        }
+      },
+      "volume": {
+        "h24": 28.08,
+        "h6": 9.2,
+        "h1": 1.35,
+        "m5": 0.66
+      },
+      "priceChange": {
+        "m5": -0.49,
+        "h1": 0.02,
+        "h6": 1.38,
+        "h24": 7.4
+      },
+      "liquidity": {
+        "usd": 534.46,
+        "base": 3945.05298,
+        "quote": 267.2301
+      },
+      "fdv": 21235412,
+      "marketCap": 21235412,
+      "pairCreatedAt": 1720360375000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0x250b95805786a65e00ee3df639ef7b4fa05519fd",
+      "pairAddress": "0x250B95805786A65e00ee3dF639Ef7b4Fa05519fD",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0x3894085Ef7Ff0f0aeDf52E2A2704928d1Ec074F1",
+        "name": "Noble USDC",
+        "symbol": "USDC.n"
+      },
+      "priceNative": "0.06942",
+      "priceUsd": "0.06942",
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 8,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 24,
+          "sells": 20
+        },
+        "h24": {
+          "buys": 99,
+          "sells": 93
+        }
+      },
+      "volume": {
+        "h24": 9.3,
+        "h6": 2.78,
+        "h1": 0.64,
+        "m5": 0.22
+      },
+      "priceChange": {
+        "m5": -0.25,
+        "h1": 0.3,
+        "h6": 1.3,
+        "h24": 7.49
+      },
+      "liquidity": {
+        "usd": 114.93,
+        "base": 1248.4015,
+        "quote": 28.2572
+      },
+      "fdv": 21765357,
+      "marketCap": 21765357,
+      "pairCreatedAt": 1720966053000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0x4577ba78ec8ec55bd1df8ddd72c87c225748d414",
+      "pairAddress": "0x4577bA78eC8Ec55BD1DF8DDD72C87c225748D414",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.07606",
+      "priceUsd": "0.07606",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 7,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 27,
+          "sells": 24
+        }
+      },
+      "volume": {
+        "h24": 0.88,
+        "h6": 0.29,
+        "h1": 0.04,
+        "m5": 0.02
+      },
+      "priceChange": {
+        "m5": -0.52,
+        "h1": -0.13,
+        "h6": 1.22,
+        "h24": 7
+      },
+      "liquidity": {
+        "usd": 24.8,
+        "base": 250.9813,
+        "quote": 5.7171
+      },
+      "fdv": 23845075,
+      "marketCap": 23845075,
+      "pairCreatedAt": 1720821514000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x54368c8e25e798bd013748b7be3b98050983d68a",
+      "pairAddress": "0x54368c8e25E798Bd013748B7BE3B98050983D68A",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.06896",
+      "priceUsd": "0.06896",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 3,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0.3,
+        "h6": 0.12,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 3,
+        "h24": 3.28
+      },
+      "liquidity": {
+        "usd": 18.38,
+        "base": 140.6391,
+        "quote": 8.6881
+      },
+      "fdv": 21621360,
+      "marketCap": 21621360,
+      "pairCreatedAt": 1724173345000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "0x4B4746216214f9e972c5D35D3Fe88e6Ec4C28A6B",
+      "url": "https://dexscreener.com/seiv2/0x43290118fc3df09d3d6984ecac12ec356c01f11c",
+      "pairAddress": "0x43290118FC3df09d3d6984eCAc12Ec356c01f11C",
+      "baseToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "quoteToken": {
+        "address": "0xB75D0B03c06A926e488e2659DF1A861F860bD3d1",
+        "name": "USDT.kava",
+        "symbol": "USDT"
+      },
+      "priceNative": "0.06407",
+      "priceUsd": "0.06407",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 1,
+          "sells": 0
+        }
+      },
+      "volume": {
+        "h24": 0,
+        "h6": 0,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {},
+      "liquidity": {
+        "usd": 0,
+        "base": 0.01771,
+        "quote": 0.001135
+      },
+      "fdv": 20087681,
+      "marketCap": 20087681,
+      "pairCreatedAt": 1728323340000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x481b7a494e565be3666ac34cca2fa9304611ef0a",
+      "pairAddress": "0x481b7A494e565be3666aC34Cca2FA9304611Ef0A",
+      "baseToken": {
+        "address": "0x0a526e425809aEA71eb279d24ae22Dee6C92A4Fe",
+        "name": "Dragonswap Token",
+        "symbol": "DRG"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.2565",
+      "priceUsd": "0.01739",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 9,
+          "sells": 23
+        },
+        "h24": {
+          "buys": 273,
+          "sells": 383
+        }
+      },
+      "volume": {
+        "h24": 7890.32,
+        "h6": 380.92,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 0.85,
+        "h24": 2.98
+      },
+      "liquidity": {
+        "usd": 126901.13,
+        "base": 3647724,
+        "quote": 935849
+      },
+      "fdv": 17394563,
+      "marketCap": 4065631,
+      "pairCreatedAt": 1751972303000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/ecabbece36ffdd130ea447da352e0ef60fec968a9b6abec3944153ee3e6955dc?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/8332cca0ff3b061747a026f64fccb4a8b283396610eb83f9dcb06cc536ddbba1?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x0a526e425809aea71eb279d24ae22dee6c92a4fe?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://dragonswap.app/",
+            "label": "Website"
+          },
+          {
+            "url": "https://docs.dragonswap.app/dragonswap",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/dragonswap_dex",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/c/dragonswaphq/1",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/dragonswaphq",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x4cea29353508b81b6efbfb8d089efe808e8fc991",
+      "pairAddress": "0x4CeA29353508b81B6efbfb8d089EFE808e8FC991",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x0a526e425809aEA71eb279d24ae22Dee6C92A4Fe",
+        "name": "Dragonswap Token",
+        "symbol": "DRG"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.2567",
+      "priceUsd": "0.01751",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 10,
+          "sells": 18
+        },
+        "h24": {
+          "buys": 78,
+          "sells": 179
+        }
+      },
+      "volume": {
+        "h24": 4380.96,
+        "h6": 347.43,
+        "h1": 39.43,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 0.04,
+        "h6": 1.39,
+        "h24": 3.94
+      },
+      "liquidity": {
+        "usd": 91521.39,
+        "base": 2614388,
+        "quote": 670587
+      },
+      "fdv": 17513596,
+      "marketCap": 4093453,
+      "pairCreatedAt": 1752239683000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/ecabbece36ffdd130ea447da352e0ef60fec968a9b6abec3944153ee3e6955dc?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/8332cca0ff3b061747a026f64fccb4a8b283396610eb83f9dcb06cc536ddbba1?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x0a526e425809aea71eb279d24ae22dee6c92a4fe?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://dragonswap.app/",
+            "label": "Website"
+          },
+          {
+            "url": "https://docs.dragonswap.app/dragonswap",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/dragonswap_dex",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/c/dragonswaphq/1",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/dragonswaphq",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xf1d35df54a1247b047a52f8acc2359b415ba8a9a",
+      "pairAddress": "0xF1d35dF54a1247b047A52F8acc2359b415Ba8A9a",
+      "baseToken": {
+        "address": "0x95597EB8D227a7c4B4f5E807a815C5178eE6dBE1",
+        "name": "MILLI",
+        "symbol": "MILLI"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.00002482",
+      "priceUsd": "0.000001685",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 11,
+          "sells": 36
+        }
+      },
+      "volume": {
+        "h24": 317.91,
+        "h6": 51.58,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.15,
+        "h24": 8.98
+      },
+      "liquidity": {
+        "usd": 51284.05,
+        "base": 15213534164,
+        "quote": 377643
+      },
+      "fdv": 505199,
+      "marketCap": 505293,
+      "pairCreatedAt": 1717239464000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6eb08a027121c17999327fcbe4df495e1858b9abde968533b62561eac802699b?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e0ffda7445ad3c55b6606db031097420a41892448dbf859674ac05394867553e?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x95597eb8d227a7c4b4f5e807a815c5178ee6dbe1?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://milli.dog/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://twitter.com/MilliCoinSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/OfficialMILLIPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.gg/kGfGs2SEtv",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xcca2352200a63eb0aaba2d40ba69b1d32174f285",
+      "pairAddress": "0xcca2352200a63eb0Aaba2D40BA69b1d32174F285",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
+        "name": "USDC",
+        "symbol": "USDC"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "14.7633",
+      "priceUsd": "0.9965",
+      "txns": {
+        "m5": {
+          "buys": 54,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 55,
+          "sells": 156
+        },
+        "h6": {
+          "buys": 393,
+          "sells": 583
+        },
+        "h24": {
+          "buys": 1150,
+          "sells": 1967
+        }
+      },
+      "volume": {
+        "h24": 2227315.11,
+        "h6": 1135479.4,
+        "h1": 240325.64,
+        "m5": 85659
+      },
+      "priceChange": {
+        "m5": -0.62,
+        "h1": -0.05,
+        "h6": -0.59,
+        "h24": -0.24
+      },
+      "liquidity": {
+        "usd": 7498576.16,
+        "base": 2267682,
+        "quote": 77611456
+      },
+      "fdv": 58989946,
+      "marketCap": 60689606785,
+      "pairCreatedAt": 1753355679000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xb243320bcf9c95db7f74108b6773b8f4dc3adaf5",
+      "pairAddress": "0xb243320bcf9c95DB7F74108B6773b8F4Dc3adaF5",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x9151434b16b9763660705744891fA906F660EcC5",
+        "name": "USD₮0",
+        "symbol": "USD₮0"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "14.8186",
+      "priceUsd": "1.0032",
+      "txns": {
+        "m5": {
+          "buys": 12,
+          "sells": 3
+        },
+        "h1": {
+          "buys": 58,
+          "sells": 57
+        },
+        "h6": {
+          "buys": 375,
+          "sells": 350
+        },
+        "h24": {
+          "buys": 1233,
+          "sells": 1250
+        }
+      },
+      "volume": {
+        "h24": 1069287.82,
+        "h6": 309652.23,
+        "h1": 48492.3,
+        "m5": 3298.17
+      },
+      "priceChange": {
+        "m5": 0.53,
+        "h1": 0.42,
+        "h6": 0.25,
+        "h24": 0.37
+      },
+      "liquidity": {
+        "usd": 222978.43,
+        "base": 43964,
+        "quote": 2642123
+      },
+      "fdv": 6104928,
+      "marketCap": 6104928,
+      "pairCreatedAt": 1744198149000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x3e00dd875fef6ce2209007c1e625d9a656e32556",
+      "pairAddress": "0x3E00Dd875fEf6cE2209007c1e625d9A656E32556",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "1066357.1862",
+      "priceUsd": "72192.38",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 14
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 51
+        },
+        "h6": {
+          "buys": 66,
+          "sells": 83
+        },
+        "h24": {
+          "buys": 251,
+          "sells": 281
+        }
+      },
+      "volume": {
+        "h24": 128159,
+        "h6": 46867.47,
+        "h1": 10419.77,
+        "m5": 1381.81
+      },
+      "priceChange": {
+        "m5": -0.61,
+        "h1": -0.87,
+        "h6": 0.88,
+        "h24": 3.21
+      },
+      "liquidity": {
+        "usd": 702304.4,
+        "base": 0.6032,
+        "quote": 9730511
+      },
+      "fdv": 3383365,
+      "marketCap": 3383365,
+      "pairCreatedAt": 1732831138000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x49a982960968d9283dd6e413af8dc953d4a5c1a9",
+      "pairAddress": "0x49A982960968D9283DD6e413af8DC953D4a5C1A9",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0xC257361320F4514D91c05F461006CE6a0300E2d2",
+        "name": "Splashing SEI",
+        "symbol": "spSEI"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "1.01212",
+      "priceUsd": "0.06882",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 3,
+          "sells": 1
+        }
+      },
+      "volume": {
+        "h24": 146.99,
+        "h6": 80.49,
+        "h1": 13.75,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 0.44,
+        "h6": 2.26,
+        "h24": 2.26
+      },
+      "liquidity": {
+        "usd": 2061325.86,
+        "base": 23762432,
+        "quote": 6263132
+      },
+      "fdv": 6370528,
+      "marketCap": 6370528,
+      "pairCreatedAt": 1763623144000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x373e718e54e73fb462fec3a73e9645efea280b84",
+      "pairAddress": "0x373e718E54e73fb462Fec3A73e9645efeA280b84",
+      "baseToken": {
+        "address": "0xF9BDbF259eCe5ae17e29BF92EB7ABd7B8b465Db9",
+        "name": "Froggy",
+        "symbol": "Frog"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.0009329",
+      "priceUsd": "0.00006399",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 14,
+          "sells": 11
+        },
+        "h24": {
+          "buys": 47,
+          "sells": 96
+        }
+      },
+      "volume": {
+        "h24": 393.73,
+        "h6": 74.91,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 3.86,
+        "h24": 8.91
+      },
+      "liquidity": {
+        "usd": 18671.53,
+        "base": 145872657,
+        "quote": 136089
+      },
+      "fdv": 63999,
+      "marketCap": 63999,
+      "pairCreatedAt": 1728418054000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/J4ifqQdxfJ1ABRV6?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/p22XEcqrW79FZTOI?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0xf9bdbf259ece5ae17e29bf92eb7abd7b8b465db9?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://frogonsei.app/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/FrogOnSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/FrogOnSei",
+            "type": "telegram"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xe0f20947365d2fcf5fabd14ad4415ab18191bd3a",
+      "pairAddress": "0xE0F20947365D2fcF5Fabd14AD4415ab18191BD3a",
+      "labels": [
+        "V2"
+      ],
+      "baseToken": {
+        "address": "0x160345fC359604fC6e70E3c5fAcbdE5F7A9342d8",
+        "name": "WETH",
+        "symbol": "WETH"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "31676.3234",
+      "priceUsd": "2153.98",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 19
+        },
+        "h6": {
+          "buys": 44,
+          "sells": 32
+        },
+        "h24": {
+          "buys": 107,
+          "sells": 118
+        }
+      },
+      "volume": {
+        "h24": 1859.87,
+        "h6": 788.67,
+        "h1": 191.78,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -0.98,
+        "h6": 2.7,
+        "h24": 4.27
+      },
+      "liquidity": {
+        "usd": 53668.77,
+        "base": 8.3114,
+        "quote": 525969
+      },
+      "fdv": 1168033,
+      "marketCap": 1168033,
+      "pairCreatedAt": 1724176517000
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xa66b30a0076aa295335d4d8c13f71e74885a6ea7",
+      "pairAddress": "0xa66B30a0076aa295335d4D8C13F71E74885a6Ea7",
+      "baseToken": {
+        "address": "0xF91fBe296b0121DA410f885BfA39fad078407234",
+        "name": "MILLI",
+        "symbol": "MILLI"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.00002482",
+      "priceUsd": "0.000001687",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 1,
+          "sells": 1
+        }
+      },
+      "volume": {
+        "h24": 0.01,
+        "h6": 0.01,
+        "h1": 0.01,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": -0.15,
+        "h6": -0.15,
+        "h24": -0.15
+      },
+      "liquidity": {
+        "usd": 1773.14,
+        "base": 525234871,
+        "quote": 13037
+      },
+      "fdv": 505943,
+      "marketCap": 505943,
+      "pairCreatedAt": 1773411185000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/46rhK0RTWn12g094?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/XUJIYmNBV21nIuQa?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0xf91fbe296b0121da410f885bfa39fad078407234?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://milli.dog/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/MilliCoinSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/OfficialMILLIPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.gg/kGfGs2SEtv",
+            "type": "discord"
+          },
+          {
+            "url": "https://www.tiktok.com/@millicoinsei",
+            "type": "tiktok"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0x8ba502d9243fa5e44678044098be9782cebafda5",
+      "pairAddress": "0x8Ba502d9243fa5E44678044098Be9782cEbaFdA5",
+      "baseToken": {
+        "address": "0x5f0E07dFeE5832Faa00c63F2D33A0D79150E8598",
+        "name": "SEIYAN",
+        "symbol": "SEIYAN"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.002716",
+      "priceUsd": "0.0001838",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 8
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 12
+        }
+      },
+      "volume": {
+        "h24": 132.65,
+        "h6": 77.26,
+        "h1": 0.54,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 0.72,
+        "h6": 4.36,
+        "h24": 8.87
+      },
+      "liquidity": {
+        "usd": 7934.16,
+        "base": 21572714,
+        "quote": 58597
+      },
+      "fdv": 183893,
+      "marketCap": 143419,
+      "pairCreatedAt": 1717003163000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6c64becd3f303d49f06f4d859b9fc9bea9c20c28de427417378df8d46e45f18e?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e10aea5484b0bca62c420ef4f21792b2f2c4dca0243314bebf8f688f0d345c28?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x5f0e07dfee5832faa00c63f2d33a0d79150e8598?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://seiyantoken.com/",
+            "label": "Website"
+          },
+          {
+            "url": "https://seiyan-token.gitbook.io/seiyan-token",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/seiyantoken9000",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/seiyantoken9000",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/seiyantoken9000",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0xd30ea06df5371a12d2733471def942a118e61b0b",
+      "pairAddress": "0xd30eA06df5371a12d2733471dEf942A118e61b0B",
+      "baseToken": {
+        "address": "0x95597EB8D227a7c4B4f5E807a815C5178eE6dBE1",
+        "name": "MILLI",
+        "symbol": "MILLI"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.00002487",
+      "priceUsd": "0.000001654",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 8,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 1.27,
+        "h6": 0.15,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 0.13,
+        "h24": 1.19
+      },
+      "liquidity": {
+        "usd": 348.05,
+        "base": 105208521,
+        "quote": 2616.9697
+      },
+      "fdv": 495804,
+      "marketCap": 495895,
+      "pairCreatedAt": 1728081937000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6eb08a027121c17999327fcbe4df495e1858b9abde968533b62561eac802699b?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e0ffda7445ad3c55b6606db031097420a41892448dbf859674ac05394867553e?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x95597eb8d227a7c4b4f5e807a815c5178ee6dbe1?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://milli.dog/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://twitter.com/MilliCoinSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/OfficialMILLIPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.gg/kGfGs2SEtv",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0x522713e4b2bfd531bf704969875a134310566de3",
+      "pairAddress": "0x522713E4B2bFd531BF704969875A134310566de3",
+      "baseToken": {
+        "address": "0x95597EB8D227a7c4B4f5E807a815C5178eE6dBE1",
+        "name": "MILLI",
+        "symbol": "MILLI"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.00002482",
+      "priceUsd": "0.000001700",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 6,
+          "sells": 6
+        }
+      },
+      "volume": {
+        "h24": 0.61,
+        "h6": 0.15,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 3.51,
+        "h24": 10.47
+      },
+      "liquidity": {
+        "usd": 120.9,
+        "base": 53324139,
+        "quote": 441.3903
+      },
+      "fdv": 509656,
+      "marketCap": 509751,
+      "pairCreatedAt": 1731785385000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6eb08a027121c17999327fcbe4df495e1858b9abde968533b62561eac802699b?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e0ffda7445ad3c55b6606db031097420a41892448dbf859674ac05394867553e?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x95597eb8d227a7c4b4f5e807a815c5178ee6dbe1?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://milli.dog/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://twitter.com/MilliCoinSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/OfficialMILLIPortal",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.gg/kGfGs2SEtv",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0xdaff2df0adee507b77878caaff76b44c81a4d63b",
+      "pairAddress": "0xdAFF2dF0adee507B77878CAAFf76B44c81A4d63B",
+      "baseToken": {
+        "address": "0x51121BCAE92E302f19D06C193C95E1f7b81a444b",
+        "name": "YAKA",
+        "symbol": "YAKA"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.001551",
+      "priceUsd": "0.0001046",
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 15,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 41,
+          "sells": 47
+        }
+      },
+      "volume": {
+        "h24": 23.26,
+        "h6": 5.88,
+        "h1": 0.47,
+        "m5": 0.18
+      },
+      "priceChange": {
+        "m5": -0.96,
+        "h1": -0.04,
+        "h6": 1.54,
+        "h24": 5.73
+      },
+      "liquidity": {
+        "usd": 1039.58,
+        "base": 4964693,
+        "quote": 7700.6312
+      },
+      "fdv": 76265,
+      "marketCap": 19935,
+      "pairCreatedAt": 1728122153000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/4ff5dc85dcc2a260dd11ef852d34ba242120c086a6170e5f7d0ed5eb798f61f3?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/1eb9e8059053668fd5ddf599a808c0d6c5903dbc32663e2362b0608ded64e3d5?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x51121bcae92e302f19d06c193c95e1f7b81a444b?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://yaka.finance/",
+            "label": "Website"
+          },
+          {
+            "url": "https://yaka.gitbook.io/yaka-finance",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/YakaFinance",
+            "type": "twitter"
+          },
+          {
+            "url": "https://discord.com/invite/yaka-finance",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0x83eab1ebfb63f4e4763cbbf10542a260b49cb4a0",
+      "pairAddress": "0x83EAB1eBfb63F4e4763cBBF10542A260b49CB4A0",
+      "baseToken": {
+        "address": "0x5f0E07dFeE5832Faa00c63F2D33A0D79150E8598",
+        "name": "SEIYAN",
+        "symbol": "SEIYAN"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.002707",
+      "priceUsd": "0.0001824",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 2,
+          "sells": 4
+        }
+      },
+      "volume": {
+        "h24": 10.64,
+        "h6": 7.61,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 2.92,
+        "h24": 3.85
+      },
+      "liquidity": {
+        "usd": 1028.13,
+        "base": 2816842,
+        "quote": 7627.08866
+      },
+      "fdv": 182497,
+      "marketCap": 142330,
+      "pairCreatedAt": 1721227711000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6c64becd3f303d49f06f4d859b9fc9bea9c20c28de427417378df8d46e45f18e?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e10aea5484b0bca62c420ef4f21792b2f2c4dca0243314bebf8f688f0d345c28?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x5f0e07dfee5832faa00c63f2d33a0d79150e8598?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://seiyantoken.com/",
+            "label": "Website"
+          },
+          {
+            "url": "https://seiyan-token.gitbook.io/seiyan-token",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/seiyantoken9000",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/seiyantoken9000",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/seiyantoken9000",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "yaka-finance",
+      "url": "https://dexscreener.com/seiv2/0xc1cedf7fb6e5636147424cc9009044c7a5902432",
+      "pairAddress": "0xc1cedf7FB6E5636147424cc9009044c7a5902432",
+      "baseToken": {
+        "address": "0xF9BDbF259eCe5ae17e29BF92EB7ABd7B8b465Db9",
+        "name": "Froggy",
+        "symbol": "Frog"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.0009328",
+      "priceUsd": "0.00006287",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 6,
+          "sells": 3
+        },
+        "h24": {
+          "buys": 13,
+          "sells": 14
+        }
+      },
+      "volume": {
+        "h24": 2.25,
+        "h6": 0.59,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 1.3,
+        "h24": 8.89
+      },
+      "liquidity": {
+        "usd": 133.93,
+        "base": 1065139,
+        "quote": 993.5787
+      },
+      "fdv": 62872,
+      "marketCap": 62872,
+      "pairCreatedAt": 1731874057000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/J4ifqQdxfJ1ABRV6?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/p22XEcqrW79FZTOI?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0xf9bdbf259ece5ae17e29bf92eb7abd7b8b465db9?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://frogonsei.app/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/FrogOnSei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/FrogOnSei",
+            "type": "telegram"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "0x4B4746216214f9e972c5D35D3Fe88e6Ec4C28A6B",
+      "url": "https://dexscreener.com/seiv2/0xe634783134df6b490c81eb8a77ad48b799f2e58e",
+      "pairAddress": "0xe634783134Df6B490c81Eb8a77aD48B799F2E58e",
+      "baseToken": {
+        "address": "0x5f0E07dFeE5832Faa00c63F2D33A0D79150E8598",
+        "name": "SEIYAN",
+        "symbol": "SEIYAN"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.002702",
+      "priceUsd": "0.0001821",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 1,
+          "sells": 2
+        }
+      },
+      "volume": {
+        "h24": 0.15,
+        "h6": 0.08,
+        "h1": 0,
+        "m5": 0
+      },
+      "priceChange": {
+        "h6": 3.52,
+        "h24": 3.12
+      },
+      "liquidity": {
+        "usd": 18.97,
+        "base": 52083,
+        "quote": 140.7456
+      },
+      "fdv": 182136,
+      "marketCap": 142049,
+      "pairCreatedAt": 1722007456000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/6c64becd3f303d49f06f4d859b9fc9bea9c20c28de427417378df8d46e45f18e?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/e10aea5484b0bca62c420ef4f21792b2f2c4dca0243314bebf8f688f0d345c28?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0x5f0e07dfee5832faa00c63f2d33a0d79150e8598?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://seiyantoken.com/",
+            "label": "Website"
+          },
+          {
+            "url": "https://seiyan-token.gitbook.io/seiyan-token",
+            "label": "Docs"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/seiyantoken9000",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/seiyantoken9000",
+            "type": "telegram"
+          },
+          {
+            "url": "https://discord.com/invite/seiyantoken9000",
+            "type": "discord"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "dragonswap",
+      "url": "https://dexscreener.com/seiv2/0xa2aee4f82023c6614f3ab40041c3b434ff97b439",
+      "pairAddress": "0xA2AeE4f82023c6614f3ab40041c3B434FF97B439",
+      "baseToken": {
+        "address": "0xC18b6a15FB0ceaf5eb18696EeFCb5bc7b9107149",
+        "name": "Popo The Cat",
+        "symbol": "POPO"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "0.0000008819",
+      "priceUsd": "0.00000005997",
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 9,
+          "sells": 1
+        }
+      },
+      "volume": {
+        "h24": 184.46,
+        "h6": 13.76,
+        "h1": 13.75,
+        "m5": 0
+      },
+      "priceChange": {
+        "h1": 1.61,
+        "h6": 2.83,
+        "h24": -0.76
+      },
+      "liquidity": {
+        "usd": 7735.53,
+        "base": 64492358131,
+        "quote": 56878
+      },
+      "fdv": 25230,
+      "marketCap": 25230,
+      "pairCreatedAt": 1717013340000,
+      "info": {
+        "imageUrl": "https://cdn.dexscreener.com/cms/images/aaccf9d26f01cbfc3c4620a0456d88e9484f1e880999224ca07e7308855e1a59?width=800&height=800&quality=95&format=auto",
+        "header": "https://cdn.dexscreener.com/cms/images/f8c5c40da2a5f466c923711c9fe372317e2cacdf0bf4df5ce3f3ebfcef8c07b7?width=1500&height=500&quality=95&format=auto",
+        "openGraph": "https://cdn.dexscreener.com/token-images/og/seiv2/0xc18b6a15fb0ceaf5eb18696eefcb5bc7b9107149?timestamp=1773416700000",
+        "websites": [
+          {
+            "url": "https://popome.me/",
+            "label": "Website"
+          }
+        ],
+        "socials": [
+          {
+            "url": "https://x.com/Popo_On_Sei",
+            "type": "twitter"
+          },
+          {
+            "url": "https://t.me/PopoTheCatOfficial",
+            "type": "telegram"
+          }
+        ]
+      }
+    },
+    {
+      "chainId": "seiv2",
+      "dexId": "oku",
+      "url": "https://dexscreener.com/seiv2/0xa3a573c8d14c93fca8fdecb7db168619563d9b00",
+      "pairAddress": "0xa3A573c8D14C93FCa8FDEcb7DB168619563D9B00",
+      "baseToken": {
+        "address": "0x160345fC359604fC6e70E3c5fAcbdE5F7A9342d8",
+        "name": "WETH",
+        "symbol": "WETH"
+      },
+      "quoteToken": {
+        "address": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+        "name": "Wrapped SEI",
+        "symbol": "WSEI"
+      },
+      "priceNative": "31674.1507",
+      "priceUsd": "2138.0051",
+      "txns": {
+        "m5": {
+          "buys": 17,
+          "sells": 11
+        },
+        "h1": {
+          "buys": 86,
+          "sells": 65
+        },
+        "h6": {
+          "buys": 304,
+          "sells": 298
+        },
+        "h24": {
+          "buys": 1004,
+          "sells": 1006
+        }
+      },
+      "volume": {
+        "h24": 35819.4,
+        "h6": 6915.92,
+        "h1": 1478.51,
+        "m5": 235.76
+      },
+      "priceChange": {
+        "m5": -0.53,
+        "h1": -1.52,
+        "h6": 1.54,
+        "h24": 3.12
+      },
+      "liquidity": {
+        "usd": 6835.1,
+        "base": 1.6164,
+        "quote": 50061
+      },
+      "fdv": 1159365,
+      "marketCap": 1159365,
+      "pairCreatedAt": 1718831109000
+    }
+  ]
+}

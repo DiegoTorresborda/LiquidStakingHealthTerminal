@@ -96,10 +96,12 @@ function scorePreLst(
  * LST-active L&E formula (5 components, weights sum to 0.95 → normalized):
  *
  *   lstScore       ×  0.10  — LST DEX depth vs LST TVL (2%–20%)
- *   volumeScore    ×  0.35  — 24h trading volume vs market cap (0.5%–20%)
+ *   stableScore    ×  0.35  — native stablecoin exit depth vs market cap (0.3%–5%)
  *   redemptionScore×  0.15  — redemption quality (unbonding days); -20 penalty if no mechanism
  *   nativeDexScore ×  0.25  — base token DEX depth vs market cap (0.5%–10%)
  *   crossChainScore×  0.10  — official cross-chain exit liquidity vs market cap (0.1%–5%)
+ *
+ * Caps: !stableExitExists → cap 55
  */
 function scoreActiveLst(
   input: Extract<LiquidityExitInput, { mode: "lst-active" }>
@@ -115,12 +117,12 @@ function scoreActiveLst(
     0.20   // rel ceiling: 20% of LST TVL
   )
 
-  // 24h trading volume: captures real exit capacity across CEX + DEX
-  const volumeScore = usdScore(
-    input.volume24hUsd ?? 0,
+  // Stable exit: native chain stablecoin pairs only
+  const stableScore = usdScore(
+    input.stableExitValue ?? 0,
     mc,
-    0.005, // rel floor: 0.5% of market cap
-    0.20   // rel ceiling: 20% of market cap
+    0.003, // 0.3% of market cap
+    0.05   // 5% of market cap
   )
 
   // Redemption quality: same scale, weight 0.15
@@ -135,14 +137,33 @@ function scoreActiveLst(
   )
 
   // Cross-chain exit: officially bridged token pairs > $100K on other chains
-  // Smaller ticket size ($50K) → exec floor = $100K, ceiling = $1.25M (appropriate for cross-chain scale)
   const crossChainScore = usdScore(
     input.crossChainExitLiquidityUsd ?? 0,
     mc,
     0.001, // 0.1% of market cap
-    0.05,  // 5% of market cap
-    50_000 // ticketSize: exec floor = $100K, ceiling = $1.25M
+    0.05   // 5% of market cap
   )
+
+  // Normalize by weight sum (0.95) so that all-100 components = final score 100
+  let rawScore = Math.round(
+    (lstScore * 0.10 +
+      stableScore * 0.35 +
+      redemptionScore * 0.15 +
+      nativeDexScore * 0.25 +
+      crossChainScore * 0.10) /
+      WEIGHT_SUM
+  )
+
+  // Redemption penalty: -20 on raw score if no redemption mechanism exists
+  // (replaces the previous cap=60 for !redemptionExists)
+  if (!input.redemptionExists) {
+    rawScore = Math.max(0, rawScore - 20)
+  }
+
+  // Cap: no stable exit route documented
+  const caps = [
+    !input.stableExitExists && { reason: "Sin ruta stable", value: 55 }
+  ].filter(Boolean) as { reason: string; value: number }[]
 
   // Normalize by weight sum (0.95) so that all-100 components = final score 100
   let rawScore = Math.round(
@@ -171,7 +192,7 @@ function scoreActiveLst(
     module: "Liquidity & Exit",
     mode: "lst-active",
     rawScore,
-    finalScore: rawScore,
+    finalScore: capApplied ? Math.min(capApplied.value, rawScore) : rawScore,
     capApplied,
     breakdown: {
       lstLiquidity: {

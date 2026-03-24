@@ -9,6 +9,12 @@ function cachePathFor(url: string) {
   return new URL(`${key}.json`, CACHE_DIR);
 }
 
+function looksLikeApiError(data: unknown): boolean {
+  if (data === null || typeof data !== "object") return false;
+  const record = data as Record<string, unknown>;
+  return record.status === "0" && typeof record.message === "string" && record.message.startsWith("NOTOK");
+}
+
 export async function fetchJsonWithCache<T>(url: string, init?: RequestInit): Promise<T> {
   await mkdir(CACHE_DIR, { recursive: true });
   const cachePath = cachePathFor(url);
@@ -30,6 +36,11 @@ export async function fetchJsonWithCache<T>(url: string, init?: RequestInit): Pr
   }
 
   const data = (await response.json()) as T;
-  await writeFile(cachePath, JSON.stringify({ cachedAt: Date.now(), data }, null, 2));
+
+  const shouldCache = !looksLikeApiError(data);
+  if (shouldCache) {
+    await writeFile(cachePath, JSON.stringify({ cachedAt: Date.now(), data }, null, 2));
+  }
+
   return data;
 }

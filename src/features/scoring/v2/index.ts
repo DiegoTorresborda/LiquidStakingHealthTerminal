@@ -66,12 +66,17 @@ export type V2ScoringResult = {
 
 function calcPillars(m: V2ModuleScores): V2PillarScores {
   const s = (key: keyof V2ModuleScores) => m[key].finalScore
+  const excluded = (key: keyof V2ModuleScores) => m[key].excluded === true
 
-  const exitability = Math.round(
-    (s("Liquidity & Exit") * W["Liquidity & Exit"] +
-      s("Peg Stability") * W["Peg Stability"]) /
-      (W["Liquidity & Exit"] + W["Peg Stability"])
-  )
+  // Exitability: L&E + Peg. If Peg is excluded (pre-LST), use only L&E.
+  const pegExcluded = excluded("Peg Stability")
+  const exitabilityWeightSum = pegExcluded
+    ? W["Liquidity & Exit"]
+    : W["Liquidity & Exit"] + W["Peg Stability"]
+  const exitabilityWeighted = pegExcluded
+    ? s("Liquidity & Exit") * W["Liquidity & Exit"]
+    : s("Liquidity & Exit") * W["Liquidity & Exit"] + s("Peg Stability") * W["Peg Stability"]
+  const exitability = Math.round(exitabilityWeighted / exitabilityWeightSum)
 
   const moneyness = s("DeFi Moneyness")
 
@@ -90,15 +95,19 @@ function calcPillars(m: V2ModuleScores): V2PillarScores {
 // ─── Global score ─────────────────────────────────────────────────────────────
 
 function calcGlobal(m: V2ModuleScores): number {
-  const weighted =
-    m["Liquidity & Exit"].finalScore * W["Liquidity & Exit"] +
-    m["Peg Stability"].finalScore * W["Peg Stability"] +
-    m["DeFi Moneyness"].finalScore * W["DeFi Moneyness"] +
-    m["Security & Governance"].finalScore * W["Security & Governance"] +
-    m["Validator Decentralization"].finalScore * W["Validator Decentralization"] +
-    m["Incentive Sustainability"].finalScore * W["Incentive Sustainability"]
+  // Sum only non-excluded modules. This redistributes excluded weights
+  // proportionally across the remaining modules via normalization.
+  let weighted = 0
+  let activeWeightSum = 0
 
-  return Math.round(Math.min(100, Math.max(0, weighted / WEIGHTS_SUM)))
+  for (const key of Object.keys(W) as (keyof typeof W)[]) {
+    if (m[key].excluded) continue
+    weighted += m[key].finalScore * W[key]
+    activeWeightSum += W[key]
+  }
+
+  if (activeWeightSum === 0) return 0
+  return Math.round(Math.min(100, Math.max(0, weighted / activeWeightSum)))
 }
 
 // ─── Main entry point ─────────────────────────────────────────────────────────

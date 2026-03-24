@@ -42,6 +42,10 @@ export type DetailRedFlag = {
   detail: string;
   linkedModule?: ModuleName;
   severity: "High" | "Medium" | "Low";
+  /** ID of the Improvement Plan opportunity that addresses this flag */
+  linkedOpportunityId?: string;
+  /** Title of the Improvement Plan opportunity that addresses this flag */
+  linkedOpportunityTitle?: string;
 };
 
 export type StressSnapshot = {
@@ -73,6 +77,8 @@ export type NetworkDetailSummary = {
   lpAttractiveness: LpAttractivenessLabel;
   diagnosis: string;
   scoringMode?: "pre-lst" | "lst-active";
+  /** For pre-LST networks: the projected global score immediately after an LST is launched (before any other improvements). */
+  lstLaunchProjectedScore?: number;
 };
 
 export type NetworkDetailData = {

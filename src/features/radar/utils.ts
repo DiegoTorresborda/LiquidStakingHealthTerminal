@@ -135,8 +135,6 @@ function getSortValue(network: RadarNetwork, key: SortKey): string | number {
       return network.stakingRatioPct;
     case "stakingApyPct":
       return network.stakingApyPct;
-    case "stakerAddresses":
-      return network.stakerAddresses;
     case "globalLstHealthScore":
       return network.globalLstHealthScore;
     case "lstProtocols":

@@ -40,12 +40,11 @@ const COLUMNS: Column[] = [
   { key: "marketCapUsd", label: "Market Cap", align: "right" },
   { key: "stakingRatioPct", label: "% Staked", align: "right" },
   { key: "stakingApyPct", label: "Staking APY", align: "right" },
-  { key: "stakerAddresses", label: "# Stakers", align: "right" },
   { key: "globalLstHealthScore", label: "Global LST Health", align: "right" },
   { key: "lstProtocols", label: "# of LSTs", align: "right" },
   { key: "lstPenetrationPct", label: "LST / Staked %", align: "right" },
   { key: "defiTvlUsd", label: "DeFi TVL", align: "right" },
-  { key: "opportunityScore", label: "Opportunity Score", align: "right" }
+  { key: "opportunityScore", label: "Score Potential", align: "right" }
 ];
 
 export function NetworksTable({
@@ -141,7 +140,6 @@ export function NetworksTable({
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatUsdCompact(network.marketCapUsd)}</td>
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatPercent(network.stakingRatioPct)}</td>
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatPercent(network.stakingApyPct)}</td>
-                    <td className="px-3 py-3 text-right text-sm text-ink-100">{formatInteger(network.stakerAddresses)}</td>
                     <td className="px-3 py-3 text-right">
                       <span className={`inline-flex rounded-md border px-2.5 py-1 text-sm font-semibold ${resolveHealthScoreClass(network.globalLstHealthScore)}`}>
                         {network.globalLstHealthScore}
@@ -159,7 +157,7 @@ export function NetworksTable({
 
                   {isExpanded ? (
                     <tr>
-                      <td colSpan={11} className="px-3 pb-3">
+                      <td colSpan={10} className="px-3 pb-3">
                         <div className="rounded-xl border border-ink-300/20 bg-ink-900/30 p-4">
                           <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                             <p className="text-xs uppercase tracking-[0.16em] text-ink-300">Secondary fields</p>

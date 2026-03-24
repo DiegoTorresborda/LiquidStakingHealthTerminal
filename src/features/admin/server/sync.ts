@@ -68,34 +68,60 @@ type SyncResult = {
 
 async function runNpmScript(scriptName: string): Promise<SyncLog> {
   const command = `npm run ${scriptName}`;
-  const { stdout, stderr } = await execFileAsync("npm", ["run", scriptName], {
-    cwd: process.cwd(),
-    env: process.env,
-    maxBuffer: 1024 * 1024 * 10
-  });
+  console.log("[sync] running script: %s", command);
+  const start = Date.now();
 
-  return {
-    command,
-    stdout,
-    stderr
-  };
+  try {
+    const { stdout, stderr } = await execFileAsync("npm", ["run", scriptName], {
+      cwd: process.cwd(),
+      env: process.env,
+      maxBuffer: 1024 * 1024 * 10
+    });
+
+    console.log("[sync] script %s completed in %dms (stdout: %d chars, stderr: %d chars)",
+      scriptName, Date.now() - start, stdout.length, stderr.length);
+
+    if (stderr && stderr.trim().length > 0) {
+      console.warn("[sync] script %s stderr:\n%s", scriptName, stderr.trim().slice(0, 500));
+    }
+
+    return { command, stdout, stderr };
+  } catch (error) {
+    console.error("[sync] script %s failed after %dms:", scriptName, Date.now() - start,
+      error instanceof Error ? error.message : error);
+    throw error;
+  }
 }
 
 async function snapshotFromJsonFile(source: "coingecko" | "defillama", filePath: string, startedAt: string, endedAt: string) {
+  console.log("[sync] reading %s snapshot from %s", source, filePath);
   const payload = await readJsonWithFallback<Record<string, unknown>>(filePath, {});
+
+  const payloadKeys = Object.keys(payload);
+  console.log("[sync] %s payload keys: [%s] (%d top-level keys)", source, payloadKeys.join(", "), payloadKeys.length);
+
   await writeRawSnapshot(source, payload, endedAt);
+  console.log("[sync] %s raw snapshot written (timestamp: %s)", source, endedAt);
 
   const networks = payload.networks;
   let updatedNetworks = 0;
+  let totalNetworks = 0;
 
   if (networks && typeof networks === "object") {
-    for (const entry of Object.values(networks as Record<string, { status?: unknown }>)) {
+    const networkEntries = Object.entries(networks as Record<string, { status?: unknown }>);
+    totalNetworks = networkEntries.length;
+
+    for (const [networkId, entry] of networkEntries) {
       const status = typeof entry?.status === "string" ? entry.status : "";
       if (status === "ok" || status === "partial") {
         updatedNetworks += 1;
+      } else if (status && status !== "ok" && status !== "partial") {
+        console.warn("[sync] %s — network %s has status: %s", source, networkId, status);
       }
     }
   }
+
+  console.log("[sync] %s — %d/%d networks updated successfully", source, updatedNetworks, totalNetworks);
 
   const status: SyncSourceStatus = {
     source,
@@ -155,8 +181,12 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
   const logs: SyncLog[] = [];
   const statuses: SyncSourceStatus[] = [];
 
+  console.log("[sync] ========== starting data sync for source: %s ==========", source);
+  console.log("[sync] started at %s", startedAt);
+
   try {
     if (source === "coingecko" || source === "all") {
+      console.log("[sync] --- fetching CoinGecko data ---");
       logs.push(await runNpmScript("data:sync:coingecko"));
       const endedAt = new Date().toISOString();
       const status = await snapshotFromJsonFile(
@@ -166,9 +196,11 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
         endedAt
       );
       statuses.push(status);
+      console.log("[sync] CoinGecko sync finished: %d networks updated", status.updatedNetworks);
     }
 
     if (source === "defillama" || source === "all") {
+      console.log("[sync] --- fetching DefiLlama data ---");
       logs.push(await runNpmScript("data:sync:defillama"));
       const endedAt = new Date().toISOString();
       const status = await snapshotFromJsonFile(
@@ -178,13 +210,17 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
         endedAt
       );
       statuses.push(status);
+      console.log("[sync] DefiLlama sync finished: %d networks updated", status.updatedNetworks);
     }
 
+    console.log("[sync] --- rebuilding generated dataset ---");
     logs.push(await runDatasetRebuildOnly());
 
     const dataset = await readJsonWithFallback<Array<Record<string, unknown>>>(GENERATED_DATASET_PATH, []);
+    console.log("[sync] dataset loaded: %d records from %s", dataset.length, GENERATED_DATASET_PATH);
 
     if (source === "dexscreener" || source === "all") {
+      console.log("[sync] --- extracting Dexscreener snapshot from dataset ---");
       const endedAt = new Date().toISOString();
       const payload = {
         source: "dexscreener",
@@ -193,17 +229,20 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
       };
 
       await writeRawSnapshot("dexscreener", payload, endedAt);
+      const dexUpdated = countUpdated(dataset, DEX_FIELDS);
 
       statuses.push({
         source: "dexscreener",
         status: "ok",
-        updatedNetworks: countUpdated(dataset, DEX_FIELDS),
+        updatedNetworks: dexUpdated,
         startedAt,
         endedAt
       });
+      console.log("[sync] Dexscreener snapshot written: %d networks with data (%d fields tracked)", dexUpdated, DEX_FIELDS.length);
     }
 
     if (source === "explorer" || source === "all") {
+      console.log("[sync] --- extracting Explorer snapshot from dataset ---");
       const endedAt = new Date().toISOString();
       const payload = {
         source: "explorer",
@@ -212,14 +251,16 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
       };
 
       await writeRawSnapshot("explorer", payload, endedAt);
+      const explorerUpdated = countUpdated(dataset, EXPLORER_FIELDS);
 
       statuses.push({
         source: "explorer",
         status: "ok",
-        updatedNetworks: countUpdated(dataset, EXPLORER_FIELDS),
+        updatedNetworks: explorerUpdated,
         startedAt,
         endedAt
       });
+      console.log("[sync] Explorer snapshot written: %d networks with data (%d fields tracked)", explorerUpdated, EXPLORER_FIELDS.length);
     }
 
     if (source === "coingecko" || source === "defillama") {
@@ -233,6 +274,7 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
           endedAt,
           message: "Sync completed"
         });
+        console.log("[sync] %s completed with 0 updated networks (no snapshot file produced)", source);
       }
     }
 
@@ -246,9 +288,14 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
         endedAt,
         message: "Sync completed"
       });
+      console.log("[sync] %s completed with 0 updated networks", source);
     }
 
     await upsertAdminSyncStatuses(statuses);
+
+    const totalElapsed = Date.now() - new Date(startedAt).getTime();
+    console.log("[sync] ========== sync complete for %s — %d source(s) processed in %dms ==========",
+      source, statuses.length, totalElapsed);
 
     return {
       startedAt,
@@ -259,6 +306,11 @@ export async function executeDataSync(source: SyncSourceKey): Promise<SyncResult
   } catch (error) {
     const endedAt = new Date().toISOString();
     const failedSource = source === "all" ? "coingecko" : source;
+    const totalElapsed = Date.now() - new Date(startedAt).getTime();
+
+    console.error("[sync] ========== SYNC FAILED for %s after %dms ==========", source, totalElapsed);
+    console.error("[sync] failed source: %s", failedSource);
+    console.error("[sync] error:", error instanceof Error ? error.stack ?? error.message : error);
 
     const failure: SyncSourceStatus = {
       source: failedSource,

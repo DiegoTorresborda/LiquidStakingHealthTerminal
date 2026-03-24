@@ -127,6 +127,13 @@ function buildActiveLst(
   // Cross-chain exit: official bridged token pairs > $100K on other chains
   const crossChainExitLiquidityUsd = network.crossChainExitLiquidityUsd ?? null
 
+  // Native DEX liquidity: base token pairs on the native chain (all counterparties)
+  const baseTokenDexLiquidityUsd = network.baseTokenDexLiquidityUsd ?? null
+  const baseTokenDexSource: DataSource = baseTokenDexLiquidityUsd != null ? "primary" : "missing"
+
+  // Cross-chain exit: official bridged token pairs > $100K on other chains
+  const crossChainExitLiquidityUsd = network.crossChainExitLiquidityUsd ?? null
+
   // Redemption: hasLst=true implies protocol exists; unbondingDays now in dataset
   const redemptionExists = network.hasLst ?? (network.lstProtocols ?? 0) >= 1
 
@@ -135,8 +142,8 @@ function buildActiveLst(
     lstDexLiquidityUsd,
     lstDexSource,
     lstTvlUsd: network.lstTvlUsd,
-    volume24hUsd,
-    volumeSource,
+    stableExitValue,
+    stableExitSource,
     baseTokenDexLiquidityUsd,
     baseTokenDexSource,
     crossChainExitLiquidityUsd,
