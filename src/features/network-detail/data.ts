@@ -348,6 +348,7 @@ function buildV2ModuleMetrics(
     }
     return [
       { label: "Base Token DEX Liq.", value: usd(r.baseTokenDexLiquidityUsd), description: "Native token DEX liquidity. Proxy for on-chain market depth before an LST exists." },
+      { label: "24h Trading Volume", value: usd(r.volume24hUsd), description: "Total 24h trading volume (CEX + DEX). Best available proxy for exit capacity on non-EVM chains where DEX depth data is unavailable." },
       { label: "Stable Exit Depth", value: usd(r.stableExitLiquidityUsd ?? (r.stablecoinLiquidityUsd != null ? r.stablecoinLiquidityUsd * 0.05 : null)), description: "Stablecoin liquidity available to exit the base token position." },
       { label: "Staking Ratio", value: pct(r.stakingRatioPct), description: "% of supply staked. Higher ratio signals committed capital but reduces liquid float." }
     ];
