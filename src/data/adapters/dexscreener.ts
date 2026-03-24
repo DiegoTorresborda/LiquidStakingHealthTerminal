@@ -168,7 +168,8 @@ function emptyDexFieldQuality(): DexscreenerFieldQualityMap {
     lstHasStablePair: "missing",
     baseTokenVolumeLiquidityRatio: "missing",
     lstVolumeLiquidityRatio: "missing",
-    crossChainExitLiquidityUsd: "missing"
+    crossChainExitLiquidityUsd: "missing",
+    crossChainAllLiquidityUsd: "missing"
   };
 }
 
