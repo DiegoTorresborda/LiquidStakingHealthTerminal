@@ -84,6 +84,58 @@ export const NETWORK_TOKEN_REGISTRY: Record<string, NetworkTokenConfig> = {
         bridge: "Wormhole"
       }
     ]
+  },
+  sei: {
+
+    networkId: "sei",
+    nativeTokenSymbol: "SEI",
+    nativeChainId: "seiv2",
+    nativeTokenAddress: "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7", // WSEI (Wrapped SEI)
+    officialDocsUrl: "https://docs.sei.io/evm/bridging/layerzero",
+    lastDiscoveryAt: "2026-03-24",
+    crossChainDeployments: [
+      {
+        chainId: "ethereum",
+        address: "0xbdF43ecAdC5ceF51B7D1772F722E40596BC1788B",
+        bridge: "LayerZero OFT v2",
+        bridgeUrl: "https://app.sei.io/bridge"
+      }
+    ]
+  },
+  sui: {
+
+    networkId: "sui",
+    nativeTokenSymbol: "SUI",
+    nativeChainId: "sui",
+    nativeTokenAddress: null, // SUI is used natively in DeFi — no WSUI equivalent
+    officialDocsUrl: "https://docs.sui.io/concepts/tokenomics/sui-bridging",
+    lastDiscoveryAt: "2026-03-24",
+    crossChainDeployments: [
+      {
+        chainId: "base",
+        address: "0xb0505e5a99abd03d94a1169e638B78EDfEd26ea4",
+        bridge: "Universal Protocol (uSUI)",
+        bridgeUrl: "https://bridge.sui.io",
+        notes: "Third-party wrapped SUI, custodied by Coinbase Prime. CoinGecko-listed. No official Sui Foundation ERC-20 exists."
+      }
+    ]
+  },
+  aptos: {
+    networkId: "aptos",
+    nativeTokenSymbol: "APT",
+    nativeChainId: "aptos",
+    nativeTokenAddress: null, // APT is natively usable in DeFi — no wrapping needed (0x1::aptos_coin::AptosCoin)
+    officialDocsUrl: "https://aptos.dev/build/guides/exchanges",
+    lastDiscoveryAt: "2026-03-24",
+    crossChainDeployments: [
+      {
+        chainId: "base",
+        address: "0x9c0e042d65a2e1ff31ac83f404e5cb79f452c337",
+        bridge: "Universal Protocol (uAPT)",
+        bridgeUrl: "https://theaptosbridge.com",
+        notes: "Third-party wrapped APT, custodied by Coinbase Prime. CoinGecko-listed but ~$21K liquidity — below $100K scoring threshold."
+      }
+    ]
   }
-  // Future entries: zigchain, berachain, sei, etc. as cross-chain bridges launch
+  // Future entries: zigchain, berachain, etc. as cross-chain bridges launch
 };
