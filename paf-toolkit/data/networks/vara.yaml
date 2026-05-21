@@ -1,0 +1,134 @@
+# Vara Network (VARA) — PoS Adoption Funnel profile
+# Sources: Vara Network docs, Tokenomist, DAIC Capital.
+# As-of: 2026-05-21
+#
+# Vara is a Substrate-based NPoS L1 powered by Gear Protocol.
+# Infinite supply model with ideal staking rate target of 85%.
+
+name: Vara Network
+ticker: VARA
+genesis_date: 2023-12-08
+consensus_type: npos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 4_903_487_996.0
+    as_of: 2026-05-21
+    source: "Tokenomist May 2026"
+    confidence: high
+  native_price_usd:
+    value: 0.02
+    as_of: 2026-05-21
+    source: "Estimate; VARA low-cap altcoin"
+    confidence: low
+  market_cap_usd:
+    value: 98_069_760.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  net_issuance_annualized_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Dynamic inflation based on staking rate vs ideal 85%"
+    confidence: medium
+  holder_count:
+    value: 80_000
+    as_of: 2026-04-30
+    source: "Vara explorer"
+    confidence: low
+  active_addresses_30d:
+    value: 15_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 500_000.0
+    as_of: 2026-05-21
+    source: "Limited CEX presence"
+    confidence: low
+  token_age_months:
+    value: 30
+    as_of: 2026-05-21
+    source: "Vara mainnet Dec 2023"
+    confidence: high
+
+l2:
+  total_staked:
+    # NPoS with ideal staking rate 85% — Vara likely 70-80% staked
+    value: 3_432_441_597.0
+    as_of: 2026-05-21
+    source: "Estimate ~70% staked (NPoS ideal 85%)"
+    confidence: medium
+  staking_ratio_pct:
+    value: 70.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: medium
+  active_validators:
+    value: 200
+    as_of: 2026-05-21
+    source: "Vara validator set (Substrate NPoS)"
+    confidence: medium
+  distinct_operators:
+    value: 200
+    as_of: 2026-05-21
+    source: "Vara validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 30
+    as_of: 2026-05-21
+    source: "Substrate NPoS typically high Nakamoto"
+    confidence: medium
+  nominal_yield_pct:
+    value: 8.4
+    as_of: 2026-05-21
+    source: "DAIC Capital: up to 8.4% APY"
+    confidence: high
+  real_yield_pct:
+    value: 0.4
+    as_of: 2026-05-21
+    source: "Derived: 8.4% − 8% inflation"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing on Vara"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 28.0
+    as_of: 2026-05-21
+    source: "Substrate-style 28-day unbonding"
+    confidence: high
+  min_stake_native:
+    value: 50.0
+    as_of: 2026-05-21
+    source: "50 VARA minimum nominator stake"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client (Gear Protocol)"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 60.0
+      liquid_staking_pct: 0.0
+      cex_pct: 15.0
+      other_pct: 25.0
+    as_of: 2026-05-21
+    source: "Direct nomination dominates; no LSTs"
+    confidence: medium
+
+# No L3 — no material LST market for VARA.
+# No L4.1, no L4.2.

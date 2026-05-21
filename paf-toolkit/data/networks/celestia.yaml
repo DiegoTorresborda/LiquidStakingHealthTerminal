@@ -1,0 +1,213 @@
+# Celestia (TIA) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Celestia docs, Stride, MilkyWay, Forum posts.
+# As-of: 2026-05-21
+#
+# Note: Celestia is a Data Availability layer, not a smart-contract L1.
+# Native DeFi is minimal — most "DeFi for TIA" happens in the Cosmos
+# ecosystem via IBC (Osmosis, Stride). Liquid staking adoption is the
+# main relevance for PAF.
+
+name: Celestia
+ticker: TIA
+genesis_date: 2023-10-31
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 919_932_997.0
+    as_of: 2026-05-19
+    source: "CoinMarketCap May 2026"
+    confidence: high
+  native_price_usd:
+    value: 0.41
+    as_of: 2026-05-19
+    source: "Derived: $375M mcap / 919.93M circ"
+    confidence: high
+  market_cap_usd:
+    value: 377_172_528.0
+    as_of: 2026-05-19
+    source: "Derived: circulating × price"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 8.0
+    as_of: 2026-05-19
+    source: "Celestia inflation started at 8% annually (Celestia Vision 2.0)"
+    confidence: high
+  holder_count:
+    value: 250_000
+    as_of: 2026-04-30
+    source: "Celenium explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 50_000
+    as_of: 2026-04-30
+    source: "Estimate from Celestia daily activity"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "Not consistently published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 5_000_000.0
+    as_of: 2026-05-19
+    source: "TIA on Binance, Bybit + Cosmos DEXes"
+    confidence: low
+  token_age_months:
+    value: 31
+    as_of: 2026-05-19
+    source: "Computed: Oct 31 2023 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # 60% staking ratio typical for Cosmos chains
+    value: 551_959_798.0
+    as_of: 2026-05-19
+    source: "Estimate ~60% staked — typical for Cosmos chains"
+    confidence: medium
+  staking_ratio_pct:
+    value: 60.0
+    as_of: 2026-05-19
+    source: "Derived; Cosmos-style chains typically 50-70% staked"
+    confidence: medium
+  active_validators:
+    value: 100
+    as_of: 2026-05-19
+    source: "Celestia docs: initial validator set of 100"
+    confidence: high
+  distinct_operators:
+    value: 100
+    as_of: 2026-05-19
+    source: "Celestia validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 9
+    as_of: 2026-05-19
+    source: "Cosmos-style chains typically 8-12; Celestia est. 9"
+    confidence: medium
+  nominal_yield_pct:
+    value: 12.0
+    as_of: 2026-05-19
+    source: "Stakingrewards.com (rough mid 2026)"
+    confidence: medium
+  real_yield_pct:
+    value: 4.0
+    as_of: 2026-05-19
+    source: "Derived: 12% nominal − 8% inflation"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 5
+    as_of: 2026-05-19
+    source: "Few slashing events documented since launch"
+    confidence: low
+  eth_slashed_cumulative:
+    value: 100.0
+    as_of: 2026-05-19
+    source: "Estimate"
+    confidence: low
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-19
+    source: "Standard Cosmos unbonding period"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-19
+    source: "Cosmos-style delegation min (effectively 1 TIA)"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-19
+    source: "Single client (celestia-app)"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 8.0
+      cex_pct: 40.0
+      other_pct: 22.0
+    as_of: 2026-05-19
+    source: "Estimate"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Stride stTIA dominant + MilkyWay milkTIA. Total TIA staked in LSTs
+    # ~45M TIA at $0.41 = ~$18.5M
+    value: 18_500_000.0
+    as_of: 2026-04-30
+    source: "Estimate: ~45M TIA in stTIA + milkTIA at $0.41"
+    confidence: medium
+  liquidization_rate_pct:
+    # 18.5M / (551.96M × $0.41) = 18.5M / 226.3M = 8.2%
+    value: 8.2
+    as_of: 2026-04-30
+    source: "Derived: lst_tvl_usd / (total_staked × price)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    value: 2
+    as_of: 2026-04-30
+    source: "Stride stTIA (dominant) + MilkyWay milkTIA"
+    confidence: high
+  lst_issuer_hhi:
+    value: 7000.0
+    as_of: 2026-04-30
+    source: "Stride ~80% + MilkyWay ~20% → HHI ~6800"
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 80.0
+    as_of: 2026-04-30
+    source: "Stride stTIA approx 80% of TIA LST market"
+    confidence: medium
+  median_peg_deviation_90d_bps:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "Estimate — Cosmos LSTs typically tight peg"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-19
+    source: "Stride supports native redemption via 21d unbond"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Celestia.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # Limited DeFi on Celestia (DA layer). TIA LSTs used in Osmosis pools.
+    value: 5_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate — Osmosis stTIA/TIA pools, small TVL"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 27.0
+    as_of: 2026-04-30
+    source: "Derived: $5M / $18.5M — below S3 threshold"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-19
+    source: "Mars Protocol on Osmosis accepts stTIA"
+    confidence: medium
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-19
+    source: "Osmosis stTIA/TIA pool"
+    confidence: high
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-19
+    source: "No CDP for TIA"
+    confidence: high
+  looping_supported:
+    value: false
+    as_of: 2026-05-19
+    source: "No native looping market on Celestia / Cosmos for TIA"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "No yield tokenization market"
+    confidence: high

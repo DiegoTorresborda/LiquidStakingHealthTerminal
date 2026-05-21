@@ -1,0 +1,214 @@
+# Berachain (BERA) — PoS Adoption Funnel profile
+# Sources: BlockEden Mar 2026, Infrared Finance, Berachain docs.
+# As-of: 2026-05-21
+#
+# Note: Berachain uses Proof-of-Liquidity (PoL), an unusual consensus where
+# validators stake BERA but rewards (BGT) flow to liquidity providers.
+# The PAF framework's "staking ratio" measures BERA validator self-stake;
+# LST market (iBERA/iBGT via Infrared) is much larger than typical.
+
+name: Berachain
+ticker: BERA
+genesis_date: 2026-02-06
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 261_387_286.0
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026"
+    confidence: high
+  native_price_usd:
+    value: 0.39
+    as_of: 2026-05-21
+    source: "Derived: $102M mcap / 261.39M circ"
+    confidence: high
+  market_cap_usd:
+    value: 101_941_042.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 10.0
+    as_of: 2026-05-21
+    source: "Mainnet 3 months old, ongoing emissions"
+    confidence: low
+  holder_count:
+    value: 200_000
+    as_of: 2026-04-30
+    source: "Berachain explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 80_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 4_000_000.0
+    as_of: 2026-05-21
+    source: "BERA on Binance + native DEX"
+    confidence: low
+  token_age_months:
+    value: 3
+    as_of: 2026-05-21
+    source: "Mainnet Feb 6 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # ~30% validator BERA self-stake (69 validators × ~1.1M average)
+    value: 78_416_186.0
+    as_of: 2026-05-21
+    source: "Estimate ~30% of circulating in validator self-stake (PoL validators 250k-10M BERA)"
+    confidence: low
+  staking_ratio_pct:
+    value: 30.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  active_validators:
+    value: 69
+    as_of: 2026-05-21
+    source: "Berachain top 69 validators in active set"
+    confidence: high
+  distinct_operators:
+    value: 69
+    as_of: 2026-05-21
+    source: "Berachain validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 10
+    as_of: 2026-05-21
+    source: "Estimate based on top 69 validator distribution"
+    confidence: medium
+  nominal_yield_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Estimate from BGT/BERA reward flow"
+    confidence: low
+  real_yield_pct:
+    value: -2.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "Mainnet recent, no documented events"
+    confidence: high
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Berachain docs estimate"
+    confidence: low
+  min_stake_native:
+    value: 250_000.0
+    as_of: 2026-05-21
+    source: "250K BERA minimum (10M max) for active validator slot"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 15.0
+      liquid_staking_pct: 45.0
+      cex_pct: 20.0
+      other_pct: 20.0
+    as_of: 2026-05-21
+    source: "Infrared captures ~45% of BERA staking"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Infrared iBERA only (excluding iBGT which wraps soulbound BGT).
+    # Conservative estimate ~$50M of pure BERA in iBERA LST.
+    value: 50_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate iBERA TVL only (Infrared total $1.5B includes iBGT + LP)"
+    confidence: low
+  liquidization_rate_pct:
+    # $50M / ($78.4M × $0.39) = $50M / $30.6M = 163%
+    # WARNING: PoL model makes this metric distorted. Capping at meaningful value.
+    value: 60.0
+    as_of: 2026-04-30
+    source: "Estimate cap; PoL framework distorts standard calc"
+    confidence: low
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "Infrared near-monopoly on Berachain LST"
+    confidence: high
+  lst_issuer_hhi:
+    value: 9000.0
+    as_of: 2026-04-30
+    source: "Infrared dominance → very high HHI"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 92.0
+    as_of: 2026-04-30
+    source: "Infrared dominant LST issuer on Berachain"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "Infrared supports native redemption"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Berachain.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # Berachain TVL $3.26B (BlockEden Mar 2026). iBGT/iBERA active in PoL vaults.
+    value: 1_000_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate from Berachain $3.26B total TVL with iBGT/iBERA in PoL vaults"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 75.0
+    as_of: 2026-04-30
+    source: "PoL inherently makes LSTs productive; rate is structurally high"
+    confidence: low
+  num_lending_integrations:
+    value: 3
+    as_of: 2026-05-21
+    source: "Berachain native lending markets accept iBGT/iBERA"
+    confidence: medium
+  num_amm_integrations:
+    value: 4
+    as_of: 2026-05-21
+    source: "BEX, Kodiak, and other DEXes via PoL"
+    confidence: medium
+  num_cdp_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Honey stablecoin uses LSTs as collateral"
+    confidence: medium
+  looping_supported:
+    value: true
+    as_of: 2026-05-21
+    source: "PoL vault loops are core to Berachain UX"
+    confidence: high
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization market on Berachain yet"
+    confidence: medium

@@ -1,0 +1,208 @@
+# Sei (SEI) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Messari State of Sei Q4 2025, Sei docs.
+# As-of: 2026-05-21
+
+name: Sei
+ticker: SEI
+genesis_date: 2023-08-15
+consensus_type: dpos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 5_500_000_000.0
+    as_of: 2026-05-21
+    source: "~55% of 10B max supply unlocked (vesting from 2023 launch)"
+    confidence: medium
+  native_price_usd:
+    value: 0.20
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 estimate"
+    confidence: medium
+  market_cap_usd:
+    value: 1_100_000_000.0
+    as_of: 2026-05-21
+    source: "Derived: 5.5B × $0.20"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Vesting unlocks + staking emissions"
+    confidence: medium
+  holder_count:
+    value: 1_200_000
+    as_of: 2026-04-30
+    source: "Sei explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 200_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not consistently published; foundation + investor tokens significant"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 8_000_000.0
+    as_of: 2026-05-21
+    source: "SEI/USDT on Binance, Bybit"
+    confidence: low
+  token_age_months:
+    value: 33
+    as_of: 2026-05-21
+    source: "Computed: Aug 2023 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # 45% of circulating staked
+    value: 2_475_000_000.0
+    as_of: 2026-01-31
+    source: "Messari/Tanaka Jan 2026: 43-47% of supply staked (use mid 45%)"
+    confidence: high
+  staking_ratio_pct:
+    value: 45.0
+    as_of: 2026-01-31
+    source: "Messari State of Sei"
+    confidence: high
+  active_validators:
+    value: 50
+    as_of: 2026-01-31
+    source: "Sei active validator slot count"
+    confidence: medium
+  distinct_operators:
+    value: 50
+    as_of: 2026-01-31
+    source: "Sei validator set"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 8
+    as_of: 2026-01-31
+    source: "Estimate for Cosmos-style chain"
+    confidence: medium
+  nominal_yield_pct:
+    value: 6.0
+    as_of: 2026-01-31
+    source: "Sei staking APY 4-7% range (mid 6%)"
+    confidence: high
+  real_yield_pct:
+    value: -1.0
+    as_of: 2026-01-31
+    source: "Derived: 6% nominal − 7% issuance"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing on Sei mainnet"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-21
+    source: "21-day unbonding (standard Cosmos)"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Cosmos delegation min"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client implementation"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 25.0
+      liquid_staking_pct: 4.0
+      cex_pct: 40.0
+      other_pct: 31.0
+    as_of: 2026-05-21
+    source: "Estimate based on Messari LST market share"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # 107M SEI liquid-staked end Q4'25 × $0.20 = $21.4M
+    value: 21_400_000.0
+    as_of: 2025-12-31
+    source: "Messari State of Sei Q4 2025: 107M SEI liquid staked"
+    confidence: high
+  liquidization_rate_pct:
+    # $21.4M / ($2.475B × $0.20) = $21.4M / $495M = 4.3%
+    # Below 20% threshold — Sei stays at S1.
+    value: 4.3
+    as_of: 2025-12-31
+    source: "Derived: lst_tvl_usd / (total_staked × price)"
+    confidence: high
+  num_lst_issuers_above_5pct:
+    # Splashing Stake 95% + Silo 5% (Silo shutting down)
+    value: 1
+    as_of: 2025-12-31
+    source: "Splashing Stake spSEI dominant (95.1% per Messari Q4 2025)"
+    confidence: high
+  lst_issuer_hhi:
+    value: 9050.0
+    as_of: 2025-12-31
+    source: "95² + 5² = 9050 (Splashing near-monopoly)"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 95.1
+    as_of: 2025-12-31
+    source: "Splashing Stake 95.1% (Messari Q4 2025)"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 60.0
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "21-day unbonding available"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Sei.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 4_280_000.0
+    as_of: 2026-04-30
+    source: "Estimate ~20% of LST in Sei DeFi"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 20.0
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Yei Finance / Sei native lending"
+    confidence: medium
+  num_amm_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Astroport, DragonSwap"
+    confidence: medium
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP"
+    confidence: high
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping market"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

@@ -1,0 +1,209 @@
+# Core DAO (CORE) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Core DAO docs, Coinfomania.
+# As-of: 2026-05-21
+#
+# Core uses "Satoshi Plus" consensus combining DPoW (Bitcoin) + DPoS (CORE).
+# Dual staking: BTC stakers boost yields by also staking CORE.
+
+name: Core DAO
+ticker: CORE
+genesis_date: 2023-01-14
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 1_000_000_000.0
+    as_of: 2026-05-21
+    source: "~48% of 2.1B max supply unlocked"
+    confidence: medium
+  native_price_usd:
+    value: 0.50
+    as_of: 2026-05-21
+    source: "CoinMarketCap estimate May 2026"
+    confidence: medium
+  market_cap_usd:
+    value: 500_000_000.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 5.0
+    as_of: 2026-05-21
+    source: "Block rewards minus burn"
+    confidence: medium
+  holder_count:
+    value: 600_000
+    as_of: 2026-04-30
+    source: "Core explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 150_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 6_000_000.0
+    as_of: 2026-05-21
+    source: "CORE on Binance, others"
+    confidence: low
+  token_age_months:
+    value: 40
+    as_of: 2026-05-21
+    source: "Core mainnet Jan 2023"
+    confidence: high
+
+l2:
+  total_staked:
+    value: 500_000_000.0
+    as_of: 2026-05-21
+    source: "~50% staked (DPoS + dual staking incentives)"
+    confidence: medium
+  staking_ratio_pct:
+    value: 50.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: medium
+  active_validators:
+    value: 21
+    as_of: 2026-05-21
+    source: "Core Satoshi Plus: top 21 validators per 200 blocks"
+    confidence: high
+  distinct_operators:
+    value: 21
+    as_of: 2026-05-21
+    source: "Core validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 7
+    as_of: 2026-05-21
+    source: "Top 21 with stake distribution; est. 7"
+    confidence: medium
+  nominal_yield_pct:
+    value: 8.5
+    as_of: 2026-05-21
+    source: "stCORE reward rate 8.59%"
+    confidence: high
+  real_yield_pct:
+    value: 3.5
+    as_of: 2026-05-21
+    source: "Derived: 8.5% − 5% inflation"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Core round-based unbonding"
+    confidence: medium
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Delegation min"
+    confidence: medium
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 15.0
+      cex_pct: 25.0
+      other_pct: 30.0
+    as_of: 2026-05-21
+    source: "stCORE growing; BTC stakers also contribute"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # stCORE growing 57% QoQ; estimate ~$75M USD value
+    value: 75_000_000.0
+    as_of: 2026-04-30
+    source: "stCORE growing 57% QoQ (Coinfomania); estimate"
+    confidence: medium
+  liquidization_rate_pct:
+    # $75M / ($500M × $0.50) = $75M / $250M = 30%
+    value: 30.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "stCORE is the dominant LST on Core"
+    confidence: high
+  lst_issuer_hhi:
+    value: 9500.0
+    as_of: 2026-04-30
+    source: "stCORE near-monopoly"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 95.0
+    as_of: 2026-04-30
+    source: "stCORE official Core DAO LST"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 30.0
+    as_of: 2026-04-30
+    source: "stCORE auto-compounds, tight peg"
+    confidence: medium
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "stCORE has native redemption"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Core (lstBTC is separate, BTC-focused).
+
+l42:
+  lst_in_defi_tvl_usd:
+    # Core DeFi TVL 1.1B CORE = $550M USD. ~40% of LST might be in DeFi.
+    value: 30_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate ~40% of LST in Core DeFi"
+    confidence: medium
+  defi_productivity_rate_pct:
+    value: 40.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: medium
+  num_lending_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Colend, others on Core"
+    confidence: medium
+  num_amm_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Core DEXes (IceCreamSwap, SushiSwap)"
+    confidence: medium
+  num_cdp_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "stCORE used as collateral for coreBTC"
+    confidence: high
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature LST looping market"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

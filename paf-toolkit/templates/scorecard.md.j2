@@ -1,0 +1,75 @@
+# {{ profile.name }} ({{ profile.ticker }}) — PoS Adoption Funnel Scorecard
+
+**Stage:** `{{ stage.value }}` &nbsp;|&nbsp; **Classification confidence:** {{ classification_confidence }} &nbsp;|&nbsp; **Generated:** {{ generated_at }}
+
+> {{ trajectory }}
+
+---
+
+## Funnel
+
+```
+L1   Native token       │ supply {{ fmt_n(profile.l1.circulating_supply.value) }} {{ profile.ticker }}  mc {{ fmt_usd(profile.l1.market_cap_usd.value) }}
+L2   Staking security   │ staked {{ fmt_n(profile.l2.total_staked.value) }} {{ profile.ticker }}  ratio {{ "%.1f"|format(profile.l2.staking_ratio_pct.value) }}%
+{% if profile.l3 -%}
+L3   Liquid staking     │ LST TVL {{ fmt_usd(profile.l3.lst_tvl_usd.value) }}  liquidization {{ "%.1f"|format(profile.l3.liquidization_rate_pct.value) }}%
+{% else -%}
+L3   Liquid staking     │ [not present]
+{% endif -%}
+{% if profile.l41 -%}
+L4.1 Restaking / LRT    │ restake TVL {{ fmt_usd(profile.l41.restaking_tvl_usd.value) }}  rate {{ "%.1f"|format(profile.l41.restaking_rate_pct.value) }}%  AVSs {{ profile.l41.avs_count_live.value }}
+{% else -%}
+L4.1 Restaking / LRT    │ [not present]
+{% endif -%}
+{% if profile.l42 -%}
+L4.2 DeFi productivity  │ LST-in-DeFi {{ fmt_usd(profile.l42.lst_in_defi_tvl_usd.value) }}  productivity {{ "%.1f"|format(profile.l42.defi_productivity_rate_pct.value) }}%
+{%- else -%}
+L4.2 DeFi productivity  │ [not present]
+{%- endif %}
+```
+
+## Conversion ratios
+
+| Ratio | {{ profile.ticker }} | Ethereum (Q1 2026) | Gap |
+|---|---|---|---|
+{% for key, label in ratio_labels -%}
+| {{ label }} | {{ fmt_pct(ratios.get(key)) }} | {{ fmt_pct(eth_ratios.get(key)) }} | {{ fmt_gap(ratios.get(key), eth_ratios.get(key)) }} |
+{% endfor %}
+
+## vs-Ethereum scores (log-scaled, 100 = parity, cap 150)
+
+| Layer | Score |
+|---|---|
+{% for layer, score in scores.items() -%}
+| {{ layer }} | {{ "%.0f"|format(score) }} |
+{% endfor %}
+
+## Strengths & gaps
+
+**Strengths**
+{% for s in strengths -%}
+- {{ s }}
+{% else -%}
+- _none flagged_
+{% endfor %}
+
+**Gaps**
+{% for g in gaps -%}
+- {{ g }}
+{% else -%}
+- _none flagged_
+{% endfor %}
+
+## Data confidence
+
+{% if confidence_notes -%}
+{% for note in confidence_notes -%}
+- {{ note }}
+{% endfor %}
+{%- else -%}
+_All KPIs at high/medium confidence._
+{%- endif %}
+
+## BD recommendation
+
+{{ bd_recommendation }}

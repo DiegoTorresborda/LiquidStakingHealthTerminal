@@ -1,0 +1,208 @@
+# Injective (INJ) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Stakingrewards.com, Hydro docs, DefiLlama.
+# As-of: 2026-05-21
+
+name: Injective
+ticker: INJ
+genesis_date: 2020-11-01
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 99_970_955.0
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 (99.97M of 100M max — ~100% unlocked)"
+    confidence: high
+  native_price_usd:
+    value: 9.50
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026"
+    confidence: medium
+  market_cap_usd:
+    # 99.97M × $9.50 = $949.72M
+    value: 949_724_073.0
+    as_of: 2026-05-21
+    source: "Derived: circulating × price"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "INJ has deflationary mechanism (burn auction); near zero net issuance"
+    confidence: high
+  holder_count:
+    value: 300_000
+    as_of: 2026-04-30
+    source: "Estimate from Injective explorer"
+    confidence: low
+  active_addresses_30d:
+    value: 150_000
+    as_of: 2026-04-30
+    source: "Estimate from Injective activity"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not consistently published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 15_000_000.0
+    as_of: 2026-05-21
+    source: "INJ on Binance, Kraken, Coinbase"
+    confidence: medium
+  token_age_months:
+    value: 66
+    as_of: 2026-05-21
+    source: "Computed: Nov 2020 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # Injective has ~65% staking historically
+    value: 64_980_120.0
+    as_of: 2026-03-31
+    source: "Injective high staking ratio (~65% of circulating)"
+    confidence: medium
+  staking_ratio_pct:
+    value: 65.0
+    as_of: 2026-03-31
+    source: "Stakingrewards.com / Injective explorer"
+    confidence: medium
+  active_validators:
+    value: 49
+    as_of: 2026-03-31
+    source: "Q1 2026: 47-51 validators (mid 49)"
+    confidence: high
+  distinct_operators:
+    value: 49
+    as_of: 2026-03-31
+    source: "Injective validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 7
+    as_of: 2026-03-31
+    source: "Top 10 = 58% — estimate Nakamoto coefficient 7"
+    confidence: medium
+  nominal_yield_pct:
+    value: 12.0
+    as_of: 2026-03-31
+    source: "Crypto News Navigator: APY topped 12% late Mar 2026"
+    confidence: high
+  real_yield_pct:
+    value: 12.0
+    as_of: 2026-03-31
+    source: "Derived: 12% nominal − 0% inflation (deflationary burn)"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No publicized slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-21
+    source: "Standard Cosmos unbonding"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Cosmos-style delegation"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client (injective-core)"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 25.0
+      liquid_staking_pct: 5.0
+      cex_pct: 35.0
+      other_pct: 35.0
+    as_of: 2026-05-21
+    source: "Estimate; Hydro hINJ + stINJ"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Hydro hINJ ~$125M peak, settled. Whole LST category $18M (Hydro figure)
+    # Use ~$30M conservative estimate (peak was much higher)
+    value: 30_000_000.0
+    as_of: 2026-04-30
+    source: "Hydro hINJ + stINJ Stride; category $18M reported but Hydro peak $125M"
+    confidence: low
+  liquidization_rate_pct:
+    # $30M / ($64.98M × $9.50) = $30M / $617.3M = 4.9%
+    value: 4.9
+    as_of: 2026-04-30
+    source: "Derived: lst_tvl_usd / (total_staked × price)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    value: 2
+    as_of: 2026-04-30
+    source: "Hydro (hINJ + yINJ) dominant, Stride (stINJ) secondary"
+    confidence: medium
+  lst_issuer_hhi:
+    value: 7500.0
+    as_of: 2026-04-30
+    source: "Hydro ~85% + Stride ~15% → HHI ~7475"
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 85.0
+    as_of: 2026-04-30
+    source: "Hydro hINJ dominant on Injective"
+    confidence: medium
+  median_peg_deviation_90d_bps:
+    value: 40.0
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "Hydro and Stride both support native redemption"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Injective.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 15_000_000.0
+    as_of: 2026-04-30
+    source: "Hydro yINJ + Helix DEX usage of hINJ — ~50% of LST in DeFi"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lending_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Hydro lending, Mito (DEX with lending features)"
+    confidence: medium
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Helix is mainly orderbook; Mito AMM"
+    confidence: medium
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP protocol for INJ LSTs"
+    confidence: high
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping market for hINJ"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization on Injective"
+    confidence: high

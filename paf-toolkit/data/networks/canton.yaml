@@ -1,0 +1,141 @@
+# Canton Network (CC) — PoS Adoption Funnel profile
+# Sources: Canton docs, CoinStats, Tokenomist, CIP-0105.
+# As-of: 2026-05-21
+#
+# Canton uses "Super Validators" model — invitation-only, 13 active validators.
+# Highly institutional-focused (Goldman, Microsoft, Bank of America participate).
+# No retail-accessible LST market; staking is via institutional channels.
+
+name: Canton Network
+ticker: CC
+genesis_date: 2024-07-01
+consensus_type: bft_pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 38_430_000_000.0
+    as_of: 2026-05-21
+    source: "CoinStats May 2026: 38.43B CC circulating (no cap, burn-mint equilibrium)"
+    confidence: high
+  native_price_usd:
+    value: 0.143
+    as_of: 2026-05-21
+    source: "Derived: $5.5B mc / 38.43B"
+    confidence: medium
+  market_cap_usd:
+    value: 5_495_490_000.0
+    as_of: 2026-05-21
+    source: "Tokenomist March 2026: ~$5.5B"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 2.0
+    as_of: 2026-05-21
+    source: "Burn-mint equilibrium; depends on network activity"
+    confidence: medium
+  holder_count:
+    value: 50_000
+    as_of: 2026-04-30
+    source: "Institutional-focused; small holder base"
+    confidence: low
+  active_addresses_30d:
+    value: 15_000
+    as_of: 2026-04-30
+    source: "Estimate; B2B-focused network"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Institutional network; allocation not retail-public"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 2_000_000.0
+    as_of: 2026-05-21
+    source: "CC trading limited to specific institutional venues"
+    confidence: low
+  token_age_months:
+    value: 22
+    as_of: 2026-05-21
+    source: "Canton launched July 2024"
+    confidence: high
+
+l2:
+  total_staked:
+    # CIP-0105 requires 70% of lifetime rewards locked for Tier 1 status
+    value: 19_215_000_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~50% via Super Validator + delegated locking"
+    confidence: medium
+  staking_ratio_pct:
+    value: 50.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: medium
+  active_validators:
+    value: 13
+    as_of: 2026-03-31
+    source: "13 Super Validators (invitation-only)"
+    confidence: high
+  distinct_operators:
+    value: 13
+    as_of: 2026-03-31
+    source: "Canton Super Validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 5
+    as_of: 2026-05-21
+    source: "Equal voting power among 13 SVs; ⌈13/3⌉ = 5"
+    confidence: high
+  nominal_yield_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Canton.wiki: ~8% APY"
+    confidence: high
+  real_yield_pct:
+    value: 6.0
+    as_of: 2026-05-21
+    source: "Derived: 8% − 2% inflation"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No publicized slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 4.5
+    as_of: 2026-05-21
+    source: "Canton: 4.5-day reward rounds"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Delegation min; SV slots are invitation-only"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single Canton client implementation"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 5.0
+      liquid_staking_pct: 0.0
+      cex_pct: 5.0
+      other_pct: 90.0
+    as_of: 2026-05-21
+    source: "Institutional delegation dominates"
+    confidence: medium
+
+# No L3 — no retail-accessible LST market for CC. The institutional staking
+# model (Super Validators + invitation-only delegation) does not produce
+# typical liquid staking tokens. Canton's "staking liquidity" is delivered
+# via institutional channels, not on-chain LST primitives.
+
+# No L4.1 — no restaking primitive.
+
+# No L4.2 — no retail DeFi for CC LSTs (because no LSTs exist).

@@ -1,0 +1,223 @@
+# Sui (SUI) — PoS Adoption Funnel profile
+# Sources: CoinGecko, Suiscan, DefiLlama, Everstake Sui H1 2025 report,
+# Chainspect (Nakamoto), Sui Foundation docs.
+# As-of: 2026-05-19
+#
+# Calibration note on staking_ratio: Sui has ~60% of max supply still locked
+# (foundation/team/vesting). The Suiscan "total stake" of ~7.4B SUI includes
+# locked-but-staking tokens. For PAF comparability with Ethereum we use stake
+# of circulating tokens (~2.8B SUI = 70% of 4.005B circulating). The
+# investable stake market — what's available for LST adoption — is the
+# relevant denominator for liquidization rate.
+
+name: Sui
+ticker: SUI
+genesis_date: 2023-05-03
+consensus_type: dpos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 4_005_418_370.0
+    as_of: 2026-05-15
+    source: "CoinMarketCap / CoinGecko (May 2026)"
+    confidence: high
+  native_price_usd:
+    value: 1.22
+    as_of: 2026-05-15
+    source: "CoinMarketCap May 15 2026 ($1.22, market cap $4.88B / 4.005B circ)"
+    confidence: high
+  market_cap_usd:
+    # Derived: 4.005B × $1.22 = $4.886B
+    value: 4_886_610_411.0
+    as_of: 2026-05-15
+    source: "Derived: circulating_supply × native_price_usd"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 6.0
+    as_of: 2026-05-15
+    source: "Ainvest May 2026: 5–7% annual inflation from staking rewards + emissions"
+    confidence: medium
+  holder_count:
+    value: 168_000_000
+    as_of: 2026-04-30
+    source: "Ledger Academy citing on-chain wallets (likely cumulative — not 30d active)"
+    confidence: contested
+  active_addresses_30d:
+    value: 5_000_000
+    as_of: 2026-04-30
+    source: "Estimate from Sui Foundation 600k–1.2M daily active in 2025"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-15
+    source: "Not consistently published; CCN notes >80% of token supply controlled by foundation/team (locked)"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 50_000_000.0
+    as_of: 2026-05-15
+    source: "Approx SUI/USDC + SUI/USDT depth on Binance, Bybit, Cetus"
+    confidence: low
+  token_age_months:
+    value: 36
+    as_of: 2026-05-15
+    source: "Computed: genesis May 3 2023 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # 70% of 4.005B circulating = 2.804B SUI. Excludes ~4.6B locked
+    # foundation/vesting tokens that also earn staking rewards on Suiscan.
+    value: 2_803_793_000.0
+    as_of: 2026-05-15
+    source: "Everstake Sui H1 2025: 65–75% of circulating supply staked"
+    confidence: medium
+  staking_ratio_pct:
+    value: 70.0
+    as_of: 2026-05-15
+    source: "Derived: total_staked / circulating_supply"
+    confidence: medium
+  active_validators:
+    value: 113
+    as_of: 2026-05-15
+    source: "Suiscan 125 vs Ledger 100 — using midpoint"
+    confidence: medium
+  distinct_operators:
+    value: 113
+    as_of: 2026-05-15
+    source: "Sui Foundation validator set"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 20
+    as_of: 2026-04-30
+    source: "Chainspect (https://chainspect.app/dashboard/decentralization)"
+    confidence: high
+  nominal_yield_pct:
+    value: 3.0
+    as_of: 2026-05-15
+    source: "Bitget/Stakingrewards.com: typical 3–6% range in 2026"
+    confidence: medium
+  real_yield_pct:
+    value: -3.0
+    as_of: 2026-05-15
+    source: "Derived: 3.0% nominal − 6.0% inflation ≈ −3% real"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-15
+    source: "No publicized slashing events on Sui mainnet to date"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-15
+    source: "n/a — Sui does not slash"
+    confidence: high
+  unbonding_period_days:
+    value: 1.0
+    as_of: 2026-05-15
+    source: "Sui docs: epoch-based unstaking, ~24h epochs"
+    confidence: high
+  min_stake_native:
+    value: 30_000_000.0
+    as_of: 2026-05-15
+    source: "Sui validator stake minimum (30M SUI ≈ $36.6M at current price)"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-15
+    source: "Sui has one client implementation (sui-node) → 100% share → HHI 10000"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 20.0
+      cex_pct: 30.0
+      other_pct: 20.0
+    as_of: 2026-05-15
+    source: "Rough estimate; precise breakdown not consistently published"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Sum of DefiLlama LST issuers: SpringSui $328.45M + Haedal $180.82M
+    # + Volo $87.35M + Aftermath $28.58M + AlphaFi $28.03M = $653.23M
+    value: 653_230_000.0
+    as_of: 2026-04-30
+    source: "DefiLlama sum of SpringSui + Haedal + Volo + Aftermath + AlphaFi (Apr 2026)"
+    confidence: high
+  liquidization_rate_pct:
+    # Derived: lst_tvl_usd / (total_staked × price) = $653.23M / ($2.804B × $1.22) = 19.1%
+    # Just BELOW the 20% S1→S2 threshold — Sui sits right at the boundary.
+    value: 19.1
+    as_of: 2026-04-30
+    source: "Derived: lst_tvl_usd / (total_staked × native_price_usd)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    # SpringSui (50.3%), Haedal (27.7%), Volo (13.4%) — 3 above 5%
+    # AlphaFi (4.3%), Aftermath (4.4%) — below
+    value: 3
+    as_of: 2026-04-30
+    source: "DefiLlama issuer shares Apr 2026"
+    confidence: high
+  lst_issuer_hhi:
+    # 50.3² + 27.7² + 13.4² + 4.4² + 4.3² ≈ 3485
+    value: 3485.0
+    as_of: 2026-04-30
+    source: "Computed from top-5 issuer shares"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 50.3
+    as_of: 2026-04-30
+    source: "SpringSui $328.45M / $653.23M total"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "Rough estimate; Sui LSTs use epoch-based redemption so deviation stays small"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-15
+    source: "AlphaFi instant unstake; Haedal/Volo epoch-based native redemption"
+    confidence: high
+
+# No L4.1 — Sui has no live restaking primitive as of May 2026.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # ~40% of LST TVL is deployed as DeFi collateral (NAVI, Suilend, Scallop loops)
+    value: 261_292_000.0
+    as_of: 2026-04-30
+    source: "Derived: 40% of LST TVL (NAVI 1-click yield loops + Suilend/Scallop LST collateral)"
+    confidence: medium
+  defi_productivity_rate_pct:
+    value: 40.0
+    as_of: 2026-04-30
+    source: "Estimate from NAVI/Suilend/Scallop LST market sizes vs total LST TVL"
+    confidence: medium
+  num_lending_integrations:
+    value: 3
+    as_of: 2026-05-15
+    source: "NAVI (haSUI/vSUI collateral), Suilend, Scallop"
+    confidence: high
+  num_amm_integrations:
+    value: 4
+    as_of: 2026-05-15
+    source: "Cetus, Bluefin, Aftermath, Kriya — LST pools active"
+    confidence: high
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-15
+    source: "No CDP-style protocols accept LSTs as collateral on Sui yet"
+    confidence: medium
+  looping_supported:
+    value: true
+    as_of: 2026-05-15
+    source: "NAVI 1-click yield strategies: supply LST, borrow SUI, restake — recursive"
+    confidence: high
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-15
+    source: "No mature yield-tokenization market on Sui (no Pendle equivalent live)"
+    confidence: medium
+  # l2_lst_bridged_usd omitted: Sui is L1, no rollups host its LSTs.

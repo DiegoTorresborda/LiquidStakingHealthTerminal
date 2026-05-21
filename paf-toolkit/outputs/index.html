@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PAF Toolkit — Index</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --panel: #14181d;
+    --border: #232a32;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+    --good: #34d399;
+    --warn: #fbbf24;
+    --bad: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 28px 64px;
+  }
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    background: var(--panel);
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+  }
+  nav a { color: var(--accent); text-decoration: none; font-size: 14px; }
+  nav a:hover { text-decoration: underline; }
+  nav .brand { font-weight: 600; color: var(--text); margin-right: 6px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  h2 { font-size: 18px; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 15px; margin: 18px 0 8px; color: var(--muted); }
+  p, li { color: var(--text); }
+  blockquote {
+    margin: 12px 0 18px;
+    padding: 10px 14px;
+    border-left: 3px solid var(--accent);
+    background: rgba(96, 165, 250, 0.06);
+    color: var(--text);
+    border-radius: 0 4px 4px 0;
+  }
+  code, pre {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px;
+  }
+  pre {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px;
+    overflow-x: auto;
+    line-height: 1.5;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th { color: var(--muted); font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  ul { padding-left: 20px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+  .stage-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">paf-toolkit</span>
+  <a href="index.html">Index</a>
+  <a href="https://github.com/anthropics/apps">Repo</a>
+</nav>
+<div class="wrap">
+<h1>PoS Adoption Funnel — Scorecards</h1>
+<p>Generated 2026-05-18 14:07 UTC from <code>data/benchmark/ethereum.yaml</code> and <code>data/networks/*.yaml</code>.</p>
+<h2>Networks</h2>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Ticker</th>
+<th>Stage</th>
+<th>Staking</th>
+<th>Liquidization</th>
+<th>Trajectory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="eth_scorecard.html">Ethereum</a></td>
+<td>ETH</td>
+<td><code>S4.2</code></td>
+<td>30.5%</td>
+<td>46.0%</td>
+<td>2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden</td>
+</tr>
+</tbody>
+</table>
+<h2>Stages</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S0</code></td>
+<td>Pre-staking</td>
+</tr>
+<tr>
+<td><code>S1</code></td>
+<td>Securing (staking &gt; 2%)</td>
+</tr>
+<tr>
+<td><code>S2</code></td>
+<td>Liquidizing (LST &gt; 20% of staked)</td>
+</tr>
+<tr>
+<td><code>S3</code></td>
+<td>Productive (LST in DeFi &gt; 30%, withdrawals enabled)</td>
+</tr>
+<tr>
+<td><code>S4.1</code></td>
+<td>Restaking era (restaking &gt; 5% of LST)</td>
+</tr>
+<tr>
+<td><code>S4.2</code></td>
+<td>Composable mature (looping + Pendle &gt; $1B)</td>
+</tr>
+<tr>
+<td><code>S*</code></td>
+<td>Native liquid staking — L3 evaluation skipped</td>
+</tr>
+</tbody>
+</table>
+<p>See <a href="README.md">README on disk</a> for the full framework rationale.</p>
+</div>
+</body>
+</html>

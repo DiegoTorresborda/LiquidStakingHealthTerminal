@@ -1,0 +1,1381 @@
+{
+  "generatedAt": "2026-05-21T12:34:21.941Z",
+  "benchmarkAsOf": "2026-05-18",
+  "ethereum": {
+    "name": "Ethereum",
+    "ticker": "ETH",
+    "circulatingSupply": 121500000,
+    "totalStaked": 37300000,
+    "stakingRatioPct": 30.5,
+    "nativePriceUsd": 2100,
+    "marketCapUsd": 255150000000,
+    "lstTvlUsd": 36031800000,
+    "lstInDefiTvlUsd": 16214310000,
+    "restakingTvlUsd": 13800180000,
+    "pendleEquivalentTvlUsd": 11000000000,
+    "activeValidators": 1000000,
+    "nakamotoCoefficient": 3,
+    "nominalYieldPct": 2.84,
+    "realYieldPct": 2.6,
+    "clientDiversityHhi": 3400,
+    "liquidizationRatePct": 46,
+    "largestLstIssuerSharePct": 55,
+    "numLstIssuersAbove5pct": 2,
+    "nativeRedemptionAvailable": true,
+    "restakingRatePct": 38.3,
+    "avsCountLive": 40,
+    "lrtCount": 5,
+    "defiProductivityRatePct": 45,
+    "numLendingIntegrations": 6,
+    "numAmmIntegrations": 2,
+    "loopingSupported": true,
+    "paf": {
+      "stage": "S4.2",
+      "classificationConfidence": "contested",
+      "conversionRatios": {
+        "stakingParticipationPct": 30.5,
+        "liquidizationPct": 46,
+        "defiProductivityPct": 45,
+        "restakingPct": 38.300001665195744,
+        "loopingDepthPct": 30.52858863559411
+      },
+      "trajectory": "comparable to ETH 2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden",
+      "nearestQuarter": "2026-Q1",
+      "vsEthScores": {
+        "L1": 100,
+        "L2": 100,
+        "L3": 100,
+        "L4.1": 100,
+        "L4.2": 100,
+        "overall": 100
+      },
+      "strengths": [
+        "Staking ratio 30.5% meets/exceeds Ethereum's 30.5%.",
+        "Liquidization rate 46% is healthy (S2-mature).",
+        "DeFi productivity 45% clears the S3 threshold."
+      ],
+      "gaps": [],
+      "bdRecommendation": "Mature funnel. All conversion ratios qualify for category-leadership pitches. BD focus on differentiated yield products and institutional structured products."
+    }
+  },
+  "ethereumHistory": [
+    {
+      "quarter": "2020-Q4",
+      "asOf": "2020-12-01",
+      "stage": "S0",
+      "stakingRatioPct": 0.6,
+      "liquidizationRatePct": null,
+      "defiProductivityRatePct": null,
+      "restakingRatePct": null,
+      "lstTvlUsd": 0,
+      "restakingTvlUsd": null,
+      "note": "Beacon Chain genesis"
+    },
+    {
+      "quarter": "2021-Q4",
+      "asOf": "2021-12-31",
+      "stage": "S1",
+      "stakingRatioPct": 7.4,
+      "liquidizationRatePct": 25,
+      "defiProductivityRatePct": null,
+      "restakingRatePct": null,
+      "lstTvlUsd": 5000000000,
+      "restakingTvlUsd": null,
+      "note": "Lido crossed 1M staked ETH (S1→S2 in progress)"
+    },
+    {
+      "quarter": "2022-Q3",
+      "asOf": "2022-09-15",
+      "stage": "S2",
+      "stakingRatioPct": 11.2,
+      "liquidizationRatePct": 33,
+      "defiProductivityRatePct": 5,
+      "restakingRatePct": null,
+      "lstTvlUsd": 12000000000,
+      "restakingTvlUsd": null,
+      "note": "The Merge — issuance dropped ~88%"
+    },
+    {
+      "quarter": "2022-Q4",
+      "asOf": "2022-12-31",
+      "stage": "S2",
+      "stakingRatioPct": 13.1,
+      "liquidizationRatePct": 38,
+      "defiProductivityRatePct": 8,
+      "restakingRatePct": null,
+      "lstTvlUsd": 14090000000,
+      "restakingTvlUsd": null,
+      "note": "LST TVL $14.09B (CryptoSlate / DefiLlama)"
+    },
+    {
+      "quarter": "2023-Q1",
+      "asOf": "2023-03-31",
+      "stage": "S2",
+      "stakingRatioPct": 15,
+      "liquidizationRatePct": 33,
+      "defiProductivityRatePct": 15,
+      "restakingRatePct": null,
+      "lstTvlUsd": 16000000000,
+      "restakingTvlUsd": null,
+      "note": "Pre-Shapella; Aave v3 stETH listed Jan 2023"
+    },
+    {
+      "quarter": "2023-Q2",
+      "asOf": "2023-06-30",
+      "stage": "S3",
+      "stakingRatioPct": 15.6,
+      "liquidizationRatePct": 30,
+      "defiProductivityRatePct": 20,
+      "restakingRatePct": null,
+      "lstTvlUsd": 17000000000,
+      "restakingTvlUsd": null,
+      "note": "Shapella Apr 12 enabled withdrawals; EigenLayer Stage 1 Mainnet Jun 14"
+    },
+    {
+      "quarter": "2023-Q4",
+      "asOf": "2023-12-31",
+      "stage": "S3",
+      "stakingRatioPct": 24.1,
+      "liquidizationRatePct": 30,
+      "defiProductivityRatePct": 25,
+      "restakingRatePct": 3.2,
+      "lstTvlUsd": 22000000000,
+      "restakingTvlUsd": 700000000,
+      "note": "29M ETH staked (+83% YoY); restaking still <5% of LST TVL"
+    },
+    {
+      "quarter": "2024-Q1",
+      "asOf": "2024-03-31",
+      "stage": "S4.1",
+      "stakingRatioPct": 25.7,
+      "liquidizationRatePct": 35,
+      "defiProductivityRatePct": 30,
+      "restakingRatePct": 29.5,
+      "lstTvlUsd": 44000000000,
+      "restakingTvlUsd": 13000000000,
+      "note": "1M validators; EigenLayer LST cap removed Apr 17 → LRT explosion"
+    },
+    {
+      "quarter": "2024-Q2",
+      "asOf": "2024-06-30",
+      "stage": "S4.2",
+      "stakingRatioPct": 27,
+      "liquidizationRatePct": 30,
+      "defiProductivityRatePct": 35,
+      "restakingRatePct": 40,
+      "lstTvlUsd": 50000000000,
+      "restakingTvlUsd": 20090000000,
+      "note": "EigenLayer peak $20.09B Jun 6; Pendle ATH $6.71B Jun 10"
+    },
+    {
+      "quarter": "2024-Q4",
+      "asOf": "2024-12-31",
+      "stage": "S4.2",
+      "stakingRatioPct": 28,
+      "liquidizationRatePct": 28,
+      "defiProductivityRatePct": 40,
+      "restakingRatePct": 43,
+      "lstTvlUsd": 45000000000,
+      "restakingTvlUsd": 19300000000,
+      "note": "Lido 27.7% share; restaking still elevated pre-slashing"
+    },
+    {
+      "quarter": "2025-Q2",
+      "asOf": "2025-06-30",
+      "stage": "S4.2",
+      "stakingRatioPct": 29,
+      "liquidizationRatePct": 46,
+      "defiProductivityRatePct": 42,
+      "restakingRatePct": 30,
+      "lstTvlUsd": 25000000000,
+      "restakingTvlUsd": 7500000000,
+      "note": "Pectra activated May 7; EigenLayer slashing Apr 17 crashed restaking TVL"
+    },
+    {
+      "quarter": "2025-Q3",
+      "asOf": "2025-09-30",
+      "stage": "S4.2",
+      "stakingRatioPct": 29.5,
+      "liquidizationRatePct": 46,
+      "defiProductivityRatePct": 45,
+      "restakingRatePct": 11.3,
+      "lstTvlUsd": 62000000000,
+      "restakingTvlUsd": 7000000000,
+      "note": "LST TVL ATH $86B Aug 14 ($62B on Ethereum); Kiln exit Sept 10"
+    },
+    {
+      "quarter": "2026-Q1",
+      "asOf": "2026-02-28",
+      "stage": "S4.2",
+      "stakingRatioPct": 30.5,
+      "liquidizationRatePct": 46,
+      "defiProductivityRatePct": 45,
+      "restakingRatePct": 38.3,
+      "lstTvlUsd": 47000000000,
+      "restakingTvlUsd": 18000000000,
+      "note": "Post-correction; EigenLayer recovery to $18B per BlockEden"
+    }
+  ],
+  "networks": {
+    "apt": {
+      "name": "Aptos",
+      "ticker": "APT",
+      "circulatingSupply": 819270000,
+      "totalStaked": 625922280,
+      "stakingRatioPct": 76.4,
+      "nativePriceUsd": 0.94,
+      "marketCapUsd": 770113800,
+      "lstTvlUsd": 312000000,
+      "lstInDefiTvlUsd": 109200000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 152,
+      "nakamotoCoefficient": 18,
+      "nominalYieldPct": 6.54,
+      "realYieldPct": 0,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 53,
+      "largestLstIssuerSharePct": 39,
+      "numLstIssuersAbove5pct": 4,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 35,
+      "numLendingIntegrations": 4,
+      "numAmmIntegrations": 3,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S3",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 76.4,
+          "liquidizationPct": 53,
+          "defiProductivityPct": 35,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2025-Q2 — Pectra activated May 7; EigenLayer slashing Apr 17 crashed restaking TVL",
+        "nearestQuarter": "2025-Q2",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 139.87935192289044,
+          "L3": 106.15180379192151,
+          "L4.1": null,
+          "L4.2": 89.0855530574932,
+          "overall": 83.7791771930763
+        },
+        "strengths": [
+          "Staking ratio 76.4% meets/exceeds Ethereum's 30.5%.",
+          "Liquidization rate 53% is healthy (S2-mature).",
+          "DeFi productivity 35% clears the S3 threshold."
+        ],
+        "gaps": [
+          "Next gate: S3 → S4.1 requires restaking_tvl > 5% of lst_tvl."
+        ],
+        "bdRecommendation": "Productive integrations stage. Restaking primitives are the next gate but watch for restaking market stability before pitching restaking-only narratives."
+      }
+    },
+    "bera": {
+      "name": "Berachain",
+      "ticker": "BERA",
+      "circulatingSupply": 261387286,
+      "totalStaked": 78416186,
+      "stakingRatioPct": 30,
+      "nativePriceUsd": 0.39,
+      "marketCapUsd": 101941042,
+      "lstTvlUsd": 50000000,
+      "lstInDefiTvlUsd": 1000000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 69,
+      "nakamotoCoefficient": 10,
+      "nominalYieldPct": 8,
+      "realYieldPct": -2,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 60,
+      "largestLstIssuerSharePct": 92,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 75,
+      "numLendingIntegrations": 3,
+      "numAmmIntegrations": 4,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 30,
+          "liquidizationPct": 60,
+          "defiProductivityPct": 75,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2025-Q3 — LST TVL ATH $86B Aug 14 ($62B on Ethereum); Kiln exit Sept 10",
+        "nearestQuarter": "2025-Q3",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 99.28214153728766,
+          "L3": 111.53934187020695,
+          "L4.1": null,
+          "L4.2": 122.18487496163564,
+          "overall": 83.25158959228256
+        },
+        "strengths": [
+          "Liquidization rate 60% is healthy (S2-mature).",
+          "DeFi productivity 75% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (92% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "cc": {
+      "name": "Canton Network",
+      "ticker": "CC",
+      "circulatingSupply": 38430000000,
+      "totalStaked": 19215000000,
+      "stakingRatioPct": 50,
+      "nativePriceUsd": 0.143,
+      "marketCapUsd": 5495490000,
+      "lstTvlUsd": null,
+      "lstInDefiTvlUsd": null,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": null,
+      "activeValidators": 13,
+      "nakamotoCoefficient": 5,
+      "nominalYieldPct": 8,
+      "realYieldPct": 6,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": null,
+      "largestLstIssuerSharePct": null,
+      "numLstIssuersAbove5pct": null,
+      "nativeRedemptionAvailable": null,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": null,
+      "numLendingIntegrations": null,
+      "numAmmIntegrations": null,
+      "loopingSupported": null,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 50,
+          "liquidizationPct": null,
+          "defiProductivityPct": null,
+          "restakingPct": null,
+          "loopingDepthPct": null
+        },
+        "trajectory": "comparable to ETH 2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden",
+        "nearestQuarter": "2026-Q1",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 121.46701649892329,
+          "L3": null,
+          "L4.1": null,
+          "L4.2": null,
+          "overall": 60.73350824946164
+        },
+        "strengths": [
+          "Staking ratio 50.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "tia": {
+      "name": "Celestia",
+      "ticker": "TIA",
+      "circulatingSupply": 919932997,
+      "totalStaked": 551959798,
+      "stakingRatioPct": 60,
+      "nativePriceUsd": 0.41,
+      "marketCapUsd": 377172528,
+      "lstTvlUsd": 18500000,
+      "lstInDefiTvlUsd": 5000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 100,
+      "nakamotoCoefficient": 9,
+      "nominalYieldPct": 12,
+      "realYieldPct": 4,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 8.2,
+      "largestLstIssuerSharePct": 80,
+      "numLstIssuersAbove5pct": 2,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 27,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 60,
+          "liquidizationPct": 8.2,
+          "defiProductivityPct": 27,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2023-Q4 — 29M ETH staked (+83% YoY); restaking still <5% of LST TVL",
+        "nearestQuarter": "2023-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 129.38514110368578,
+          "L3": 25.10560207021426,
+          "L4.1": null,
+          "L4.2": 77.81512503836436,
+          "overall": 58.076467053066104
+        },
+        "strengths": [
+          "Staking ratio 60.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (80% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "core": {
+      "name": "Core DAO",
+      "ticker": "CORE",
+      "circulatingSupply": 1000000000,
+      "totalStaked": 500000000,
+      "stakingRatioPct": 50,
+      "nativePriceUsd": 0.5,
+      "marketCapUsd": 500000000,
+      "lstTvlUsd": 75000000,
+      "lstInDefiTvlUsd": 30000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 21,
+      "nakamotoCoefficient": 7,
+      "nominalYieldPct": 8.5,
+      "realYieldPct": 3.5,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 30,
+      "largestLstIssuerSharePct": 95,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 40,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 2,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 50,
+          "liquidizationPct": 30,
+          "defiProductivityPct": 40,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 121.46701649892329,
+          "L3": 81.43634230380884,
+          "L4.1": null,
+          "L4.2": 94.88474775526187,
+          "overall": 74.4470266394985
+        },
+        "strengths": [
+          "Staking ratio 50.0% meets/exceeds Ethereum's 30.5%.",
+          "Liquidization rate 30% is healthy (S2-mature).",
+          "DeFi productivity 40% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (95% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "hype": {
+      "name": "Hyperliquid",
+      "ticker": "HYPE",
+      "circulatingSupply": 240000000,
+      "totalStaked": 84000000,
+      "stakingRatioPct": 35,
+      "nativePriceUsd": 52,
+      "marketCapUsd": 12480000000,
+      "lstTvlUsd": 1000000000,
+      "lstInDefiTvlUsd": 300000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 83000000,
+      "activeValidators": 24,
+      "nakamotoCoefficient": 8,
+      "nominalYieldPct": 2.5,
+      "realYieldPct": 4.5,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 22.9,
+      "largestLstIssuerSharePct": 82.5,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 30,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 3,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 35,
+          "liquidizationPct": 22.9,
+          "defiProductivityPct": 30,
+          "restakingPct": null,
+          "loopingDepthPct": 8.3
+        },
+        "trajectory": "comparable to ETH 2024-Q2 — EigenLayer peak $20.09B Jun 6; Pendle ATH $6.71B Jun 10",
+        "nearestQuarter": "2024-Q2",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 105.97682050034898,
+          "L3": 69.70776506583138,
+          "L4.1": null,
+          "L4.2": 82.39087409443188,
+          "overall": 64.51886491515306
+        },
+        "strengths": [
+          "Staking ratio 35.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 30% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (83% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "init": {
+      "name": "Initia",
+      "ticker": "INIT",
+      "circulatingSupply": 250000000,
+      "totalStaked": 137500000,
+      "stakingRatioPct": 55,
+      "nativePriceUsd": 0.2,
+      "marketCapUsd": 50000000,
+      "lstTvlUsd": 5000000,
+      "lstInDefiTvlUsd": 2000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 100,
+      "nakamotoCoefficient": 8,
+      "nominalYieldPct": 2,
+      "realYieldPct": -10,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 18.2,
+      "largestLstIssuerSharePct": 50,
+      "numLstIssuersAbove5pct": 3,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 40,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 55,
+          "liquidizationPct": 18.2,
+          "defiProductivityPct": 40,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 125.6062850147458,
+          "L3": 59.731355630350066,
+          "L4.1": null,
+          "L4.2": 94.88474775526187,
+          "overall": 70.05559710008943
+        },
+        "strengths": [
+          "Staking ratio 55.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 40% clears the S3 threshold."
+        ],
+        "gaps": [
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "inj": {
+      "name": "Injective",
+      "ticker": "INJ",
+      "circulatingSupply": 99970955,
+      "totalStaked": 64980120,
+      "stakingRatioPct": 65,
+      "nativePriceUsd": 9.5,
+      "marketCapUsd": 949724073,
+      "lstTvlUsd": 30000000,
+      "lstInDefiTvlUsd": 15000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 49,
+      "nakamotoCoefficient": 7,
+      "nominalYieldPct": 12,
+      "realYieldPct": 12,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 4.9,
+      "largestLstIssuerSharePct": 85,
+      "numLstIssuersAbove5pct": 2,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 50,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 65,
+          "liquidizationPct": 4.9,
+          "defiProductivityPct": 50,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 132.86135172960698,
+          "L3": 2.743824834693964,
+          "L4.1": null,
+          "L4.2": 104.57574905606752,
+          "overall": 60.04523140509211
+        },
+        "strengths": [
+          "Staking ratio 65.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 50% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (85% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "mnt": {
+      "name": "Mantle",
+      "ticker": "MNT",
+      "circulatingSupply": 3172988154,
+      "totalStaked": 158649408,
+      "stakingRatioPct": 5,
+      "nativePriceUsd": 0.66,
+      "marketCapUsd": 2094172182,
+      "lstTvlUsd": null,
+      "lstInDefiTvlUsd": null,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": null,
+      "activeValidators": 0,
+      "nakamotoCoefficient": 1,
+      "nominalYieldPct": 6,
+      "realYieldPct": 6,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": null,
+      "largestLstIssuerSharePct": null,
+      "numLstIssuersAbove5pct": null,
+      "nativeRedemptionAvailable": null,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": null,
+      "numLendingIntegrations": null,
+      "numAmmIntegrations": null,
+      "loopingSupported": null,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 5,
+          "liquidizationPct": null,
+          "defiProductivityPct": null,
+          "restakingPct": null,
+          "loopingDepthPct": null
+        },
+        "trajectory": "comparable to ETH 2021-Q4 — Lido crossed 1M staked ETH (S1→S2 in progress)",
+        "nearestQuarter": "2021-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 21.467016498923286,
+          "L3": null,
+          "L4.1": null,
+          "L4.2": null,
+          "overall": 10.733508249461643
+        },
+        "strengths": [],
+        "gaps": [
+          "Staking ratio 5.0% is less than half Ethereum's — security thin.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "om": {
+      "name": "MANTRA",
+      "ticker": "OM",
+      "circulatingSupply": 888888888,
+      "totalStaked": 488888888,
+      "stakingRatioPct": 55,
+      "nativePriceUsd": 0.3,
+      "marketCapUsd": 266666667,
+      "lstTvlUsd": 15000000,
+      "lstInDefiTvlUsd": 4000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 75,
+      "nakamotoCoefficient": 9,
+      "nominalYieldPct": 18,
+      "realYieldPct": 10,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 10.2,
+      "largestLstIssuerSharePct": 95,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 27,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 55,
+          "liquidizationPct": 10.2,
+          "defiProductivityPct": 27,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2023-Q4 — 29M ETH staked (+83% YoY); restaking still <5% of LST TVL",
+        "nearestQuarter": "2023-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 125.6062850147458,
+          "L3": 34.58423400803434,
+          "L4.1": null,
+          "L4.2": 77.81512503836436,
+          "overall": 59.50141101528612
+        },
+        "strengths": [
+          "Staking ratio 55.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (95% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "mon": {
+      "name": "Monad",
+      "ticker": "MON",
+      "circulatingSupply": 11000000000,
+      "totalStaked": 3300000000,
+      "stakingRatioPct": 30,
+      "nativePriceUsd": 0.035,
+      "marketCapUsd": 385000000,
+      "lstTvlUsd": 80000000,
+      "lstInDefiTvlUsd": 20000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 200,
+      "nakamotoCoefficient": 67,
+      "nominalYieldPct": 18,
+      "realYieldPct": -2,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 69.3,
+      "largestLstIssuerSharePct": 60,
+      "numLstIssuersAbove5pct": 2,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 25,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 2,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S2",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 30,
+          "liquidizationPct": 69.3,
+          "defiProductivityPct": 25,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2025-Q2 — Pectra activated May 7; EigenLayer slashing Apr 17 crashed restaking TVL",
+        "nearestQuarter": "2025-Q2",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 99.28214153728766,
+          "L3": 117.79754029302327,
+          "L4.1": null,
+          "L4.2": 74.4727494896694,
+          "overall": 72.88810782999508
+        },
+        "strengths": [
+          "Liquidization rate 69% is healthy (S2-mature)."
+        ],
+        "gaps": [
+          "Next gate: S2 → S3 requires defi_productivity > 30% AND withdrawals enabled."
+        ],
+        "bdRecommendation": "Active BD target. LST market is forming. Push for DeFi integrations (lending + AMM) to break the 30% productivity barrier."
+      }
+    },
+    "move": {
+      "name": "Movement",
+      "ticker": "MOVE",
+      "circulatingSupply": 2250000000,
+      "totalStaked": 900000000,
+      "stakingRatioPct": 40,
+      "nativePriceUsd": 0.15,
+      "marketCapUsd": 337500000,
+      "lstTvlUsd": 15000000,
+      "lstInDefiTvlUsd": 3000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 100,
+      "nakamotoCoefficient": 15,
+      "nominalYieldPct": 5,
+      "realYieldPct": -3,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 11.1,
+      "largestLstIssuerSharePct": 85,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 20,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 40,
+          "liquidizationPct": 11.1,
+          "defiProductivityPct": 20,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2023-Q4 — 29M ETH staked (+83% YoY); restaking still <5% of LST TVL",
+        "nearestQuarter": "2023-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 111.77601519811766,
+          "L3": 38.25651471050834,
+          "L4.1": null,
+          "L4.2": 64.78174818886376,
+          "overall": 53.70356952437244
+        },
+        "strengths": [
+          "Staking ratio 40.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (85% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "near": {
+      "name": "NEAR Protocol",
+      "ticker": "NEAR",
+      "circulatingSupply": 1235630657,
+      "totalStaked": 494252263,
+      "stakingRatioPct": 40,
+      "nativePriceUsd": 1.64,
+      "marketCapUsd": 2026434277,
+      "lstTvlUsd": 80000000,
+      "lstInDefiTvlUsd": 44000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 150,
+      "nakamotoCoefficient": 7,
+      "nominalYieldPct": 4.5,
+      "realYieldPct": -0.5,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 9.9,
+      "largestLstIssuerSharePct": 75,
+      "numLstIssuersAbove5pct": 2,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 55,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 2,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 40,
+          "liquidizationPct": 9.9,
+          "defiProductivityPct": 55,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 111.77601519811766,
+          "L3": 33.28773629159758,
+          "L4.1": null,
+          "L4.2": 108.71501757189002,
+          "overall": 63.444692265401315
+        },
+        "strengths": [
+          "Staking ratio 40.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 55% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (75% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "sei": {
+      "name": "Sei",
+      "ticker": "SEI",
+      "circulatingSupply": 5500000000,
+      "totalStaked": 2475000000,
+      "stakingRatioPct": 45,
+      "nativePriceUsd": 0.2,
+      "marketCapUsd": 1100000000,
+      "lstTvlUsd": 21400000,
+      "lstInDefiTvlUsd": 4280000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 50,
+      "nakamotoCoefficient": 8,
+      "nominalYieldPct": 6,
+      "realYieldPct": -1,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 4.3,
+      "largestLstIssuerSharePct": 95.1,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 20,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 2,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 45,
+          "liquidizationPct": 4.3,
+          "defiProductivityPct": 20,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2023-Q4 — 29M ETH staked (+83% YoY); restaking still <5% of LST TVL",
+        "nearestQuarter": "2023-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 116.89126744285578,
+          "L3": 0,
+          "L4.1": null,
+          "L4.2": 64.78174818886376,
+          "overall": 45.41825390792988
+        },
+        "strengths": [
+          "Staking ratio 45.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (95% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "shm": {
+      "name": "Shardeum",
+      "ticker": "SHM",
+      "circulatingSupply": 249000000,
+      "totalStaked": 124500000,
+      "stakingRatioPct": 50,
+      "nativePriceUsd": 0.1,
+      "marketCapUsd": 24900000,
+      "lstTvlUsd": null,
+      "lstInDefiTvlUsd": null,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": null,
+      "activeValidators": 500,
+      "nakamotoCoefficient": 30,
+      "nominalYieldPct": 12,
+      "realYieldPct": 7,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": null,
+      "largestLstIssuerSharePct": null,
+      "numLstIssuersAbove5pct": null,
+      "nativeRedemptionAvailable": null,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": null,
+      "numLendingIntegrations": null,
+      "numAmmIntegrations": null,
+      "loopingSupported": null,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 50,
+          "liquidizationPct": null,
+          "defiProductivityPct": null,
+          "restakingPct": null,
+          "loopingDepthPct": null
+        },
+        "trajectory": "comparable to ETH 2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden",
+        "nearestQuarter": "2026-Q1",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 121.46701649892329,
+          "L3": null,
+          "L4.1": null,
+          "L4.2": null,
+          "overall": 60.73350824946164
+        },
+        "strengths": [
+          "Staking ratio 50.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "s": {
+      "name": "Sonic",
+      "ticker": "S",
+      "circulatingSupply": 3180000000,
+      "totalStaked": 1590000000,
+      "stakingRatioPct": 50,
+      "nativePriceUsd": 0.65,
+      "marketCapUsd": 2067000000,
+      "lstTvlUsd": 122000000,
+      "lstInDefiTvlUsd": 60000000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 100,
+      "nakamotoCoefficient": 12,
+      "nominalYieldPct": 3.5,
+      "realYieldPct": 1.75,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 11.8,
+      "largestLstIssuerSharePct": 92,
+      "numLstIssuersAbove5pct": 2,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 50,
+      "numLendingIntegrations": 2,
+      "numAmmIntegrations": 3,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 50,
+          "liquidizationPct": 11.8,
+          "defiProductivityPct": 50,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 121.46701649892329,
+          "L3": 40.91241756245514,
+          "L4.1": null,
+          "L4.2": 104.57574905606752,
+          "overall": 66.73879577936148
+        },
+        "strengths": [
+          "Staking ratio 50.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 50% clears the S3 threshold."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (92% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "sui": {
+      "name": "Sui",
+      "ticker": "SUI",
+      "circulatingSupply": 4005418370,
+      "totalStaked": 2803793000,
+      "stakingRatioPct": 70,
+      "nativePriceUsd": 1.22,
+      "marketCapUsd": 4886610411,
+      "lstTvlUsd": 653230000,
+      "lstInDefiTvlUsd": 261292000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 113,
+      "nakamotoCoefficient": 20,
+      "nominalYieldPct": 3,
+      "realYieldPct": -3,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 19.1,
+      "largestLstIssuerSharePct": 50.3,
+      "numLstIssuersAbove5pct": 3,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 40,
+      "numLendingIntegrations": 3,
+      "numAmmIntegrations": 4,
+      "loopingSupported": true,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 70,
+          "liquidizationPct": 19.1,
+          "defiProductivityPct": 40,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 136.07982006674712,
+          "L3": 61.82755355661536,
+          "L4.1": null,
+          "L4.2": 94.88474775526187,
+          "overall": 73.19803034465609
+        },
+        "strengths": [
+          "Staking ratio 70.0% meets/exceeds Ethereum's 30.5%.",
+          "DeFi productivity 40% clears the S3 threshold."
+        ],
+        "gaps": [
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "vara": {
+      "name": "Vara Network",
+      "ticker": "VARA",
+      "circulatingSupply": 4903487996,
+      "totalStaked": 3432441597,
+      "stakingRatioPct": 70,
+      "nativePriceUsd": 0.02,
+      "marketCapUsd": 98069760,
+      "lstTvlUsd": null,
+      "lstInDefiTvlUsd": null,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": null,
+      "activeValidators": 200,
+      "nakamotoCoefficient": 30,
+      "nominalYieldPct": 8.4,
+      "realYieldPct": 0.4,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": null,
+      "largestLstIssuerSharePct": null,
+      "numLstIssuersAbove5pct": null,
+      "nativeRedemptionAvailable": null,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": null,
+      "numLendingIntegrations": null,
+      "numAmmIntegrations": null,
+      "loopingSupported": null,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "medium",
+        "conversionRatios": {
+          "stakingParticipationPct": 70,
+          "liquidizationPct": null,
+          "defiProductivityPct": null,
+          "restakingPct": null,
+          "loopingDepthPct": null
+        },
+        "trajectory": "comparable to ETH 2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden",
+        "nearestQuarter": "2026-Q1",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 136.07982006674712,
+          "L3": null,
+          "L4.1": null,
+          "L4.2": null,
+          "overall": 68.03991003337356
+        },
+        "strengths": [
+          "Staking ratio 70.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "xdc": {
+      "name": "XDC Network",
+      "ticker": "XDC",
+      "circulatingSupply": 20551498909,
+      "totalStaked": 3260000000,
+      "stakingRatioPct": 15.9,
+      "nativePriceUsd": 0.092,
+      "marketCapUsd": 1890737900,
+      "lstTvlUsd": 6000000,
+      "lstInDefiTvlUsd": 1500000,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": 0,
+      "activeValidators": 108,
+      "nakamotoCoefficient": 15,
+      "nominalYieldPct": 10,
+      "realYieldPct": 8.5,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 2,
+      "largestLstIssuerSharePct": 97,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": 25,
+      "numLendingIntegrations": 1,
+      "numAmmIntegrations": 1,
+      "loopingSupported": false,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 15.9,
+          "liquidizationPct": 2,
+          "defiProductivityPct": 25,
+          "restakingPct": null,
+          "loopingDepthPct": 0
+        },
+        "trajectory": "comparable to ETH 2023-Q2 — Shapella Apr 12 enabled withdrawals; EigenLayer Stage 1 Mainnet Jun 14",
+        "nearestQuarter": "2023-Q2",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 71.70972849736657,
+          "L3": 0,
+          "L4.1": null,
+          "L4.2": 74.4727494896694,
+          "overall": 36.54561949675899
+        },
+        "strengths": [],
+        "gaps": [
+          "LST market dominated by single issuer (97% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    },
+    "zig": {
+      "name": "ZigChain",
+      "ticker": "ZIG",
+      "circulatingSupply": 1400000000,
+      "totalStaked": 630000000,
+      "stakingRatioPct": 45,
+      "nativePriceUsd": 0.1,
+      "marketCapUsd": 140000000,
+      "lstTvlUsd": 3000000,
+      "lstInDefiTvlUsd": null,
+      "restakingTvlUsd": null,
+      "pendleEquivalentTvlUsd": null,
+      "activeValidators": 100,
+      "nakamotoCoefficient": 10,
+      "nominalYieldPct": 8,
+      "realYieldPct": 2,
+      "clientDiversityHhi": 10000,
+      "liquidizationRatePct": 4.8,
+      "largestLstIssuerSharePct": 100,
+      "numLstIssuersAbove5pct": 1,
+      "nativeRedemptionAvailable": true,
+      "restakingRatePct": null,
+      "avsCountLive": null,
+      "lrtCount": null,
+      "defiProductivityRatePct": null,
+      "numLendingIntegrations": null,
+      "numAmmIntegrations": null,
+      "loopingSupported": null,
+      "paf": {
+        "stage": "S1",
+        "classificationConfidence": "low",
+        "conversionRatios": {
+          "stakingParticipationPct": 45,
+          "liquidizationPct": 4.8,
+          "defiProductivityPct": null,
+          "restakingPct": null,
+          "loopingDepthPct": null
+        },
+        "trajectory": "comparable to ETH 2024-Q4 — Lido 27.7% share; restaking still elevated pre-slashing",
+        "nearestQuarter": "2024-Q4",
+        "vsEthScores": {
+          "L1": 0,
+          "L2": 116.89126744285578,
+          "L3": 1.8483405694013078,
+          "L4.1": null,
+          "L4.2": null,
+          "overall": 39.57986933741903
+        },
+        "strengths": [
+          "Staking ratio 45.0% meets/exceeds Ethereum's 30.5%."
+        ],
+        "gaps": [
+          "LST market dominated by single issuer (100% share) — anti-monopoly red flag.",
+          "Next gate: S1 → S2 requires liquidization > 20% AND (≥3 LST issuers > 5% OR largest issuer < 70%)."
+        ],
+        "bdRecommendation": "Highest-leverage BD opportunity. Network is securing but pre-liquidization. Pitch a liquid-staking product before a dominant issuer emerges."
+      }
+    }
+  }
+}

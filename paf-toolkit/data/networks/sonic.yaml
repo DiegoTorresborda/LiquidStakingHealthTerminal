@@ -1,0 +1,206 @@
+# Sonic (S) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Sonic docs, BEETS docs, DefiLlama.
+# As-of: 2026-05-21
+
+name: Sonic
+ticker: S
+genesis_date: 2024-12-18
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 3_180_000_000.0
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 (3.18B S circulating)"
+    confidence: high
+  native_price_usd:
+    value: 0.65
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 ($2.05B mc / 3.18B)"
+    confidence: medium
+  market_cap_usd:
+    value: 2_067_000_000.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 1.75
+    as_of: 2026-05-21
+    source: "Sonic docs: 1.75% annual block rewards after initial 4-year period"
+    confidence: high
+  holder_count:
+    value: 500_000
+    as_of: 2026-04-30
+    source: "Sonic / Fantom migration; estimate of active holders"
+    confidence: low
+  active_addresses_30d:
+    value: 250_000
+    as_of: 2026-04-30
+    source: "Sonic ecosystem activity"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 30_000_000.0
+    as_of: 2026-05-21
+    source: "S on Binance, Bybit, others"
+    confidence: medium
+  token_age_months:
+    value: 17
+    as_of: 2026-05-21
+    source: "Sonic launched Dec 18 2024 (migrated from FTM)"
+    confidence: high
+
+l2:
+  total_staked:
+    # Target 50% staked per Sonic docs
+    value: 1_590_000_000.0
+    as_of: 2026-05-21
+    source: "Sonic docs target 50% staked for 3.5% APY"
+    confidence: medium
+  staking_ratio_pct:
+    value: 50.0
+    as_of: 2026-05-21
+    source: "Estimated target"
+    confidence: medium
+  active_validators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Sonic validator set"
+    confidence: medium
+  distinct_operators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Sonic validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 12
+    as_of: 2026-05-21
+    source: "Estimate; Sonic inherits some Fantom validator history"
+    confidence: low
+  nominal_yield_pct:
+    value: 3.5
+    as_of: 2026-05-21
+    source: "Sonic docs: target 3.5% at 50% staking"
+    confidence: high
+  real_yield_pct:
+    value: 1.75
+    as_of: 2026-05-21
+    source: "Derived: 3.5% − 1.75% inflation"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing on Sonic"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Sonic docs estimate"
+    confidence: medium
+  min_stake_native:
+    value: 500_000.0
+    as_of: 2026-05-21
+    source: "Sonic validator minimum: 500K S"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client (Sonic / opera-derived)"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 25.0
+      liquid_staking_pct: 12.0
+      cex_pct: 35.0
+      other_pct: 28.0
+    as_of: 2026-05-21
+    source: "Estimate; BEETS stS LS share growing"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # BEETS stS $112M + Origin Sonic $10M = $122M
+    value: 122_000_000.0
+    as_of: 2026-04-30
+    source: "DefiLlama: BEETS stS $112M + Origin Sonic $10.34M"
+    confidence: high
+  liquidization_rate_pct:
+    # $122M / ($1.59B × $0.65) = $122M / $1033.5M = 11.8%
+    value: 11.8
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: high
+  num_lst_issuers_above_5pct:
+    value: 2
+    as_of: 2026-04-30
+    source: "BEETS stS (~92%) + Origin Sonic (~8%)"
+    confidence: high
+  lst_issuer_hhi:
+    value: 8500.0
+    as_of: 2026-04-30
+    source: "BEETS dominance (92² + 8² = 8528)"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 92.0
+    as_of: 2026-04-30
+    source: "BEETS stS dominant on Sonic"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 40.0
+    as_of: 2026-04-30
+    source: "stS auto-compounds, tight peg"
+    confidence: medium
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "BEETS supports native redemption"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Sonic.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 60_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate ~50% of LST in DeFi (Sonic DeFi growing)"
+    confidence: medium
+  defi_productivity_rate_pct:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: medium
+  num_lending_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Aave on Sonic, Silo Finance"
+    confidence: medium
+  num_amm_integrations:
+    value: 3
+    as_of: 2026-05-21
+    source: "BEETS, SwapX, Equalizer"
+    confidence: high
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP for S LSTs"
+    confidence: medium
+  looping_supported:
+    value: true
+    as_of: 2026-05-21
+    source: "Silo Finance allows stS loops"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No mature yield tokenization on Sonic"
+    confidence: medium

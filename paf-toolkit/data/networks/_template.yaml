@@ -1,0 +1,197 @@
+# PAF network profile template — copy to data/networks/<ticker>.yaml and fill in.
+#
+# Required KPI envelope:
+#   value:       the metric (number / bool / SourceBreakdown object)
+#   as_of:       YYYY-MM-DD date the value was observed
+#   source:      free-text citation (DefiLlama snapshot, Dune query URL, etc.)
+#   confidence:  high | medium | low | data_gap | contested
+#
+# Layers L3, L4.1, L4.2 are OPTIONAL — omit them entirely for networks that
+# haven't reached those stages. Use `native_liquid_staking_flag: true` for
+# networks where staked positions are inherently liquid (e.g., Solana, Cardano);
+# the toolkit will classify these as S_STAR and skip the L3 evaluation.
+
+name: ExampleNet
+ticker: EXN
+genesis_date: 2023-01-01
+consensus_type: pos           # pos | dpos | npos | lpos | bft_pos | other
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "CoinGecko / official explorer"
+    confidence: high
+  native_price_usd:
+    # All dependent USD KPIs (market_cap_usd, lst_tvl_usd, lst_in_defi_tvl_usd,
+    # restaking_tvl_usd) must be internally consistent with this price.
+    # Run `paf.derive.consistency_report(profile)` to check.
+    value: 0.0
+    as_of: 2026-05-18
+    source: "CoinGecko spot"
+    confidence: high
+  market_cap_usd:
+    # Should equal circulating_supply × native_price_usd
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Derived"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  holder_count:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  active_addresses_30d:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: low
+  token_age_months:
+    value: 0
+    as_of: 2026-05-18
+    source: "Computed from genesis_date"
+    confidence: high
+
+l2:
+  total_staked:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: high
+  staking_ratio_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Derived: total_staked / circulating_supply"
+    confidence: high
+  active_validators:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: high
+  distinct_operators:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  nakamoto_coefficient:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  nominal_yield_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Staking Rewards"
+    confidence: high
+  real_yield_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "nominal_yield − net_issuance"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  unbonding_period_days:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Protocol docs"
+    confidence: high
+  min_stake_native:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Protocol docs"
+    confidence: high
+  client_diversity_hhi:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: low
+  source_breakdown:
+    value:
+      solo_pct: 0.0
+      liquid_staking_pct: 0.0
+      cex_pct: 0.0
+      other_pct: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+
+# OPTIONAL — omit the entire l3 block if the network has no LSTs.
+l3:
+  lst_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "DefiLlama Liquid Staking category"
+    confidence: high
+  liquidization_rate_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: "Derived: lst_tvl_usd / (total_staked × price)"
+    confidence: high
+  num_lst_issuers_above_5pct:
+    value: 0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  lst_issuer_hhi:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 0.0
+    as_of: 2026-05-18
+    source: ""
+    confidence: medium
+  native_redemption_available:
+    value: false
+    as_of: 2026-05-18
+    source: "Protocol docs"
+    confidence: high
+
+# OPTIONAL — omit if no restaking primitive is live.
+# l41:
+#   restaking_tvl_usd: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   restaking_rate_pct: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   lrt_count: { value: 0, as_of: 2026-05-18, source: "", confidence: low }
+#   lrt_hhi: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   avs_count_live: { value: 0, as_of: 2026-05-18, source: "", confidence: low }
+
+# OPTIONAL — omit if no LSTs are used in DeFi yet.
+# l42:
+#   lst_in_defi_tvl_usd: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   defi_productivity_rate_pct: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   num_lending_integrations: { value: 0, as_of: 2026-05-18, source: "", confidence: low }
+#   num_amm_integrations: { value: 0, as_of: 2026-05-18, source: "", confidence: low }
+#   num_cdp_integrations: { value: 0, as_of: 2026-05-18, source: "", confidence: low }
+#   looping_supported: { value: false, as_of: 2026-05-18, source: "", confidence: low }
+#   pendle_equivalent_tvl_usd: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }
+#   l2_lst_bridged_usd: { value: 0.0, as_of: 2026-05-18, source: "", confidence: low }

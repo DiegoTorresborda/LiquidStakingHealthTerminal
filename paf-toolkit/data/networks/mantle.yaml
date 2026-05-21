@@ -1,0 +1,160 @@
+# Mantle (MNT) — PoS Adoption Funnel profile
+#
+# ⚠️  FRAMEWORK FIT WARNING ⚠️
+# Mantle is an Ethereum L2 (modular rollup), not a PoS L1. The PAF framework
+# was calibrated for PoS L1s, which makes Mantle a degenerate case:
+#   • MNT has staking (4–8% APY) but the sequencer is centralized — MNT
+#     staking is "earn yield on rollup token", not "secure the chain".
+#   • Mantle's notable LST is mETH — but mETH is an ETH-backed LST that
+#     happens to be ISSUED on Mantle. mETH belongs in Ethereum's funnel,
+#     not Mantle's. Per the benchmark doc: "Mantle is the only material
+#     native-L2 LST issuer per user spec."
+#   • There are no mature MNT-native LSTs (no stMNT, no mMNT).
+#
+# We profile MNT honestly (likely classifies as S1 — low staking + no LST
+# market), and note mETH as a cross-asset feature. For mETH-specific BD,
+# treat it as an Ethereum L4.2 integration rather than a Mantle funnel KPI.
+#
+# Sources: CoinMarketCap, Messari State of Mantle Q1 2025, DefiLlama,
+# Stakingrewards.com, Mantle Docs.
+# As-of: 2026-05-19
+
+name: Mantle
+ticker: MNT
+genesis_date: 2023-07-17
+consensus_type: other            # rollup with centralized sequencer
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 3_172_988_154.0
+    as_of: 2026-05-19
+    source: "CoinMarketCap May 19 2026 (3.173B circulating / 6.219B max)"
+    confidence: high
+  native_price_usd:
+    value: 0.66
+    as_of: 2026-05-19
+    source: "CoinMarketCap May 19 2026 ($0.655542); 77% below $2.86 ATH Oct 2025"
+    confidence: high
+  market_cap_usd:
+    # Derived: 3.173B × $0.66 = $2.094B (also matches MC $2.16B reported)
+    value: 2_094_172_182.0
+    as_of: 2026-05-19
+    source: "Derived: circulating_supply × native_price_usd"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "Mantle has capped supply 6.219B; new MNT enters via scheduled unlocks, not inflation"
+    confidence: medium
+  holder_count:
+    value: 800_000
+    as_of: 2026-04-30
+    source: "Mantle Explorer cumulative holder count (rough)"
+    confidence: low
+  active_addresses_30d:
+    value: 400_000
+    as_of: 2026-04-30
+    source: "Mantle daily active ~10–20k; 30d rolling estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 70.0
+    as_of: 2026-05-19
+    source: "Bybit Treasury + Mantle Treasury hold majority of supply (well-documented)"
+    confidence: medium
+  cex_dex_depth_2pct_usd:
+    value: 25_000_000.0
+    as_of: 2026-05-19
+    source: "MNT/USDT depth on Bybit, Binance, Gate.io (approximate)"
+    confidence: low
+  token_age_months:
+    value: 34
+    as_of: 2026-05-19
+    source: "MNT migration from BIT effective July 17 2023"
+    confidence: high
+
+l2:
+  total_staked:
+    # MNT staking participation is low. Coinbase reports ~0% staked through them.
+    # Estimating 5% network-wide based on 4-8% APY availability + thin adoption.
+    value: 158_649_408.0
+    as_of: 2026-05-19
+    source: "Estimate: ~5% of circulating supply staked (no central staking dashboard published)"
+    confidence: low
+  staking_ratio_pct:
+    value: 5.0
+    as_of: 2026-05-19
+    source: "Derived: total_staked / circulating_supply"
+    confidence: low
+  active_validators:
+    value: 0
+    as_of: 2026-05-19
+    source: "Mantle uses centralized sequencer; no PoS validator set securing the chain"
+    confidence: high
+  distinct_operators:
+    value: 1
+    as_of: 2026-05-19
+    source: "Single Mantle Foundation-operated sequencer (decentralization planned)"
+    confidence: high
+  nakamoto_coefficient:
+    value: 1
+    as_of: 2026-05-19
+    source: "Centralized sequencer; Nakamoto coefficient = 1"
+    confidence: high
+  nominal_yield_pct:
+    value: 6.0
+    as_of: 2026-05-19
+    source: "Mantle staking yield 4–8% range, midpoint 6%"
+    confidence: medium
+  real_yield_pct:
+    value: 6.0
+    as_of: 2026-05-19
+    source: "Derived: 6% nominal − 0% inflation (capped supply)"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-19
+    source: "No slashing — no validator network to slash"
+    confidence: high
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 17.0
+    as_of: 2026-05-19
+    source: "14–21 day MNT staking lock-up (midpoint 17.5d)"
+    confidence: medium
+  min_stake_native:
+    value: 32_000.0
+    as_of: 2026-05-19
+    source: "Native MNT staking requires min 32,000 MNT (~$21k at current price)"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-19
+    source: "Single sequencer implementation"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 20.0
+      liquid_staking_pct: 0.0
+      cex_pct: 70.0
+      other_pct: 10.0
+    as_of: 2026-05-19
+    source: "Estimate; most MNT staking likely via Bybit/exchanges"
+    confidence: low
+
+# No L3 — no mature MNT-native LST market. mETH is an ETH LST issued on Mantle,
+# NOT an MNT LST. It does not appear in Mantle's L3.
+#
+# For mETH-specific data (relevant to Ethereum's L3/L4.2 funnel via cross-chain
+# deployment):
+#   mETH Protocol TVL Dec 2025: $791.7M (Messari)
+#   cmETH (Mantle's restaking extension) — feeds EigenLayer
+#   Used in Mantle DeFi: Aave V3 ($454M as of Feb 2026), Init Capital,
+#   Lendle, Merchant Moe
+#
+# These figures should be counted in Ethereum's `l42.l2_lst_bridged_usd`
+# (already represented in ethereum.yaml), not Mantle's L3.

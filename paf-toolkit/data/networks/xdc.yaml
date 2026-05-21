@@ -1,0 +1,205 @@
+# XDC Network (XDC) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, XDC docs, PrimeStaking, AInvest.
+# As-of: 2026-05-21
+
+name: XDC Network
+ticker: XDC
+genesis_date: 2017-06-01
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 20_551_498_909.0
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026"
+    confidence: high
+  native_price_usd:
+    value: 0.092
+    as_of: 2026-05-21
+    source: "Derived: 142M XDC = $13.1M reported"
+    confidence: medium
+  market_cap_usd:
+    value: 1_890_737_900.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 1.5
+    as_of: 2026-05-21
+    source: "XDC low inflation rate"
+    confidence: medium
+  holder_count:
+    value: 800_000
+    as_of: 2026-04-30
+    source: "XDC Network explorer"
+    confidence: low
+  active_addresses_30d:
+    value: 100_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 8_000_000.0
+    as_of: 2026-05-21
+    source: "XDC on Bitfinex, KuCoin, others"
+    confidence: low
+  token_age_months:
+    value: 107
+    as_of: 2026-05-21
+    source: "Computed: June 2017 mainnet → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # $300M staked / $0.092 = 3.26B XDC
+    value: 3_260_000_000.0
+    as_of: 2026-05-21
+    source: "AInvest: staked XDC surpassed $300M"
+    confidence: high
+  staking_ratio_pct:
+    value: 15.9
+    as_of: 2026-05-21
+    source: "Derived: 3.26B / 20.55B"
+    confidence: high
+  active_validators:
+    value: 108
+    as_of: 2025-01-06
+    source: "108 active masternodes (of 300+ candidates)"
+    confidence: high
+  distinct_operators:
+    value: 108
+    as_of: 2025-01-06
+    source: "XDC Network masternodes"
+    confidence: high
+  nakamoto_coefficient:
+    value: 15
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  nominal_yield_pct:
+    value: 10.0
+    as_of: 2026-05-21
+    source: "XDC staking APY 5-15% range (mid 10%)"
+    confidence: high
+  real_yield_pct:
+    value: 8.5
+    as_of: 2026-05-21
+    source: "Derived: 10% − 1.5% inflation"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major XDC slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 14.0
+    as_of: 2026-05-21
+    source: "XDC unbonding"
+    confidence: medium
+  min_stake_native:
+    value: 10_000_000.0
+    as_of: 2026-05-21
+    source: "10M XDC masternode minimum"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client (xinfin-go)"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 60.0
+      liquid_staking_pct: 1.0
+      cex_pct: 15.0
+      other_pct: 24.0
+    as_of: 2026-05-21
+    source: "Mostly direct masternode delegation (high min stake)"
+    confidence: medium
+
+l3:
+  lst_tvl_usd:
+    value: 6_000_000.0
+    as_of: 2025-06-30
+    source: "PrimeStaking $6M TVL (June 2025) — largest LST on XDC"
+    confidence: high
+  liquidization_rate_pct:
+    # $6M / ($3.26B × $0.092) = $6M / $300M = 2.0%
+    value: 2.0
+    as_of: 2025-06-30
+    source: "Derived"
+    confidence: high
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2025-06-30
+    source: "PrimeStaking dominant"
+    confidence: high
+  lst_issuer_hhi:
+    value: 9500.0
+    as_of: 2025-06-30
+    source: "Near-monopoly"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 97.0
+    as_of: 2025-06-30
+    source: "PrimeStaking near-monopoly"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 100.0
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "PrimeStaking supports redemption"
+    confidence: medium
+
+# No L4.1 — no restaking on XDC.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 1_500_000.0
+    as_of: 2026-04-30
+    source: "Estimate ~25% of LST in XDC DeFi"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 25.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Small XDC lending market"
+    confidence: low
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "XSwap on XDC"
+    confidence: medium
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP"
+    confidence: medium
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

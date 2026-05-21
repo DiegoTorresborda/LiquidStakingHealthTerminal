@@ -1,0 +1,213 @@
+# Aptos (APT) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Messari Aptos H1 2025, DefiLlama, Everstake Aptos
+# 3rd Anniversary, Chainspect (Nakamoto), Echelon docs.
+# As-of: 2026-05-20
+
+name: Aptos
+ticker: APT
+genesis_date: 2022-10-18
+consensus_type: bft_pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 819_270_000.0
+    as_of: 2026-05-20
+    source: "CoinMarketCap May 20 2026 (819.27M circulating / 2.10B max)"
+    confidence: high
+  native_price_usd:
+    value: 0.94
+    as_of: 2026-05-20
+    source: "CoinMarketCap May 20 2026 ($0.942155)"
+    confidence: high
+  market_cap_usd:
+    # Derived: 819.27M × $0.94 = $770.11M
+    value: 770_113_800.0
+    as_of: 2026-05-20
+    source: "Derived: circulating_supply × native_price_usd"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 6.5
+    as_of: 2026-05-20
+    source: "AIP-119 reduced staking reward APR to 6.54% (declining to 5.26% over 7 months)"
+    confidence: medium
+  holder_count:
+    value: 3_000_000
+    as_of: 2026-04-30
+    source: "Rough estimate from Aptos Explorer cumulative wallets"
+    confidence: low
+  active_addresses_30d:
+    value: 8_000_000
+    as_of: 2026-04-30
+    source: "Messari H1 2025: ~9M monthly active users on Aptos"
+    confidence: medium
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-20
+    source: "Not consistently published filtered metric"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 15_000_000.0
+    as_of: 2026-05-20
+    source: "Approx APT/USDT + APT/USDC depth on Binance, Coinbase, Bybit"
+    confidence: low
+  token_age_months:
+    value: 43
+    as_of: 2026-05-20
+    source: "Computed: genesis Oct 18 2022 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # 76.4% of 819.27M circulating = 625.92M APT
+    value: 625_922_280.0
+    as_of: 2025-06-30
+    source: "Messari Aptos H1 2025: 76.4% of eligible supply staked at Q2 2025 end"
+    confidence: high
+  staking_ratio_pct:
+    value: 76.4
+    as_of: 2025-06-30
+    source: "Messari Aptos H1 2025"
+    confidence: high
+  active_validators:
+    value: 152
+    as_of: 2025-06-30
+    source: "Messari Aptos H1 2025: 152 validators ATH at Q2 close"
+    confidence: high
+  distinct_operators:
+    value: 152
+    as_of: 2025-06-30
+    source: "Aptos validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 18
+    as_of: 2025-06-30
+    source: "Messari Aptos H1 2025: Nakamoto coefficient 18 (validator level)"
+    confidence: high
+  nominal_yield_pct:
+    value: 6.54
+    as_of: 2026-05-20
+    source: "AIP-119 (June 2025) reduced base APR to 6.54%, schedule to 5.26%"
+    confidence: high
+  real_yield_pct:
+    value: 0.0
+    as_of: 2026-05-20
+    source: "Derived: ~6.54% nominal − ~6.5% inflation ≈ 0% real"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-20
+    source: "No publicized slashing events on Aptos mainnet"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-20
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 1.0
+    as_of: 2026-05-20
+    source: "Aptos epoch-based unstaking, ~2h epochs (full unstake in ~1 day)"
+    confidence: high
+  min_stake_native:
+    value: 1_000_000.0
+    as_of: 2026-05-20
+    source: "Aptos validator minimum stake (1M APT ≈ $940k)"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-20
+    source: "Single client implementation (aptos-core) → HHI 10000"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 25.0
+      liquid_staking_pct: 40.0
+      cex_pct: 20.0
+      other_pct: 15.0
+    as_of: 2026-05-20
+    source: "Estimate; LST share ~40% reflects high liquidization rate"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Total LST TVL on Aptos. Amnis $121.6M = 39% market share → total ~$312M.
+    # Peak was ~$700M in 2024.
+    value: 312_000_000.0
+    as_of: 2025-10-31
+    source: "DefiLlama via desadm.apt Medium Oct 2025: Amnis $121.6M @ 39% share → total ~$312M"
+    confidence: medium
+  liquidization_rate_pct:
+    # Derived: lst_tvl_usd / (total_staked × native_price_usd)
+    # = $312M / ($625.92M APT × $0.94) = $312M / $588.4M = 53.0%
+    value: 53.0
+    as_of: 2025-10-31
+    source: "Derived: lst_tvl_usd / (total_staked × native_price_usd)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    # Amnis 39%, Thala 14%, TruFin 12%, Kofi 9% — 4 above 5%
+    value: 4
+    as_of: 2025-10-31
+    source: "DefiLlama: Amnis (39%), Thala (14%), TruFin (12%), Kofi (9%)"
+    confidence: high
+  lst_issuer_hhi:
+    # 39² + 14² + 12² + 9² + 3² + 1² + 0² ≈ 1521 + 196 + 144 + 81 + 9 + 1 ≈ 1952
+    value: 1952.0
+    as_of: 2025-10-31
+    source: "Computed from top issuer shares"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 39.0
+    as_of: 2025-10-31
+    source: "Amnis Finance dominant LST issuer (39% share)"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 30.0
+    as_of: 2026-04-30
+    source: "Estimate; Aptos LSTs (amAPT, thAPT) maintain tight peg"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-20
+    source: "Amnis amAPT epoch-based redemption + instant via amAPT/APT pools; Thala thAPT native unstake"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Aptos as of May 2026.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # ~35% of LST TVL deployed in DeFi (Echelon sthAPT loops + Aries + Thala)
+    value: 109_200_000.0
+    as_of: 2025-10-31
+    source: "Derived: 35% × $312M LST TVL (Echelon E-Mode loops + Aries LST collateral)"
+    confidence: medium
+  defi_productivity_rate_pct:
+    value: 35.0
+    as_of: 2025-10-31
+    source: "Estimate from Echelon/Aries LST collateral exposure vs total LST TVL"
+    confidence: medium
+  num_lending_integrations:
+    value: 4
+    as_of: 2026-05-20
+    source: "Echelon (sthAPT collateral, E-Mode 93% LTV), Aries Markets, Joule Finance, Thala lending"
+    confidence: high
+  num_amm_integrations:
+    value: 3
+    as_of: 2026-05-20
+    source: "Thala DEX, LiquidSwap, AnimeSwap — LST/APT pools active"
+    confidence: high
+  num_cdp_integrations:
+    value: 1
+    as_of: 2026-05-20
+    source: "Thala MOD stablecoin accepts LST as collateral"
+    confidence: high
+  looping_supported:
+    value: true
+    as_of: 2026-05-20
+    source: "Echelon E-Mode enables up to 14x leverage on correlated LST/APT pairs"
+    confidence: high
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-20
+    source: "No mature yield-tokenization market on Aptos (no Pendle equivalent live)"
+    confidence: medium

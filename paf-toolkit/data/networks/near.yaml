@@ -1,0 +1,213 @@
+# NEAR Protocol (NEAR) — PoS Adoption Funnel profile
+# Sources: CoinGecko/CoinMarketCap, DefiLlama, Meta Pool Medium,
+# Burrow / Rhea Finance docs, Chainspect (Nakamoto).
+# As-of: 2026-05-19
+
+name: NEAR Protocol
+ticker: NEAR
+genesis_date: 2020-04-22
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 1_235_630_657.0
+    as_of: 2026-05-19
+    source: "CoinMarketCap May 19 2026 (1.236B circulating / 1.296B total)"
+    confidence: high
+  native_price_usd:
+    value: 1.64
+    as_of: 2026-05-19
+    source: "CoinMarketCap May 19 2026 (mid of $1.26–$1.74 range)"
+    confidence: high
+  market_cap_usd:
+    # Derived: 1.236B × $1.64 = $2.026B
+    value: 2_026_434_277.0
+    as_of: 2026-05-19
+    source: "Derived: circulating_supply × native_price_usd"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: 5.0
+    as_of: 2026-05-19
+    source: "NEAR Protocol fixed 5% annual inflation (90% to validators, 10% treasury)"
+    confidence: high
+  holder_count:
+    value: 24_000_000
+    as_of: 2026-04-30
+    source: "NearBlocks cumulative account count (includes inactive)"
+    confidence: contested
+  active_addresses_30d:
+    value: 500_000
+    as_of: 2026-04-30
+    source: "Rough estimate from NEAR daily transactions (~150–250k/day)"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "Not consistently published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 30_000_000.0
+    as_of: 2026-05-19
+    source: "Approx NEAR/USDT + NEAR/USDC depth on Binance, Coinbase, OKX"
+    confidence: low
+  token_age_months:
+    value: 73
+    as_of: 2026-05-19
+    source: "Computed: genesis Apr 22 2020 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # ~40% of circulating staked = 494M NEAR
+    value: 494_252_263.0
+    as_of: 2026-05-19
+    source: "Stakingrewards.com / NearBlocks: NEAR staking ratio ~38–42%"
+    confidence: medium
+  staking_ratio_pct:
+    value: 40.0
+    as_of: 2026-05-19
+    source: "Derived: total_staked / circulating_supply"
+    confidence: medium
+  active_validators:
+    value: 150
+    as_of: 2026-05-19
+    source: "NEAR Protocol active validator slot count (200 max, ~150 active)"
+    confidence: medium
+  distinct_operators:
+    value: 150
+    as_of: 2026-05-19
+    source: "NEAR validator set"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 7
+    as_of: 2026-04-30
+    source: "Meta Pool / Chainspect: top 7 validators control ~33% of stake"
+    confidence: high
+  nominal_yield_pct:
+    value: 4.5
+    as_of: 2026-05-19
+    source: "Stakingrewards.com 2026: APY 4–5.2% (mid 4.5%)"
+    confidence: high
+  real_yield_pct:
+    value: -0.5
+    as_of: 2026-05-19
+    source: "Derived: 4.5% nominal − 5% inflation ≈ −0.5% real"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-19
+    source: "NEAR uses fault-tolerant BFT — no slashing in current implementation"
+    confidence: high
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "n/a — no slashing on NEAR"
+    confidence: high
+  unbonding_period_days:
+    value: 3.0
+    as_of: 2026-05-19
+    source: "NEAR Protocol: 36-72 hour unstaking (4 epochs of ~12h)"
+    confidence: high
+  min_stake_native:
+    value: 30_000.0
+    as_of: 2026-05-19
+    source: "NEAR validator threshold (seat price ~30k NEAR for 200-slot set)"
+    confidence: medium
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-19
+    source: "Single client (nearcore) → HHI 10000"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 12.0
+      cex_pct: 35.0
+      other_pct: 23.0
+    as_of: 2026-05-19
+    source: "Estimate; LST share low (Meta Pool + LiNEAR < 15% of stake)"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Meta Pool $60M + LiNEAR $15M + others $5M ≈ $80M
+    value: 80_000_000.0
+    as_of: 2026-04-30
+    source: "DefiLlama: Meta Pool $59.6M dominant; LiNEAR smaller; total ~$80M"
+    confidence: medium
+  liquidization_rate_pct:
+    # Derived: $80M / ($494.25M × $1.64) = $80M / $810.6M = 9.9%
+    # Well below the 20% S1→S2 threshold — NEAR sits firmly at S1.
+    value: 9.9
+    as_of: 2026-04-30
+    source: "Derived: lst_tvl_usd / (total_staked × native_price_usd)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    # Meta Pool ~75% share; LiNEAR ~19%; Linear stable ~3%; others negligible
+    # So 2 issuers above 5% (Meta Pool + LiNEAR)
+    value: 2
+    as_of: 2026-04-30
+    source: "Meta Pool dominant (~75%), LiNEAR distant 2nd (~19%)"
+    confidence: medium
+  lst_issuer_hhi:
+    # 75² + 19² + 3² + 2² + 1² ≈ 5625 + 361 + 9 + 4 + 1 ≈ 6000
+    value: 6000.0
+    as_of: 2026-04-30
+    source: "Computed: Meta Pool ~75% dominance drives HHI high"
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 75.0
+    as_of: 2026-04-30
+    source: "Meta Pool stNEAR ~75% of NEAR LST market"
+    confidence: medium
+  median_peg_deviation_90d_bps:
+    value: 80.0
+    as_of: 2026-04-30
+    source: "Estimate; stNEAR generally tight peg with epoch-based redemption"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-19
+    source: "Meta Pool stNEAR redemption available via epoch unstake or stNEAR/NEAR pool"
+    confidence: high
+
+# No L4.1 — no restaking primitive on NEAR.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # ~55% of LST TVL deployed via Burrow + Rhea = $44M
+    value: 44_000_000.0
+    as_of: 2026-04-30
+    source: "Derived: 55% × $80M LST TVL (Burrow stNEAR collateral + Rhea/Ref pools)"
+    confidence: medium
+  defi_productivity_rate_pct:
+    value: 55.0
+    as_of: 2026-04-30
+    source: "Estimate from Burrow + Rhea LST exposure vs total LST TVL"
+    confidence: medium
+  num_lending_integrations:
+    value: 2
+    as_of: 2026-05-19
+    source: "Burrow Finance (stNEAR collateral), Rhea Finance (merged Ref+Burrow)"
+    confidence: high
+  num_amm_integrations:
+    value: 2
+    as_of: 2026-05-19
+    source: "Ref Finance, Jumbo Exchange — stNEAR/NEAR pools"
+    confidence: high
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-19
+    source: "No NEAR CDP protocol accepts LST as collateral"
+    confidence: medium
+  looping_supported:
+    value: true
+    as_of: 2026-05-19
+    source: "Burrow supports leveraged staking loops (deposit stNEAR, borrow NEAR, restake)"
+    confidence: high
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-19
+    source: "No yield-tokenization market on NEAR"
+    confidence: medium

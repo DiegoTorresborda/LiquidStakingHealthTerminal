@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ethereum — PAF Scorecard</title>
+<style>
+  :root {
+    --bg: #0b0d10;
+    --panel: #14181d;
+    --border: #232a32;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #60a5fa;
+    --good: #34d399;
+    --warn: #fbbf24;
+    --bad: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 28px 64px;
+  }
+  nav {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 28px;
+    background: var(--panel);
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+  }
+  nav a { color: var(--accent); text-decoration: none; font-size: 14px; }
+  nav a:hover { text-decoration: underline; }
+  nav .brand { font-weight: 600; color: var(--text); margin-right: 6px; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  h2 { font-size: 18px; margin: 28px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 15px; margin: 18px 0 8px; color: var(--muted); }
+  p, li { color: var(--text); }
+  blockquote {
+    margin: 12px 0 18px;
+    padding: 10px 14px;
+    border-left: 3px solid var(--accent);
+    background: rgba(96, 165, 250, 0.06);
+    color: var(--text);
+    border-radius: 0 4px 4px 0;
+  }
+  code, pre {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 13px;
+  }
+  pre {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px;
+    overflow-x: auto;
+    line-height: 1.5;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th { color: var(--muted); font-weight: 500; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  ul { padding-left: 20px; }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 24px 0; }
+  .stage-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <span class="brand">paf-toolkit</span>
+  <a href="index.html">Index</a>
+  <a href="https://github.com/anthropics/apps">Repo</a>
+</nav>
+<div class="wrap">
+<h1>Ethereum (ETH) — PoS Adoption Funnel Scorecard</h1>
+<p><strong>Stage:</strong> <code>S4.2</code> &nbsp;|&nbsp; <strong>Classification confidence:</strong> contested &nbsp;|&nbsp; <strong>Generated:</strong> 2026-05-18</p>
+<blockquote>
+<p>comparable to ETH 2026-Q1 — Post-correction; EigenLayer recovery to $18B per BlockEden</p>
+</blockquote>
+<hr />
+<h2>Funnel</h2>
+<pre><code>L1   Native token       │ supply 121.50M ETH  mc $255.15B
+L2   Staking security   │ staked 37.30M ETH  ratio 30.5%
+L3   Liquid staking     │ LST TVL $36.03B  liquidization 46.0%
+L4.1 Restaking / LRT    │ restake TVL $13.80B  rate 38.3%  AVSs 40
+L4.2 DeFi productivity  │ LST-in-DeFi $16.21B  productivity 45.0%
+</code></pre>
+<h2>Conversion ratios</h2>
+<table>
+<thead>
+<tr>
+<th>Ratio</th>
+<th>ETH</th>
+<th>Ethereum (Q1 2026)</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Staking participation (L1→L2)</td>
+<td>30.5%</td>
+<td>30.5%</td>
+<td>+0.0 pp</td>
+</tr>
+<tr>
+<td>Liquidization (L2→L3)</td>
+<td>46.0%</td>
+<td>46.0%</td>
+<td>+0.0 pp</td>
+</tr>
+<tr>
+<td>DeFi productivity (L3→L4.2)</td>
+<td>45.0%</td>
+<td>45.0%</td>
+<td>+0.0 pp</td>
+</tr>
+<tr>
+<td>Restaking (L3→L4.1)</td>
+<td>38.3%</td>
+<td>38.3%</td>
+<td>+0.0 pp</td>
+</tr>
+<tr>
+<td>Looping depth (proxy)</td>
+<td>30.5%</td>
+<td>30.5%</td>
+<td>+0.0 pp</td>
+</tr>
+</tbody>
+</table>
+<h2>vs-Ethereum scores (log-scaled, 100 = parity, cap 150)</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>100</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>100</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>L4.1</td>
+<td>100</td>
+</tr>
+<tr>
+<td>L4.2</td>
+<td>100</td>
+</tr>
+<tr>
+<td>overall</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h2>Strengths &amp; gaps</h2>
+<p><strong>Strengths</strong>
+- Staking ratio 30.5% meets/exceeds Ethereum's 30.5%.
+- Liquidization rate 46% is healthy (S2-mature).
+- DeFi productivity 45% clears the S3 threshold.</p>
+<p><strong>Gaps</strong>
+- <em>none flagged</em></p>
+<h2>Data confidence</h2>
+<ul>
+<li><code>L1.holder_count</code> flagged CONTESTED — Etherscan non-zero balance addresses, cited in benchmark</li>
+<li><code>L1.top100_concentration_ex_protocols_pct</code> flagged DATA_GAP — Galaxy / Blockworks 2024 secondary estimate (12–14%)</li>
+<li><code>L1.cex_dex_depth_2pct_usd</code> flagged LOW — Benchmark qualitative: &gt;$100M aggregate CEX+DEX; institutional-grade depth</li>
+<li><code>L2.distinct_operators</code> flagged LOW — Rated Network estimate (order of magnitude — hundreds of distinct entities)</li>
+<li><code>L4.1.restaking_tvl_usd</code> flagged CONTESTED — Derived: restaking_rate × lst_tvl_usd. Original BlockEden figure: $18B at ~$2,738/ETH.</li>
+<li><code>L4.1.restaking_rate_pct</code> flagged CONTESTED — Derived: BlockEden Feb 2026 restaking / LST TVL. Benchmark note: ETH-equivalent figure is ~16–20% post-slashing.</li>
+</ul>
+<h2>BD recommendation</h2>
+<p><strong>Mature funnel.</strong> All conversion ratios qualify for category-leadership pitches. BD focus should shift to differentiated yield products (Pendle-equivalents), cross-chain LST distribution, and institutional structured products.</p>
+</div>
+</body>
+</html>

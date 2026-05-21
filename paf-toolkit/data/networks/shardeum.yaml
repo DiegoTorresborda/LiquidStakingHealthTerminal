@@ -1,0 +1,135 @@
+# Shardeum (SHM) — PoS Adoption Funnel profile
+# Sources: Shardeum docs, blog, BitcoinEthereumNews.
+# As-of: 2026-05-21
+#
+# Shardeum EVM mainnet launched Oct 30, 2025. India-focused L1 with
+# sharding. New chain, limited LST market.
+
+name: Shardeum
+ticker: SHM
+genesis_date: 2025-10-30
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 249_000_000.0
+    as_of: 2026-05-21
+    source: "Shardeum TGE supply 249M SHM"
+    confidence: high
+  native_price_usd:
+    value: 0.10
+    as_of: 2026-05-21
+    source: "Estimate from launch-era trading"
+    confidence: low
+  market_cap_usd:
+    value: 24_900_000.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  net_issuance_annualized_pct:
+    value: 5.0
+    as_of: 2026-05-21
+    source: "Dynamic minting for validator rewards; fees burned"
+    confidence: medium
+  holder_count:
+    value: 150_000
+    as_of: 2026-04-30
+    source: "Shardeum community size"
+    confidence: low
+  active_addresses_30d:
+    value: 30_000
+    as_of: 2026-04-30
+    source: "Estimate; early mainnet"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 1_000_000.0
+    as_of: 2026-05-21
+    source: "Early CEX listings"
+    confidence: low
+  token_age_months:
+    value: 7
+    as_of: 2026-05-21
+    source: "Computed: Oct 2025 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # >1B SHM staked per blog, but circulating is 249M. Allocate validator
+    # stake at ~50% of circulating = 124.5M
+    value: 124_500_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~50% of circulating (>75% community delegators)"
+    confidence: low
+  staking_ratio_pct:
+    value: 50.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  active_validators:
+    value: 500
+    as_of: 2026-05-21
+    source: "Shardeum sharded validator set (record-breaking testnet)"
+    confidence: medium
+  distinct_operators:
+    value: 500
+    as_of: 2026-05-21
+    source: "Shardeum validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 30
+    as_of: 2026-05-21
+    source: "Estimate; large validator set"
+    confidence: low
+  nominal_yield_pct:
+    value: 12.0
+    as_of: 2026-05-21
+    source: "Early mainnet high incentive yields"
+    confidence: low
+  real_yield_pct:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Derived: 12% − 5% inflation"
+    confidence: low
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "New mainnet"
+    confidence: high
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Delegation min"
+    confidence: medium
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 50.0
+      liquid_staking_pct: 0.0
+      cex_pct: 15.0
+      other_pct: 35.0
+    as_of: 2026-05-21
+    source: "Mostly direct delegation; no LSTs yet"
+    confidence: medium
+
+# No L3 — no LST market on Shardeum yet (mainnet too new).
+# No L4.1, no L4.2.

@@ -1,0 +1,206 @@
+# MANTRA (OM) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Mantra docs, Bitget Academy, AInvest.
+# As-of: 2026-05-21
+
+name: MANTRA
+ticker: OM
+genesis_date: 2024-10-24
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 888_888_888.0
+    as_of: 2026-05-21
+    source: "Mantra Chain mainnet (888.89M OM)"
+    confidence: high
+  native_price_usd:
+    value: 0.30
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 estimate (OM post-buyback)"
+    confidence: medium
+  market_cap_usd:
+    value: 266_666_667.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: medium
+  net_issuance_annualized_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Mantra reintroduced 8% annual inflation with 2.5B cap"
+    confidence: high
+  holder_count:
+    value: 250_000
+    as_of: 2026-04-30
+    source: "Mantra explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 70_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 5_000_000.0
+    as_of: 2026-05-21
+    source: "OM on Binance, Bybit"
+    confidence: low
+  token_age_months:
+    value: 19
+    as_of: 2026-05-21
+    source: "Mantra Chain mainnet Oct 24 2024"
+    confidence: high
+
+l2:
+  total_staked:
+    # Cosmos-style with 18% projected APY → high participation, ~55%
+    value: 488_888_888.0
+    as_of: 2026-05-21
+    source: "Estimate ~55% staked with 18% projected APY incentive"
+    confidence: medium
+  staking_ratio_pct:
+    value: 55.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: medium
+  active_validators:
+    value: 75
+    as_of: 2026-05-21
+    source: "Mantra validator set estimate"
+    confidence: medium
+  distinct_operators:
+    value: 75
+    as_of: 2026-05-21
+    source: "Mantra validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 9
+    as_of: 2026-05-21
+    source: "Estimate for Cosmos-style chain"
+    confidence: medium
+  nominal_yield_pct:
+    value: 18.0
+    as_of: 2026-05-21
+    source: "Bitget/AInvest: 18% projected APY"
+    confidence: high
+  real_yield_pct:
+    value: 10.0
+    as_of: 2026-05-21
+    source: "Derived: 18% nominal − 8% inflation"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-21
+    source: "Standard Cosmos 21-day unbonding"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Cosmos delegation min"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 8.0
+      cex_pct: 40.0
+      other_pct: 22.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Native stOM exists but TVL is small (early adoption)
+    value: 15_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate; stOM native LS early stage"
+    confidence: low
+  liquidization_rate_pct:
+    # $15M / ($488.9M × $0.30) = $15M / $146.7M = 10.2%
+    value: 10.2
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "stOM native solution dominant"
+    confidence: medium
+  lst_issuer_hhi:
+    value: 9000.0
+    as_of: 2026-04-30
+    source: "Single LST issuer"
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 95.0
+    as_of: 2026-04-30
+    source: "stOM native is essentially monopoly"
+    confidence: medium
+  median_peg_deviation_90d_bps:
+    value: 60.0
+    as_of: 2026-04-30
+    source: "Estimate for new LST"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "stOM has native redemption via 21-day unbond"
+    confidence: high
+
+# No L4.1 — no restaking on Mantra.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 4_000_000.0
+    as_of: 2026-04-30
+    source: "Mantra RWA-focused, less native DeFi for LSTs"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 27.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Mantra DAO native lending"
+    confidence: medium
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Mantra native DEX"
+    confidence: medium
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP"
+    confidence: medium
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

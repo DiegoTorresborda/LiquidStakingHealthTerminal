@@ -1,0 +1,371 @@
+# Ethereum Proof-of-Stake Adoption Funnel — Calibration Reference
+# Source: Ethereum_benckmark.md (Dec 2020 – May 2026, prepared for Protofire)
+# Snapshot = Q1 2026 figures. History = quarterly from Beacon Chain genesis.
+#
+# Confidence vocabulary:
+#   high       — value comes directly from a primary source quoted in the doc
+#   medium     — value is a documented mid-point of a published range
+#   low        — value is an order-of-magnitude estimate
+#   data_gap   — flagged in benchmark doc as not consistently published
+#   contested  — flagged in benchmark doc as methodology-dependent
+#
+# All USD figures are at the as_of date and not price-adjusted.
+
+snapshot:
+  name: Ethereum
+  ticker: ETH
+  genesis_date: 2020-12-01            # Beacon Chain genesis
+  consensus_type: pos
+  native_liquid_staking_flag: false
+
+  l1:
+    circulating_supply:
+      value: 121_500_000.0
+      as_of: 2026-05-12
+      source: "Benchmark Q1 2026 row (Everstake-aligned)"
+      confidence: high
+    native_price_usd:
+      value: 2100.0
+      as_of: 2026-05-18
+      source: "User-supplied current spot (May 2026). All dependent USD KPIs are derived from this."
+      confidence: high
+    market_cap_usd:
+      # Derived: 121.5M × $2,100 = $255.15B (recomputed by paf.derive)
+      value: 255_150_000_000.0
+      as_of: 2026-05-18
+      source: "Derived: circulating_supply × native_price_usd"
+      confidence: high
+    net_issuance_annualized_pct:
+      value: 0.23
+      as_of: 2026-05-12
+      source: "Benchmark L1 table Q1 2026 (post-Fusaka blob-burn floor)"
+      confidence: high
+    holder_count:
+      value: 120_000_000
+      as_of: 2025-06-30
+      source: "Etherscan non-zero balance addresses, cited in benchmark"
+      confidence: contested
+    active_addresses_30d:
+      value: 700_000
+      as_of: 2025-12-31
+      source: "Etherscan / Glassnode mid-range (600k–800k post-Dencun)"
+      confidence: medium
+    top100_concentration_ex_protocols_pct:
+      value: 13.0
+      as_of: 2025-06-30
+      source: "Galaxy / Blockworks 2024 secondary estimate (12–14%)"
+      confidence: data_gap
+    cex_dex_depth_2pct_usd:
+      value: 500_000_000.0
+      as_of: 2025-12-31
+      source: "Benchmark qualitative: >$100M aggregate CEX+DEX; institutional-grade depth"
+      confidence: low
+    token_age_months:
+      value: 130                       # ETH genesis July 30, 2015 → May 2026
+      as_of: 2026-05-18
+      source: "Computed from ETH genesis 2015-07-30"
+      confidence: high
+
+  l2:
+    total_staked:
+      value: 37_300_000.0
+      as_of: 2026-02-28
+      source: "Everstake Feb 2026 — '~37.3M ETH staked, ~30.5% of supply'"
+      confidence: high
+    staking_ratio_pct:
+      value: 30.5
+      as_of: 2026-02-28
+      source: "Everstake Feb 2026"
+      confidence: high
+    active_validators:
+      value: 1_000_000
+      as_of: 2026-02-28
+      source: "Benchmark — peak ~1.07M mid-2025, compressing post-Pectra"
+      confidence: high
+    distinct_operators:
+      value: 400
+      as_of: 2025-12-31
+      source: "Rated Network estimate (order of magnitude — hundreds of distinct entities)"
+      confidence: low
+    nakamoto_coefficient:
+      value: 3
+      as_of: 2025-08-14
+      source: "CoinDesk Aug 14 2025: Lido 24.4% + Coinbase 11.7% + Binance 8.4% = ~45%, 4th entity needed for 33%"
+      confidence: high
+    nominal_yield_pct:
+      value: 2.84
+      as_of: 2026-02-28
+      source: "Benchmark Q1 2026 row"
+      confidence: high
+    real_yield_pct:
+      value: 2.6
+      as_of: 2026-02-28
+      source: "Derived: 2.84% nominal − ~0.23% issuance dilution"
+      confidence: high
+    slashing_events_cumulative:
+      value: 500
+      as_of: 2025-09-30
+      source: "Beaconcha.in via MEXC News Sept 2025: <500 cumulative validators slashed"
+      confidence: high
+    eth_slashed_cumulative:
+      value: 2000.0
+      as_of: 2025-09-30
+      source: "Benchmark — low single-digit thousands cumulative ETH slashed"
+      confidence: medium
+    unbonding_period_days:
+      value: 7.0
+      as_of: 2025-12-31
+      source: "Post-Shapella exit queue typical depth ~7 days (queue-dependent)"
+      confidence: medium
+    min_stake_native:
+      value: 32.0
+      as_of: 2026-05-18
+      source: "EIP-7251 (Pectra) kept MinEB=32 ETH; MaxEB raised to 2,048"
+      confidence: high
+    client_diversity_hhi:
+      value: 3400.0
+      as_of: 2025-10-31
+      source: "Miga Labs / Clientdiversity.org Oct 2025: Lighthouse 52%, Prysm 18%, Teku 14%, Nimbus 9% → HHI≈3400"
+      confidence: high
+    source_breakdown:
+      value:
+        solo_pct: 24.9
+        liquid_staking_pct: 31.1
+        cex_pct: 24.0
+        other_pct: 20.0
+      as_of: 2025-06-30
+      source: "CoinLaw mid-2025: LST 31.1%, CEX 24.0%, solo/other 44.9% (split heuristically)"
+      confidence: medium
+
+  l3:
+    lst_tvl_usd:
+      # Derived: 46.0% × 37.3M ETH × $2,100 = $36.0318B
+      # The benchmark doc reports $45–50B at higher ETH price (~$2,738/ETH implicit).
+      value: 36_031_800_000.0
+      as_of: 2026-05-18
+      source: "Derived: liquidization_rate × total_staked × native_price_usd"
+      confidence: high
+    liquidization_rate_pct:
+      value: 46.0
+      as_of: 2025-08-14
+      source: "Lido Aug 2025 update — 'liquid staking share of total staking 46%'"
+      confidence: high
+    num_lst_issuers_above_5pct:
+      value: 2
+      as_of: 2025-12-31
+      source: "DefiLlama: Lido (~55%) and Binance wBETH (~22%) above 5%; RPL ~3.7% below threshold"
+      confidence: high
+    lst_issuer_hhi:
+      value: 1900.0
+      as_of: 2025-12-31
+      source: "Benchmark L3 section — top-10 LST issuer HHI ~1,800–2,200"
+      confidence: medium
+    largest_lst_issuer_share_pct:
+      value: 55.0
+      as_of: 2025-12-31
+      source: "Lido stETH/wstETH $25.77B / $47B total LST TVL ≈ 55%"
+      confidence: high
+    median_peg_deviation_90d_bps:
+      value: 20.0
+      as_of: 2025-12-31
+      source: "Benchmark L3: stETH/ETH ±0.2% post-Shapella (20 bps)"
+      confidence: high
+    native_redemption_available:
+      value: true
+      as_of: 2023-04-12
+      source: "Shapella upgrade Apr 12 2023 enabled withdrawals"
+      confidence: high
+
+  l41:
+    restaking_tvl_usd:
+      # Derived: 38.3% × $36.0318B = $13.8002B. The benchmark's $18B figure was at
+      # higher ETH price; using the ratio (which is price-independent) keeps this
+      # consistent with the new ETH=$2,100 spot.
+      value: 13_800_180_000.0
+      as_of: 2026-05-18
+      source: "Derived: restaking_rate × lst_tvl_usd. Original BlockEden figure: $18B at ~$2,738/ETH."
+      confidence: contested
+    restaking_rate_pct:
+      # 38.3% is the price-independent ratio. Benchmark TL;DR mentions a 16–20%
+      # ETH-equivalent range (excluding EIGEN token portion). We use the higher
+      # ratio reflecting the BlockEden USD-denominated source.
+      value: 38.3
+      as_of: 2026-02-28
+      source: "Derived: BlockEden Feb 2026 restaking / LST TVL. Benchmark note: ETH-equivalent figure is ~16–20% post-slashing."
+      confidence: contested
+    lrt_count:
+      value: 5
+      as_of: 2025-12-31
+      source: "ether.fi, Renzo, Kelp, Puffer, Swell (benchmark L4.1)"
+      confidence: high
+    lrt_hhi:
+      value: 3000.0
+      as_of: 2025-12-31
+      source: "Benchmark L4.1: ether.fi ~40%, Renzo ~25%, others residual → HHI ~2,800–3,200"
+      confidence: medium
+    avs_count_live:
+      value: 40
+      as_of: 2025-12-31
+      source: "EigenLayer press release: 40 AVSs live mainnet, 190+ ecosystem"
+      confidence: high
+
+  l42:
+    lst_in_defi_tvl_usd:
+      # Derived: 45.0% × $36.0318B = $16.2143B
+      value: 16_214_310_000.0
+      as_of: 2026-05-18
+      source: "Derived: defi_productivity_rate × lst_tvl_usd"
+      confidence: high
+    defi_productivity_rate_pct:
+      value: 45.0
+      as_of: 2025-12-31
+      source: "Benchmark L4.2: ~40–50% of L1 LST TVL deployed in DeFi (mid-point)"
+      confidence: medium
+    num_lending_integrations:
+      value: 6
+      as_of: 2025-12-31
+      source: "Aave v3, Morpho Blue, Spark, Euler v2, Liquity/Prisma, Sky (benchmark L4.2 table)"
+      confidence: high
+    num_amm_integrations:
+      value: 2
+      as_of: 2025-12-31
+      source: "Curve and Balancer (benchmark L4.2 table)"
+      confidence: high
+    num_cdp_integrations:
+      value: 3
+      as_of: 2025-12-31
+      source: "MakerDAO/Sky, Liquity, Prisma (benchmark L4.2 table)"
+      confidence: high
+    looping_supported:
+      value: true
+      as_of: 2024-06-30
+      source: "Morpho 64% looping volume; Index Coop wstETH15x; Aave E-Mode LTV up to 93%"
+      confidence: high
+    pendle_equivalent_tvl_usd:
+      value: 11_000_000_000.0
+      as_of: 2025-09-30
+      source: "Pendle TVL Sept 2025 via Incrypted; DefiLlama Aug 26 2025: $10.26B"
+      confidence: high
+    l2_lst_bridged_usd:
+      value: 1_200_000_000.0
+      as_of: 2025-12-31
+      source: "Arbitrum + Base + Optimism + Linea aggregate (benchmark L2 table)"
+      confidence: medium
+
+# Quarterly history — used by trajectory_position() to locate networks on ETH's curve.
+history:
+  - quarter: "2020-Q4"
+    as_of: 2020-12-01
+    stage: "S0"
+    staking_ratio_pct: 0.6
+    lst_tvl_usd: 0.0
+    note: "Beacon Chain genesis"
+  - quarter: "2021-Q4"
+    as_of: 2021-12-31
+    stage: "S1"
+    staking_ratio_pct: 7.4
+    liquidization_rate_pct: 25.0
+    lst_tvl_usd: 5_000_000_000.0
+    note: "Lido crossed 1M staked ETH (S1→S2 in progress)"
+  - quarter: "2022-Q3"
+    as_of: 2022-09-15
+    stage: "S2"
+    staking_ratio_pct: 11.2
+    liquidization_rate_pct: 33.0
+    lst_tvl_usd: 12_000_000_000.0
+    defi_productivity_rate_pct: 5.0
+    note: "The Merge — issuance dropped ~88%"
+  - quarter: "2022-Q4"
+    as_of: 2022-12-31
+    stage: "S2"
+    staking_ratio_pct: 13.1
+    liquidization_rate_pct: 38.0
+    lst_tvl_usd: 14_090_000_000.0
+    defi_productivity_rate_pct: 8.0
+    note: "LST TVL $14.09B (CryptoSlate / DefiLlama)"
+  - quarter: "2023-Q1"
+    as_of: 2023-03-31
+    stage: "S2"
+    staking_ratio_pct: 15.0
+    liquidization_rate_pct: 33.0
+    lst_tvl_usd: 16_000_000_000.0
+    defi_productivity_rate_pct: 15.0
+    note: "Pre-Shapella; Aave v3 stETH listed Jan 2023"
+  - quarter: "2023-Q2"
+    as_of: 2023-06-30
+    stage: "S3"
+    staking_ratio_pct: 15.6
+    liquidization_rate_pct: 30.0
+    lst_tvl_usd: 17_000_000_000.0
+    defi_productivity_rate_pct: 20.0
+    note: "Shapella Apr 12 enabled withdrawals; EigenLayer Stage 1 Mainnet Jun 14"
+  - quarter: "2023-Q4"
+    as_of: 2023-12-31
+    stage: "S3"
+    staking_ratio_pct: 24.1
+    liquidization_rate_pct: 30.0
+    lst_tvl_usd: 22_000_000_000.0
+    defi_productivity_rate_pct: 25.0
+    restaking_rate_pct: 3.2
+    restaking_tvl_usd: 700_000_000.0
+    note: "29M ETH staked (+83% YoY); restaking still <5% of LST TVL"
+  - quarter: "2024-Q1"
+    as_of: 2024-03-31
+    stage: "S4.1"
+    staking_ratio_pct: 25.7
+    liquidization_rate_pct: 35.0
+    lst_tvl_usd: 44_000_000_000.0
+    defi_productivity_rate_pct: 30.0
+    restaking_rate_pct: 29.5
+    restaking_tvl_usd: 13_000_000_000.0
+    note: "1M validators; EigenLayer LST cap removed Apr 17 → LRT explosion"
+  - quarter: "2024-Q2"
+    as_of: 2024-06-30
+    stage: "S4.2"
+    staking_ratio_pct: 27.0
+    liquidization_rate_pct: 30.0
+    lst_tvl_usd: 50_000_000_000.0
+    defi_productivity_rate_pct: 35.0
+    restaking_rate_pct: 40.0
+    restaking_tvl_usd: 20_090_000_000.0
+    note: "EigenLayer peak $20.09B Jun 6; Pendle ATH $6.71B Jun 10"
+  - quarter: "2024-Q4"
+    as_of: 2024-12-31
+    stage: "S4.2"
+    staking_ratio_pct: 28.0
+    liquidization_rate_pct: 28.0
+    lst_tvl_usd: 45_000_000_000.0
+    defi_productivity_rate_pct: 40.0
+    restaking_rate_pct: 43.0
+    restaking_tvl_usd: 19_300_000_000.0
+    note: "Lido 27.7% share; restaking still elevated pre-slashing"
+  - quarter: "2025-Q2"
+    as_of: 2025-06-30
+    stage: "S4.2"
+    staking_ratio_pct: 29.0
+    liquidization_rate_pct: 46.0
+    lst_tvl_usd: 25_000_000_000.0
+    defi_productivity_rate_pct: 42.0
+    restaking_rate_pct: 30.0
+    restaking_tvl_usd: 7_500_000_000.0
+    note: "Pectra activated May 7; EigenLayer slashing Apr 17 crashed restaking TVL"
+  - quarter: "2025-Q3"
+    as_of: 2025-09-30
+    stage: "S4.2"
+    staking_ratio_pct: 29.5
+    liquidization_rate_pct: 46.0
+    lst_tvl_usd: 62_000_000_000.0
+    defi_productivity_rate_pct: 45.0
+    restaking_rate_pct: 11.3
+    restaking_tvl_usd: 7_000_000_000.0
+    note: "LST TVL ATH $86B Aug 14 ($62B on Ethereum); Kiln exit Sept 10"
+  - quarter: "2026-Q1"
+    as_of: 2026-02-28
+    stage: "S4.2"
+    staking_ratio_pct: 30.5
+    liquidization_rate_pct: 46.0
+    lst_tvl_usd: 47_000_000_000.0
+    defi_productivity_rate_pct: 45.0
+    restaking_rate_pct: 38.3
+    restaking_tvl_usd: 18_000_000_000.0
+    note: "Post-correction; EigenLayer recovery to $18B per BlockEden"

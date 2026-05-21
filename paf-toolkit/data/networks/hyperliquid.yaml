@@ -1,0 +1,209 @@
+# Hyperliquid (HYPE) — PoS Adoption Funnel profile
+# Sources: CoinMarketCap, Kinetiq docs, DefiLlama, OAK Research.
+# As-of: 2026-05-21
+
+name: Hyperliquid
+ticker: HYPE
+genesis_date: 2024-11-29
+consensus_type: bft_pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 240_000_000.0
+    as_of: 2026-05-21
+    source: "CoinMarketCap May 2026 (240M circulating, ~23.8% of 1B max)"
+    confidence: high
+  native_price_usd:
+    value: 52.0
+    as_of: 2026-05-21
+    source: "Derived: $12.5B mc / 240M circ"
+    confidence: high
+  market_cap_usd:
+    value: 12_480_000_000.0
+    as_of: 2026-05-21
+    source: "Derived: circulating × price"
+    confidence: high
+  net_issuance_annualized_pct:
+    value: -2.0
+    as_of: 2026-05-21
+    source: "Assistance fund burns HYPE from fees — net deflationary"
+    confidence: high
+  holder_count:
+    value: 700_000
+    as_of: 2026-04-30
+    source: "HYPE airdrop reached 310M HYPE to ~94k users; broader holders grown since"
+    confidence: medium
+  active_addresses_30d:
+    value: 350_000
+    as_of: 2026-04-30
+    source: "Hyperliquid daily active estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not consistently published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 250_000_000.0
+    as_of: 2026-05-21
+    source: "HYPE has deep CEX + native Hyperliquid DEX liquidity"
+    confidence: medium
+  token_age_months:
+    value: 18
+    as_of: 2026-05-21
+    source: "Computed: Nov 2024 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # Hyperliquid PoS staking: estimate 35% of circulating
+    value: 84_000_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~35% of circulating staked"
+    confidence: medium
+  staking_ratio_pct:
+    value: 35.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: medium
+  active_validators:
+    value: 24
+    as_of: 2026-05-21
+    source: "Hyperliquid active validator set: 24"
+    confidence: high
+  distinct_operators:
+    value: 24
+    as_of: 2026-05-21
+    source: "HyperBFT validator set"
+    confidence: high
+  nakamoto_coefficient:
+    value: 8
+    as_of: 2026-05-21
+    source: "Estimate based on 24-validator BFT with stake distribution"
+    confidence: medium
+  nominal_yield_pct:
+    value: 2.5
+    as_of: 2026-05-21
+    source: "Hyperliquid initial APY ~2.5%, declining"
+    confidence: high
+  real_yield_pct:
+    value: 4.5
+    as_of: 2026-05-21
+    source: "Derived: 2.5% nominal + 2% deflation benefit"
+    confidence: high
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No publicized slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 365.0
+    as_of: 2026-05-21
+    source: "Hyperliquid: 1-year lock for validator self-delegation"
+    confidence: high
+  min_stake_native:
+    value: 10_000.0
+    as_of: 2026-05-21
+    source: "10,000 HYPE minimum self-delegation for validators"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client implementation"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 20.0
+      liquid_staking_pct: 50.0
+      cex_pct: 20.0
+      other_pct: 10.0
+    as_of: 2026-05-21
+    source: "Kinetiq kHYPE captures ~83% of LST market, drives high LS share"
+    confidence: medium
+
+l3:
+  lst_tvl_usd:
+    # Kinetiq kHYPE alone $800M-1B + smaller LSTs
+    value: 1_000_000_000.0
+    as_of: 2026-04-30
+    source: "Kinetiq kHYPE ~$800M-$1B (Q1 2026); peak was $2.6B"
+    confidence: high
+  liquidization_rate_pct:
+    # $1B / ($84M × $52) = $1B / $4.37B = 22.9%
+    # Above the 20% threshold — Hyperliquid crosses S1→S2
+    value: 22.9
+    as_of: 2026-04-30
+    source: "Derived: lst_tvl_usd / (total_staked × price)"
+    confidence: medium
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "Kinetiq kHYPE 82.5% share — only issuer above 5%"
+    confidence: high
+  lst_issuer_hhi:
+    value: 6900.0
+    as_of: 2026-04-30
+    source: "82.5² + smaller players → HHI ~6900"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 82.5
+    as_of: 2026-04-30
+    source: "Kinetiq dominant on Hyperliquid"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 30.0
+    as_of: 2026-04-30
+    source: "kHYPE non-rebasing, tight peg"
+    confidence: medium
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "Kinetiq supports native redemption (with 1y validator lock)"
+    confidence: high
+
+# No L4.1 — no restaking primitive on Hyperliquid.
+
+l42:
+  lst_in_defi_tvl_usd:
+    # Hyperlend $128M kHYPE + Pendle $83M + Project X $40M + others ≈ $300M
+    value: 300_000_000.0
+    as_of: 2026-04-30
+    source: "Hyperlend ($128M kHYPE) + Pendle ($83M) + Project X ($40M) + Harmonix/Valantis"
+    confidence: high
+  defi_productivity_rate_pct:
+    # $300M / $1B = 30%
+    value: 30.0
+    as_of: 2026-04-30
+    source: "Derived: lst_in_defi / lst_tvl"
+    confidence: high
+  num_lending_integrations:
+    value: 2
+    as_of: 2026-05-21
+    source: "Hyperlend, Harmonix"
+    confidence: high
+  num_amm_integrations:
+    value: 3
+    as_of: 2026-05-21
+    source: "Project X, Hybra, Kittenswap"
+    confidence: high
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP yet on Hyperliquid"
+    confidence: medium
+  looping_supported:
+    value: true
+    as_of: 2026-05-21
+    source: "Hyperlend supports kHYPE loops"
+    confidence: high
+  pendle_equivalent_tvl_usd:
+    value: 83_000_000.0
+    as_of: 2026-04-30
+    source: "Pendle on Hyperliquid: $83M TVL (kHYPE yield tokenization)"
+    confidence: high

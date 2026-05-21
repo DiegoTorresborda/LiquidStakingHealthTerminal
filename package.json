@@ -12,12 +12,15 @@
     "data:sync:all": "npm run data:sync:coingecko && npm run data:sync:defillama",
     "data:build:dataset": "tsx scripts/build-overview-dataset.ts && node scripts/apply-manual-overlays.mjs",
     "data:audit:dataset": "tsx scripts/audit-overview-dataset.ts",
-    "data:refresh:overview": "npm run data:build:dataset && npm run data:audit:dataset"
+    "data:refresh:overview": "npm run data:build:dataset && npm run data:audit:dataset",
+    "data:sync:paf": "tsx scripts/sync-paf-data.ts"
   },
   "dependencies": {
     "next": "14.2.18",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "recharts": "^3.8.1",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@types/node": "20.16.9",

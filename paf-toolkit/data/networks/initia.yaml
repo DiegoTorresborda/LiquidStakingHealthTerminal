@@ -1,0 +1,210 @@
+# Initia (INIT) — PoS Adoption Funnel profile
+# Sources: Initia docs, DAIC Capital, Lavender Five Research, Figment.
+# As-of: 2026-05-21
+#
+# Mainnet launched Apr 24, 2025. INIT is the gas/stake token for the
+# L1 + interwoven rollups ecosystem. Multiple LSTs already launched.
+
+name: Initia
+ticker: INIT
+genesis_date: 2025-04-24
+consensus_type: dpos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 250_000_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~25% of 1B max unlocked (airdrop + initial distribution)"
+    confidence: medium
+  native_price_usd:
+    value: 0.20
+    as_of: 2026-05-21
+    source: "Estimate from launch-era pricing"
+    confidence: low
+  market_cap_usd:
+    value: 50_000_000.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  net_issuance_annualized_pct:
+    value: 12.0
+    as_of: 2026-05-21
+    source: "VIP rewards + staking emissions"
+    confidence: medium
+  holder_count:
+    value: 100_000
+    as_of: 2026-04-30
+    source: "Estimate from Initia explorer"
+    confidence: low
+  active_addresses_30d:
+    value: 30_000
+    as_of: 2026-04-30
+    source: "Early-stage network"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 2_000_000.0
+    as_of: 2026-05-21
+    source: "Binance Launch Campaign provided CEX liquidity"
+    confidence: low
+  token_age_months:
+    value: 13
+    as_of: 2026-05-21
+    source: "Computed: Apr 2025 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # ~55% staked (Cosmos-style with VIP program)
+    value: 137_500_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~55% staked (Enshrined Liquidity + standard delegation)"
+    confidence: low
+  staking_ratio_pct:
+    value: 55.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  active_validators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Initia validator set estimate"
+    confidence: medium
+  distinct_operators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Initia validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 8
+    as_of: 2026-05-21
+    source: "Estimate for new Cosmos-style chain"
+    confidence: medium
+  nominal_yield_pct:
+    value: 2.0
+    as_of: 2026-05-21
+    source: "DAIC Capital reports ~2% staking yield"
+    confidence: medium
+  real_yield_pct:
+    value: -10.0
+    as_of: 2026-05-21
+    source: "Derived: 2% nominal − 12% inflation = -10% real"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "Early mainnet, no major slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-21
+    source: "Initia docs: 21-day unbonding"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Cosmos delegation"
+    confidence: high
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 30.0
+      liquid_staking_pct: 15.0
+      cex_pct: 30.0
+      other_pct: 25.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # 3 LSTs live: milkINIT (MilkyWay), Inertia (nINIT/sINIT), deINIT
+    # Estimate $5M total
+    value: 5_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate; MilkyWay + Inertia + deINIT early stage"
+    confidence: low
+  liquidization_rate_pct:
+    # $5M / ($137.5M × $0.20) = $5M / $27.5M = 18.2%
+    value: 18.2
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lst_issuers_above_5pct:
+    value: 3
+    as_of: 2026-04-30
+    source: "MilkyWay, Inertia, deINIT — all material"
+    confidence: medium
+  lst_issuer_hhi:
+    value: 3500.0
+    as_of: 2026-04-30
+    source: "Distributed across 3 issuers"
+    confidence: medium
+  largest_lst_issuer_share_pct:
+    value: 50.0
+    as_of: 2026-04-30
+    source: "MilkyWay leading on Initia"
+    confidence: medium
+  median_peg_deviation_90d_bps:
+    value: 100.0
+    as_of: 2026-04-30
+    source: "Early stage, wider peg deviation"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "MilkyWay supports native redemption"
+    confidence: high
+
+# No L4.1 — no restaking primitive yet on Initia.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 2_000_000.0
+    as_of: 2026-04-30
+    source: "Early stage DeFi on interwoven rollups"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 40.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Early lending on Initia rollups"
+    confidence: low
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Native DEX on Initia"
+    confidence: low
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP"
+    confidence: medium
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

@@ -1,0 +1,209 @@
+# Movement (MOVE) — PoS Adoption Funnel profile
+# Sources: Movement Network Foundation, KuCoin Research, Bitget Academy.
+# As-of: 2026-05-21
+#
+# Movement repositioned from L2 to L1 powerhouse. Settles to Ethereum.
+# MOVE staking enabled via Ethereum-side liquid deposit contracts.
+
+name: Movement
+ticker: MOVE
+genesis_date: 2024-12-09
+consensus_type: bft_pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 2_250_000_000.0
+    as_of: 2026-05-21
+    source: "22.5% of 10B max supply + monthly unlocks 170M each 9th of month"
+    confidence: medium
+  native_price_usd:
+    value: 0.15
+    as_of: 2026-05-21
+    source: "Estimate from launch-era pricing"
+    confidence: low
+  market_cap_usd:
+    value: 337_500_000.0
+    as_of: 2026-05-21
+    source: "Derived: 2.25B × $0.15"
+    confidence: low
+  net_issuance_annualized_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Monthly unlocks ~170M (5-6% of circulating) + staking rewards"
+    confidence: medium
+  holder_count:
+    value: 200_000
+    as_of: 2026-04-30
+    source: "Movement explorer estimate"
+    confidence: low
+  active_addresses_30d:
+    value: 50_000
+    as_of: 2026-04-30
+    source: "Early-stage activity"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 5_000_000.0
+    as_of: 2026-05-21
+    source: "MOVE on Coinbase, Binance, others"
+    confidence: low
+  token_age_months:
+    value: 17
+    as_of: 2026-05-21
+    source: "Computed: Dec 2024 → May 2026"
+    confidence: high
+
+l2:
+  total_staked:
+    # 40% estimate; Ethereum-side liquid deposit limits true MOVE staking
+    value: 900_000_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~40% staked across native + ETH-side deposit contracts"
+    confidence: low
+  staking_ratio_pct:
+    value: 40.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  active_validators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Movement validator set estimate"
+    confidence: medium
+  distinct_operators:
+    value: 100
+    as_of: 2026-05-21
+    source: "Movement validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 15
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: medium
+  nominal_yield_pct:
+    value: 5.0
+    as_of: 2026-05-21
+    source: "Estimate from Movement staking page"
+    confidence: medium
+  real_yield_pct:
+    value: -3.0
+    as_of: 2026-05-21
+    source: "Derived: 5% − 8% inflation"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "Early mainnet"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 7.0
+    as_of: 2026-05-21
+    source: "Movement docs estimate"
+    confidence: low
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Delegated PoS"
+    confidence: medium
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 15.0
+      liquid_staking_pct: 50.0
+      cex_pct: 25.0
+      other_pct: 10.0
+    as_of: 2026-05-21
+    source: "Liquid deposit contracts on ETH drive high LS share"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Liquid staking via ETH-side deposit contracts; estimate small
+    value: 15_000_000.0
+    as_of: 2026-04-30
+    source: "Estimate from ETH-side MOVE liquid deposit contracts"
+    confidence: low
+  liquidization_rate_pct:
+    # $15M / ($900M × $0.15) = $15M / $135M = 11.1%
+    value: 11.1
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "Native ETH-side deposit dominant"
+    confidence: low
+  lst_issuer_hhi:
+    value: 8000.0
+    as_of: 2026-04-30
+    source: "Single dominant issuer → high HHI"
+    confidence: low
+  largest_lst_issuer_share_pct:
+    value: 85.0
+    as_of: 2026-04-30
+    source: "Native liquid deposit dominant"
+    confidence: low
+  median_peg_deviation_90d_bps:
+    value: 80.0
+    as_of: 2026-04-30
+    source: "Early stage"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "Liquid deposit contracts allow redemption"
+    confidence: medium
+
+# No L4.1 — no restaking primitive on Movement.
+
+l42:
+  lst_in_defi_tvl_usd:
+    value: 3_000_000.0
+    as_of: 2026-04-30
+    source: "Limited DeFi for MOVE LSTs"
+    confidence: low
+  defi_productivity_rate_pct:
+    value: 20.0
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lending_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Early lending on Movement"
+    confidence: low
+  num_amm_integrations:
+    value: 1
+    as_of: 2026-05-21
+    source: "Movement native DEX"
+    confidence: low
+  num_cdp_integrations:
+    value: 0
+    as_of: 2026-05-21
+    source: "No CDP"
+    confidence: medium
+  looping_supported:
+    value: false
+    as_of: 2026-05-21
+    source: "No mature looping"
+    confidence: medium
+  pendle_equivalent_tvl_usd:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "No yield tokenization"
+    confidence: high

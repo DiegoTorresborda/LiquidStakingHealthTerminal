@@ -1,0 +1,174 @@
+# ZigChain (ZIG) — PoS Adoption Funnel profile
+# Sources: Phemex, ZIGChain docs, MEXC, Valdora Finance.
+# As-of: 2026-05-21
+#
+# ZIGChain is a DeFi-focused L1 with native ZIGStake program and recent
+# Valdora Finance launch enabling stZIG liquid staking.
+
+name: ZigChain
+ticker: ZIG
+genesis_date: 2024-12-15
+consensus_type: pos
+native_liquid_staking_flag: false
+
+l1:
+  circulating_supply:
+    value: 1_400_000_000.0
+    as_of: 2026-05-21
+    source: "MEXC May 2026: ~1.4B ZIG circulating (of 2.0B max)"
+    confidence: high
+  native_price_usd:
+    value: 0.10
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  market_cap_usd:
+    value: 140_000_000.0
+    as_of: 2026-05-21
+    source: "Derived"
+    confidence: low
+  net_issuance_annualized_pct:
+    value: 6.0
+    as_of: 2026-05-21
+    source: "Dynamic inflation based on staking participation"
+    confidence: medium
+  holder_count:
+    value: 200_000
+    as_of: 2026-04-30
+    source: "ZigChain holder base (via Zignaly trading platform)"
+    confidence: low
+  active_addresses_30d:
+    value: 50_000
+    as_of: 2026-04-30
+    source: "Estimate"
+    confidence: low
+  top100_concentration_ex_protocols_pct:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "Not published"
+    confidence: data_gap
+  cex_dex_depth_2pct_usd:
+    value: 2_000_000.0
+    as_of: 2026-05-21
+    source: "ZIG on MEXC, KuCoin"
+    confidence: low
+  token_age_months:
+    value: 17
+    as_of: 2026-05-21
+    source: "ZigChain mainnet Dec 2024"
+    confidence: high
+
+l2:
+  total_staked:
+    # ZIGStake Program 125M tokens + community staking
+    # Estimate 45% staked
+    value: 630_000_000.0
+    as_of: 2026-05-21
+    source: "Estimate ~45% of circulating staked"
+    confidence: low
+  staking_ratio_pct:
+    value: 45.0
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  active_validators:
+    value: 100
+    as_of: 2026-05-21
+    source: "ZigChain validator set"
+    confidence: medium
+  distinct_operators:
+    value: 100
+    as_of: 2026-05-21
+    source: "ZigChain validators"
+    confidence: medium
+  nakamoto_coefficient:
+    value: 10
+    as_of: 2026-05-21
+    source: "Estimate"
+    confidence: low
+  nominal_yield_pct:
+    value: 8.0
+    as_of: 2026-05-21
+    source: "Phemex: APY 5-12% range (mid 8%)"
+    confidence: high
+  real_yield_pct:
+    value: 2.0
+    as_of: 2026-05-21
+    source: "Derived: 8% − 6% inflation"
+    confidence: medium
+  slashing_events_cumulative:
+    value: 0
+    as_of: 2026-05-21
+    source: "No major slashing"
+    confidence: medium
+  eth_slashed_cumulative:
+    value: 0.0
+    as_of: 2026-05-21
+    source: "n/a"
+    confidence: high
+  unbonding_period_days:
+    value: 21.0
+    as_of: 2026-05-21
+    source: "ZIGChain 21-day unbonding"
+    confidence: high
+  min_stake_native:
+    value: 1.0
+    as_of: 2026-05-21
+    source: "Delegation min"
+    confidence: medium
+  client_diversity_hhi:
+    value: 10000.0
+    as_of: 2026-05-21
+    source: "Single client"
+    confidence: high
+  source_breakdown:
+    value:
+      solo_pct: 35.0
+      liquid_staking_pct: 5.0
+      cex_pct: 35.0
+      other_pct: 25.0
+    as_of: 2026-05-21
+    source: "Estimate; stZIG via Valdora new"
+    confidence: low
+
+l3:
+  lst_tvl_usd:
+    # Valdora Finance recently launched stZIG; small TVL
+    value: 3_000_000.0
+    as_of: 2026-04-30
+    source: "Valdora Finance stZIG (recently launched)"
+    confidence: low
+  liquidization_rate_pct:
+    # $3M / ($630M × $0.10) = $3M / $63M = 4.8%
+    value: 4.8
+    as_of: 2026-04-30
+    source: "Derived"
+    confidence: low
+  num_lst_issuers_above_5pct:
+    value: 1
+    as_of: 2026-04-30
+    source: "Valdora stZIG is the only LST"
+    confidence: high
+  lst_issuer_hhi:
+    value: 10000.0
+    as_of: 2026-04-30
+    source: "Single LST issuer (monopoly)"
+    confidence: high
+  largest_lst_issuer_share_pct:
+    value: 100.0
+    as_of: 2026-04-30
+    source: "Valdora stZIG = 100% LST market on ZIGChain"
+    confidence: high
+  median_peg_deviation_90d_bps:
+    value: 100.0
+    as_of: 2026-04-30
+    source: "New LST, wider peg expected"
+    confidence: low
+  native_redemption_available:
+    value: true
+    as_of: 2026-05-21
+    source: "Valdora supports native redemption via 21d unbond"
+    confidence: medium
+
+# No L4.1 — no restaking on ZigChain.
+# No L4.2 — stZIG too new for material DeFi integrations.

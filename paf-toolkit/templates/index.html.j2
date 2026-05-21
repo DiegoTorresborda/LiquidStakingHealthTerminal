@@ -1,0 +1,25 @@
+# PoS Adoption Funnel — Scorecards
+
+Generated {{ generated_at }} from `data/benchmark/ethereum.yaml` and `data/networks/*.yaml`.
+
+## Networks
+
+| Network | Ticker | Stage | Staking | Liquidization | Trajectory |
+|---|---|---|---|---|---|
+{% for entry in entries -%}
+| [{{ entry.name }}]({{ entry.href }}) | {{ entry.ticker }} | `{{ entry.stage }}` | {{ "%.1f"|format(entry.staking_pct) }}% | {{ entry.liquidization }} | {{ entry.trajectory }} |
+{% endfor %}
+
+## Stages
+
+| Stage | Label |
+|---|---|
+| `S0` | Pre-staking |
+| `S1` | Securing (staking > 2%) |
+| `S2` | Liquidizing (LST > 20% of staked) |
+| `S3` | Productive (LST in DeFi > 30%, withdrawals enabled) |
+| `S4.1` | Restaking era (restaking > 5% of LST) |
+| `S4.2` | Composable mature (looping + Pendle > $1B) |
+| `S*` | Native liquid staking — L3 evaluation skipped |
+
+See [README on disk](README.md) for the full framework rationale.
