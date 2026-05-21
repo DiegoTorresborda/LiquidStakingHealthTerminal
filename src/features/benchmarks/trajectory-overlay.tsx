@@ -83,7 +83,7 @@ export function TrajectoryOverlay({
       <div className="mb-3 flex flex-col gap-1">
         <h3 className="text-sm font-semibold text-ink-50">Trajectory overlay</h3>
         <p className="text-xs text-ink-300">
-          Ethereum's quarterly path from Beacon Chain genesis (Q4 2020) to current. Each emerging network is placed on the curve at its current staking/liquidization coordinate — where it &quot;is&quot; in Ethereum-time.
+          Ethereum&apos;s quarterly path from Beacon Chain genesis (Q4 2020) to current. Each emerging network is placed on the curve at its current staking/liquidization coordinate — where it &quot;is&quot; in Ethereum-time.
         </p>
       </div>
       <ResponsiveContainer width="100%" height={460}>
