@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import type { RadarNetwork } from "@/features/radar/types";
 import type { SortKey, SortState } from "@/features/radar/types";
 import { ChainResourcesQuickAction } from "@/components/chain-resources";
+import { StageBadge } from "@/features/benchmarks/stage-badge";
 import {
   booleanLabel,
   formatInteger,
@@ -41,6 +42,7 @@ const COLUMNS: Column[] = [
   { key: "stakingRatioPct", label: "% Staked", align: "right" },
   { key: "stakingApyPct", label: "Staking APY", align: "right" },
   { key: "globalLstHealthScore", label: "Global LST Health", align: "right" },
+  { key: "funnelStage", label: "Funnel Stage", align: "right" },
   { key: "lstProtocols", label: "# of LSTs", align: "right" },
   { key: "lstPenetrationPct", label: "LST / Staked %", align: "right" },
   { key: "defiTvlUsd", label: "DeFi TVL", align: "right" },
@@ -89,11 +91,15 @@ export function NetworksTable({
           <tbody>
             {networks.map((network) => {
               const isExpanded = expandedNetwork === network.networkId;
+              const isBenchmark = network.isBenchmark === true;
+              const rowClass = isBenchmark
+                ? "cursor-pointer rounded-xl border-2 border-amber-400/40 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent transition hover:border-amber-400/60 hover:bg-amber-500/15 shadow-[0_0_24px_rgba(251,191,36,0.12)]"
+                : "cursor-pointer rounded-xl border border-ink-300/20 bg-ink-900/25 transition hover:border-[#7baff5]/30 hover:bg-ink-900/35";
 
               return (
                 <Fragment key={network.networkId}>
                   <tr
-                    className="cursor-pointer rounded-xl border border-ink-300/20 bg-ink-900/25 transition hover:border-[#7baff5]/30 hover:bg-ink-900/35"
+                    className={rowClass}
                     onClick={(event) => {
                       if (shouldIgnoreRowNavigation(event.target)) {
                         return;
@@ -114,10 +120,16 @@ export function NetworksTable({
                     <td className="rounded-l-xl px-3 py-3 align-top">
                       <div className="flex flex-col gap-1.5">
                         <div className="flex items-center gap-2">
-                          <p className="font-semibold text-ink-50">{network.network}</p>
-                          <span className={`inline-flex rounded-md border px-2 py-0.5 text-xs ${resolveStatusClass(network.status)}`}>
-                            {network.status}
-                          </span>
+                          <p className={`font-semibold ${isBenchmark ? "text-amber-200" : "text-ink-50"}`}>{network.network}</p>
+                          {isBenchmark ? (
+                            <span className="inline-flex items-center gap-1 rounded-md border border-amber-400/60 bg-amber-500/15 px-2 py-0.5 text-xs font-semibold uppercase tracking-wider text-amber-200">
+                              <span aria-hidden>★</span> Leading case
+                            </span>
+                          ) : (
+                            <span className={`inline-flex rounded-md border px-2 py-0.5 text-xs ${resolveStatusClass(network.status)}`}>
+                              {network.status}
+                            </span>
+                          )}
                         </div>
                         <p className="text-xs text-ink-300">{network.category}</p>
                         <div className="mt-0.5 flex flex-nowrap items-center gap-2 overflow-x-auto overflow-y-visible whitespace-nowrap pr-1">
@@ -145,6 +157,9 @@ export function NetworksTable({
                         {network.globalLstHealthScore}
                       </span>
                     </td>
+                    <td className="px-3 py-3 text-right text-sm">
+                      {network.paf ? <StageBadge stage={network.paf.stage} compact /> : <span className="text-ink-400">—</span>}
+                    </td>
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatInteger(network.lstProtocols)}</td>
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatPercent(network.lstPenetrationPct)}</td>
                     <td className="px-3 py-3 text-right text-sm text-ink-100">{formatUsdCompact(network.defiTvlUsd)}</td>
@@ -157,7 +172,7 @@ export function NetworksTable({
 
                   {isExpanded ? (
                     <tr>
-                      <td colSpan={10} className="px-3 pb-3">
+                      <td colSpan={11} className="px-3 pb-3">
                         <div className="rounded-xl border border-ink-300/20 bg-ink-900/30 p-4">
                           <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                             <p className="text-xs uppercase tracking-[0.16em] text-ink-300">Secondary fields</p>

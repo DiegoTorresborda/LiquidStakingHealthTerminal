@@ -1,5 +1,6 @@
 import type { NetworkDetailData } from "@/features/network-detail/types";
 
+import { networks } from "@data/networks";
 import { ChainResourcesSection } from "@/components/chain-resources";
 import { DetailModulesGrid } from "@/components/network-detail/detail-modules-grid";
 import { DiagnosisInteractiveSection } from "@/components/network-detail/diagnosis-interactive-section";
@@ -8,15 +9,23 @@ import { NetworkDetailHeader } from "@/components/network-detail/network-detail-
 import { RedFlagsPanel } from "@/components/network-detail/red-flags-panel";
 import { ScoringModelPanel } from "@/components/network-detail/scoring-model-panel";
 import { StressSnapshotPanel } from "@/components/network-detail/stress-snapshot-panel";
+import { NetworkVsEthPanel } from "@/features/benchmarks/network-vs-eth-panel";
 
 type NetworkDiagnosisPageProps = {
   detail: NetworkDetailData;
 };
 
 export function NetworkDiagnosisPage({ detail }: NetworkDiagnosisPageProps) {
+  const network = networks.find((n) => n.networkId === detail.summary.networkId);
+  const ethereum = networks.find((n) => n.isBenchmark === true);
+
   return (
     <main className="mx-auto flex w-full max-w-[1480px] flex-col gap-6 px-4 py-6 md:px-8 md:py-8">
       <NetworkDetailHeader summary={detail.summary} />
+
+      {network?.paf && ethereum ? (
+        <NetworkVsEthPanel network={network} ethereum={ethereum} />
+      ) : null}
 
       {detail.scoring ? (
         <ScoringModelPanel scoring={detail.scoring} mode={detail.summary.scoringMode} />

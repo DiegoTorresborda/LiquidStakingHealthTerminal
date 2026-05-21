@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import networksGenerated from "@data/networks.generated.json";
 import { networks as networkUniverse } from "@data/networks";
 
+import { ExplorePafCards } from "@/components/radar/explore-paf-cards";
 import { KpiSummaryBar } from "@/components/radar/kpi-summary-bar";
 import { NetworksTable } from "@/components/radar/networks-table";
 import { RadarHeader } from "@/components/radar/radar-header";
@@ -63,7 +64,12 @@ export function LstOpportunityRadar({ hiddenNetworkIds = [] }: { hiddenNetworkId
   }, [filters, networkDataset]);
 
   const visibleNetworks = useMemo(() => {
-    return sortNetworks(filteredNetworks, sort);
+    // Sort by user's choice, then pin benchmark networks (Ethereum) at the top.
+    // The benchmark is a reference, not a candidate — it should always lead.
+    const sorted = sortNetworks(filteredNetworks, sort);
+    const benchmarks = sorted.filter((n) => n.isBenchmark);
+    const candidates = sorted.filter((n) => !n.isBenchmark);
+    return [...benchmarks, ...candidates];
   }, [filteredNetworks, sort]);
 
   const kpis = useMemo(() => computeKpis(filteredNetworks), [filteredNetworks]);
@@ -103,6 +109,8 @@ export function LstOpportunityRadar({ hiddenNetworkIds = [] }: { hiddenNetworkId
       />
 
       <KpiSummaryBar kpis={kpis} />
+
+      <ExplorePafCards />
 
       {visibleNetworks.length > 0 ? (
         <NetworksTable

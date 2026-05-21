@@ -17,6 +17,7 @@ export type SortKey =
   | "stakingRatioPct"
   | "stakingApyPct"
   | "globalLstHealthScore"
+  | "funnelStage"
   | "lstProtocols"
   | "lstPenetrationPct"
   | "defiTvlUsd"

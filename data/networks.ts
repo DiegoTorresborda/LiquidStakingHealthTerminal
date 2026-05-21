@@ -1,4 +1,6 @@
 import networksGenerated from "./networks.generated.json";
+import pafData from "./paf-data.json";
+import type { PafExtension } from "@/lib/paf/types";
 
 export type NetworkCategory =
   | "High-performance EVM L1"
@@ -11,7 +13,8 @@ export type NetworkCategory =
   | "Bitcoin-aligned PoS"
   | "Gaming-focused L1"
   | "RWA-focused L1"
-  | "WASM-native L1";
+  | "WASM-native L1"
+  | "Reference benchmark";
 
 export type NetworkStatus =
   | "High Potential"
@@ -22,7 +25,8 @@ export type NetworkStatus =
   | "Growing"
   | "Watchlist"
   | "Strong LP Fit"
-  | "Weak DeFi Base";
+  | "Weak DeFi Base"
+  | "Benchmark";
 
 export type Network = {
   networkId: string;
@@ -61,9 +65,67 @@ export type Network = {
   dataCoveragePct?: number;
   fieldQuality?: Record<string, "observed" | "derived" | "inferred" | "simulated" | "missing">;
   status: NetworkStatus;
+  // PAF (PoS Adoption Funnel) extension — pre-computed at build time by
+  // scripts/sync-paf-data.ts from paf-toolkit YAMLs. Optional: networks without
+  // a paf-toolkit YAML have paf=undefined.
+  paf?: PafExtension;
+  // Reference benchmark flag (true for Ethereum). UI surfaces should
+  // visually distinguish benchmark networks from BD candidates.
+  isBenchmark?: boolean;
+};
+
+// Ethereum reference entry. All values either pulled from paf-data.json (the
+// canonical PAF benchmark) or set to representative scale for V2 scoring
+// inputs that PAF does not provide at sufficient granularity (DEX liquidity,
+// staking-provider count, etc.). Health score V2 is approximate for ETH —
+// see docs/paf-integration.md for the mapping rationale.
+const ethereumNetwork: Network = {
+  networkId: "ethereum",
+  network: "Ethereum",
+  token: "ETH",
+  category: "Reference benchmark",
+  marketCapUsd: pafData.ethereum.marketCapUsd,
+  fdvUsd: pafData.ethereum.marketCapUsd, // ETH is fully circulating
+  circulatingSupply: pafData.ethereum.circulatingSupply,
+  circulatingSupplyPct: 100,
+  stakedTokens: pafData.ethereum.totalStaked,
+  priceUsd: pafData.ethereum.nativePriceUsd,
+  volume24hUsd: 20_000_000_000, // ETH 24h volume order-of-magnitude
+  stakingRatioPct: pafData.ethereum.stakingRatioPct,
+  stakingApyPct: pafData.ethereum.nominalYieldPct,
+  stakedValueUsd: pafData.ethereum.totalStaked * pafData.ethereum.nativePriceUsd,
+  stakerAddresses: 1_500_000, // distinct stakers across pools + solo, rough
+  validatorCount: pafData.ethereum.activeValidators,
+  // Manual calibration: ETH is the reference benchmark (S4.2, mature funnel
+   // across all 5 PAF layers). The mock health-score model anchors all 7
+   // modules on this value, so leaving it 0 collapses every module to its
+   // floor. 88 = Institutional Grade band, matching ETH's actual funnel
+   // maturity. ETH is NOT in data/networks.generated.json, so V2 scoring
+   // doesn't run on it — this hardcoded value is the calibration anchor.
+   globalLstHealthScore: 88,
+  lstProtocols: 10, // Lido + Binance + RPL + StakeWise + cbETH + mETH + Stader + Frax + Liquid Collective + Origin
+  largestLst: "stETH/wstETH",
+  lstTvlUsd: pafData.ethereum.lstTvlUsd ?? 0,
+  lstPenetrationPct: pafData.ethereum.liquidizationRatePct ?? 0,
+  defiTvlUsd: 75_000_000_000, // Ethereum DeFi TVL order-of-magnitude (DefiLlama)
+  tvlToMcapPct: 0, // derived
+  stablecoinLiquidityUsd: 120_000_000_000, // ETH-resident stablecoin float
+  lendingPresence: true,
+  lstCollateralEnabled: true,
+  opportunityScore: 0, // Ethereum is the benchmark, not a candidate
+  mainBottleneck: "n/a — reference benchmark",
+  mainOpportunity: "calibration anchor for emerging PoS networks",
+  asOf: pafData.benchmarkAsOf,
+  sourceRefs: ["paf-toolkit/data/benchmark/ethereum.yaml"],
+  quality: "observed",
+  confidence: "high",
+  status: "Benchmark",
+  paf: pafData.ethereum.paf as PafExtension,
+  isBenchmark: true,
 };
 
 const baseNetworks: Network[] = [
+  ethereumNetwork,
   {
     networkId: "canton",
     network: "Canton Network",
@@ -499,10 +561,121 @@ type GeneratedOverviewRecord = {
   fieldQuality?: Record<string, "observed" | "derived" | "inferred" | "simulated" | "missing">;
 };
 
-export const networks: Network[] = applyGeneratedOverview(
-  baseNetworks,
-  networksGenerated as GeneratedOverviewRecord[]
+// Attach PAF extensions for any network that has a YAML in
+// paf-toolkit/data/networks/. Ethereum already gets its paf via the
+// ethereumNetwork literal above; this step covers the other networks
+// already present in baseNetworks.
+//
+// pafByKey is keyed by ticker.toLowerCase (set in scripts/sync-paf-data.ts),
+// but baseNetworks tokens don't always match (e.g., Sonic has token "SONIC"
+// while ticker is "S"). Match by ticker first, falling back to networkId.
+function applyPafOverlays(networks: Network[]): Network[] {
+  const pafByKey = pafData.networks as Record<string, { name: string; paf: PafExtension }>;
+  // Build a secondary index by slugified name for fallback matching.
+  const pafBySlug: Record<string, { paf: PafExtension }> = {};
+  for (const p of Object.values(pafByKey)) {
+    const slug = p.name.toLowerCase().split(/\s+/)[0].replace(/[^a-z0-9]/g, "");
+    pafBySlug[slug] = p;
+  }
+  return networks.map((n) => {
+    if (n.paf) return n;
+    const entry =
+      pafByKey[n.token.toLowerCase()] ?? pafBySlug[n.networkId.toLowerCase()];
+    return entry?.paf ? { ...n, paf: entry.paf as PafExtension } : n;
+  });
+}
+
+// Build a minimal Network stub for any PAF YAML that isn't represented in
+// baseNetworks. This lets new YAMLs appear in the benchmark surfaces
+// without requiring a baseNetworks entry first. Values are derived from
+// paf-data.json — the rich Network fields (DEX liquidity, etc.) are zero
+// because they don't come from PAF.
+type PafNetworkRecord = {
+  name: string;
+  ticker: string;
+  circulatingSupply: number;
+  totalStaked: number;
+  stakingRatioPct: number;
+  nativePriceUsd: number;
+  marketCapUsd: number;
+  lstTvlUsd: number | null;
+  defiProductivityRatePct: number | null;
+  nominalYieldPct: number;
+  activeValidators: number;
+  liquidizationRatePct: number | null;
+  largestLstIssuerSharePct: number | null;
+  paf: PafExtension;
+};
+
+function buildPafOnlyNetworks(existing: Network[]): Network[] {
+  // Match by EITHER ticker or networkId — Sonic has token "SONIC" but
+  // PAF YAML ticker "S", and we still want a single row.
+  const existingKeys = new Set<string>();
+  for (const n of existing) {
+    existingKeys.add(n.token.toLowerCase());
+    existingKeys.add(n.networkId.toLowerCase());
+  }
+  const pafByKey = pafData.networks as Record<string, PafNetworkRecord>;
+  const stubs: Network[] = [];
+
+  // Derive a friendly networkId from the network name (first word lowercased),
+  // matching the convention of baseNetworks (monad, aptos, sui, etc.).
+  const slugify = (name: string): string =>
+    name.toLowerCase().split(/\s+/)[0].replace(/[^a-z0-9]/g, "");
+
+  for (const [, p] of Object.entries(pafByKey)) {
+    const slug = slugify(p.name);
+    if (
+      existingKeys.has(p.ticker.toLowerCase()) ||
+      existingKeys.has(slug)
+    ) {
+      continue;
+    }
+    stubs.push({
+      networkId: slugify(p.name),
+      network: p.name,
+      token: p.ticker,
+      category: "Reference benchmark",
+      marketCapUsd: p.marketCapUsd,
+      fdvUsd: p.marketCapUsd,
+      circulatingSupply: p.circulatingSupply,
+      circulatingSupplyPct: 100,
+      stakedTokens: p.totalStaked,
+      priceUsd: p.nativePriceUsd,
+      volume24hUsd: null,
+      stakingRatioPct: p.stakingRatioPct,
+      stakingApyPct: p.nominalYieldPct,
+      stakedValueUsd: p.totalStaked * p.nativePriceUsd,
+      stakerAddresses: 0,
+      validatorCount: p.activeValidators,
+      globalLstHealthScore: 0,
+      lstProtocols: 0,
+      largestLst: "",
+      lstTvlUsd: p.lstTvlUsd ?? 0,
+      lstPenetrationPct: p.liquidizationRatePct ?? 0,
+      defiTvlUsd: 0,
+      tvlToMcapPct: 0,
+      stablecoinLiquidityUsd: 0,
+      lendingPresence: (p.defiProductivityRatePct ?? 0) > 0,
+      lstCollateralEnabled: (p.liquidizationRatePct ?? 0) > 0,
+      opportunityScore: 0,
+      mainBottleneck: "PAF-only — populate baseNetworks for full app coverage",
+      mainOpportunity: "n/a",
+      status: "Watchlist",
+      paf: p.paf,
+    });
+  }
+  return stubs;
+}
+
+const overlaid = applyPafOverlays(
+  applyGeneratedOverview(
+    baseNetworks,
+    networksGenerated as GeneratedOverviewRecord[]
+  )
 );
+
+export const networks: Network[] = [...overlaid, ...buildPafOnlyNetworks(overlaid)];
 
 function toFiniteNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;

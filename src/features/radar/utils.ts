@@ -137,6 +137,10 @@ function getSortValue(network: RadarNetwork, key: SortKey): string | number {
       return network.stakingApyPct;
     case "globalLstHealthScore":
       return network.globalLstHealthScore;
+    case "funnelStage": {
+      const order: Record<string, number> = { S0: 0, S1: 1, S2: 2, S3: 3, "S4.1": 4, "S4.2": 5, "S*": 6 };
+      return network.paf ? order[network.paf.stage] ?? -1 : -1;
+    }
     case "lstProtocols":
       return network.lstProtocols;
     case "lstPenetrationPct":
